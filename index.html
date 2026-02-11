@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>赛博朋克个人主页</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #0a0a0a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* 黑客帝国代码雨画布 */
+    #matrix-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.4;
+    }
+
+    /* 霓虹紫发光标题 */
+    h1 {
+      font-size: 3.5rem;
+      color: #fff;
+      text-shadow: 
+        0 0 10px #b026ff,
+        0 0 20px #b026ff,
+        0 0 40px #b026ff,
+        0 0 80px #b026ff;
+      margin-bottom: 3rem;
+      letter-spacing: 0.2em;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; text-shadow: 0 0 10px #b026ff, 0 0 20px #b026ff, 0 0 40px #b026ff, 0 0 80px #b026ff; }
+      50% { opacity: 0.9; text-shadow: 0 0 20px #b026ff, 0 0 40px #b026ff, 0 0 60px #b026ff, 0 0 100px #b026ff; }
+    }
+
+    /* 流光边框卡片容器 */
+    .card-wrapper {
+      position: relative;
+      padding: 4px;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      background: linear-gradient(90deg, #b026ff, #ff00ff, #00ffff, #b026ff);
+      background-size: 300% 100%;
+      animation: borderFlow 4s linear infinite;
+    }
+
+    @keyframes borderFlow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 300% 50%; }
+    }
+
+    .card-wrapper::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+      padding: 2px;
+      background: linear-gradient(90deg, transparent, rgba(176, 38, 255, 0.5), transparent);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      animation: borderFlow 3s linear infinite reverse;
+      opacity: 0.8;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 8px;
+      padding: 2.5rem 3rem;
+      min-width: 360px;
+      text-align: center;
+      border: 1px solid rgba(176, 38, 255, 0.25);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .card p {
+      color: #e0e0e0;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      text-shadow: 0 0 10px rgba(176, 38, 255, 0.5);
+    }
+
+    /* 故障艺术按钮 */
+    .glitch-btn {
+      position: relative;
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      font-size: 1.1rem;
+      color: #b026ff;
+      background: transparent;
+      border: 2px solid #b026ff;
+      cursor: pointer;
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .glitch-btn::before,
+    .glitch-btn::after {
+      content: '点击联系我';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: inherit;
+      background: transparent;
+      border: inherit;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .glitch-btn:hover::before,
+    .glitch-btn:hover::after {
+      opacity: 1;
+    }
+
+    .glitch-btn:hover {
+      animation: glitch 0.3s ease infinite;
+    }
+
+    .glitch-btn:hover::before {
+      animation: glitchBefore 0.3s ease infinite;
+      color: #00ffff;
+      z-index: -1;
+    }
+
+    .glitch-btn:hover::after {
+      animation: glitchAfter 0.3s ease infinite;
+      color: #ff00ff;
+      z-index: -2;
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(-3px, 2px); }
+      40% { transform: translate(3px, -2px); }
+      60% { transform: translate(-2px, 3px); }
+      80% { transform: translate(2px, -3px); }
+      100% { transform: translate(0); }
+    }
+
+    @keyframes glitchBefore {
+      0% { transform: translate(0); clip-path: inset(0 0 100% 0); }
+      20% { transform: translate(3px, -2px); clip-path: inset(20% 0 60% 0); }
+      40% { transform: translate(-3px, 2px); clip-path: inset(60% 0 20% 0); }
+      60% { transform: translate(2px, 3px); clip-path: inset(40% 0 40% 0); }
+      80% { transform: translate(-2px, -3px); clip-path: inset(10% 0 70% 0); }
+      100% { transform: translate(0); clip-path: inset(0 0 100% 0); }
+    }
+
+    @keyframes glitchAfter {
+      0% { transform: translate(0); clip-path: inset(100% 0 0 0); }
+      20% { transform: translate(-3px, 2px); clip-path: inset(70% 0 10% 0); }
+      40% { transform: translate(3px, -2px); clip-path: inset(10% 0 70% 0); }
+      60% { transform: translate(-2px, 3px); clip-path: inset(50% 0 30% 0); }
+      80% { transform: translate(2px, -3px); clip-path: inset(80% 0 0 0); }
+      100% { transform: translate(0); clip-path: inset(100% 0 0 0); }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="matrix-canvas"></canvas>
+  <h1>Hello World</h1>
+  <div class="card-wrapper">
+    <div class="card">
+      <p>我是产品经理，正在用 Cursor 改变世界</p>
+    </div>
+  </div>
+  <a href="#" class="glitch-btn">点击联系我</a>
+
+  <script>
+    (function() {
+      const canvas = document.getElementById('matrix-canvas');
+      const ctx = canvas.getContext('2d');
+      const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+      const charArr = chars.split('');
+      const fontSize = 14;
+      let columns = 0;
+      const drops = [];
+
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        columns = Math.floor(canvas.width / fontSize);
+        drops.length = 0;
+        for (let i = 0; i < columns; i++) drops[i] = Math.random() * -100;
+      }
+
+      function draw() {
+        ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#00ff41';
+        ctx.font = fontSize + 'px monospace';
+        for (let i = 0; i < drops.length; i++) {
+          const char = charArr[Math.floor(Math.random() * charArr.length)];
+          ctx.fillStyle = i % 20 === 0 ? '#39ff14' : '#00ff41';
+          ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+          drops[i]++;
+        }
+      }
+
+      resize();
+      window.addEventListener('resize', resize);
+      setInterval(draw, 50);
+    })();
+  </script>
+</body>
+</html>
