@@ -3,7 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>赛博朋克个人主页</title>
+  <title>超级炫酷放假倒计时</title>
+  <!-- Google Fonts - Orbitron -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Babel (用于 JSX 转换，可选) -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- canvas-confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  <!-- Import Map: React, ReactDOM, Framer Motion -->
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://esm.sh/react@18.2.0",
+      "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+      "framer-motion": "https://esm.sh/framer-motion@11.11.17"
+    }
+  }
+  </script>
   <style>
     * {
       margin: 0;
@@ -13,225 +33,386 @@
 
     body {
       min-height: 100vh;
-      background: #0a0a0a;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Segoe UI', sans-serif;
-      overflow-x: hidden;
-      position: relative;
+      overflow: hidden;
+      font-family: 'Orbitron', sans-serif;
+      background: #0a0a0f;
     }
 
-    /* 黑客帝国代码雨画布 */
-    #matrix-canvas {
+    /* 动态流动渐变背景 */
+    .cyber-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      background: 
+        linear-gradient(135deg, #0a0a0f 0%, #1a0a2e 25%, #0f0a1a 50%, #0a1a2e 75%, #0a0a0f 100%);
+      background-size: 400% 400%;
+      animation: gradientFlow 15s ease infinite;
+    }
+
+    /* 粒子网格背景 */
+    .grid-overlay {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       z-index: -1;
-      opacity: 0.4;
+      background-image: 
+        linear-gradient(rgba(176, 38, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(176, 38, 255, 0.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: gridPulse 4s ease-in-out infinite;
     }
 
-    /* 霓虹紫发光标题 */
-    h1 {
-      font-size: 3.5rem;
+    @keyframes gradientFlow {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    @keyframes gridPulse {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+
+    /* 倒计时容器 */
+    .countdown-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    /* 倒计时数字 - 巨大 + 霓虹发光 */
+    .countdown-digits {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .digit-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 0.25rem;
+    }
+
+    .digit {
+      font-size: clamp(4rem, 15vw, 12rem);
+      font-weight: 900;
       color: #fff;
       text-shadow: 
-        0 0 10px #b026ff,
-        0 0 20px #b026ff,
-        0 0 40px #b026ff,
-        0 0 80px #b026ff;
-      margin-bottom: 3rem;
-      letter-spacing: 0.2em;
-      animation: pulse 2s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; text-shadow: 0 0 10px #b026ff, 0 0 20px #b026ff, 0 0 40px #b026ff, 0 0 80px #b026ff; }
-      50% { opacity: 0.9; text-shadow: 0 0 20px #b026ff, 0 0 40px #b026ff, 0 0 60px #b026ff, 0 0 100px #b026ff; }
-    }
-
-    /* 流光边框卡片容器 */
-    .card-wrapper {
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff,
+        0 0 40px #ff00ff,
+        0 0 80px #ff00ff,
+        0 0 120px #ff00ff;
+      line-height: 1;
+      animation: digitPulse 1s ease-in-out infinite;
       position: relative;
-      padding: 4px;
-      border-radius: 12px;
-      margin-bottom: 2rem;
-      background: linear-gradient(90deg, #b026ff, #ff00ff, #00ffff, #b026ff);
-      background-size: 300% 100%;
-      animation: borderFlow 4s linear infinite;
+      filter: drop-shadow(0 0 30px rgba(255, 0, 255, 0.8));
     }
 
-    @keyframes borderFlow {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 300% 50%; }
+    .digit-block:nth-child(1) .digit { animation-delay: 0s; color: #ff00ff; }
+    .digit-block:nth-child(2) .digit { animation-delay: 0.1s; color: #00ffff; }
+    .digit-block:nth-child(3) .digit { animation-delay: 0.2s; color: #ff0066; }
+    .digit-block:nth-child(4) .digit { animation-delay: 0.15s; color: #ff00ff; }
+    .digit-block:nth-child(5) .digit { animation-delay: 0.25s; color: #00ffff; }
+    .digit-block:nth-child(6) .digit { animation-delay: 0.3s; color: #ff0066; }
+    .digit-block:nth-child(7) .digit { animation-delay: 0.2s; color: #ff00ff; }
+    .digit-block:nth-child(8) .digit { animation-delay: 0.35s; color: #00ffff; }
+    .digit-block:nth-child(9) .digit { animation-delay: 0.4s; color: #ff0066; }
+
+    @keyframes digitPulse {
+      0%, 100% { 
+        transform: scale(1); 
+        text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor;
+      }
+      50% { 
+        transform: scale(1.05); 
+        text-shadow: 0 0 20px currentColor, 0 0 40px currentColor, 0 0 80px currentColor;
+      }
     }
 
-    .card-wrapper::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: 12px;
-      padding: 2px;
-      background: linear-gradient(90deg, transparent, rgba(176, 38, 255, 0.5), transparent);
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      animation: borderFlow 3s linear infinite reverse;
-      opacity: 0.8;
+    /* 倒影效果 */
+    .digit-reflection {
+      font-size: inherit;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.15);
+      transform: scaleY(-1);
+      margin-top: -0.1em;
+      filter: blur(2px);
+      animation: none !important;
+      -webkit-mask-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.5));
+      mask-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.5));
     }
 
-    .card {
-      background: rgba(255, 255, 255, 0.06);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-radius: 8px;
-      padding: 2.5rem 3rem;
-      min-width: 360px;
-      text-align: center;
-      border: 1px solid rgba(176, 38, 255, 0.25);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    /* 分隔符 */
+    .separator {
+      font-size: clamp(3rem, 12vw, 10rem);
+      font-weight: 900;
+      color: #00ffff;
+      text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+      animation: blink 1s step-end infinite;
+      margin: 0 0.1em;
     }
 
-    .card p {
-      color: #e0e0e0;
-      font-size: 1.2rem;
-      line-height: 1.8;
-      text-shadow: 0 0 10px rgba(176, 38, 255, 0.5);
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0.3; }
     }
 
-    /* 故障艺术按钮 */
-    .glitch-btn {
+    /* 故障效果 (Glitch) */
+    .glitch {
       position: relative;
-      display: inline-block;
-      padding: 1rem 2.5rem;
-      font-size: 1.1rem;
-      color: #b026ff;
-      background: transparent;
-      border: 2px solid #b026ff;
-      cursor: pointer;
-      text-decoration: none;
-      letter-spacing: 0.1em;
-      transition: all 0.3s ease;
-      overflow: hidden;
     }
 
-    .glitch-btn::before,
-    .glitch-btn::after {
-      content: '点击联系我';
+    .glitch::before,
+    .glitch::after {
+      content: attr(data-text);
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: inherit;
-      background: transparent;
-      border: inherit;
-      opacity: 0;
-      pointer-events: none;
     }
 
-    .glitch-btn:hover::before,
-    .glitch-btn:hover::after {
-      opacity: 1;
+    .glitch::before {
+      left: 2px;
+      text-shadow: -2px 0 #ff00ff;
+      clip-path: inset(40% 0 50% 0);
+      animation: glitchAnim1 2s infinite linear alternate-reverse;
     }
 
-    .glitch-btn:hover {
-      animation: glitch 0.3s ease infinite;
+    .glitch::after {
+      left: -2px;
+      text-shadow: 2px 0 #00ffff;
+      clip-path: inset(60% 0 30% 0);
+      animation: glitchAnim2 3s infinite linear alternate-reverse;
     }
 
-    .glitch-btn:hover::before {
-      animation: glitchBefore 0.3s ease infinite;
-      color: #00ffff;
-      z-index: -1;
+    @keyframes glitchAnim1 {
+      0% { clip-path: inset(40% 0 50% 0); transform: translate(-2px, 2px); }
+      20% { clip-path: inset(10% 0 80% 0); transform: translate(2px, -2px); }
+      40% { clip-path: inset(70% 0 20% 0); transform: translate(-2px, 2px); }
+      60% { clip-path: inset(30% 0 60% 0); transform: translate(2px, -2px); }
+      80% { clip-path: inset(80% 0 10% 0); transform: translate(-2px, 2px); }
+      100% { clip-path: inset(40% 0 50% 0); transform: translate(2px, -2px); }
     }
 
-    .glitch-btn:hover::after {
-      animation: glitchAfter 0.3s ease infinite;
+    @keyframes glitchAnim2 {
+      0% { clip-path: inset(60% 0 30% 0); transform: translate(2px, -2px); }
+      20% { clip-path: inset(80% 0 10% 0); transform: translate(-2px, 2px); }
+      40% { clip-path: inset(20% 0 70% 0); transform: translate(2px, -2px); }
+      60% { clip-path: inset(50% 0 40% 0); transform: translate(-2px, 2px); }
+      80% { clip-path: inset(10% 0 80% 0); transform: translate(2px, -2px); }
+      100% { clip-path: inset(60% 0 30% 0); transform: translate(-2px, -2px); }
+    }
+
+    /* FREEDOM 文字 */
+    .freedom-text {
+      font-size: clamp(3rem, 10vw, 8rem);
+      font-weight: 900;
+      text-align: center;
+      line-height: 1.2;
+      position: relative;
+      z-index: 10;
+    }
+
+    .freedom-text .line1 {
       color: #ff00ff;
-      z-index: -2;
+      text-shadow: 
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff,
+        0 0 40px #ff00ff,
+        0 0 80px #ff00ff;
+      animation: freedomGlow 2s ease-in-out infinite;
     }
 
-    @keyframes glitch {
-      0% { transform: translate(0); }
-      20% { transform: translate(-3px, 2px); }
-      40% { transform: translate(3px, -2px); }
-      60% { transform: translate(-2px, 3px); }
-      80% { transform: translate(2px, -3px); }
-      100% { transform: translate(0); }
+    .freedom-text .line2 {
+      color: #00ffff;
+      font-size: 0.8em;
+      margin-top: 0.2em;
+      text-shadow: 
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #00ffff;
+      animation: freedomGlow 2s ease-in-out infinite 0.5s;
     }
 
-    @keyframes glitchBefore {
-      0% { transform: translate(0); clip-path: inset(0 0 100% 0); }
-      20% { transform: translate(3px, -2px); clip-path: inset(20% 0 60% 0); }
-      40% { transform: translate(-3px, 2px); clip-path: inset(60% 0 20% 0); }
-      60% { transform: translate(2px, 3px); clip-path: inset(40% 0 40% 0); }
-      80% { transform: translate(-2px, -3px); clip-path: inset(10% 0 70% 0); }
-      100% { transform: translate(0); clip-path: inset(0 0 100% 0); }
+    @keyframes freedomGlow {
+      0%, 100% { filter: brightness(1); opacity: 1; }
+      50% { filter: brightness(1.3); opacity: 0.95; }
     }
 
-    @keyframes glitchAfter {
-      0% { transform: translate(0); clip-path: inset(100% 0 0 0); }
-      20% { transform: translate(-3px, 2px); clip-path: inset(70% 0 10% 0); }
-      40% { transform: translate(3px, -2px); clip-path: inset(10% 0 70% 0); }
-      60% { transform: translate(-2px, 3px); clip-path: inset(50% 0 30% 0); }
-      80% { transform: translate(2px, -3px); clip-path: inset(80% 0 0 0); }
-      100% { transform: translate(0); clip-path: inset(100% 0 0 0); }
+    /* 副标题 */
+    .subtitle {
+      font-size: clamp(1rem, 3vw, 1.5rem);
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 2rem;
+      letter-spacing: 0.3em;
+      text-shadow: 0 0 10px rgba(176, 38, 255, 0.5);
+    }
+
+    /* 目标时间提示 */
+    .target-hint {
+      font-size: clamp(0.8rem, 2vw, 1rem);
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 1.5rem;
+      letter-spacing: 0.2em;
     }
   </style>
 </head>
 <body>
-  <canvas id="matrix-canvas"></canvas>
-  <h1>Hello World</h1>
-  <div class="card-wrapper">
-    <div class="card">
-      <p>我是产品经理，正在用 Cursor 改变世界</p>
-    </div>
-  </div>
-  <a href="#" class="glitch-btn">点击联系我</a>
+  <div id="root"></div>
 
-  <script>
-    (function() {
-      const canvas = document.getElementById('matrix-canvas');
-      const ctx = canvas.getContext('2d');
-      const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-      const charArr = chars.split('');
-      const fontSize = 14;
-      let columns = 0;
-      const drops = [];
+  <script type="module">
+    import React, { useState, useEffect } from 'react';
+    import { createRoot } from 'react-dom/client';
+    import { motion } from 'framer-motion';
 
-      function resize() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        columns = Math.floor(canvas.width / fontSize);
-        drops.length = 0;
-        for (let i = 0; i < columns; i++) drops[i] = Math.random() * -100;
-      }
+    const { createElement: h } = React;
+    const TARGET_TIME = new Date('2026-02-13T12:30:00');
 
-      function draw() {
-        ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = '#00ff41';
-        ctx.font = fontSize + 'px monospace';
-        for (let i = 0; i < drops.length; i++) {
-          const char = charArr[Math.floor(Math.random() * charArr.length)];
-          ctx.fillStyle = i % 20 === 0 ? '#39ff14' : '#00ff41';
-          ctx.fillText(char, i * fontSize, drops[i] * fontSize);
-          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-          drops[i]++;
-        }
-      }
+    function useCountdown() {
+      const [timeLeft, setTimeLeft] = useState(null);
+      const [isReached, setIsReached] = useState(false);
 
-      resize();
-      window.addEventListener('resize', resize);
-      setInterval(draw, 50);
-    })();
+      useEffect(() => {
+        const tick = () => {
+          const now = new Date();
+          const diff = TARGET_TIME - now;
+
+          if (diff <= 0) {
+            setIsReached(true);
+            setTimeLeft({ hours: 0, minutes: 0, seconds: 0 });
+            return;
+          }
+
+          const hours = Math.floor(diff / (1000 * 60 * 60));
+          const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+          setTimeLeft({ hours, minutes, seconds });
+        };
+
+        tick();
+        const timer = setInterval(tick, 1000);
+        return () => clearInterval(timer);
+      }, []);
+
+      return { timeLeft, isReached };
+    }
+
+    function useFireworks(active) {
+      useEffect(() => {
+        if (!active) return;
+
+        const colors = ['#ff00ff', '#00ffff', '#ff0066', '#ffff00'];
+        let animationId;
+
+        const fire = () => {
+          confetti({
+            particleCount: 50,
+            spread: 100,
+            origin: { x: Math.random(), y: Math.random() },
+            colors: colors,
+          });
+          confetti({
+            particleCount: 30,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0 },
+            colors: colors,
+          });
+          confetti({
+            particleCount: 30,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1 },
+            colors: colors,
+          });
+        };
+
+        const loop = () => {
+          fire();
+          animationId = setTimeout(loop, 800);
+        };
+        loop();
+
+        return () => clearTimeout(animationId);
+      }, [active]);
+    }
+
+    function formatNum(n) {
+      return String(n).padStart(2, '0');
+    }
+
+    function CountdownDisplay({ timeLeft }) {
+      if (!timeLeft) return null;
+      const { hours, minutes, seconds } = timeLeft;
+      const digits = [
+        ...formatNum(hours).split(''),
+        ':',
+        ...formatNum(minutes).split(''),
+        ':',
+        ...formatNum(seconds).split(''),
+      ];
+
+      return h('div', { className: 'countdown-digits' },
+        digits.map((d, i) => 
+          d === ':' 
+            ? h('span', { key: i, className: 'separator' }, ':')
+            : h(motion.div, {
+                key: i,
+                className: 'digit-block',
+                animate: { scale: [1, 1.08, 1] },
+                transition: { duration: 0.5, repeat: Infinity, repeatDelay: 0.3 },
+              },
+                h('span', { className: 'digit glitch', 'data-text': d }, d),
+                h('span', { className: 'digit digit-reflection' }, d)
+              )
+        )
+      );
+    }
+
+    function FreedomDisplay() {
+      return h(motion.div, {
+        className: 'freedom-text',
+        initial: { scale: 0, opacity: 0 },
+        animate: { scale: 1, opacity: 1 },
+        transition: { type: 'spring', stiffness: 200, damping: 15 },
+      },
+        h('div', { className: 'line1 glitch', 'data-text': 'FREEDOM!' }, 'FREEDOM!'),
+        h('div', { className: 'line2 glitch', 'data-text': '放假啦！' }, '放假啦！')
+      );
+    }
+
+    function App() {
+      const { timeLeft, isReached } = useCountdown();
+      useFireworks(isReached);
+
+      return h('div', { className: 'countdown-container' },
+        h('div', { className: 'cyber-bg' }),
+        h('div', { className: 'grid-overlay' }),
+        isReached
+          ? h(FreedomDisplay)
+          : h('div', { style: { textAlign: 'center' } },
+              h('div', { className: 'subtitle' }, '距离放假还有'),
+              h(CountdownDisplay, { timeLeft }),
+              h('div', { className: 'target-hint' }, '目标: 2026年2月13日 12:30:00')
+            )
+      );
+    }
+
+    const root = createRoot(document.getElementById('root'));
+    root.render(h(App));
   </script>
 </body>
 </html>
