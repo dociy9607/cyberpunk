@@ -4,26 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>超级炫酷放假倒计时</title>
-  <!-- Google Fonts - Orbitron -->
+  <!-- Google Fonts - Orbitron (国内可访问镜像) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Babel (用于 JSX 转换，可选) -->
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <!-- canvas-confetti -->
+  <!-- React, ReactDOM UMD - jsdelivr 国内加速 -->
+  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <!-- Babel 用于 JSX 转换 -->
+  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.24.0/babel.min.js"></script>
+  <!-- canvas-confetti 烟花效果 -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
-  <!-- Import Map: React, ReactDOM, Framer Motion -->
-  <script type="importmap">
-  {
-    "imports": {
-      "react": "https://esm.sh/react@18.2.0",
-      "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
-      "framer-motion": "https://esm.sh/framer-motion@11.11.17"
-    }
-  }
-  </script>
   <style>
     * {
       margin: 0;
@@ -34,7 +25,7 @@
     body {
       min-height: 100vh;
       overflow: hidden;
-      font-family: 'Orbitron', sans-serif;
+      font-family: 'Orbitron', 'Microsoft YaHei', sans-serif;
       background: #0a0a0f;
     }
 
@@ -101,6 +92,31 @@
       flex-direction: column;
       align-items: center;
       margin: 0 0.25rem;
+      animation: digitBounce 0.6s ease-in-out infinite;
+    }
+
+    .digit-block:nth-child(1) { animation-delay: 0s; }
+    .digit-block:nth-child(2) { animation-delay: 0.05s; }
+    .digit-block:nth-child(3) { animation-delay: 0.1s; }
+    .digit-block:nth-child(4) { animation-delay: 0.15s; }
+    .digit-block:nth-child(5) { animation-delay: 0.2s; }
+    .digit-block:nth-child(6) { animation-delay: 0.25s; }
+    .digit-block:nth-child(7) { animation-delay: 0.3s; }
+    .digit-block:nth-child(8) { animation-delay: 0.35s; }
+    .digit-block:nth-child(9) { animation-delay: 0.4s; }
+    .digit-block:nth-child(10) { animation-delay: 0.1s; }
+    .digit-block:nth-child(11) { animation-delay: 0.15s; }
+    .digit-block:nth-child(12) { animation-delay: 0.2s; }
+    .digit-block:nth-child(13) { animation-delay: 0.25s; }
+    .digit-block:nth-child(14) { animation-delay: 0.3s; }
+    .digit-block:nth-child(15) { animation-delay: 0.35s; }
+    .digit-block:nth-child(16) { animation-delay: 0.4s; }
+    .digit-block:nth-child(17) { animation-delay: 0.45s; }
+    .digit-block:nth-child(18) { animation-delay: 0.5s; }
+
+    @keyframes digitBounce {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
     }
 
     .digit {
@@ -119,15 +135,9 @@
       filter: drop-shadow(0 0 30px rgba(255, 0, 255, 0.8));
     }
 
-    .digit-block:nth-child(1) .digit { animation-delay: 0s; color: #ff00ff; }
-    .digit-block:nth-child(2) .digit { animation-delay: 0.1s; color: #00ffff; }
-    .digit-block:nth-child(3) .digit { animation-delay: 0.2s; color: #ff0066; }
-    .digit-block:nth-child(4) .digit { animation-delay: 0.15s; color: #ff00ff; }
-    .digit-block:nth-child(5) .digit { animation-delay: 0.25s; color: #00ffff; }
-    .digit-block:nth-child(6) .digit { animation-delay: 0.3s; color: #ff0066; }
-    .digit-block:nth-child(7) .digit { animation-delay: 0.2s; color: #ff00ff; }
-    .digit-block:nth-child(8) .digit { animation-delay: 0.35s; color: #00ffff; }
-    .digit-block:nth-child(9) .digit { animation-delay: 0.4s; color: #ff0066; }
+    .digit-block:nth-child(odd) .digit { color: #ff00ff; }
+    .digit-block:nth-child(3n) .digit { color: #00ffff; }
+    .digit-block:nth-child(3n+2) .digit { color: #ff0066; }
 
     @keyframes digitPulse {
       0%, 100% { 
@@ -215,7 +225,7 @@
       100% { clip-path: inset(60% 0 30% 0); transform: translate(-2px, -2px); }
     }
 
-    /* FREEDOM 文字 */
+    /* FREEDOM 文字 - 弹簧入场动画 (替代 Framer Motion) */
     .freedom-text {
       font-size: clamp(3rem, 10vw, 8rem);
       font-weight: 900;
@@ -223,6 +233,12 @@
       line-height: 1.2;
       position: relative;
       z-index: 10;
+      animation: freedomScaleIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes freedomScaleIn {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
     }
 
     .freedom-text .line1 {
@@ -272,147 +288,148 @@
 <body>
   <div id="root"></div>
 
-  <script type="module">
-    import React, { useState, useEffect } from 'react';
-    import { createRoot } from 'react-dom/client';
-    import { motion } from 'framer-motion';
+  <script type="text/babel" data-presets="react">
+    (function() {
+      const React = window.React;
+      const ReactDOM = window.ReactDOM;
+      const { useState, useEffect } = React;
 
-    const { createElement: h } = React;
-    const TARGET_TIME = new Date('2026-02-13T12:30:00');
+      const TARGET_TIME = new Date('2026-02-13T12:30:00');
 
-    function useCountdown() {
-      const [timeLeft, setTimeLeft] = useState(null);
-      const [isReached, setIsReached] = useState(false);
+      function useCountdown() {
+        const [timeLeft, setTimeLeft] = useState(null);
+        const [isReached, setIsReached] = useState(false);
 
-      useEffect(() => {
-        const tick = () => {
-          const now = new Date();
-          const diff = TARGET_TIME - now;
+        useEffect(() => {
+          const tick = () => {
+            const now = new Date();
+            const diff = TARGET_TIME - now;
 
-          if (diff <= 0) {
-            setIsReached(true);
-            setTimeLeft({ hours: 0, minutes: 0, seconds: 0 });
-            return;
-          }
+            if (diff <= 0) {
+              setIsReached(true);
+              setTimeLeft({ hours: 0, minutes: 0, seconds: 0 });
+              return;
+            }
 
-          const hours = Math.floor(diff / (1000 * 60 * 60));
-          const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-          const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-          setTimeLeft({ hours, minutes, seconds });
-        };
+            setTimeLeft({ hours, minutes, seconds });
+          };
 
-        tick();
-        const timer = setInterval(tick, 1000);
-        return () => clearInterval(timer);
-      }, []);
+          tick();
+          const timer = setInterval(tick, 1000);
+          return () => clearInterval(timer);
+        }, []);
 
-      return { timeLeft, isReached };
-    }
+        return { timeLeft, isReached };
+      }
 
-    function useFireworks(active) {
-      useEffect(() => {
-        if (!active) return;
+      function useFireworks(active) {
+        useEffect(() => {
+          if (!active || typeof confetti !== 'function') return;
 
-        const colors = ['#ff00ff', '#00ffff', '#ff0066', '#ffff00'];
-        let animationId;
+          const colors = ['#ff00ff', '#00ffff', '#ff0066', '#ffff00'];
+          let animationId;
 
-        const fire = () => {
-          confetti({
-            particleCount: 50,
-            spread: 100,
-            origin: { x: Math.random(), y: Math.random() },
-            colors: colors,
-          });
-          confetti({
-            particleCount: 30,
-            angle: 60,
-            spread: 55,
-            origin: { x: 0 },
-            colors: colors,
-          });
-          confetti({
-            particleCount: 30,
-            angle: 120,
-            spread: 55,
-            origin: { x: 1 },
-            colors: colors,
-          });
-        };
+          const fire = () => {
+            confetti({
+              particleCount: 50,
+              spread: 100,
+              origin: { x: Math.random(), y: Math.random() },
+              colors: colors,
+            });
+            confetti({
+              particleCount: 30,
+              angle: 60,
+              spread: 55,
+              origin: { x: 0 },
+              colors: colors,
+            });
+            confetti({
+              particleCount: 30,
+              angle: 120,
+              spread: 55,
+              origin: { x: 1 },
+              colors: colors,
+            });
+          };
 
-        const loop = () => {
-          fire();
-          animationId = setTimeout(loop, 800);
-        };
-        loop();
+          const loop = () => {
+            fire();
+            animationId = setTimeout(loop, 800);
+          };
+          loop();
 
-        return () => clearTimeout(animationId);
-      }, [active]);
-    }
+          return () => clearTimeout(animationId);
+        }, [active]);
+      }
 
-    function formatNum(n) {
-      return String(n).padStart(2, '0');
-    }
+      function formatNum(n) {
+        return String(n).padStart(2, '0');
+      }
 
-    function CountdownDisplay({ timeLeft }) {
-      if (!timeLeft) return null;
-      const { hours, minutes, seconds } = timeLeft;
-      const digits = [
-        ...formatNum(hours).split(''),
-        ':',
-        ...formatNum(minutes).split(''),
-        ':',
-        ...formatNum(seconds).split(''),
-      ];
+      function CountdownDisplay({ timeLeft }) {
+        if (!timeLeft) return null;
+        const { hours, minutes, seconds } = timeLeft;
+        const digits = [
+          ...formatNum(hours).split(''),
+          ':',
+          ...formatNum(minutes).split(''),
+          ':',
+          ...formatNum(seconds).split(''),
+        ];
 
-      return h('div', { className: 'countdown-digits' },
-        digits.map((d, i) => 
-          d === ':' 
-            ? h('span', { key: i, className: 'separator' }, ':')
-            : h(motion.div, {
-                key: i,
-                className: 'digit-block',
-                animate: { scale: [1, 1.08, 1] },
-                transition: { duration: 0.5, repeat: Infinity, repeatDelay: 0.3 },
-              },
-                h('span', { className: 'digit glitch', 'data-text': d }, d),
-                h('span', { className: 'digit digit-reflection' }, d)
-              )
-        )
-      );
-    }
+        return (
+          <div className="countdown-digits">
+            {digits.map((d, i) => 
+              d === ':' 
+                ? <span key={i} className="separator">:</span>
+                : (
+                    <div key={i} className="digit-block">
+                      <span className="digit glitch" data-text={d}>{d}</span>
+                      <span className="digit digit-reflection">{d}</span>
+                    </div>
+                  )
+            )}
+          </div>
+        );
+      }
 
-    function FreedomDisplay() {
-      return h(motion.div, {
-        className: 'freedom-text',
-        initial: { scale: 0, opacity: 0 },
-        animate: { scale: 1, opacity: 1 },
-        transition: { type: 'spring', stiffness: 200, damping: 15 },
-      },
-        h('div', { className: 'line1 glitch', 'data-text': 'FREEDOM!' }, 'FREEDOM!'),
-        h('div', { className: 'line2 glitch', 'data-text': '放假啦！' }, '放假啦！')
-      );
-    }
+      function FreedomDisplay() {
+        return (
+          <div className="freedom-text">
+            <div className="line1 glitch" data-text="FREEDOM!">FREEDOM!</div>
+            <div className="line2 glitch" data-text="放假啦！">放假啦！</div>
+          </div>
+        );
+      }
 
-    function App() {
-      const { timeLeft, isReached } = useCountdown();
-      useFireworks(isReached);
+      function App() {
+        const { timeLeft, isReached } = useCountdown();
+        useFireworks(isReached);
 
-      return h('div', { className: 'countdown-container' },
-        h('div', { className: 'cyber-bg' }),
-        h('div', { className: 'grid-overlay' }),
-        isReached
-          ? h(FreedomDisplay)
-          : h('div', { style: { textAlign: 'center' } },
-              h('div', { className: 'subtitle' }, '距离放假还有'),
-              h(CountdownDisplay, { timeLeft }),
-              h('div', { className: 'target-hint' }, '目标: 2026年2月13日 12:30:00')
-            )
-      );
-    }
+        return (
+          <div className="countdown-container">
+            <div className="cyber-bg" />
+            <div className="grid-overlay" />
+            {isReached ? (
+              <FreedomDisplay />
+            ) : (
+              <div style={{ textAlign: 'center' }}>
+                <div className="subtitle">距离放假还有</div>
+                <CountdownDisplay timeLeft={timeLeft} />
+                <div className="target-hint">目标: 2026年2月13日 12:30:00</div>
+              </div>
+            )}
+          </div>
+        );
+      }
 
-    const root = createRoot(document.getElementById('root'));
-    root.render(h(App));
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(<App />);
+    })();
   </script>
 </body>
 </html>
