@@ -1,707 +1,1218 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kernel Space | 产品内核</title>
-  <link rel="icon" type="image/png" href="./corn_favicon.png">
-  <!-- Google Fonts - Orbitron (国内可访问镜像) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-  <!-- React, ReactDOM UMD - jsdelivr 国内加速 -->
-  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
-  <!-- Babel 用于 JSX 转换 -->
-  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.24.0/babel.min.js"></script>
-  <!-- canvas-confetti 烟花效果 -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>钱大少养胃记录</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --ink: #182226;
+      --muted: #64727a;
+      --line: #d8e0dd;
+      --paper: #fbfaf4;
+      --panel: #ffffff;
+      --panel-2: #f2f5ef;
+      --green: #1f7a54;
+      --green-soft: #dcefe4;
+      --amber: #c57a1d;
+      --amber-soft: #fff1d7;
+      --red: #bd3d36;
+      --red-soft: #fbe1dd;
+      --blue: #2d6677;
+      --blue-soft: #dcecf0;
+      --shadow: 0 18px 45px rgba(32, 49, 44, .13);
     }
+
+    * { box-sizing: border-box; }
 
     body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(135deg, rgba(31,122,84,.12), transparent 32%),
+        linear-gradient(315deg, rgba(197,122,29,.11), transparent 35%),
+        var(--paper);
+      font-family: "Microsoft YaHei", "Noto Sans SC", "PingFang SC", sans-serif;
       min-height: 100vh;
-      overflow: hidden;
-      font-family: 'Orbitron', 'Microsoft YaHei', sans-serif;
-      background: #0a0a0f;
+      overflow-x: hidden;
     }
 
-    /* 动态流动渐变背景 */
-    .cyber-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-      background: 
-        linear-gradient(135deg, #0a0a0f 0%, #1a0a2e 25%, #0f0a1a 50%, #0a1a2e 75%, #0a0a0f 100%);
-      background-size: 400% 400%;
-      animation: gradientFlow 15s ease infinite;
+    button, input, select, textarea {
+      font: inherit;
+      min-width: 0;
     }
 
-    /* 粒子网格背景 */
-    .grid-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background-image: 
-        linear-gradient(rgba(176, 38, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(176, 38, 255, 0.03) 1px, transparent 1px);
-      background-size: 50px 50px;
-      animation: gridPulse 4s ease-in-out infinite;
-    }
-
-    @keyframes gradientFlow {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-    }
-
-    @keyframes gridPulse {
-      0%, 100% { opacity: 0.5; }
-      50% { opacity: 1; }
-    }
-
-    /* 倒计时容器 */
-    .countdown-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 2rem;
-    }
-
-    /* 倒计时数字 - 巨大 + 霓虹发光 */
-    .countdown-digits {
-      display: flex;
-      gap: 0.5rem;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .digit-block {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0 0.25rem;
-      animation: digitBounce 0.6s ease-in-out infinite;
-    }
-
-    .digit-block:nth-child(1) { animation-delay: 0s; }
-    .digit-block:nth-child(2) { animation-delay: 0.05s; }
-    .digit-block:nth-child(3) { animation-delay: 0.1s; }
-    .digit-block:nth-child(4) { animation-delay: 0.15s; }
-    .digit-block:nth-child(5) { animation-delay: 0.2s; }
-    .digit-block:nth-child(6) { animation-delay: 0.25s; }
-    .digit-block:nth-child(7) { animation-delay: 0.3s; }
-    .digit-block:nth-child(8) { animation-delay: 0.35s; }
-    .digit-block:nth-child(9) { animation-delay: 0.4s; }
-    .digit-block:nth-child(10) { animation-delay: 0.1s; }
-    .digit-block:nth-child(11) { animation-delay: 0.15s; }
-    .digit-block:nth-child(12) { animation-delay: 0.2s; }
-    .digit-block:nth-child(13) { animation-delay: 0.25s; }
-    .digit-block:nth-child(14) { animation-delay: 0.3s; }
-    .digit-block:nth-child(15) { animation-delay: 0.35s; }
-    .digit-block:nth-child(16) { animation-delay: 0.4s; }
-    .digit-block:nth-child(17) { animation-delay: 0.45s; }
-    .digit-block:nth-child(18) { animation-delay: 0.5s; }
-
-    @keyframes digitBounce {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.08); }
-    }
-
-    .digit {
-      font-size: clamp(4rem, 15vw, 12rem);
-      font-weight: 900;
-      color: #fff;
-      text-shadow: 
-        0 0 4px currentColor,
-        0 0 8px currentColor,
-        0 0 12px rgba(255, 255, 255, 0.4);
-      line-height: 1;
-      animation: digitPulse 1s ease-in-out infinite;
-      position: relative;
-      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
-    }
-
-    .digit-block:nth-child(odd) .digit { color: #ff00ff; }
-    .digit-block:nth-child(3n) .digit { color: #00ffff; }
-    .digit-block:nth-child(3n+2) .digit { color: #ff0066; }
-
-    @keyframes digitPulse {
-      0%, 100% { 
-        transform: scale(1); 
-        text-shadow: 0 0 4px currentColor, 0 0 8px currentColor, 0 0 12px rgba(255,255,255,0.3);
-      }
-      50% { 
-        transform: scale(1.05); 
-        text-shadow: 0 0 6px currentColor, 0 0 12px currentColor, 0 0 18px rgba(255,255,255,0.4);
-      }
-    }
-
-    /* 倒影效果 */
-    .digit-reflection {
-      font-size: inherit;
-      font-weight: 900;
-      color: rgba(255, 255, 255, 0.15);
-      transform: scaleY(-1);
-      margin-top: -0.1em;
-      filter: blur(2px);
-      animation: none !important;
-      -webkit-mask-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.5));
-      mask-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.5));
-    }
-
-    /* 分隔符 */
-    .separator {
-      font-size: clamp(3rem, 12vw, 10rem);
-      font-weight: 900;
-      color: #00ffff;
-      text-shadow: 0 0 6px #00ffff, 0 0 12px rgba(0, 255, 255, 0.5);
-      animation: blink 1s step-end infinite;
-      margin: 0 0.1em;
-    }
-
-    @keyframes blink {
-      0%, 50% { opacity: 1; }
-      51%, 100% { opacity: 0.3; }
-    }
-
-    /* 故障效果 (Glitch) */
-    .glitch {
-      position: relative;
-    }
-
-    .glitch::before,
-    .glitch::after {
-      content: attr(data-text);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .glitch::before {
-      left: 2px;
-      text-shadow: -2px 0 #ff00ff;
-      clip-path: inset(40% 0 50% 0);
-      animation: glitchAnim1 2s infinite linear alternate-reverse;
-    }
-
-    .glitch::after {
-      left: -2px;
-      text-shadow: 2px 0 #00ffff;
-      clip-path: inset(60% 0 30% 0);
-      animation: glitchAnim2 3s infinite linear alternate-reverse;
-    }
-
-    @keyframes glitchAnim1 {
-      0% { clip-path: inset(40% 0 50% 0); transform: translate(-2px, 2px); }
-      20% { clip-path: inset(10% 0 80% 0); transform: translate(2px, -2px); }
-      40% { clip-path: inset(70% 0 20% 0); transform: translate(-2px, 2px); }
-      60% { clip-path: inset(30% 0 60% 0); transform: translate(2px, -2px); }
-      80% { clip-path: inset(80% 0 10% 0); transform: translate(-2px, 2px); }
-      100% { clip-path: inset(40% 0 50% 0); transform: translate(2px, -2px); }
-    }
-
-    @keyframes glitchAnim2 {
-      0% { clip-path: inset(60% 0 30% 0); transform: translate(2px, -2px); }
-      20% { clip-path: inset(80% 0 10% 0); transform: translate(-2px, 2px); }
-      40% { clip-path: inset(20% 0 70% 0); transform: translate(2px, -2px); }
-      60% { clip-path: inset(50% 0 40% 0); transform: translate(-2px, 2px); }
-      80% { clip-path: inset(10% 0 80% 0); transform: translate(2px, -2px); }
-      100% { clip-path: inset(60% 0 30% 0); transform: translate(-2px, -2px); }
-    }
-
-    /* FREEDOM 文字 - 弹簧入场动画 (替代 Framer Motion) */
-    .freedom-text {
-      font-size: clamp(3rem, 10vw, 8rem);
-      font-weight: 900;
-      text-align: center;
-      line-height: 1.2;
-      position: relative;
-      z-index: 10;
-      animation: freedomScaleIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-    }
-
-    @keyframes freedomScaleIn {
-      0% { transform: scale(0); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-
-    .freedom-text .line1 {
-      color: #ff00ff;
-      text-shadow: 
-        0 0 10px #ff00ff,
-        0 0 20px #ff00ff,
-        0 0 40px #ff00ff,
-        0 0 80px #ff00ff;
-      animation: freedomGlow 2s ease-in-out infinite;
-    }
-
-    .freedom-text .line2 {
-      color: #00ffff;
-      font-size: 0.8em;
-      margin-top: 0.2em;
-      text-shadow: 
-        0 0 10px #00ffff,
-        0 0 20px #00ffff,
-        0 0 40px #00ffff;
-      animation: freedomGlow 2s ease-in-out infinite 0.5s;
-    }
-
-    @keyframes freedomGlow {
-      0%, 100% { filter: brightness(1); opacity: 1; }
-      50% { filter: brightness(1.3); opacity: 0.95; }
-    }
-
-    /* 副标题 */
-    .subtitle {
-      font-size: clamp(1rem, 3vw, 1.5rem);
-      color: rgba(255, 255, 255, 0.7);
-      margin-top: 2rem;
-      letter-spacing: 0.3em;
-      text-shadow: 0 0 10px rgba(176, 38, 255, 0.5);
-    }
-
-    /* 目标时间提示 */
-    .target-hint {
-      font-size: clamp(0.8rem, 2vw, 1rem);
-      color: rgba(255, 255, 255, 0.5);
-      margin-top: 1.5rem;
-      letter-spacing: 0.2em;
-    }
-
-    /* 计分板 - 赛博风格 */
-    .score-board {
-      position: fixed;
-      top: 20px;
-      right: 24px;
-      z-index: 20;
-      font-family: 'Orbitron', monospace;
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: #00ffff;
-      letter-spacing: 0.15em;
-      text-shadow: 0 0 8px #00ffff, 0 0 16px rgba(0, 255, 255, 0.5);
-      padding: 8px 16px;
-      background: rgba(0, 0, 0, 0.5);
-      border: 1px solid rgba(0, 255, 255, 0.4);
-      border-radius: 4px;
-    }
-    .score-board .score-num {
-      display: inline-block;
-      min-width: 2em;
-      text-align: right;
-    }
-    .score-board.score-bump .score-num {
-      animation: scoreBump 0.3s ease-out;
-    }
-    @keyframes scoreBump {
-      0% { transform: scale(1); }
-      40% { transform: scale(1.25); }
-      70% { transform: scale(0.95); }
-      100% { transform: scale(1); }
-    }
-    /* LEVEL UP 弹窗 */
-    .level-up-popup {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 100;
-      font-family: 'Orbitron', sans-serif;
-      font-size: 2.5rem;
-      font-weight: 900;
-      color: #ffd700;
-      text-shadow: 0 0 20px #ffd700, 0 0 40px #ffd700, 0 0 80px #ffd700;
-      animation: levelUpPop 1.5s ease-out forwards;
-      pointer-events: none;
-    }
-    @keyframes levelUpPop {
-      0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
-      20% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
-      40% { transform: translate(-50%, -50%) scale(1); }
-      80% { opacity: 1; }
-      100% { opacity: 0; transform: translate(-50%, -50%) scale(1.1); }
-    }
-    /* 赛博豆子 - 捡豆子游戏 */
-    .bean-layer {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
-      pointer-events: none;
-    }
-    .bean-layer > * {
-      pointer-events: auto;
-    }
-    .cyber-bean {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      border-radius: 2px;
+    button {
+      border: 0;
       cursor: pointer;
-      box-shadow: 0 0 6px currentColor, 0 0 12px currentColor;
     }
-    /* 等级1: 绿色数据点 (0-49) */
-    .cyber-bean.tier-green {
-      background: #39ff14;
-      color: #39ff14;
-      animation: beanBreathe 2s ease-in-out infinite;
+
+    .app {
+      width: min(1480px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 24px 0 28px;
     }
-    .cyber-bean.tier-green.yellow {
-      background: #c9f031;
-      color: #c9f031;
+
+    .topbar {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
     }
-    /* 等级2: 紫色能量块 (50-99) */
-    .cyber-bean.tier-purple {
-      background: #b026ff;
-      color: #b026ff;
-      width: 12px;
-      height: 12px;
-      border-radius: 3px;
-      box-shadow: 0 0 12px #b026ff, 0 0 24px rgba(176, 38, 255, 0.8);
-      animation: beanRotate 3s linear infinite;
+
+    .brand h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 54px);
+      line-height: .96;
+      letter-spacing: 0;
+      font-weight: 900;
     }
-    /* 等级3: 金色核心 (100+) */
-    .cyber-bean.tier-gold {
-      background: #ffd700;
-      color: #ffd700;
-      width: 14px;
-      height: 14px;
-      border-radius: 4px;
-      box-shadow: 0 0 16px #ffd700, 0 0 32px #ffd700, 0 0 48px rgba(255, 215, 0, 0.6);
-      animation: beanCoreBreathe 1.5s ease-in-out infinite;
+
+    .brand p {
+      margin: 9px 0 0;
+      color: var(--muted);
+      font-size: 14px;
     }
-    @keyframes beanBreathe {
-      0%, 100% { opacity: 0.9; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.2); }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
     }
-    @keyframes beanRotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+
+    .btn {
+      min-height: 40px;
+      border-radius: 7px;
+      padding: 0 14px;
+      color: var(--ink);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 4px 14px rgba(24,34,38,.06);
+      white-space: nowrap;
     }
-    @keyframes beanCoreBreathe {
-      0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 16px #ffd700, 0 0 32px #ffd700; }
-      50% { opacity: 1; transform: scale(1.3); box-shadow: 0 0 24px #ffd700, 0 0 48px #ffd700, 0 0 64px rgba(255,215,0,0.5); }
+
+    .btn.primary {
+      color: #fff;
+      background: var(--green);
+      border-color: var(--green);
     }
-    .trail-canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
+
+    .btn.warn {
+      color: #fff;
+      background: var(--red);
+      border-color: var(--red);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(360px, 520px) minmax(520px, 1fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .panel {
+      background: rgba(255,255,255,.9);
+      border: 1px solid rgba(216,224,221,.9);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      min-width: 0;
+    }
+
+    .panel-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(242,245,239,.85);
+    }
+
+    .panel-title {
+      font-weight: 900;
+      font-size: 17px;
+    }
+
+    .panel-sub {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .entry {
+      padding: 16px;
+    }
+
+    .mode-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .mode {
+      height: 48px;
+      border-radius: 7px;
+      background: #f7f8f3;
+      color: var(--ink);
+      border: 1px solid var(--line);
+      font-weight: 800;
+    }
+
+    .mode.active[data-type="meal"] {
+      background: var(--green-soft);
+      color: var(--green);
+      border-color: #9ccaaa;
+    }
+
+    .mode.active[data-type="poop"] {
+      background: var(--blue-soft);
+      color: var(--blue);
+      border-color: #9dbfcc;
+    }
+
+    .mode.active[data-type="vomit"] {
+      background: var(--red-soft);
+      color: var(--red);
+      border-color: #dfa39f;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .field.full { grid-column: 1 / -1; }
+
+    label {
+      color: #3b4c52;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    input, select, textarea {
       width: 100%;
-      height: 100%;
-      z-index: 3;
+      min-height: 42px;
+      border-radius: 7px;
+      border: 1px solid #cbd6d2;
+      background: #fff;
+      color: var(--ink);
+      padding: 9px 10px;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 76px;
+      resize: vertical;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(31,122,84,.14);
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .form-actions .btn {
+      flex: 1;
+    }
+
+    .search {
+      border-top: 1px solid var(--line);
+      padding: 16px;
+      background: rgba(242,245,239,.45);
+    }
+
+    .search-row {
+      display: grid;
+      grid-template-columns: 1fr 120px;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .results {
+      max-height: 318px;
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fff;
+    }
+
+    .record {
+      display: grid;
+      grid-template-columns: 76px 1fr auto;
+      gap: 10px;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #edf1ef;
+    }
+
+    .record:last-child { border-bottom: 0; }
+
+    .record:hover { background: #fbfcf7; }
+
+    .stamp {
+      font-weight: 900;
+      color: #21343a;
+      line-height: 1.2;
+    }
+
+    .stamp small {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .record-body {
+      min-width: 0;
+    }
+
+    .record-body strong {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 14px;
+    }
+
+    .record-body span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .mini-actions {
+      display: flex;
+      gap: 6px;
+    }
+
+    .icon-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 7px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .calendar-wrap {
+      padding: 14px;
+    }
+
+    .monthbar {
+      display: grid;
+      grid-template-columns: 42px 1fr 42px;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .month-title {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .weekdays, .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 7px;
+    }
+
+    .weekdays {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 7px;
+      text-align: center;
+    }
+
+    .day {
+      position: relative;
+      min-height: 112px;
+      border-radius: 8px;
+      border: 1px solid #dce4df;
+      background: rgba(255,255,255,.76);
+      padding: 8px;
+      text-align: left;
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+
+    .day:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(33,52,58,.12);
+      border-color: #a7bab2;
+    }
+
+    .day.muted {
+      opacity: .46;
+      background: rgba(247,248,243,.68);
+    }
+
+    .day.today {
+      border-color: var(--green);
+      box-shadow: inset 0 0 0 2px rgba(31,122,84,.18);
+    }
+
+    .day.selected {
+      outline: 3px solid rgba(45,102,119,.18);
+      border-color: var(--blue);
+    }
+
+    .day-number {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .count {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .meal-row, .health-row {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+      margin-top: 5px;
+    }
+
+    .pill {
+      min-width: 28px;
+      height: 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      border: 1px solid #d6ddd8;
+      background: #f5f7f4;
+      color: #839091;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .pill.ok {
+      color: #fff;
+      background: var(--green);
+      border-color: var(--green);
+    }
+
+    .pill.warn {
+      color: #6f430c;
+      background: var(--amber-soft);
+      border-color: #e0ad66;
+    }
+
+    .pill.poop-ok {
+      color: #fff;
+      background: var(--blue);
+      border-color: var(--blue);
+    }
+
+    .pill.bad {
+      color: #fff;
+      background: var(--red);
+      border-color: var(--red);
+    }
+
+    .day-detail {
+      margin-top: 12px;
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 12px;
+    }
+
+    .daily-score {
+      background: #f8faf6;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    .daily-score h3, .daily-list h3 {
+      margin: 0 0 10px;
+      font-size: 15px;
+    }
+
+    .score-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px dashed #d8e0dd;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .score-line:last-child { border-bottom: 0; }
+
+    .daily-list {
+      min-width: 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    .empty {
+      color: var(--muted);
+      font-size: 13px;
+      padding: 14px;
+      text-align: center;
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 20px;
+      transform: translateX(-50%) translateY(20px);
+      opacity: 0;
       pointer-events: none;
+      background: #182226;
+      color: #fff;
+      border-radius: 7px;
+      padding: 10px 14px;
+      box-shadow: var(--shadow);
+      transition: opacity .2s ease, transform .2s ease;
+      z-index: 20;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .hidden { display: none !important; }
+
+    @media (max-width: 1050px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .app {
+        width: calc(100vw - 18px);
+        padding-top: 12px;
+      }
+
+      .topbar {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-content: stretch;
+      }
+
+      .actions .btn {
+        width: 100%;
+        padding: 0 10px;
+      }
+
+      .form-grid, .search-row, .day-detail {
+        grid-template-columns: 1fr;
+      }
+
+      .calendar {
+        gap: 5px;
+      }
+
+      .day {
+        min-height: 96px;
+        padding: 6px;
+      }
+
+      .pill {
+        min-width: 24px;
+        height: 22px;
+        font-size: 11px;
+      }
     }
   </style>
 </head>
 <body>
-  <div id="root"></div>
+  <main class="app">
+    <header class="topbar">
+      <section class="brand">
+        <h1>钱大少养胃记录</h1>
+        <p id="todayLine">记录吃饭、排泄、呕吐；右侧日历自动判断三餐和异常。</p>
+      </section>
+      <section class="actions">
+        <button class="btn primary" id="saveBtn">保存</button>
+        <button class="btn" id="exportBtn">导出备份</button>
+        <button class="btn" id="importBtn">导入备份</button>
+        <input class="hidden" type="file" id="importFile" accept="application/json,.json">
+        <button class="btn warn" id="clearBtn">清空</button>
+      </section>
+    </header>
 
-  <script type="text/babel" data-presets="react">
-    (function() {
-      const React = window.React;
-      const ReactDOM = window.ReactDOM;
-      const { useState, useEffect, useRef } = React;
+    <section class="grid">
+      <aside class="panel">
+        <div class="panel-head">
+          <div>
+            <div class="panel-title" id="formTitle">新增记录</div>
+            <div class="panel-sub" id="formSub">默认使用当前时间，可手动调整。</div>
+          </div>
+          <button class="btn" id="nowBtn">现在</button>
+        </div>
 
-      const TARGET_TIME = new Date('2026-02-13T12:30:00');
+        <div class="entry">
+          <div class="mode-row" role="tablist" aria-label="记录类型">
+            <button class="mode active" data-type="meal">吃饭</button>
+            <button class="mode" data-type="poop">排泄</button>
+            <button class="mode" data-type="vomit">呕吐</button>
+          </div>
 
-      let beanIdCounter = 0;
-      function genSingleBean() {
-        const margin = 80;
+          <form id="recordForm">
+            <div class="form-grid">
+              <label class="field">
+                日期
+                <input type="date" id="dateInput" required>
+              </label>
+              <label class="field">
+                时间
+                <input type="time" id="timeInput" required>
+              </label>
+
+              <label class="field meal-only">
+                餐段
+                <select id="mealSlot">
+                  <option value="breakfast">早餐</option>
+                  <option value="lunch">午餐</option>
+                  <option value="dinner">晚餐</option>
+                  <option value="night">夜间加餐</option>
+                </select>
+              </label>
+              <label class="field meal-only">
+                食量
+                <select id="mealAmount">
+                  <option value="正常">正常</option>
+                  <option value="偏少">偏少</option>
+                  <option value="偏多">偏多</option>
+                  <option value="拒食">拒食</option>
+                </select>
+              </label>
+              <label class="field full meal-only">
+                吃了什么
+                <textarea id="foodText" placeholder="例如：猫粮 30g、罐头半罐、水、药"></textarea>
+              </label>
+
+              <label class="field poop-only hidden">
+                排泄类型
+                <select id="poopType">
+                  <option value="大便">大便</option>
+                  <option value="小便">小便</option>
+                  <option value="大小便">大小便</option>
+                </select>
+              </label>
+              <label class="field poop-only hidden">
+                状态
+                <select id="poopStatus">
+                  <option value="正常">正常</option>
+                  <option value="偏软">偏软</option>
+                  <option value="稀便">稀便</option>
+                  <option value="便秘">便秘</option>
+                  <option value="带血">带血</option>
+                  <option value="异常">异常</option>
+                </select>
+              </label>
+              <label class="field full poop-only hidden">
+                排泄备注
+                <textarea id="poopNote" placeholder="例如：成型、颜色、次数、尿量、是否费劲"></textarea>
+              </label>
+
+              <label class="field vomit-only hidden">
+                呕吐量
+                <select id="vomitAmount">
+                  <option value="少量">少量</option>
+                  <option value="中等">中等</option>
+                  <option value="大量">大量</option>
+                </select>
+              </label>
+              <label class="field vomit-only hidden">
+                呕吐物
+                <input id="vomitContent" placeholder="例如：未消化粮、黄水、白沫">
+              </label>
+              <label class="field full vomit-only hidden">
+                呕吐备注
+                <textarea id="vomitNote" placeholder="例如：呕吐前后精神、是否连续吐、是否伴随拉稀"></textarea>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn primary" type="submit" id="submitBtn">添加记录</button>
+              <button class="btn" type="button" id="cancelEditBtn">清空表单</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="search">
+          <div class="panel-title">查询与修改</div>
+          <div class="search-row" style="margin-top:10px">
+            <input id="keywordInput" placeholder="搜食物、备注、状态">
+            <select id="typeFilter">
+              <option value="all">全部</option>
+              <option value="meal">吃饭</option>
+              <option value="poop">排泄</option>
+              <option value="vomit">呕吐</option>
+            </select>
+          </div>
+          <div class="search-row">
+            <input type="date" id="fromDate">
+            <input type="date" id="toDate">
+          </div>
+          <div class="results" id="results"></div>
+        </div>
+      </aside>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <div class="panel-title">月历总览</div>
+            <div class="panel-sub">早 / 午 / 晚为三餐；排为正常排泄；吐为当天有呕吐。</div>
+          </div>
+          <button class="btn" id="todayBtn">回到今天</button>
+        </div>
+        <div class="calendar-wrap">
+          <div class="monthbar">
+            <button class="icon-btn" id="prevMonth" title="上个月">‹</button>
+            <div class="month-title" id="monthTitle"></div>
+            <button class="icon-btn" id="nextMonth" title="下个月">›</button>
+          </div>
+          <div class="weekdays">
+            <div>周一</div><div>周二</div><div>周三</div><div>周四</div><div>周五</div><div>周六</div><div>周日</div>
+          </div>
+          <div class="calendar" id="calendar"></div>
+
+          <div class="day-detail">
+            <section class="daily-score">
+              <h3 id="selectedTitle">当天状态</h3>
+              <div id="selectedScore"></div>
+            </section>
+            <section class="daily-list">
+              <h3>当天记录</h3>
+              <div id="dayRecords"></div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const STORE_KEY = "qian_dashao_stomach_records_v1";
+    const $ = (selector) => document.querySelector(selector);
+    const $$ = (selector) => Array.from(document.querySelectorAll(selector));
+
+    const state = {
+      records: [],
+      activeType: "meal",
+      editingId: null,
+      viewDate: new Date(),
+      selectedDate: toDateKey(new Date()),
+      dirty: false
+    };
+
+    const typeName = { meal: "吃饭", poop: "排泄", vomit: "呕吐" };
+    const mealName = { breakfast: "早餐", lunch: "午餐", dinner: "晚餐", night: "夜间加餐" };
+
+    function pad(value) {
+      return String(value).padStart(2, "0");
+    }
+
+    function toDateKey(date) {
+      return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
+    }
+
+    function nowTime() {
+      const date = new Date();
+      return `${pad(date.getHours())}:${pad(date.getMinutes())}`;
+    }
+
+    function parseDateKey(key) {
+      const [year, month, day] = key.split("-").map(Number);
+      return new Date(year, month - 1, day);
+    }
+
+    function compareDateTime(a, b) {
+      return `${a.date} ${a.time}`.localeCompare(`${b.date} ${b.time}`);
+    }
+
+    function classifyMeal(time) {
+      const [hour, minute] = time.split(":").map(Number);
+      const total = hour * 60 + minute;
+      if (total >= 4 * 60 && total < 11 * 60) return "breakfast";
+      if (total >= 11 * 60 && total < 16 * 60) return "lunch";
+      if (total >= 16 * 60 && total < 23 * 60) return "dinner";
+      return "night";
+    }
+
+    function saveRecords(showMessage = false) {
+      localStorage.setItem(STORE_KEY, JSON.stringify({
+        app: "钱大少养胃记录",
+        version: 1,
+        savedAt: new Date().toISOString(),
+        records: state.records
+      }));
+      state.dirty = false;
+      if (showMessage) toast("已保存到本机浏览器");
+    }
+
+    function loadRecords() {
+      try {
+        const raw = localStorage.getItem(STORE_KEY);
+        if (!raw) return;
+        const parsed = JSON.parse(raw);
+        state.records = Array.isArray(parsed.records) ? parsed.records : [];
+      } catch {
+        state.records = [];
+        toast("读取本地数据失败，已进入空白记录");
+      }
+    }
+
+    function markDirty() {
+      state.dirty = true;
+      saveRecords(false);
+      renderAll();
+    }
+
+    function toast(message) {
+      const node = $("#toast");
+      node.textContent = message;
+      node.classList.add("show");
+      clearTimeout(toast.timer);
+      toast.timer = setTimeout(() => node.classList.remove("show"), 1800);
+    }
+
+    function setNow() {
+      const today = new Date();
+      $("#dateInput").value = toDateKey(today);
+      $("#timeInput").value = nowTime();
+      if (state.activeType === "meal") $("#mealSlot").value = classifyMeal($("#timeInput").value);
+    }
+
+    function setActiveType(type) {
+      state.activeType = type;
+      $$(".mode").forEach((button) => button.classList.toggle("active", button.dataset.type === type));
+      $$(".meal-only").forEach((node) => node.classList.toggle("hidden", type !== "meal"));
+      $$(".poop-only").forEach((node) => node.classList.toggle("hidden", type !== "poop"));
+      $$(".vomit-only").forEach((node) => node.classList.toggle("hidden", type !== "vomit"));
+      if (!state.editingId) $("#submitBtn").textContent = `添加${typeName[type]}记录`;
+      $("#formSub").textContent = type === "meal" ? "系统会按时间自动判断早中晚餐，也可以手动改餐段。" : "默认使用当前时间，可手动调整。";
+      if (type === "meal") $("#mealSlot").value = classifyMeal($("#timeInput").value || nowTime());
+    }
+
+    function resetForm() {
+      state.editingId = null;
+      $("#formTitle").textContent = "新增记录";
+      $("#submitBtn").textContent = `添加${typeName[state.activeType]}记录`;
+      $("#cancelEditBtn").textContent = "清空表单";
+      $("#foodText").value = "";
+      $("#mealAmount").value = "正常";
+      $("#poopType").value = "大便";
+      $("#poopStatus").value = "正常";
+      $("#poopNote").value = "";
+      $("#vomitAmount").value = "少量";
+      $("#vomitContent").value = "";
+      $("#vomitNote").value = "";
+      setNow();
+    }
+
+    function readForm() {
+      const base = {
+        id: state.editingId || crypto.randomUUID(),
+        type: state.activeType,
+        date: $("#dateInput").value,
+        time: $("#timeInput").value,
+        updatedAt: new Date().toISOString()
+      };
+
+      if (base.type === "meal") {
         return {
-          id: beanIdCounter++,
-          x: margin + Math.random() * (window.innerWidth - 2 * margin),
-          y: margin + Math.random() * (window.innerHeight - 2 * margin),
-          color: Math.random() > 0.5 ? 'yellow' : 'green'
+          ...base,
+          mealSlot: $("#mealSlot").value,
+          amount: $("#mealAmount").value,
+          food: $("#foodText").value.trim()
         };
       }
-      function genBeans() {
-        const beans = [];
-        for (let i = 0; i < 20; i++) beans.push(genSingleBean());
-        return beans;
-      }
-      function getBeanTier(collected) {
-        if (collected >= 100) return 'gold';
-        if (collected >= 50) return 'purple';
-        return 'green';
-      }
 
-      function useCountdown() {
-        const [timeLeft, setTimeLeft] = useState(null);
-        const [isReached, setIsReached] = useState(false);
-
-        useEffect(() => {
-          const tick = () => {
-            const now = new Date();
-            const diff = TARGET_TIME - now;
-
-            if (diff <= 0) {
-              setIsReached(true);
-              setTimeLeft({ hours: 0, minutes: 0, seconds: 0 });
-              return;
-            }
-
-            const hours = Math.floor(diff / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-            setTimeLeft({ hours, minutes, seconds });
-          };
-
-          tick();
-          const timer = setInterval(tick, 1000);
-          return () => clearInterval(timer);
-        }, []);
-
-        return { timeLeft, isReached };
-      }
-
-      function useFireworks(active) {
-        useEffect(() => {
-          if (!active || typeof confetti !== 'function') return;
-
-          const colors = ['#ff00ff', '#00ffff', '#ff0066', '#ffff00'];
-          let animationId;
-
-          const fire = () => {
-            confetti({
-              particleCount: 50,
-              spread: 100,
-              origin: { x: Math.random(), y: Math.random() },
-              colors: colors,
-            });
-            confetti({
-              particleCount: 30,
-              angle: 60,
-              spread: 55,
-              origin: { x: 0 },
-              colors: colors,
-            });
-            confetti({
-              particleCount: 30,
-              angle: 120,
-              spread: 55,
-              origin: { x: 1 },
-              colors: colors,
-            });
-          };
-
-          const loop = () => {
-            fire();
-            animationId = setTimeout(loop, 800);
-          };
-          loop();
-
-          return () => clearTimeout(animationId);
-        }, [active]);
-      }
-
-      function formatNum(n) {
-        return String(n).padStart(2, '0');
-      }
-
-      function CountdownDisplay({ timeLeft }) {
-        if (!timeLeft) return null;
-        const { hours, minutes, seconds } = timeLeft;
-        const digits = [
-          ...formatNum(hours).split(''),
-          ':',
-          ...formatNum(minutes).split(''),
-          ':',
-          ...formatNum(seconds).split(''),
-        ];
-
-        return (
-          <div className="countdown-digits">
-            {digits.map((d, i) => 
-              d === ':' 
-                ? <span key={i} className="separator">:</span>
-                : (
-                    <div key={i} className="digit-block">
-                      <span className="digit glitch" data-text={d}>{d}</span>
-                      <span className="digit digit-reflection">{d}</span>
-                    </div>
-                  )
-            )}
-          </div>
-        );
-      }
-
-      function FreedomDisplay() {
-        return (
-          <div className="freedom-text">
-            <div className="line1 glitch" data-text="FREEDOM!">FREEDOM!</div>
-            <div className="line2 glitch" data-text="放假啦！">放假啦！</div>
-          </div>
-        );
-      }
-
-      function BeanGame() {
-        const [beans, setBeans] = useState(() => genBeans());
-        const [collectedCount, setCollectedCount] = useState(0);
-        const [showLevelUp, setShowLevelUp] = useState(false);
-        const [scoreBump, setScoreBump] = useState(false);
-        const trailRef = useRef([]);
-        const mouseRef = useRef({ x: 0, y: 0 });
-        const canvasRef = useRef(null);
-
-        useEffect(() => {
-          const onMove = (e) => {
-            mouseRef.current = { x: e.clientX, y: e.clientY };
-          };
-          window.addEventListener('mousemove', onMove);
-          return () => window.removeEventListener('mousemove', onMove);
-        }, []);
-
-        useEffect(() => {
-          const canvas = canvasRef.current;
-          if (!canvas) return;
-          const ctx = canvas.getContext('2d');
-          let raf;
-          const tier = getBeanTier(collectedCount);
-
-          const draw = () => {
-            const trail = trailRef.current;
-            const mouse = mouseRef.current;
-            const lerp = 0.18;
-            const tailLerp = 0.12;
-
-            if (trail.length > 0) {
-              const last = trail.length - 1;
-              trail[last].x += (mouse.x - trail[last].x) * lerp;
-              trail[last].y += (mouse.y - trail[last].y) * lerp;
-              for (let i = last - 1; i >= 0; i--) {
-                trail[i].x += (trail[i + 1].x - trail[i].x) * tailLerp;
-                trail[i].y += (trail[i + 1].y - trail[i].y) * tailLerp;
-              }
-            }
-
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            const colors = tier === 'gold' ? [255, 215, 0] : tier === 'purple' ? [176, 38, 255] : [201, 240, 49];
-            trail.forEach((p, i) => {
-              const t = i / Math.max(1, trail.length);
-              const alpha = 0.4 + 0.6 * t;
-              const r = 4 + t * 4;
-              const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, r * 2);
-              gradient.addColorStop(0, `rgba(${colors[0]}, ${colors[1]}, ${colors[2]}, ${alpha})`);
-              gradient.addColorStop(0.5, `rgba(${colors[0]}, ${colors[1]}, ${colors[2]}, ${alpha * 0.6})`);
-              gradient.addColorStop(1, 'transparent');
-              ctx.beginPath();
-              ctx.arc(p.x, p.y, r * 2, 0, Math.PI * 2);
-              ctx.fillStyle = gradient;
-              ctx.fill();
-              if (tier === 'gold' && i < trail.length - 1) {
-                const p2 = trail[i + 1];
-                for (let j = 1; j <= 3; j++) {
-                  const k = j / 4;
-                  const px = p.x + (p2.x - p.x) * k;
-                  const py = p.y + (p2.y - p.y) * k;
-                  const pa = (1 - k) * alpha * 0.4;
-                  ctx.beginPath();
-                  ctx.arc(px, py, r * 0.5, 0, Math.PI * 2);
-                  ctx.fillStyle = `rgba(255, 215, 0, ${pa})`;
-                  ctx.fill();
-                }
-              }
-            });
-
-            raf = requestAnimationFrame(draw);
-          };
-          raf = requestAnimationFrame(draw);
-          return () => cancelAnimationFrame(raf);
-        }, [collectedCount]);
-
-        const handleBeanClick = (id) => {
-          const mouse = mouseRef.current;
-          const nextCount = collectedCount + 1;
-
-          setBeans(prev => {
-            const next = prev.filter(b => b.id !== id);
-            next.push(genSingleBean());
-            return next;
-          });
-          setCollectedCount(nextCount);
-          trailRef.current.push({ x: mouse.x, y: mouse.y });
-
-          setScoreBump(true);
-          setTimeout(() => setScoreBump(false), 300);
-
-          if (nextCount > 0 && nextCount % 50 === 0) {
-            setShowLevelUp(true);
-            setTimeout(() => setShowLevelUp(false), 1500);
-          }
+      if (base.type === "poop") {
+        return {
+          ...base,
+          poopType: $("#poopType").value,
+          status: $("#poopStatus").value,
+          note: $("#poopNote").value.trim()
         };
-
-        const tier = getBeanTier(collectedCount);
-        const tierClass = `tier-${tier}`;
-        const beanSize = tier === 'gold' ? 14 : tier === 'purple' ? 12 : 10;
-        const beanOffset = beanSize / 2;
-
-        return (
-          <>
-            <div className={`score-board ${scoreBump ? 'score-bump' : ''}`}>
-              DATA COLLECTED: <span className="score-num">{collectedCount}</span>
-            </div>
-            {showLevelUp && <div className="level-up-popup">LEVEL UP!</div>}
-            <div className="bean-layer">
-              {beans.map(b => (
-                <div
-                  key={b.id}
-                  className={`cyber-bean ${tierClass} ${tier === 'green' ? b.color : ''}`}
-                  style={{ left: b.x - beanOffset, top: b.y - beanOffset }}
-                  onClick={() => handleBeanClick(b.id)}
-                />
-              ))}
-            </div>
-            <canvas ref={canvasRef} className="trail-canvas" />
-          </>
-        );
       }
 
-      function App() {
-        const { timeLeft, isReached } = useCountdown();
-        useFireworks(isReached);
+      return {
+        ...base,
+        amount: $("#vomitAmount").value,
+        content: $("#vomitContent").value.trim(),
+        note: $("#vomitNote").value.trim()
+      };
+    }
 
-        return (
-          <div className="countdown-container">
-            <div className="cyber-bg" />
-            <div className="grid-overlay" />
-            <BeanGame />
-            {isReached ? (
-              <FreedomDisplay />
-            ) : (
-              <div style={{ textAlign: 'center' }}>
-                <div className="subtitle">距离放假还有</div>
-                <CountdownDisplay timeLeft={timeLeft} />
-                <div className="target-hint">目标: 2026年2月13日 12:30:00</div>
-              </div>
-            )}
+    function validate(record) {
+      if (!record.date || !record.time) return "日期和时间必须填写";
+      if (record.type === "meal" && !record.food) return "吃饭记录请填写吃了什么";
+      if (record.type === "vomit" && !record.content && !record.note) return "呕吐记录请填写呕吐物或备注";
+      return "";
+    }
+
+    function upsertRecord(event) {
+      event.preventDefault();
+      const record = readForm();
+      const error = validate(record);
+      if (error) {
+        toast(error);
+        return;
+      }
+
+      if (state.editingId) {
+        const index = state.records.findIndex((item) => item.id === state.editingId);
+        if (index >= 0) state.records[index] = record;
+        toast("已修改记录");
+      } else {
+        state.records.push(record);
+        toast("已添加记录");
+      }
+
+      state.selectedDate = record.date;
+      state.viewDate = parseDateKey(record.date);
+      markDirty();
+      resetForm();
+    }
+
+    function editRecord(id) {
+      const record = state.records.find((item) => item.id === id);
+      if (!record) return;
+      state.editingId = id;
+      setActiveType(record.type);
+      $("#formTitle").textContent = `修改${typeName[record.type]}记录`;
+      $("#submitBtn").textContent = "保存修改";
+      $("#cancelEditBtn").textContent = "取消编辑";
+      $("#dateInput").value = record.date;
+      $("#timeInput").value = record.time;
+
+      if (record.type === "meal") {
+        $("#mealSlot").value = record.mealSlot || classifyMeal(record.time);
+        $("#mealAmount").value = record.amount || "正常";
+        $("#foodText").value = record.food || "";
+      }
+
+      if (record.type === "poop") {
+        $("#poopType").value = record.poopType || "大便";
+        $("#poopStatus").value = record.status || "正常";
+        $("#poopNote").value = record.note || "";
+      }
+
+      if (record.type === "vomit") {
+        $("#vomitAmount").value = record.amount || "少量";
+        $("#vomitContent").value = record.content || "";
+        $("#vomitNote").value = record.note || "";
+      }
+
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function deleteRecord(id) {
+      const record = state.records.find((item) => item.id === id);
+      if (!record) return;
+      if (!confirm(`删除这条${typeName[record.type]}记录？`)) return;
+      state.records = state.records.filter((item) => item.id !== id);
+      if (state.editingId === id) resetForm();
+      markDirty();
+      toast("已删除记录");
+    }
+
+    function dayStats(dateKey) {
+      const items = state.records.filter((item) => item.date === dateKey);
+      const meals = new Set(items.filter((item) => item.type === "meal").map((item) => item.mealSlot || classifyMeal(item.time)));
+      const poopItems = items.filter((item) => item.type === "poop");
+      const vomitItems = items.filter((item) => item.type === "vomit");
+      const abnormalPoop = poopItems.some((item) => item.status && item.status !== "正常");
+      return {
+        items,
+        meals,
+        poopCount: poopItems.length,
+        poopNormal: poopItems.length > 0 && !abnormalPoop,
+        poopAbnormal: abnormalPoop,
+        vomitCount: vomitItems.length
+      };
+    }
+
+    function renderCalendar() {
+      const year = state.viewDate.getFullYear();
+      const month = state.viewDate.getMonth();
+      $("#monthTitle").textContent = `${year}年${month + 1}月`;
+
+      const first = new Date(year, month, 1);
+      const mondayIndex = (first.getDay() + 6) % 7;
+      const start = new Date(year, month, 1 - mondayIndex);
+      const todayKey = toDateKey(new Date());
+
+      $("#calendar").innerHTML = "";
+      for (let i = 0; i < 42; i++) {
+        const date = new Date(start);
+        date.setDate(start.getDate() + i);
+        const key = toDateKey(date);
+        const stats = dayStats(key);
+        const button = document.createElement("button");
+        button.className = "day";
+        if (date.getMonth() !== month) button.classList.add("muted");
+        if (key === todayKey) button.classList.add("today");
+        if (key === state.selectedDate) button.classList.add("selected");
+        button.type = "button";
+        button.dataset.date = key;
+        button.innerHTML = `
+          <div class="day-number">
+            <span>${date.getDate()}</span>
+            <span class="count">${stats.items.length ? stats.items.length + "条" : ""}</span>
           </div>
-        );
+          <div class="meal-row">
+            ${mealPill("早", stats.meals.has("breakfast"))}
+            ${mealPill("午", stats.meals.has("lunch"))}
+            ${mealPill("晚", stats.meals.has("dinner"))}
+          </div>
+          <div class="health-row">
+            <span class="pill ${stats.poopNormal ? "poop-ok" : stats.poopAbnormal ? "warn" : ""}">排</span>
+            <span class="pill ${stats.vomitCount > 0 ? "bad" : ""}">吐</span>
+          </div>
+        `;
+        button.addEventListener("click", () => {
+          state.selectedDate = key;
+          state.viewDate = parseDateKey(key);
+          renderAll();
+        });
+        $("#calendar").appendChild(button);
       }
+    }
 
-      const root = ReactDOM.createRoot(document.getElementById('root'));
-      root.render(<App />);
-    })();
+    function mealPill(text, ok) {
+      return `<span class="pill ${ok ? "ok" : ""}">${text}</span>`;
+    }
+
+    function describeRecord(record) {
+      if (record.type === "meal") {
+        return {
+          title: `${mealName[record.mealSlot] || "加餐"} · ${record.food}`,
+          meta: `食量：${record.amount || "未填"}`
+        };
+      }
+      if (record.type === "poop") {
+        return {
+          title: `${record.poopType || "排泄"} · ${record.status || "未填"}`,
+          meta: record.note || "无备注"
+        };
+      }
+      return {
+        title: `呕吐 · ${record.amount || "未填"} · ${record.content || "未填呕吐物"}`,
+        meta: record.note || "无备注"
+      };
+    }
+
+    function recordNode(record) {
+      const info = describeRecord(record);
+      const node = document.createElement("div");
+      node.className = "record";
+      node.innerHTML = `
+        <div class="stamp">${record.time}<small>${typeName[record.type]}</small></div>
+        <div class="record-body">
+          <strong>${escapeHtml(info.title)}</strong>
+          <span>${escapeHtml(record.date)} · ${escapeHtml(info.meta)}</span>
+        </div>
+        <div class="mini-actions">
+          <button class="icon-btn" title="修改" data-edit="${record.id}">改</button>
+          <button class="icon-btn" title="删除" data-delete="${record.id}">删</button>
+        </div>
+      `;
+      node.querySelector("[data-edit]").addEventListener("click", () => editRecord(record.id));
+      node.querySelector("[data-delete]").addEventListener("click", () => deleteRecord(record.id));
+      return node;
+    }
+
+    function renderDayDetail() {
+      const stats = dayStats(state.selectedDate);
+      $("#selectedTitle").textContent = `${state.selectedDate} 状态`;
+      $("#selectedScore").innerHTML = `
+        <div class="score-line"><span>早餐</span><strong>${stats.meals.has("breakfast") ? "已吃" : "未记录"}</strong></div>
+        <div class="score-line"><span>午餐</span><strong>${stats.meals.has("lunch") ? "已吃" : "未记录"}</strong></div>
+        <div class="score-line"><span>晚餐</span><strong>${stats.meals.has("dinner") ? "已吃" : "未记录"}</strong></div>
+        <div class="score-line"><span>排泄</span><strong>${stats.poopNormal ? "正常" : stats.poopAbnormal ? "异常" : "未记录"}</strong></div>
+        <div class="score-line"><span>呕吐</span><strong>${stats.vomitCount > 0 ? stats.vomitCount + "次" : "无记录"}</strong></div>
+      `;
+
+      const list = $("#dayRecords");
+      list.innerHTML = "";
+      const records = stats.items.sort(compareDateTime);
+      if (!records.length) {
+        list.innerHTML = `<div class="empty">当天还没有记录。</div>`;
+        return;
+      }
+      records.forEach((record) => list.appendChild(recordNode(record)));
+    }
+
+    function renderResults() {
+      const keyword = $("#keywordInput").value.trim().toLowerCase();
+      const type = $("#typeFilter").value;
+      const from = $("#fromDate").value;
+      const to = $("#toDate").value;
+
+      const records = state.records
+        .filter((record) => type === "all" || record.type === type)
+        .filter((record) => !from || record.date >= from)
+        .filter((record) => !to || record.date <= to)
+        .filter((record) => {
+          if (!keyword) return true;
+          return JSON.stringify(record).toLowerCase().includes(keyword);
+        })
+        .sort((a, b) => compareDateTime(b, a));
+
+      const box = $("#results");
+      box.innerHTML = "";
+      if (!records.length) {
+        box.innerHTML = `<div class="empty">没有查到记录。</div>`;
+        return;
+      }
+      records.forEach((record) => box.appendChild(recordNode(record)));
+    }
+
+    function renderAll() {
+      $("#todayLine").textContent = `今天是 ${toDateKey(new Date())}，当前共有 ${state.records.length} 条记录。`;
+      renderCalendar();
+      renderDayDetail();
+      renderResults();
+    }
+
+    function exportRecords() {
+      saveRecords(false);
+      const data = JSON.stringify({
+        app: "钱大少养胃记录",
+        version: 1,
+        exportedAt: new Date().toISOString(),
+        records: state.records
+      }, null, 2);
+      const blob = new Blob([data], { type: "application/json;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `钱大少养胃记录-${toDateKey(new Date())}.json`;
+      link.click();
+      URL.revokeObjectURL(url);
+      toast("已导出备份文件");
+    }
+
+    function importRecords(file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const parsed = JSON.parse(reader.result);
+          const incoming = Array.isArray(parsed) ? parsed : parsed.records;
+          if (!Array.isArray(incoming)) throw new Error("bad format");
+          const clean = incoming
+            .filter((item) => item && item.id && item.type && item.date && item.time)
+            .map((item) => ({ ...item, updatedAt: item.updatedAt || new Date().toISOString() }));
+          if (!clean.length && incoming.length) throw new Error("empty clean");
+          if (!confirm(`导入 ${clean.length} 条记录？当前记录会被替换。`)) return;
+          state.records = clean;
+          saveRecords(true);
+          renderAll();
+        } catch {
+          toast("导入失败，请选择导出的 JSON 备份");
+        }
+      };
+      reader.readAsText(file, "utf-8");
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    $$(".mode").forEach((button) => button.addEventListener("click", () => setActiveType(button.dataset.type)));
+    $("#recordForm").addEventListener("submit", upsertRecord);
+    $("#cancelEditBtn").addEventListener("click", resetForm);
+    $("#nowBtn").addEventListener("click", setNow);
+    $("#timeInput").addEventListener("change", () => {
+      if (state.activeType === "meal") $("#mealSlot").value = classifyMeal($("#timeInput").value);
+    });
+    $("#saveBtn").addEventListener("click", () => saveRecords(true));
+    $("#exportBtn").addEventListener("click", exportRecords);
+    $("#importBtn").addEventListener("click", () => $("#importFile").click());
+    $("#importFile").addEventListener("change", (event) => {
+      const file = event.target.files[0];
+      if (file) importRecords(file);
+      event.target.value = "";
+    });
+    $("#clearBtn").addEventListener("click", () => {
+      if (!state.records.length) return toast("现在没有记录");
+      if (!confirm("确认清空所有记录？建议先导出备份。")) return;
+      state.records = [];
+      saveRecords(true);
+      renderAll();
+    });
+    $("#prevMonth").addEventListener("click", () => {
+      state.viewDate = new Date(state.viewDate.getFullYear(), state.viewDate.getMonth() - 1, 1);
+      renderCalendar();
+    });
+    $("#nextMonth").addEventListener("click", () => {
+      state.viewDate = new Date(state.viewDate.getFullYear(), state.viewDate.getMonth() + 1, 1);
+      renderCalendar();
+    });
+    $("#todayBtn").addEventListener("click", () => {
+      const today = new Date();
+      state.viewDate = today;
+      state.selectedDate = toDateKey(today);
+      renderAll();
+    });
+    ["keywordInput", "typeFilter", "fromDate", "toDate"].forEach((id) => {
+      $(`#${id}`).addEventListener("input", renderResults);
+      $(`#${id}`).addEventListener("change", renderResults);
+    });
+
+    window.addEventListener("beforeunload", () => {
+      if (state.dirty) saveRecords(false);
+    });
+
+    loadRecords();
+    setNow();
+    setActiveType("meal");
+    renderAll();
   </script>
 </body>
 </html>
