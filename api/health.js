@@ -10,7 +10,10 @@ module.exports = async function handler(req, res) {
       sessionCookieDays: 30,
       accountAdminApi: true,
       persistentAccountStore: serviceMode().persistent,
-      persistentStoreNeeds: serviceMode().persistent ? [] : ["KV_REST_API_URL", "KV_REST_API_TOKEN"],
+      persistentStoreNeeds: serviceMode().persistent ? [] : [
+        "KV_REST_API_URL + KV_REST_API_TOKEN",
+        "or UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN",
+      ],
     },
   });
 };

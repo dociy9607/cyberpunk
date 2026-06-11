@@ -8,6 +8,14 @@ const SESSION_SECRET = process.env.AUTH_JWT_SECRET || DEFAULT_ADMIN_PASSWORD;
 
 let memoryAccounts = null;
 
+function kvUrl() {
+  return process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL || "";
+}
+
+function kvToken() {
+  return process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN || "";
+}
+
 function json(res, status, payload, extraHeaders = {}) {
   res.writeHead(status, {
     "Content-Type": "application/json; charset=utf-8",
@@ -39,14 +47,14 @@ function readBody(req) {
 }
 
 function kvConfigured() {
-  return Boolean(process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN);
+  return Boolean(kvUrl() && kvToken());
 }
 
 async function kvRequest(path, init = {}) {
-  const response = await fetch(`${process.env.KV_REST_API_URL}${path}`, {
+  const response = await fetch(`${kvUrl()}${path}`, {
     ...init,
     headers: {
-      Authorization: `Bearer ${process.env.KV_REST_API_TOKEN}`,
+      Authorization: `Bearer ${kvToken()}`,
       "Content-Type": "application/json",
       ...(init.headers || {}),
     },
@@ -162,6 +170,7 @@ function serviceMode() {
   return {
     persistent: kvConfigured(),
     store: kvConfigured() ? "vercel-kv" : "server-memory-fallback",
+    acceptedEnv: ["KV_REST_API_URL", "KV_REST_API_TOKEN", "UPSTASH_REDIS_REST_URL", "UPSTASH_REDIS_REST_TOKEN"],
   };
 }
 
