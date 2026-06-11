@@ -774,7 +774,7 @@
     const typeName = { meal: "吃饭", poop: "排泄", vomit: "呕吐" };
     const mealName = { breakfast: "早餐", lunch: "午餐", dinner: "晚餐", night: "夜间加餐" };
 
-    const newsItems = [
+    const fallbackNewsItems = [
       {
         source: "Business Insider",
         date: "2026-04-26",
@@ -1080,8 +1080,14 @@
       renderHomeStatus();
     }
 
-    function renderNews() {
-      $("#newsGrid").innerHTML = newsItems.map((item) => `<article class="news-card"><div class="feature-meta">${item.tags.map((tag) => `<span class="tag blue">${escapeHtml(tag)}</span>`).join("")}</div><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.summary)}</p><footer><span>${escapeHtml(item.source)} · ${escapeHtml(item.date)}</span><a href="${item.url}" target="_blank" rel="noreferrer">来源</a></footer></article>`).join("");
+    async function renderNews() {
+      let payload = { asOf: "备用数据", items: fallbackNewsItems };
+      try {
+        payload = await api("/api/commerce-news");
+      } catch {
+        toast("资讯 API 暂不可用，已显示备用内容");
+      }
+      $("#newsGrid").innerHTML = payload.items.map((item) => `<article class="news-card"><div class="feature-meta">${item.tags.map((tag) => `<span class="tag blue">${escapeHtml(tag)}</span>`).join("")}<span class="tag amber">影响：${escapeHtml(item.impact || "中")}</span></div><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.summary)}</p><footer><span>${escapeHtml(item.source)} · ${escapeHtml(item.date)}</span><a href="${item.url}" target="_blank" rel="noreferrer">来源</a></footer></article>`).join("");
     }
 
     async function renderAccounts() {
