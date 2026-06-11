@@ -735,7 +735,7 @@
       <div class="panel-head">
         <div>
           <div class="panel-title">账号管理后台</div>
-          <div class="panel-sub">当前版本为浏览器本地账号库；真实多人云端账号需要接 Supabase/Vercel KV 等持久化服务。</div>
+          <div class="panel-sub">账号管理走服务端 API；配置 Vercel KV 后账号会持久保存，未配置时为后端内存降级。</div>
         </div>
       </div>
       <div class="content-pad admin-layout">
@@ -757,15 +757,13 @@
   <div class="toast" id="toast"></div>
 
   <script>
-    const AUTH_KEY = "dehviz_auth_accounts_v2";
-    const SESSION_KEY = "dehviz_auth_session_v2";
     const STORE_KEY = "qian_dashao_stomach_records_v2";
-    const ADMIN_PASSWORD = "QDS-Admin-2026!";
     const $ = (selector) => document.querySelector(selector);
     const $$ = (selector) => Array.from(document.querySelectorAll(selector));
 
     const state = {
       user: null,
+      service: { persistent: false, store: "unknown" },
       records: [],
       activeType: "meal",
       editingId: null,
@@ -820,33 +818,28 @@
     function toast(message) { const node = $("#toast"); node.textContent = message; node.classList.add("show"); clearTimeout(toast.timer); toast.timer = setTimeout(() => node.classList.remove("show"), 1800); }
     function escapeHtml(value) { return String(value ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;"); }
 
-    async function digest(value) {
-      const bytes = new TextEncoder().encode(value);
-      const hash = await crypto.subtle.digest("SHA-256", bytes);
-      return Array.from(new Uint8Array(hash)).map((b) => b.toString(16).padStart(2, "0")).join("");
+    async function api(path, options = {}) {
+      const response = await fetch(path, {
+        credentials: "include",
+        headers: { "Content-Type": "application/json", ...(options.headers || {}) },
+        ...options,
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        const error = new Error(data.error || "request_failed");
+        error.data = data;
+        throw error;
+      }
+      if (data.service) state.service = data.service;
+      return data;
     }
-
-    async function ensureAccounts() {
-      const raw = localStorage.getItem(AUTH_KEY);
-      if (raw) return JSON.parse(raw);
-      const accounts = [{ username: "admin", role: "admin", passwordHash: await digest(ADMIN_PASSWORD), createdAt: new Date().toISOString() }];
-      localStorage.setItem(AUTH_KEY, JSON.stringify(accounts));
-      return accounts;
-    }
-
-    function saveAccounts(accounts) { localStorage.setItem(AUTH_KEY, JSON.stringify(accounts)); }
-    function getSession() { try { return JSON.parse(localStorage.getItem(SESSION_KEY)); } catch { return null; } }
-    function setSession(account) { localStorage.setItem(SESSION_KEY, JSON.stringify({ username: account.username, role: account.role, expiresAt: Date.now() + 30 * 24 * 60 * 60 * 1000 })); }
-    function clearSession() { localStorage.removeItem(SESSION_KEY); }
 
     async function boot() {
-      await ensureAccounts();
-      const session = getSession();
-      if (session && session.expiresAt > Date.now()) {
-        state.user = session;
+      try {
+        const session = await api("/api/session");
+        state.user = session.user;
         showApp();
-      } else {
-        clearSession();
+      } catch {
         showLogin();
       }
     }
@@ -855,7 +848,8 @@
     function showApp() {
       $("#loginPage").classList.add("hidden");
       $("#appPage").classList.remove("hidden");
-      $("#sessionLine").textContent = `${state.user.username} 已登录，${state.user.role === "admin" ? "管理员" : "普通用户"}，30 天免登录`;
+      const mode = state.service.persistent ? "账号服务：Vercel KV 持久化" : "账号服务：后端内存降级";
+      $("#sessionLine").textContent = `${state.user.username} 已登录，${state.user.role === "admin" ? "管理员" : "普通用户"}，30 天免登录 · ${mode}`;
       loadRecords();
       setNow();
       setActiveType("meal");
@@ -866,17 +860,20 @@
     $("#loginForm").addEventListener("submit", async (event) => {
       event.preventDefault();
       const username = $("#loginUser").value.trim();
-      const passwordHash = await digest($("#loginPass").value);
-      const accounts = await ensureAccounts();
-      const account = accounts.find((item) => item.username === username && item.passwordHash === passwordHash);
-      if (!account) return toast("账号或密码不正确");
-      state.user = { username: account.username, role: account.role };
-      setSession(account);
-      showApp();
+      try {
+        const result = await api("/api/login", {
+          method: "POST",
+          body: JSON.stringify({ username, password: $("#loginPass").value }),
+        });
+        state.user = result.user;
+        showApp();
+      } catch {
+        toast("账号或密码不正确");
+      }
     });
 
-    $("#logoutBtn").addEventListener("click", () => {
-      clearSession();
+    $("#logoutBtn").addEventListener("click", async () => {
+      try { await api("/api/logout", { method: "POST" }); } catch {}
       state.user = null;
       showLogin();
     });
@@ -1094,27 +1091,40 @@
         return;
       }
       $("#accountForm").classList.remove("hidden");
-      const accounts = await ensureAccounts();
-      $("#accountList").innerHTML = accounts.map((account) => `<div class="account-row"><div><strong>${escapeHtml(account.username)}</strong><div class="panel-sub">${account.role} · ${new Date(account.createdAt).toLocaleString()}</div></div><button class="icon-btn" data-user="${escapeHtml(account.username)}" ${account.username === "admin" ? "disabled" : ""}>删</button></div>`).join("");
-      $$("[data-user]").forEach((button) => button.addEventListener("click", async () => {
-        if (!confirm(`删除账号 ${button.dataset.user}？`)) return;
-        const next = (await ensureAccounts()).filter((item) => item.username !== button.dataset.user);
-        saveAccounts(next);
-        renderAccounts();
-      }));
+      try {
+        const result = await api("/api/accounts");
+        const warning = result.service.persistent
+          ? `<div class="tag green" style="margin-bottom:10px">账号库已接 Vercel KV，持久保存</div>`
+          : `<div class="tag amber" style="margin-bottom:10px">账号 API 已启用，但未配置 KV，新增账号可能随服务冷启动丢失</div>`;
+        $("#accountList").innerHTML = warning + result.accounts.map((account) => `<div class="account-row"><div><strong>${escapeHtml(account.username)}</strong><div class="panel-sub">${account.role} · ${new Date(account.createdAt).toLocaleString()}</div></div><button class="icon-btn" data-user="${escapeHtml(account.username)}" ${account.username === "admin" ? "disabled" : ""}>删</button></div>`).join("");
+        $$("[data-user]").forEach((button) => button.addEventListener("click", async () => {
+          if (!confirm(`删除账号 ${button.dataset.user}？`)) return;
+          await api("/api/accounts", {
+            method: "DELETE",
+            body: JSON.stringify({ username: button.dataset.user }),
+          });
+          renderAccounts();
+        }));
+      } catch {
+        $("#accountList").innerHTML = `<div class="empty">账号服务暂时不可用。</div>`;
+      }
     }
 
     $("#accountForm").addEventListener("submit", async (event) => {
       event.preventDefault();
       const username = $("#newUsername").value.trim();
       const password = $("#newPassword").value;
-      const accounts = await ensureAccounts();
-      if (accounts.some((item) => item.username === username)) return toast("账号已存在");
-      accounts.push({ username, role: $("#newRole").value, passwordHash: await digest(password), createdAt: new Date().toISOString() });
-      saveAccounts(accounts);
-      event.target.reset();
-      renderAccounts();
-      toast("账号已创建");
+      try {
+        await api("/api/accounts", {
+          method: "POST",
+          body: JSON.stringify({ username, password, role: $("#newRole").value }),
+        });
+        event.target.reset();
+        renderAccounts();
+        toast("账号已创建");
+      } catch (error) {
+        toast(error.message === "account_exists" ? "账号已存在" : "创建失败");
+      }
     });
 
     $$(".mode").forEach((button) => button.addEventListener("click", () => setActiveType(button.dataset.type)));
