@@ -3,37 +3,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>钱大少养胃记录</title>
+  <title>dehviz.lol 工作台</title>
   <style>
     :root {
-      --ink: #182226;
-      --muted: #64727a;
-      --line: #d8e0dd;
-      --paper: #fbfaf4;
-      --panel: #ffffff;
-      --panel-2: #f2f5ef;
+      --ink: #152024;
+      --muted: #637176;
+      --line: #d9e1dc;
+      --paper: #f7f4ec;
+      --panel: #fffef9;
+      --panel-soft: #eef4ee;
       --green: #1f7a54;
-      --green-soft: #dcefe4;
-      --amber: #c57a1d;
-      --amber-soft: #fff1d7;
+      --green-soft: #dcf0e4;
       --red: #bd3d36;
       --red-soft: #fbe1dd;
       --blue: #2d6677;
       --blue-soft: #dcecf0;
-      --shadow: 0 18px 45px rgba(32, 49, 44, .13);
+      --amber: #b86f18;
+      --amber-soft: #fff0d1;
+      --shadow: 0 18px 45px rgba(33, 47, 43, .14);
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
+      min-height: 100vh;
       color: var(--ink);
       background:
-        linear-gradient(135deg, rgba(31,122,84,.12), transparent 32%),
-        linear-gradient(315deg, rgba(197,122,29,.11), transparent 35%),
+        linear-gradient(130deg, rgba(31, 122, 84, .13), transparent 34%),
+        linear-gradient(315deg, rgba(184, 111, 24, .12), transparent 36%),
         var(--paper);
       font-family: "Microsoft YaHei", "Noto Sans SC", "PingFang SC", sans-serif;
-      min-height: 100vh;
       overflow-x: hidden;
     }
 
@@ -43,59 +43,110 @@
     }
 
     button {
-      border: 0;
       cursor: pointer;
+      border: 0;
+    }
+
+    a { color: inherit; }
+
+    .hidden { display: none !important; }
+
+    .login-page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .login-panel {
+      width: min(920px, 100%);
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      border: 1px solid rgba(217, 225, 220, .95);
+      border-radius: 10px;
+      background: rgba(255, 254, 249, .94);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .login-copy {
+      padding: 36px;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(31,122,84,.18), transparent 36%),
+        linear-gradient(145deg, #fdfbf3, #eaf1ea);
+    }
+
+    .login-copy h1 {
+      margin: 0;
+      font-size: clamp(34px, 5vw, 64px);
+      line-height: .95;
+      letter-spacing: 0;
+      font-weight: 900;
+    }
+
+    .login-copy p {
+      margin: 16px 0 0;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .login-form {
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 14px;
     }
 
     .app {
       width: min(1480px, calc(100vw - 32px));
       margin: 0 auto;
-      padding: 24px 0 28px;
+      padding: 20px 0 32px;
     }
 
     .topbar {
       display: flex;
-      align-items: end;
       justify-content: space-between;
-      gap: 18px;
-      margin-bottom: 18px;
+      align-items: end;
+      gap: 16px;
+      margin-bottom: 16px;
     }
 
     .brand h1 {
       margin: 0;
-      font-size: clamp(28px, 4vw, 54px);
-      line-height: .96;
-      letter-spacing: 0;
+      font-size: clamp(30px, 4vw, 56px);
+      line-height: .95;
       font-weight: 900;
+      letter-spacing: 0;
     }
 
     .brand p {
-      margin: 9px 0 0;
+      margin: 8px 0 0;
       color: var(--muted);
       font-size: 14px;
     }
 
-    .actions {
+    .nav {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-end;
       gap: 8px;
     }
 
-    .btn {
+    .btn, .nav-btn {
       min-height: 40px;
       border-radius: 7px;
       padding: 0 14px;
       color: var(--ink);
       background: var(--panel);
       border: 1px solid var(--line);
-      box-shadow: 0 4px 14px rgba(24,34,38,.06);
+      box-shadow: 0 4px 14px rgba(24, 34, 38, .06);
       white-space: nowrap;
     }
 
-    .btn.primary {
-      color: #fff;
+    .btn.primary, .nav-btn.active {
       background: var(--green);
+      color: #fff;
       border-color: var(--green);
     }
 
@@ -105,17 +156,10 @@
       border-color: var(--red);
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: minmax(360px, 520px) minmax(520px, 1fr);
-      gap: 16px;
-      align-items: start;
-    }
-
     .panel {
-      background: rgba(255,255,255,.9);
-      border: 1px solid rgba(216,224,221,.9);
-      border-radius: 8px;
+      background: rgba(255, 254, 249, .93);
+      border: 1px solid rgba(217, 225, 220, .95);
+      border-radius: 10px;
       box-shadow: var(--shadow);
       overflow: hidden;
       min-width: 0;
@@ -123,31 +167,100 @@
 
     .panel-head {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 12px;
       padding: 14px 16px;
       border-bottom: 1px solid var(--line);
-      background: rgba(242,245,239,.85);
+      background: rgba(238, 244, 238, .8);
     }
 
     .panel-title {
-      font-weight: 900;
       font-size: 17px;
+      font-weight: 900;
     }
 
     .panel-sub {
+      margin-top: 3px;
       color: var(--muted);
       font-size: 12px;
     }
 
-    .entry {
-      padding: 16px;
+    .home-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
     }
+
+    .feature-card {
+      min-height: 230px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(255, 254, 249, .94);
+      box-shadow: var(--shadow);
+    }
+
+    .feature-kicker {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .feature-card h2 {
+      margin: 10px 0 8px;
+      font-size: 24px;
+      line-height: 1.16;
+    }
+
+    .feature-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .feature-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 18px;
+    }
+
+    .tag, .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 24px;
+      border-radius: 6px;
+      border: 1px solid #d6ddd8;
+      background: #f8faf6;
+      color: #59686b;
+      font-size: 12px;
+      font-weight: 900;
+      padding: 0 8px;
+    }
+
+    .tag.green, .pill.ok { color: #fff; background: var(--green); border-color: var(--green); }
+    .tag.blue, .pill.blue { color: #fff; background: var(--blue); border-color: var(--blue); }
+    .tag.red, .pill.bad { color: #fff; background: var(--red); border-color: var(--red); }
+    .tag.amber, .pill.warn { color: #6d4008; background: var(--amber-soft); border-color: #e0ad66; }
+
+    .tool-grid {
+      display: grid;
+      grid-template-columns: minmax(360px, 520px) minmax(520px, 1fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .entry, .search, .content-pad { padding: 16px; }
 
     .mode-row {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 8px;
       margin-bottom: 14px;
     }
@@ -155,29 +268,15 @@
     .mode {
       height: 48px;
       border-radius: 7px;
-      background: #f7f8f3;
+      background: #f8faf6;
       color: var(--ink);
       border: 1px solid var(--line);
-      font-weight: 800;
+      font-weight: 900;
     }
 
-    .mode.active[data-type="meal"] {
-      background: var(--green-soft);
-      color: var(--green);
-      border-color: #9ccaaa;
-    }
-
-    .mode.active[data-type="poop"] {
-      background: var(--blue-soft);
-      color: var(--blue);
-      border-color: #9dbfcc;
-    }
-
-    .mode.active[data-type="vomit"] {
-      background: var(--red-soft);
-      color: var(--red);
-      border-color: #dfa39f;
-    }
+    .mode.active[data-type="meal"] { background: var(--green-soft); color: var(--green); border-color: #9ccaaa; }
+    .mode.active[data-type="poop"] { background: var(--blue-soft); color: var(--blue); border-color: #9dbfcc; }
+    .mode.active[data-type="vomit"] { background: var(--red-soft); color: var(--red); border-color: #dfa39f; }
 
     .form-grid {
       display: grid;
@@ -185,19 +284,16 @@
       gap: 12px;
     }
 
-    .field {
+    label.field {
       display: flex;
       flex-direction: column;
       gap: 6px;
+      color: #3b4c52;
+      font-size: 12px;
+      font-weight: 900;
     }
 
     .field.full { grid-column: 1 / -1; }
-
-    label {
-      color: #3b4c52;
-      font-size: 12px;
-      font-weight: 800;
-    }
 
     input, select, textarea {
       width: 100%;
@@ -217,7 +313,7 @@
 
     input:focus, select:focus, textarea:focus {
       border-color: var(--green);
-      box-shadow: 0 0 0 3px rgba(31,122,84,.14);
+      box-shadow: 0 0 0 3px rgba(31, 122, 84, .14);
     }
 
     .form-actions {
@@ -226,25 +322,22 @@
       margin-top: 14px;
     }
 
-    .form-actions .btn {
-      flex: 1;
-    }
+    .form-actions .btn { flex: 1; }
 
     .search {
       border-top: 1px solid var(--line);
-      padding: 16px;
-      background: rgba(242,245,239,.45);
+      background: rgba(238, 244, 238, .45);
     }
 
     .search-row {
       display: grid;
-      grid-template-columns: 1fr 120px;
+      grid-template-columns: 1fr 118px;
       gap: 8px;
-      margin-bottom: 10px;
+      margin: 10px 0;
     }
 
-    .results {
-      max-height: 318px;
+    .results, .daily-list-box {
+      max-height: 330px;
       overflow: auto;
       border: 1px solid var(--line);
       border-radius: 7px;
@@ -262,47 +355,27 @@
 
     .record:last-child { border-bottom: 0; }
 
-    .record:hover { background: #fbfcf7; }
+    .record-body { min-width: 0; }
+    .record-body strong, .record-body span {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .record-body span { margin-top: 3px; color: var(--muted); font-size: 12px; }
 
     .stamp {
       font-weight: 900;
-      color: #21343a;
       line-height: 1.2;
     }
 
     .stamp small {
       display: block;
-      margin-top: 2px;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .record-body {
-      min-width: 0;
-    }
-
-    .record-body strong {
-      display: block;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      font-size: 14px;
-    }
-
-    .record-body span {
-      display: block;
       color: var(--muted);
       font-size: 12px;
-      margin-top: 3px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
     }
 
-    .mini-actions {
-      display: flex;
-      gap: 6px;
-    }
+    .mini-actions { display: flex; gap: 6px; }
 
     .icon-btn {
       width: 34px;
@@ -315,9 +388,7 @@
       font-weight: 900;
     }
 
-    .calendar-wrap {
-      padding: 14px;
-    }
+    .calendar-wrap { padding: 14px; }
 
     .monthbar {
       display: grid;
@@ -335,7 +406,7 @@
 
     .weekdays, .calendar {
       display: grid;
-      grid-template-columns: repeat(7, 1fr);
+      grid-template-columns: repeat(7, minmax(0, 1fr));
       gap: 7px;
     }
 
@@ -348,36 +419,19 @@
     }
 
     .day {
-      position: relative;
       min-height: 112px;
+      padding: 8px;
+      text-align: left;
       border-radius: 8px;
       border: 1px solid #dce4df;
       background: rgba(255,255,255,.76);
-      padding: 8px;
-      text-align: left;
-      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+      transition: transform .15s ease, box-shadow .15s ease;
     }
 
-    .day:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 24px rgba(33,52,58,.12);
-      border-color: #a7bab2;
-    }
-
-    .day.muted {
-      opacity: .46;
-      background: rgba(247,248,243,.68);
-    }
-
-    .day.today {
-      border-color: var(--green);
-      box-shadow: inset 0 0 0 2px rgba(31,122,84,.18);
-    }
-
-    .day.selected {
-      outline: 3px solid rgba(45,102,119,.18);
-      border-color: var(--blue);
-    }
+    .day:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(33,52,58,.12); }
+    .day.muted { opacity: .46; background: rgba(247,248,243,.68); }
+    .day.today { border-color: var(--green); box-shadow: inset 0 0 0 2px rgba(31,122,84,.18); }
+    .day.selected { outline: 3px solid rgba(45,102,119,.18); border-color: var(--blue); }
 
     .day-number {
       display: flex;
@@ -387,103 +441,96 @@
       margin-bottom: 8px;
     }
 
-    .count {
-      color: var(--muted);
-      font-size: 11px;
-      font-weight: 800;
-    }
-
     .meal-row, .health-row {
       display: flex;
-      gap: 4px;
       flex-wrap: wrap;
+      gap: 4px;
       margin-top: 5px;
     }
 
-    .pill {
-      min-width: 28px;
-      height: 24px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 6px;
-      border: 1px solid #d6ddd8;
-      background: #f5f7f4;
-      color: #839091;
-      font-size: 12px;
-      font-weight: 900;
-    }
-
-    .pill.ok {
-      color: #fff;
-      background: var(--green);
-      border-color: var(--green);
-    }
-
-    .pill.warn {
-      color: #6f430c;
-      background: var(--amber-soft);
-      border-color: #e0ad66;
-    }
-
-    .pill.poop-ok {
-      color: #fff;
-      background: var(--blue);
-      border-color: var(--blue);
-    }
-
-    .pill.bad {
-      color: #fff;
-      background: var(--red);
-      border-color: var(--red);
-    }
-
     .day-detail {
-      margin-top: 12px;
-      border-top: 1px solid var(--line);
-      padding-top: 12px;
       display: grid;
       grid-template-columns: 220px 1fr;
       gap: 12px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
     }
 
-    .daily-score {
-      background: #f8faf6;
+    .score-box, .daily-records {
       border: 1px solid var(--line);
       border-radius: 8px;
+      background: #fff;
       padding: 12px;
-    }
-
-    .daily-score h3, .daily-list h3 {
-      margin: 0 0 10px;
-      font-size: 15px;
+      min-width: 0;
     }
 
     .score-line {
       display: flex;
-      align-items: center;
       justify-content: space-between;
       padding: 8px 0;
-      border-bottom: 1px dashed #d8e0dd;
+      border-bottom: 1px dashed var(--line);
       color: var(--muted);
       font-size: 13px;
     }
 
     .score-line:last-child { border-bottom: 0; }
 
-    .daily-list {
-      min-width: 0;
-      background: #fff;
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .news-card, .account-row {
       border: 1px solid var(--line);
       border-radius: 8px;
-      padding: 12px;
+      background: #fff;
+      padding: 14px;
+    }
+
+    .news-card h3 {
+      margin: 8px 0;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .news-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .news-card footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .admin-layout {
+      display: grid;
+      grid-template-columns: minmax(320px, 420px) 1fr;
+      gap: 14px;
+    }
+
+    .account-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 8px;
     }
 
     .empty {
       color: var(--muted);
-      font-size: 13px;
-      padding: 14px;
       text-align: center;
+      padding: 14px;
+      font-size: 13px;
     }
 
     .toast {
@@ -493,13 +540,13 @@
       transform: translateX(-50%) translateY(20px);
       opacity: 0;
       pointer-events: none;
-      background: #182226;
+      background: #152024;
       color: #fff;
       border-radius: 7px;
       padding: 10px 14px;
       box-shadow: var(--shadow);
       transition: opacity .2s ease, transform .2s ease;
-      z-index: 20;
+      z-index: 50;
     }
 
     .toast.show {
@@ -507,312 +554,348 @@
       transform: translateX(-50%) translateY(0);
     }
 
-    .hidden { display: none !important; }
-
-    @media (max-width: 1050px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width: 1100px) {
+      .home-grid, .tool-grid, .news-grid, .admin-layout { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 720px) {
-      .app {
-        width: calc(100vw - 18px);
-        padding-top: 12px;
-      }
-
-      .topbar {
-        align-items: stretch;
-        flex-direction: column;
-      }
-
-      .actions {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        justify-content: stretch;
-      }
-
-      .actions .btn {
-        width: 100%;
-        padding: 0 10px;
-      }
-
-      .form-grid, .search-row, .day-detail {
-        grid-template-columns: 1fr;
-      }
-
-      .calendar {
-        gap: 5px;
-      }
-
-      .day {
-        min-height: 96px;
-        padding: 6px;
-      }
-
-      .pill {
-        min-width: 24px;
-        height: 22px;
-        font-size: 11px;
-      }
+      .app { width: calc(100vw - 18px); padding-top: 12px; }
+      .topbar { align-items: stretch; flex-direction: column; }
+      .nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .nav .btn, .nav-btn { width: 100%; padding: 0 10px; }
+      .login-panel { grid-template-columns: 1fr; }
+      .login-copy, .login-form { padding: 24px; }
+      .form-grid, .search-row, .day-detail { grid-template-columns: 1fr; }
+      .day { min-height: 96px; padding: 6px; }
+      .pill { min-height: 22px; padding: 0 6px; font-size: 11px; }
     }
   </style>
 </head>
 <body>
-  <main class="app">
+  <section id="loginPage" class="login-page">
+    <div class="login-panel">
+      <div class="login-copy">
+        <h1>dehviz.lol 工作台</h1>
+        <p>卡片式入口统一收纳个人工具。登录后可进入养胃记录、每日跨境电商资讯和账号管理后台。当前账号体系为浏览器本地服务，支持 30 天免登录。</p>
+        <div class="feature-meta">
+          <span class="tag green">30 天会话</span>
+          <span class="tag blue">账号管理</span>
+          <span class="tag amber">本地数据</span>
+        </div>
+      </div>
+      <form id="loginForm" class="login-form">
+        <div class="panel-title">账号密码登录</div>
+        <label class="field">账号<input id="loginUser" autocomplete="username" required></label>
+        <label class="field">密码<input id="loginPass" type="password" autocomplete="current-password" required></label>
+        <button class="btn primary" type="submit">登录</button>
+        <div class="panel-sub">初始后台账号：<strong>admin</strong>，初始密码见交付说明。登录成功后 30 天内免登录。</div>
+      </form>
+    </div>
+  </section>
+
+  <main id="appPage" class="app hidden">
     <header class="topbar">
       <section class="brand">
-        <h1>钱大少养胃记录</h1>
-        <p id="todayLine">记录吃饭、排泄、呕吐；右侧日历自动判断三餐和异常。</p>
+        <h1>dehviz.lol 工作台</h1>
+        <p id="sessionLine">已登录</p>
       </section>
-      <section class="actions">
-        <button class="btn primary" id="saveBtn">保存</button>
-        <button class="btn" id="exportBtn">导出备份</button>
-        <button class="btn" id="importBtn">导入备份</button>
-        <input class="hidden" type="file" id="importFile" accept="application/json,.json">
-        <button class="btn warn" id="clearBtn">清空</button>
-      </section>
+      <nav class="nav">
+        <button class="nav-btn active" data-view="home">首页</button>
+        <button class="nav-btn" data-view="stomach">养胃记录</button>
+        <button class="nav-btn" data-view="commerce">跨境资讯</button>
+        <button class="nav-btn" data-view="admin">账号后台</button>
+        <button class="btn warn" id="logoutBtn">退出</button>
+      </nav>
     </header>
 
-    <section class="grid">
-      <aside class="panel">
-        <div class="panel-head">
+    <section id="homeView">
+      <div class="home-grid">
+        <article class="feature-card">
           <div>
-            <div class="panel-title" id="formTitle">新增记录</div>
-            <div class="panel-sub" id="formSub">默认使用当前时间，可手动调整。</div>
-          </div>
-          <button class="btn" id="nowBtn">现在</button>
-        </div>
-
-        <div class="entry">
-          <div class="mode-row" role="tablist" aria-label="记录类型">
-            <button class="mode active" data-type="meal">吃饭</button>
-            <button class="mode" data-type="poop">排泄</button>
-            <button class="mode" data-type="vomit">呕吐</button>
-          </div>
-
-          <form id="recordForm">
-            <div class="form-grid">
-              <label class="field">
-                日期
-                <input type="date" id="dateInput" required>
-              </label>
-              <label class="field">
-                时间
-                <input type="time" id="timeInput" required>
-              </label>
-
-              <label class="field meal-only">
-                餐段
-                <select id="mealSlot">
-                  <option value="breakfast">早餐</option>
-                  <option value="lunch">午餐</option>
-                  <option value="dinner">晚餐</option>
-                  <option value="night">夜间加餐</option>
-                </select>
-              </label>
-              <label class="field meal-only">
-                食量
-                <select id="mealAmount">
-                  <option value="正常">正常</option>
-                  <option value="偏少">偏少</option>
-                  <option value="偏多">偏多</option>
-                  <option value="拒食">拒食</option>
-                </select>
-              </label>
-              <label class="field full meal-only">
-                吃了什么
-                <textarea id="foodText" placeholder="例如：猫粮 30g、罐头半罐、水、药"></textarea>
-              </label>
-
-              <label class="field poop-only hidden">
-                排泄类型
-                <select id="poopType">
-                  <option value="大便">大便</option>
-                  <option value="小便">小便</option>
-                  <option value="大小便">大小便</option>
-                </select>
-              </label>
-              <label class="field poop-only hidden">
-                状态
-                <select id="poopStatus">
-                  <option value="正常">正常</option>
-                  <option value="偏软">偏软</option>
-                  <option value="稀便">稀便</option>
-                  <option value="便秘">便秘</option>
-                  <option value="带血">带血</option>
-                  <option value="异常">异常</option>
-                </select>
-              </label>
-              <label class="field full poop-only hidden">
-                排泄备注
-                <textarea id="poopNote" placeholder="例如：成型、颜色、次数、尿量、是否费劲"></textarea>
-              </label>
-
-              <label class="field vomit-only hidden">
-                呕吐量
-                <select id="vomitAmount">
-                  <option value="少量">少量</option>
-                  <option value="中等">中等</option>
-                  <option value="大量">大量</option>
-                </select>
-              </label>
-              <label class="field vomit-only hidden">
-                呕吐物
-                <input id="vomitContent" placeholder="例如：未消化粮、黄水、白沫">
-              </label>
-              <label class="field full vomit-only hidden">
-                呕吐备注
-                <textarea id="vomitNote" placeholder="例如：呕吐前后精神、是否连续吐、是否伴随拉稀"></textarea>
-              </label>
+            <div class="feature-kicker">HEALTH LOG</div>
+            <h2>钱大少养胃记录</h2>
+            <p>记录吃饭、排泄、呕吐，月历自动判断三餐是否吃满、排泄是否正常、当天是否呕吐。</p>
+            <div class="feature-meta">
+              <span class="tag green" id="homeMealStatus">今日待记录</span>
+              <span class="tag blue" id="homePoopStatus">排泄待确认</span>
+              <span class="tag red" id="homeVomitStatus">无呕吐</span>
             </div>
-
-            <div class="form-actions">
-              <button class="btn primary" type="submit" id="submitBtn">添加记录</button>
-              <button class="btn" type="button" id="cancelEditBtn">清空表单</button>
-            </div>
-          </form>
-        </div>
-
-        <div class="search">
-          <div class="panel-title">查询与修改</div>
-          <div class="search-row" style="margin-top:10px">
-            <input id="keywordInput" placeholder="搜食物、备注、状态">
-            <select id="typeFilter">
-              <option value="all">全部</option>
-              <option value="meal">吃饭</option>
-              <option value="poop">排泄</option>
-              <option value="vomit">呕吐</option>
-            </select>
           </div>
-          <div class="search-row">
-            <input type="date" id="fromDate">
-            <input type="date" id="toDate">
-          </div>
-          <div class="results" id="results"></div>
-        </div>
-      </aside>
+          <button class="btn primary" data-go="stomach">进入记录</button>
+        </article>
 
-      <section class="panel">
-        <div class="panel-head">
+        <article class="feature-card">
           <div>
-            <div class="panel-title">月历总览</div>
-            <div class="panel-sub">早 / 午 / 晚为三餐；排为正常排泄；吐为当天有呕吐。</div>
+            <div class="feature-kicker">DAILY ECOMMERCE RADAR</div>
+            <h2>每日跨境电商资讯</h2>
+            <p>聚合亚马逊卖家政策、FBA 费用、独立站和 Shopify/AI Commerce 动态，按影响程度给出行动建议。</p>
+            <div class="feature-meta">
+              <span class="tag amber">亚马逊政策</span>
+              <span class="tag blue">独立站</span>
+              <span class="tag green">行动建议</span>
+            </div>
           </div>
-          <button class="btn" id="todayBtn">回到今天</button>
-        </div>
-        <div class="calendar-wrap">
-          <div class="monthbar">
-            <button class="icon-btn" id="prevMonth" title="上个月">‹</button>
-            <div class="month-title" id="monthTitle"></div>
-            <button class="icon-btn" id="nextMonth" title="下个月">›</button>
-          </div>
-          <div class="weekdays">
-            <div>周一</div><div>周二</div><div>周三</div><div>周四</div><div>周五</div><div>周六</div><div>周日</div>
-          </div>
-          <div class="calendar" id="calendar"></div>
+          <button class="btn primary" data-go="commerce">查看资讯</button>
+        </article>
 
-          <div class="day-detail">
-            <section class="daily-score">
-              <h3 id="selectedTitle">当天状态</h3>
-              <div id="selectedScore"></div>
-            </section>
-            <section class="daily-list">
-              <h3>当天记录</h3>
-              <div id="dayRecords"></div>
-            </section>
+        <article class="feature-card">
+          <div>
+            <div class="feature-kicker">ADMIN</div>
+            <h2>账号管理后台</h2>
+            <p>新增普通账号、重置密码、删除账号。后台账号信息保存在当前浏览器，适合个人私用。</p>
+            <div class="feature-meta">
+              <span class="tag blue">管理员</span>
+              <span class="tag amber">本地账号库</span>
+            </div>
           </div>
+          <button class="btn primary" data-go="admin">进入后台</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="stomachView" class="hidden">
+      <div class="tool-grid">
+        <aside class="panel">
+          <div class="panel-head">
+            <div>
+              <div class="panel-title" id="formTitle">新增记录</div>
+              <div class="panel-sub" id="formSub">默认使用当前时间，可手动调整。</div>
+            </div>
+            <button class="btn" id="nowBtn">现在</button>
+          </div>
+          <div class="entry">
+            <div class="mode-row">
+              <button class="mode active" data-type="meal">吃饭</button>
+              <button class="mode" data-type="poop">排泄</button>
+              <button class="mode" data-type="vomit">呕吐</button>
+            </div>
+            <form id="recordForm">
+              <div class="form-grid">
+                <label class="field">日期<input type="date" id="dateInput" required></label>
+                <label class="field">时间<input type="time" id="timeInput" required></label>
+                <label class="field meal-only">餐段<select id="mealSlot"><option value="breakfast">早餐</option><option value="lunch">午餐</option><option value="dinner">晚餐</option><option value="night">夜间加餐</option></select></label>
+                <label class="field meal-only">食量<select id="mealAmount"><option>正常</option><option>偏少</option><option>偏多</option><option>拒食</option></select></label>
+                <label class="field full meal-only">吃了什么<textarea id="foodText" placeholder="例如：猫粮 30g、罐头半罐、水、药"></textarea></label>
+                <label class="field poop-only hidden">排泄类型<select id="poopType"><option>大便</option><option>小便</option><option>大小便</option></select></label>
+                <label class="field poop-only hidden">状态<select id="poopStatus"><option>正常</option><option>偏软</option><option>稀便</option><option>便秘</option><option>带血</option><option>异常</option></select></label>
+                <label class="field full poop-only hidden">排泄备注<textarea id="poopNote" placeholder="例如：成型、颜色、次数、尿量、是否费劲"></textarea></label>
+                <label class="field vomit-only hidden">呕吐量<select id="vomitAmount"><option>少量</option><option>中等</option><option>大量</option></select></label>
+                <label class="field vomit-only hidden">呕吐物<input id="vomitContent" placeholder="例如：未消化粮、黄水、白沫"></label>
+                <label class="field full vomit-only hidden">呕吐备注<textarea id="vomitNote" placeholder="例如：呕吐前后精神、是否连续吐、是否伴随拉稀"></textarea></label>
+              </div>
+              <div class="form-actions">
+                <button class="btn primary" type="submit" id="submitBtn">添加吃饭记录</button>
+                <button class="btn" type="button" id="cancelEditBtn">清空表单</button>
+              </div>
+            </form>
+          </div>
+          <div class="search">
+            <div class="panel-title">查询与修改</div>
+            <div class="search-row"><input id="keywordInput" placeholder="搜食物、备注、状态"><select id="typeFilter"><option value="all">全部</option><option value="meal">吃饭</option><option value="poop">排泄</option><option value="vomit">呕吐</option></select></div>
+            <div class="search-row"><input type="date" id="fromDate"><input type="date" id="toDate"></div>
+            <div class="results" id="results"></div>
+          </div>
+        </aside>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <div class="panel-title">月历总览</div>
+              <div class="panel-sub">早 / 午 / 晚为三餐；排为正常排泄；吐为当天有呕吐。</div>
+            </div>
+            <button class="btn" id="todayBtn">回到今天</button>
+          </div>
+          <div class="calendar-wrap">
+            <div class="monthbar"><button class="icon-btn" id="prevMonth">‹</button><div class="month-title" id="monthTitle"></div><button class="icon-btn" id="nextMonth">›</button></div>
+            <div class="weekdays"><div>周一</div><div>周二</div><div>周三</div><div>周四</div><div>周五</div><div>周六</div><div>周日</div></div>
+            <div class="calendar" id="calendar"></div>
+            <div class="day-detail">
+              <section class="score-box"><h3 id="selectedTitle">当天状态</h3><div id="selectedScore"></div></section>
+              <section class="daily-records"><h3>当天记录</h3><div class="daily-list-box" id="dayRecords"></div></section>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="commerceView" class="panel hidden">
+      <div class="panel-head">
+        <div>
+          <div class="panel-title">每日跨境电商资讯</div>
+          <div class="panel-sub">更新于 2026-06-11，重点关注亚马逊、独立站和 AI Commerce。</div>
         </div>
-      </section>
+        <button class="btn" id="refreshNewsBtn">刷新本地资讯</button>
+      </div>
+      <div class="content-pad">
+        <div class="news-grid" id="newsGrid"></div>
+      </div>
+    </section>
+
+    <section id="adminView" class="panel hidden">
+      <div class="panel-head">
+        <div>
+          <div class="panel-title">账号管理后台</div>
+          <div class="panel-sub">当前版本为浏览器本地账号库；真实多人云端账号需要接 Supabase/Vercel KV 等持久化服务。</div>
+        </div>
+      </div>
+      <div class="content-pad admin-layout">
+        <form id="accountForm" class="panel content-pad">
+          <div class="panel-title">新增账号</div>
+          <label class="field">账号<input id="newUsername" required></label>
+          <label class="field">密码<input id="newPassword" type="password" required minlength="6"></label>
+          <label class="field">角色<select id="newRole"><option value="user">普通用户</option><option value="admin">管理员</option></select></label>
+          <button class="btn primary" type="submit">创建账号</button>
+        </form>
+        <div>
+          <div class="panel-title" style="margin-bottom:10px">账号列表</div>
+          <div id="accountList"></div>
+        </div>
+      </div>
     </section>
   </main>
 
   <div class="toast" id="toast"></div>
 
   <script>
-    const STORE_KEY = "qian_dashao_stomach_records_v1";
+    const AUTH_KEY = "dehviz_auth_accounts_v2";
+    const SESSION_KEY = "dehviz_auth_session_v2";
+    const STORE_KEY = "qian_dashao_stomach_records_v2";
+    const ADMIN_PASSWORD = "QDS-Admin-2026!";
     const $ = (selector) => document.querySelector(selector);
     const $$ = (selector) => Array.from(document.querySelectorAll(selector));
 
     const state = {
+      user: null,
       records: [],
       activeType: "meal",
       editingId: null,
       viewDate: new Date(),
-      selectedDate: toDateKey(new Date()),
-      dirty: false
+      selectedDate: toDateKey(new Date())
     };
 
     const typeName = { meal: "吃饭", poop: "排泄", vomit: "呕吐" };
     const mealName = { breakfast: "早餐", lunch: "午餐", dinner: "晚餐", night: "夜间加餐" };
 
-    function pad(value) {
-      return String(value).padStart(2, "0");
+    const newsItems = [
+      {
+        source: "Business Insider",
+        date: "2026-04-26",
+        tags: ["亚马逊", "现金流", "卖家成本"],
+        title: "亚马逊广告扣款方式改动推迟到 2026-08-01，卖家现金流压力仍是主线",
+        summary: "卖家社区对广告费用从销售回款中优先扣除、DD+7 回款延迟、物流附加费等变化反应强烈。行动建议：重新测算广告现金流、保留 30-45 天安全库存资金。",
+        url: "https://www.businessinsider.com/amazon-sellers-top-frustrations-ad-payments-challenges-eommerce-2026-4"
+      },
+      {
+        source: "Amazon / TechRadar",
+        date: "2026-04-03",
+        tags: ["FBA", "费用", "北美"],
+        title: "FBA 北美 3.5% fuel and logistics surcharge 生效，按履约费计算",
+        summary: "美国、加拿大 FBA 以及部分远程配送服务受影响，Buy with Prime 和 MCF 从 5 月 2 日起受影响。行动建议：按 SKU 尺寸分层复盘毛利，优先处理低毛利大件。",
+        url: "https://www.techradar.com/pro/your-amazon-shop-will-soon-cost-more-3-5-percent-fuel-and-logistics-related-surcharge-added-due-to-iran-war-knock-on-effects"
+      },
+      {
+        source: "Axios",
+        date: "2026-01-11",
+        tags: ["独立站", "Shopify", "AI Commerce"],
+        title: "Google 与 Shopify 推 Universal Commerce Protocol，AI 购物进入交易层",
+        summary: "UCP 让 AI 助手在搜索、Gemini 等场景中完成商品发现、下单与售后连接。行动建议：独立站商品数据、库存、折扣和结账链路要结构化，提前适配 AI 入口。",
+        url: "https://www.axios.com/2026/01/11/google-shopify-ai-shopping-standard-nrf-2026"
+      },
+      {
+        source: "TechRadar",
+        date: "2026-06-04",
+        tags: ["Shopify", "独立站", "运营系统"],
+        title: "Shopify 正从建站工具变成统一商业操作系统",
+        summary: "独立站竞争不只在页面，而在库存、CRM、履约、支付、营销数据能否联动。行动建议：中国卖家做独立站时先补数据治理和履约链路，再谈投放放量。",
+        url: "https://www.techradar.com/pro/in-the-ai-era-is-shopify-the-new-wordpress"
+      }
+    ];
+
+    function pad(value) { return String(value).padStart(2, "0"); }
+    function toDateKey(date) { return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`; }
+    function parseDateKey(key) { const [y, m, d] = key.split("-").map(Number); return new Date(y, m - 1, d); }
+    function nowTime() { const d = new Date(); return `${pad(d.getHours())}:${pad(d.getMinutes())}`; }
+    function uid() { return crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(16).slice(2)}`; }
+    function classifyMeal(time) { const [h, m] = time.split(":").map(Number); const t = h * 60 + m; if (t >= 240 && t < 660) return "breakfast"; if (t >= 660 && t < 960) return "lunch"; if (t >= 960 && t < 1380) return "dinner"; return "night"; }
+    function toast(message) { const node = $("#toast"); node.textContent = message; node.classList.add("show"); clearTimeout(toast.timer); toast.timer = setTimeout(() => node.classList.remove("show"), 1800); }
+    function escapeHtml(value) { return String(value ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;"); }
+
+    async function digest(value) {
+      const bytes = new TextEncoder().encode(value);
+      const hash = await crypto.subtle.digest("SHA-256", bytes);
+      return Array.from(new Uint8Array(hash)).map((b) => b.toString(16).padStart(2, "0")).join("");
     }
 
-    function toDateKey(date) {
-      return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
+    async function ensureAccounts() {
+      const raw = localStorage.getItem(AUTH_KEY);
+      if (raw) return JSON.parse(raw);
+      const accounts = [{ username: "admin", role: "admin", passwordHash: await digest(ADMIN_PASSWORD), createdAt: new Date().toISOString() }];
+      localStorage.setItem(AUTH_KEY, JSON.stringify(accounts));
+      return accounts;
     }
 
-    function nowTime() {
-      const date = new Date();
-      return `${pad(date.getHours())}:${pad(date.getMinutes())}`;
-    }
+    function saveAccounts(accounts) { localStorage.setItem(AUTH_KEY, JSON.stringify(accounts)); }
+    function getSession() { try { return JSON.parse(localStorage.getItem(SESSION_KEY)); } catch { return null; } }
+    function setSession(account) { localStorage.setItem(SESSION_KEY, JSON.stringify({ username: account.username, role: account.role, expiresAt: Date.now() + 30 * 24 * 60 * 60 * 1000 })); }
+    function clearSession() { localStorage.removeItem(SESSION_KEY); }
 
-    function parseDateKey(key) {
-      const [year, month, day] = key.split("-").map(Number);
-      return new Date(year, month - 1, day);
-    }
-
-    function compareDateTime(a, b) {
-      return `${a.date} ${a.time}`.localeCompare(`${b.date} ${b.time}`);
-    }
-
-    function classifyMeal(time) {
-      const [hour, minute] = time.split(":").map(Number);
-      const total = hour * 60 + minute;
-      if (total >= 4 * 60 && total < 11 * 60) return "breakfast";
-      if (total >= 11 * 60 && total < 16 * 60) return "lunch";
-      if (total >= 16 * 60 && total < 23 * 60) return "dinner";
-      return "night";
-    }
-
-    function saveRecords(showMessage = false) {
-      localStorage.setItem(STORE_KEY, JSON.stringify({
-        app: "钱大少养胃记录",
-        version: 1,
-        savedAt: new Date().toISOString(),
-        records: state.records
-      }));
-      state.dirty = false;
-      if (showMessage) toast("已保存到本机浏览器");
-    }
-
-    function loadRecords() {
-      try {
-        const raw = localStorage.getItem(STORE_KEY);
-        if (!raw) return;
-        const parsed = JSON.parse(raw);
-        state.records = Array.isArray(parsed.records) ? parsed.records : [];
-      } catch {
-        state.records = [];
-        toast("读取本地数据失败，已进入空白记录");
+    async function boot() {
+      await ensureAccounts();
+      const session = getSession();
+      if (session && session.expiresAt > Date.now()) {
+        state.user = session;
+        showApp();
+      } else {
+        clearSession();
+        showLogin();
       }
     }
 
-    function markDirty() {
-      state.dirty = true;
-      saveRecords(false);
+    function showLogin() { $("#loginPage").classList.remove("hidden"); $("#appPage").classList.add("hidden"); }
+    function showApp() {
+      $("#loginPage").classList.add("hidden");
+      $("#appPage").classList.remove("hidden");
+      $("#sessionLine").textContent = `${state.user.username} 已登录，${state.user.role === "admin" ? "管理员" : "普通用户"}，30 天免登录`;
+      loadRecords();
+      setNow();
+      setActiveType("meal");
+      routeTo("home");
       renderAll();
     }
 
-    function toast(message) {
-      const node = $("#toast");
-      node.textContent = message;
-      node.classList.add("show");
-      clearTimeout(toast.timer);
-      toast.timer = setTimeout(() => node.classList.remove("show"), 1800);
+    $("#loginForm").addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const username = $("#loginUser").value.trim();
+      const passwordHash = await digest($("#loginPass").value);
+      const accounts = await ensureAccounts();
+      const account = accounts.find((item) => item.username === username && item.passwordHash === passwordHash);
+      if (!account) return toast("账号或密码不正确");
+      state.user = { username: account.username, role: account.role };
+      setSession(account);
+      showApp();
+    });
+
+    $("#logoutBtn").addEventListener("click", () => {
+      clearSession();
+      state.user = null;
+      showLogin();
+    });
+
+    function routeTo(view) {
+      ["home", "stomach", "commerce", "admin"].forEach((name) => {
+        $(`#${name}View`).classList.toggle("hidden", name !== view);
+      });
+      $$(".nav-btn").forEach((button) => button.classList.toggle("active", button.dataset.view === view));
+      if (view === "commerce") renderNews();
+      if (view === "admin") renderAccounts();
     }
+
+    $$(".nav-btn").forEach((button) => button.addEventListener("click", () => routeTo(button.dataset.view)));
+    $$("[data-go]").forEach((button) => button.addEventListener("click", () => routeTo(button.dataset.go)));
+
+    function recordsKey() { return `${STORE_KEY}_${state.user.username}`; }
+    function loadRecords() { try { state.records = JSON.parse(localStorage.getItem(recordsKey())) || []; } catch { state.records = []; } }
+    function saveRecords(show = false) { localStorage.setItem(recordsKey(), JSON.stringify(state.records)); if (show) toast("已保存到本机浏览器"); }
 
     function setNow() {
       const today = new Date();
@@ -849,38 +932,10 @@
     }
 
     function readForm() {
-      const base = {
-        id: state.editingId || crypto.randomUUID(),
-        type: state.activeType,
-        date: $("#dateInput").value,
-        time: $("#timeInput").value,
-        updatedAt: new Date().toISOString()
-      };
-
-      if (base.type === "meal") {
-        return {
-          ...base,
-          mealSlot: $("#mealSlot").value,
-          amount: $("#mealAmount").value,
-          food: $("#foodText").value.trim()
-        };
-      }
-
-      if (base.type === "poop") {
-        return {
-          ...base,
-          poopType: $("#poopType").value,
-          status: $("#poopStatus").value,
-          note: $("#poopNote").value.trim()
-        };
-      }
-
-      return {
-        ...base,
-        amount: $("#vomitAmount").value,
-        content: $("#vomitContent").value.trim(),
-        note: $("#vomitNote").value.trim()
-      };
+      const base = { id: state.editingId || uid(), type: state.activeType, date: $("#dateInput").value, time: $("#timeInput").value, updatedAt: new Date().toISOString() };
+      if (base.type === "meal") return { ...base, mealSlot: $("#mealSlot").value, amount: $("#mealAmount").value, food: $("#foodText").value.trim() };
+      if (base.type === "poop") return { ...base, poopType: $("#poopType").value, status: $("#poopStatus").value, note: $("#poopNote").value.trim() };
+      return { ...base, amount: $("#vomitAmount").value, content: $("#vomitContent").value.trim(), note: $("#vomitNote").value.trim() };
     }
 
     function validate(record) {
@@ -890,15 +945,11 @@
       return "";
     }
 
-    function upsertRecord(event) {
+    $("#recordForm").addEventListener("submit", (event) => {
       event.preventDefault();
       const record = readForm();
       const error = validate(record);
-      if (error) {
-        toast(error);
-        return;
-      }
-
+      if (error) return toast(error);
       if (state.editingId) {
         const index = state.records.findIndex((item) => item.id === state.editingId);
         if (index >= 0) state.records[index] = record;
@@ -907,12 +958,12 @@
         state.records.push(record);
         toast("已添加记录");
       }
-
       state.selectedDate = record.date;
       state.viewDate = parseDateKey(record.date);
-      markDirty();
+      saveRecords();
       resetForm();
-    }
+      renderAll();
+    });
 
     function editRecord(id) {
       const record = state.records.find((item) => item.id === id);
@@ -924,35 +975,19 @@
       $("#cancelEditBtn").textContent = "取消编辑";
       $("#dateInput").value = record.date;
       $("#timeInput").value = record.time;
-
-      if (record.type === "meal") {
-        $("#mealSlot").value = record.mealSlot || classifyMeal(record.time);
-        $("#mealAmount").value = record.amount || "正常";
-        $("#foodText").value = record.food || "";
-      }
-
-      if (record.type === "poop") {
-        $("#poopType").value = record.poopType || "大便";
-        $("#poopStatus").value = record.status || "正常";
-        $("#poopNote").value = record.note || "";
-      }
-
-      if (record.type === "vomit") {
-        $("#vomitAmount").value = record.amount || "少量";
-        $("#vomitContent").value = record.content || "";
-        $("#vomitNote").value = record.note || "";
-      }
-
+      if (record.type === "meal") { $("#mealSlot").value = record.mealSlot || classifyMeal(record.time); $("#mealAmount").value = record.amount || "正常"; $("#foodText").value = record.food || ""; }
+      if (record.type === "poop") { $("#poopType").value = record.poopType || "大便"; $("#poopStatus").value = record.status || "正常"; $("#poopNote").value = record.note || ""; }
+      if (record.type === "vomit") { $("#vomitAmount").value = record.amount || "少量"; $("#vomitContent").value = record.content || ""; $("#vomitNote").value = record.note || ""; }
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
     function deleteRecord(id) {
       const record = state.records.find((item) => item.id === id);
-      if (!record) return;
-      if (!confirm(`删除这条${typeName[record.type]}记录？`)) return;
+      if (!record || !confirm(`删除这条${typeName[record.type]}记录？`)) return;
       state.records = state.records.filter((item) => item.id !== id);
       if (state.editingId === id) resetForm();
-      markDirty();
+      saveRecords();
+      renderAll();
       toast("已删除记录");
     }
 
@@ -961,27 +996,18 @@
       const meals = new Set(items.filter((item) => item.type === "meal").map((item) => item.mealSlot || classifyMeal(item.time)));
       const poopItems = items.filter((item) => item.type === "poop");
       const vomitItems = items.filter((item) => item.type === "vomit");
-      const abnormalPoop = poopItems.some((item) => item.status && item.status !== "正常");
-      return {
-        items,
-        meals,
-        poopCount: poopItems.length,
-        poopNormal: poopItems.length > 0 && !abnormalPoop,
-        poopAbnormal: abnormalPoop,
-        vomitCount: vomitItems.length
-      };
+      const poopAbnormal = poopItems.some((item) => item.status && item.status !== "正常");
+      return { items, meals, poopNormal: poopItems.length > 0 && !poopAbnormal, poopAbnormal, vomitCount: vomitItems.length };
     }
 
     function renderCalendar() {
       const year = state.viewDate.getFullYear();
       const month = state.viewDate.getMonth();
       $("#monthTitle").textContent = `${year}年${month + 1}月`;
-
       const first = new Date(year, month, 1);
       const mondayIndex = (first.getDay() + 6) % 7;
       const start = new Date(year, month, 1 - mondayIndex);
       const todayKey = toDateKey(new Date());
-
       $("#calendar").innerHTML = "";
       for (let i = 0; i < 42; i++) {
         const date = new Date(start);
@@ -993,70 +1019,26 @@
         if (date.getMonth() !== month) button.classList.add("muted");
         if (key === todayKey) button.classList.add("today");
         if (key === state.selectedDate) button.classList.add("selected");
-        button.type = "button";
-        button.dataset.date = key;
-        button.innerHTML = `
-          <div class="day-number">
-            <span>${date.getDate()}</span>
-            <span class="count">${stats.items.length ? stats.items.length + "条" : ""}</span>
-          </div>
-          <div class="meal-row">
-            ${mealPill("早", stats.meals.has("breakfast"))}
-            ${mealPill("午", stats.meals.has("lunch"))}
-            ${mealPill("晚", stats.meals.has("dinner"))}
-          </div>
-          <div class="health-row">
-            <span class="pill ${stats.poopNormal ? "poop-ok" : stats.poopAbnormal ? "warn" : ""}">排</span>
-            <span class="pill ${stats.vomitCount > 0 ? "bad" : ""}">吐</span>
-          </div>
-        `;
-        button.addEventListener("click", () => {
-          state.selectedDate = key;
-          state.viewDate = parseDateKey(key);
-          renderAll();
-        });
+        button.innerHTML = `<div class="day-number"><span>${date.getDate()}</span><span>${stats.items.length ? stats.items.length + "条" : ""}</span></div><div class="meal-row">${mealPill("早", stats.meals.has("breakfast"))}${mealPill("午", stats.meals.has("lunch"))}${mealPill("晚", stats.meals.has("dinner"))}</div><div class="health-row"><span class="pill ${stats.poopNormal ? "blue" : stats.poopAbnormal ? "warn" : ""}">排</span><span class="pill ${stats.vomitCount ? "bad" : ""}">吐</span></div>`;
+        button.addEventListener("click", () => { state.selectedDate = key; state.viewDate = parseDateKey(key); renderAll(); });
         $("#calendar").appendChild(button);
       }
     }
 
-    function mealPill(text, ok) {
-      return `<span class="pill ${ok ? "ok" : ""}">${text}</span>`;
-    }
+    function mealPill(text, ok) { return `<span class="pill ${ok ? "ok" : ""}">${text}</span>`; }
+    function compareDateTime(a, b) { return `${a.date} ${a.time}`.localeCompare(`${b.date} ${b.time}`); }
 
     function describeRecord(record) {
-      if (record.type === "meal") {
-        return {
-          title: `${mealName[record.mealSlot] || "加餐"} · ${record.food}`,
-          meta: `食量：${record.amount || "未填"}`
-        };
-      }
-      if (record.type === "poop") {
-        return {
-          title: `${record.poopType || "排泄"} · ${record.status || "未填"}`,
-          meta: record.note || "无备注"
-        };
-      }
-      return {
-        title: `呕吐 · ${record.amount || "未填"} · ${record.content || "未填呕吐物"}`,
-        meta: record.note || "无备注"
-      };
+      if (record.type === "meal") return { title: `${mealName[record.mealSlot] || "加餐"} · ${record.food}`, meta: `食量：${record.amount || "未填"}` };
+      if (record.type === "poop") return { title: `${record.poopType || "排泄"} · ${record.status || "未填"}`, meta: record.note || "无备注" };
+      return { title: `呕吐 · ${record.amount || "未填"} · ${record.content || "未填呕吐物"}`, meta: record.note || "无备注" };
     }
 
     function recordNode(record) {
       const info = describeRecord(record);
       const node = document.createElement("div");
       node.className = "record";
-      node.innerHTML = `
-        <div class="stamp">${record.time}<small>${typeName[record.type]}</small></div>
-        <div class="record-body">
-          <strong>${escapeHtml(info.title)}</strong>
-          <span>${escapeHtml(record.date)} · ${escapeHtml(info.meta)}</span>
-        </div>
-        <div class="mini-actions">
-          <button class="icon-btn" title="修改" data-edit="${record.id}">改</button>
-          <button class="icon-btn" title="删除" data-delete="${record.id}">删</button>
-        </div>
-      `;
+      node.innerHTML = `<div class="stamp">${record.time}<small>${typeName[record.type]}</small></div><div class="record-body"><strong>${escapeHtml(info.title)}</strong><span>${escapeHtml(record.date)} · ${escapeHtml(info.meta)}</span></div><div class="mini-actions"><button class="icon-btn" data-edit="${record.id}">改</button><button class="icon-btn" data-delete="${record.id}">删</button></div>`;
       node.querySelector("[data-edit]").addEventListener("click", () => editRecord(record.id));
       node.querySelector("[data-delete]").addEventListener("click", () => deleteRecord(record.id));
       return node;
@@ -1065,21 +1047,11 @@
     function renderDayDetail() {
       const stats = dayStats(state.selectedDate);
       $("#selectedTitle").textContent = `${state.selectedDate} 状态`;
-      $("#selectedScore").innerHTML = `
-        <div class="score-line"><span>早餐</span><strong>${stats.meals.has("breakfast") ? "已吃" : "未记录"}</strong></div>
-        <div class="score-line"><span>午餐</span><strong>${stats.meals.has("lunch") ? "已吃" : "未记录"}</strong></div>
-        <div class="score-line"><span>晚餐</span><strong>${stats.meals.has("dinner") ? "已吃" : "未记录"}</strong></div>
-        <div class="score-line"><span>排泄</span><strong>${stats.poopNormal ? "正常" : stats.poopAbnormal ? "异常" : "未记录"}</strong></div>
-        <div class="score-line"><span>呕吐</span><strong>${stats.vomitCount > 0 ? stats.vomitCount + "次" : "无记录"}</strong></div>
-      `;
-
+      $("#selectedScore").innerHTML = `<div class="score-line"><span>早餐</span><strong>${stats.meals.has("breakfast") ? "已吃" : "未记录"}</strong></div><div class="score-line"><span>午餐</span><strong>${stats.meals.has("lunch") ? "已吃" : "未记录"}</strong></div><div class="score-line"><span>晚餐</span><strong>${stats.meals.has("dinner") ? "已吃" : "未记录"}</strong></div><div class="score-line"><span>排泄</span><strong>${stats.poopNormal ? "正常" : stats.poopAbnormal ? "异常" : "未记录"}</strong></div><div class="score-line"><span>呕吐</span><strong>${stats.vomitCount ? stats.vomitCount + "次" : "无记录"}</strong></div>`;
       const list = $("#dayRecords");
       list.innerHTML = "";
       const records = stats.items.sort(compareDateTime);
-      if (!records.length) {
-        list.innerHTML = `<div class="empty">当天还没有记录。</div>`;
-        return;
-      }
+      if (!records.length) { list.innerHTML = `<div class="empty">当天还没有记录。</div>`; return; }
       records.forEach((record) => list.appendChild(recordNode(record)));
     }
 
@@ -1088,131 +1060,74 @@
       const type = $("#typeFilter").value;
       const from = $("#fromDate").value;
       const to = $("#toDate").value;
-
-      const records = state.records
-        .filter((record) => type === "all" || record.type === type)
-        .filter((record) => !from || record.date >= from)
-        .filter((record) => !to || record.date <= to)
-        .filter((record) => {
-          if (!keyword) return true;
-          return JSON.stringify(record).toLowerCase().includes(keyword);
-        })
-        .sort((a, b) => compareDateTime(b, a));
-
+      const records = state.records.filter((record) => type === "all" || record.type === type).filter((record) => !from || record.date >= from).filter((record) => !to || record.date <= to).filter((record) => !keyword || JSON.stringify(record).toLowerCase().includes(keyword)).sort((a, b) => compareDateTime(b, a));
       const box = $("#results");
       box.innerHTML = "";
-      if (!records.length) {
-        box.innerHTML = `<div class="empty">没有查到记录。</div>`;
-        return;
-      }
+      if (!records.length) { box.innerHTML = `<div class="empty">没有查到记录。</div>`; return; }
       records.forEach((record) => box.appendChild(recordNode(record)));
     }
 
+    function renderHomeStatus() {
+      const stats = dayStats(toDateKey(new Date()));
+      const mealCount = ["breakfast", "lunch", "dinner"].filter((key) => stats.meals.has(key)).length;
+      $("#homeMealStatus").textContent = mealCount === 3 ? "今日三餐已满" : `今日 ${mealCount}/3 餐`;
+      $("#homePoopStatus").textContent = stats.poopNormal ? "排泄正常" : stats.poopAbnormal ? "排泄异常" : "排泄待确认";
+      $("#homePoopStatus").className = `tag ${stats.poopNormal ? "blue" : stats.poopAbnormal ? "amber" : "blue"}`;
+      $("#homeVomitStatus").textContent = stats.vomitCount ? `呕吐 ${stats.vomitCount} 次` : "无呕吐";
+    }
+
     function renderAll() {
-      $("#todayLine").textContent = `今天是 ${toDateKey(new Date())}，当前共有 ${state.records.length} 条记录。`;
       renderCalendar();
       renderDayDetail();
       renderResults();
+      renderHomeStatus();
     }
 
-    function exportRecords() {
-      saveRecords(false);
-      const data = JSON.stringify({
-        app: "钱大少养胃记录",
-        version: 1,
-        exportedAt: new Date().toISOString(),
-        records: state.records
-      }, null, 2);
-      const blob = new Blob([data], { type: "application/json;charset=utf-8" });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = `钱大少养胃记录-${toDateKey(new Date())}.json`;
-      link.click();
-      URL.revokeObjectURL(url);
-      toast("已导出备份文件");
+    function renderNews() {
+      $("#newsGrid").innerHTML = newsItems.map((item) => `<article class="news-card"><div class="feature-meta">${item.tags.map((tag) => `<span class="tag blue">${escapeHtml(tag)}</span>`).join("")}</div><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.summary)}</p><footer><span>${escapeHtml(item.source)} · ${escapeHtml(item.date)}</span><a href="${item.url}" target="_blank" rel="noreferrer">来源</a></footer></article>`).join("");
     }
 
-    function importRecords(file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        try {
-          const parsed = JSON.parse(reader.result);
-          const incoming = Array.isArray(parsed) ? parsed : parsed.records;
-          if (!Array.isArray(incoming)) throw new Error("bad format");
-          const clean = incoming
-            .filter((item) => item && item.id && item.type && item.date && item.time)
-            .map((item) => ({ ...item, updatedAt: item.updatedAt || new Date().toISOString() }));
-          if (!clean.length && incoming.length) throw new Error("empty clean");
-          if (!confirm(`导入 ${clean.length} 条记录？当前记录会被替换。`)) return;
-          state.records = clean;
-          saveRecords(true);
-          renderAll();
-        } catch {
-          toast("导入失败，请选择导出的 JSON 备份");
-        }
-      };
-      reader.readAsText(file, "utf-8");
+    async function renderAccounts() {
+      if (state.user.role !== "admin") {
+        $("#accountList").innerHTML = `<div class="empty">当前账号不是管理员。</div>`;
+        $("#accountForm").classList.add("hidden");
+        return;
+      }
+      $("#accountForm").classList.remove("hidden");
+      const accounts = await ensureAccounts();
+      $("#accountList").innerHTML = accounts.map((account) => `<div class="account-row"><div><strong>${escapeHtml(account.username)}</strong><div class="panel-sub">${account.role} · ${new Date(account.createdAt).toLocaleString()}</div></div><button class="icon-btn" data-user="${escapeHtml(account.username)}" ${account.username === "admin" ? "disabled" : ""}>删</button></div>`).join("");
+      $$("[data-user]").forEach((button) => button.addEventListener("click", async () => {
+        if (!confirm(`删除账号 ${button.dataset.user}？`)) return;
+        const next = (await ensureAccounts()).filter((item) => item.username !== button.dataset.user);
+        saveAccounts(next);
+        renderAccounts();
+      }));
     }
 
-    function escapeHtml(value) {
-      return String(value ?? "")
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-    }
+    $("#accountForm").addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const username = $("#newUsername").value.trim();
+      const password = $("#newPassword").value;
+      const accounts = await ensureAccounts();
+      if (accounts.some((item) => item.username === username)) return toast("账号已存在");
+      accounts.push({ username, role: $("#newRole").value, passwordHash: await digest(password), createdAt: new Date().toISOString() });
+      saveAccounts(accounts);
+      event.target.reset();
+      renderAccounts();
+      toast("账号已创建");
+    });
 
     $$(".mode").forEach((button) => button.addEventListener("click", () => setActiveType(button.dataset.type)));
-    $("#recordForm").addEventListener("submit", upsertRecord);
     $("#cancelEditBtn").addEventListener("click", resetForm);
     $("#nowBtn").addEventListener("click", setNow);
-    $("#timeInput").addEventListener("change", () => {
-      if (state.activeType === "meal") $("#mealSlot").value = classifyMeal($("#timeInput").value);
-    });
-    $("#saveBtn").addEventListener("click", () => saveRecords(true));
-    $("#exportBtn").addEventListener("click", exportRecords);
-    $("#importBtn").addEventListener("click", () => $("#importFile").click());
-    $("#importFile").addEventListener("change", (event) => {
-      const file = event.target.files[0];
-      if (file) importRecords(file);
-      event.target.value = "";
-    });
-    $("#clearBtn").addEventListener("click", () => {
-      if (!state.records.length) return toast("现在没有记录");
-      if (!confirm("确认清空所有记录？建议先导出备份。")) return;
-      state.records = [];
-      saveRecords(true);
-      renderAll();
-    });
-    $("#prevMonth").addEventListener("click", () => {
-      state.viewDate = new Date(state.viewDate.getFullYear(), state.viewDate.getMonth() - 1, 1);
-      renderCalendar();
-    });
-    $("#nextMonth").addEventListener("click", () => {
-      state.viewDate = new Date(state.viewDate.getFullYear(), state.viewDate.getMonth() + 1, 1);
-      renderCalendar();
-    });
-    $("#todayBtn").addEventListener("click", () => {
-      const today = new Date();
-      state.viewDate = today;
-      state.selectedDate = toDateKey(today);
-      renderAll();
-    });
-    ["keywordInput", "typeFilter", "fromDate", "toDate"].forEach((id) => {
-      $(`#${id}`).addEventListener("input", renderResults);
-      $(`#${id}`).addEventListener("change", renderResults);
-    });
+    $("#timeInput").addEventListener("change", () => { if (state.activeType === "meal") $("#mealSlot").value = classifyMeal($("#timeInput").value); });
+    ["keywordInput", "typeFilter", "fromDate", "toDate"].forEach((id) => { $(`#${id}`).addEventListener("input", renderResults); $(`#${id}`).addEventListener("change", renderResults); });
+    $("#prevMonth").addEventListener("click", () => { state.viewDate = new Date(state.viewDate.getFullYear(), state.viewDate.getMonth() - 1, 1); renderCalendar(); });
+    $("#nextMonth").addEventListener("click", () => { state.viewDate = new Date(state.viewDate.getFullYear(), state.viewDate.getMonth() + 1, 1); renderCalendar(); });
+    $("#todayBtn").addEventListener("click", () => { const today = new Date(); state.viewDate = today; state.selectedDate = toDateKey(today); renderAll(); });
+    $("#refreshNewsBtn").addEventListener("click", () => { renderNews(); toast("已刷新本地资讯"); });
 
-    window.addEventListener("beforeunload", () => {
-      if (state.dirty) saveRecords(false);
-    });
-
-    loadRecords();
-    setNow();
-    setActiveType("meal");
-    renderAll();
+    boot();
   </script>
 </body>
 </html>
