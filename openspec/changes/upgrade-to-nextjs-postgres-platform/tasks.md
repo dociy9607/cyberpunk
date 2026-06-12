@@ -2,9 +2,9 @@
 
 ## 1. Decision and Setup
 
-- [ ] 1.1 Confirm Supabase as the first Postgres provider.
-- [ ] 1.2 Create or log in to Supabase account with user confirmation.
-- [ ] 1.3 Create Supabase project on free plan unless user explicitly approves paid plan.
+- [x] 1.1 Confirm Supabase as the first Postgres provider.
+- [x] 1.2 Create or log in to Supabase account with user confirmation.
+- [x] 1.3 Create Supabase project on free plan unless user explicitly approves paid plan.
 - [ ] 1.4 Record required environment variables for Vercel.
 
 ## 2. Project Migration

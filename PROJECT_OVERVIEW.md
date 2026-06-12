@@ -58,6 +58,19 @@
 - 换电脑、换浏览器、清理浏览器数据会丢
 - 如果以后需要手机和电脑同步，需要把养胃记录也改成后端数据库保存
 
+## Supabase/Postgres 升级准备
+
+已创建 Supabase 免费组织和项目，用于后续正规化升级到 `Next.js + TypeScript + Postgres`。
+
+- Supabase 组织：`dociy9607's Org`
+- Supabase 项目：`dehviz-lol`
+- Supabase Project ID：`wxhgiwcrvfymneypdvvv`
+- Supabase Project URL：`https://wxhgiwcrvfymneypdvvv.supabase.co`
+- 数据库区域：`East US (North Virginia) / us-east-1`
+- 当前计划：Free
+
+注意：数据库密码、service role key、连接字符串等敏感信息不要写入 GitHub。需要时应从 Supabase Dashboard 或用户本地密码记录中获取。
+
 ## 推荐开发流程
 
 1. 先把新需求说清楚：要加什么、谁用、做到什么程度算完成。
