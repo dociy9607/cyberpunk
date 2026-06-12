@@ -8,12 +8,28 @@ const SESSION_SECRET = process.env.AUTH_JWT_SECRET || DEFAULT_ADMIN_PASSWORD;
 
 let memoryAccounts = null;
 
+const KV_URL_ENV_KEYS = [
+  "KV_REST_API_URL",
+  "UPSTASH_REDIS_REST_URL",
+  "UPSTASH_REDIS_REST_KV_REST_API_URL",
+];
+
+const KV_TOKEN_ENV_KEYS = [
+  "KV_REST_API_TOKEN",
+  "UPSTASH_REDIS_REST_TOKEN",
+  "UPSTASH_REDIS_REST_KV_REST_API_TOKEN",
+];
+
+function firstEnv(keys) {
+  return keys.map((key) => process.env[key]).find(Boolean) || "";
+}
+
 function kvUrl() {
-  return process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL || "";
+  return firstEnv(KV_URL_ENV_KEYS);
 }
 
 function kvToken() {
-  return process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN || "";
+  return firstEnv(KV_TOKEN_ENV_KEYS);
 }
 
 function json(res, status, payload, extraHeaders = {}) {
@@ -169,8 +185,8 @@ function clearCookie() {
 function serviceMode() {
   return {
     persistent: kvConfigured(),
-    store: kvConfigured() ? "vercel-kv" : "server-memory-fallback",
-    acceptedEnv: ["KV_REST_API_URL", "KV_REST_API_TOKEN", "UPSTASH_REDIS_REST_URL", "UPSTASH_REDIS_REST_TOKEN"],
+    store: kvConfigured() ? "upstash-rest" : "server-memory-fallback",
+    acceptedEnv: [...KV_URL_ENV_KEYS, ...KV_TOKEN_ENV_KEYS],
   };
 }
 

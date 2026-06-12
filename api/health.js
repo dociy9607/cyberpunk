@@ -13,6 +13,7 @@ module.exports = async function handler(req, res) {
       persistentStoreNeeds: serviceMode().persistent ? [] : [
         "KV_REST_API_URL + KV_REST_API_TOKEN",
         "or UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN",
+        "or UPSTASH_REDIS_REST_KV_REST_API_URL + UPSTASH_REDIS_REST_KV_REST_API_TOKEN",
       ],
     },
   });
