@@ -34,7 +34,7 @@
 - [x] 5.1 Configure Vercel environment variables.
 - [ ] 5.2 Deploy Preview and verify before Production.
 - [ ] 5.3 Add monitoring and basic error logging.
-- [ ] 5.4 Document runbook for future changes.
+- [x] 5.4 Document runbook for future changes.
 
 ## 6. Verification
 
