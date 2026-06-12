@@ -1,0 +1,7 @@
+project: dehviz-lol-workbench
+owner: DEHVIZ
+repo: https://github.com/dociy9607/cyberpunk
+production_url: https://www.dehviz.lol/
+deployment: vercel
+default_branch: master
+spec_language: zh-CN
