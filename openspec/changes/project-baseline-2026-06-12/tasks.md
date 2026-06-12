@@ -14,4 +14,4 @@
 ## 3. Verification
 
 - [x] 3.1 Verify files exist.
-- [ ] 3.2 Commit and push documentation to GitHub if appropriate.
+- [x] 3.2 Commit and push documentation to GitHub if appropriate.
