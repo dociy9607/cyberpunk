@@ -18,7 +18,7 @@ import {
   Wrench,
 } from "lucide-react";
 import { FormEvent, useEffect, useMemo, useState } from "react";
-import type { HealthRecord, SafeAccount, ServiceMode, UserRole } from "@/lib/types";
+import type { CommerceNewsBrief, HealthRecord, SafeAccount, ServiceMode, UserRole } from "@/lib/types";
 
 type View = "home" | "health" | "commerce" | "projects" | "ai" | "admin";
 type Session = { username: string; role: UserRole };
@@ -35,11 +35,15 @@ const fallbackService: ServiceMode = {
   supabaseConfigured: false,
 };
 
-const newsItems = [
-  { source: "Amazon", title: "亚马逊政策观察", summary: "后续接入定时采集和后台审核，沉淀卖家政策变化。", tag: "亚马逊" },
-  { source: "DTC", title: "独立站运营雷达", summary: "关注 Shopify、广告投放、支付、物流和站外流量。", tag: "独立站" },
-  { source: "OEM AI", title: "AI 产品接入预留", summary: "数字人、智能客服和 AI 获客产品会统一走 integrations 模块。", tag: "AI" },
-];
+const fallbackCommerceBrief: CommerceNewsBrief = {
+  date: "loading",
+  displayDate: "加载中",
+  generatedAt: "",
+  researchWindow: "正在读取每日跨境电商资讯。",
+  observation: ["正在连接资讯接口。"],
+  verificationNotes: ["资讯会保留原文链接和页面显示时间。"],
+  items: [],
+};
 
 function pad(value: number) {
   return String(value).padStart(2, "0");
@@ -133,6 +137,8 @@ export function AppShell() {
   const [filterType, setFilterType] = useState("all");
   const [accounts, setAccounts] = useState<SafeAccount[]>([]);
   const [loginMessage, setLoginMessage] = useState("");
+  const [commerceBriefs, setCommerceBriefs] = useState<CommerceNewsBrief[]>([fallbackCommerceBrief]);
+  const [commerceLoading, setCommerceLoading] = useState(false);
 
   function notify(message: string) {
     setToast(message);
@@ -150,6 +156,16 @@ export function AppShell() {
     const payload = await api<{ accounts: SafeAccount[]; service: ServiceMode }>("/api/accounts");
     setAccounts(payload.accounts);
     setService(payload.service);
+  }
+
+  async function refreshCommerceNews() {
+    setCommerceLoading(true);
+    try {
+      const payload = await api<{ briefs: CommerceNewsBrief[] }>("/api/commerce-news");
+      setCommerceBriefs(payload.briefs.length ? payload.briefs : [fallbackCommerceBrief]);
+    } finally {
+      setCommerceLoading(false);
+    }
   }
 
   useEffect(() => {
@@ -171,6 +187,10 @@ export function AppShell() {
   useEffect(() => {
     if (view === "admin") refreshAccounts().catch(() => notify("账号后台暂时不可用"));
   }, [view, session]);
+
+  useEffect(() => {
+    if (view === "commerce") refreshCommerceNews().catch(() => notify("跨境资讯暂时不可用"));
+  }, [view]);
 
   const statsByDay = useMemo(() => {
     const map = new Map<string, HealthRecord[]>();
@@ -429,7 +449,7 @@ export function AppShell() {
           </section>
         )}
 
-        {view === "commerce" && <SimpleCards title="每日跨境电商资讯" items={newsItems} icon={<Newspaper />} />}
+        {view === "commerce" && <CommerceNewsView briefs={commerceBriefs} loading={commerceLoading} onRefresh={refreshCommerceNews} />}
         {view === "projects" && <ProjectsView />}
         {view === "ai" && <AiView />}
         {view === "admin" && (
@@ -493,8 +513,66 @@ function RecordRow({ record, onEdit, onDelete }: { record: HealthRecord; onEdit:
   return <div className="record-row"><div className="stamp">{record.time}<small>{typeName[record.type]}</small></div><div><strong>{info.title}</strong><span>{record.date} · {info.meta}</span></div><div className="row-actions"><button onClick={() => onEdit(record)}>改</button><button onClick={() => onDelete(record.id)}>删</button></div></div>;
 }
 
-function SimpleCards({ title, items, icon }: { title: string; items: typeof newsItems; icon: React.ReactNode }) {
-  return <section className="panel"><div className="panel-head"><h2>{title}</h2>{icon}</div><div className="card-grid">{items.map((item) => <article className="info-card" key={item.title}><span>{item.source}</span><strong>{item.title}</strong><p>{item.summary}</p><em>{item.tag}</em></article>)}</div></section>;
+function CommerceNewsView({ briefs, loading, onRefresh }: { briefs: CommerceNewsBrief[]; loading: boolean; onRefresh: () => void }) {
+  const latest = briefs[0] || fallbackCommerceBrief;
+  const history = briefs.slice(1);
+  return (
+    <section className="commerce-panel">
+      <div className="panel commerce-hero">
+        <div className="panel-head">
+          <div>
+            <span className="eyebrow">DAILY ECOMMERCE RADAR</span>
+            <h2>每日跨境电商资讯简报</h2>
+            <p>{latest.displayDate} · {latest.researchWindow}</p>
+          </div>
+          <button className="ghost-btn" onClick={onRefresh} disabled={loading}>
+            <Newspaper size={17} /> {loading ? "刷新中" : "刷新"}
+          </button>
+        </div>
+        <div className="brief-note">
+          <strong>今日重点观察</strong>
+          {latest.observation.map((item) => <p key={item}>{item}</p>)}
+        </div>
+      </div>
+
+      <div className="news-card-grid">
+        {latest.items.map((item, index) => (
+          <article className="news-brief-card" key={item.id}>
+            <div className="feature-meta">
+              <span className={`tag ${item.priority === "high" ? "amber" : "blue"}`}>#{index + 1}</span>
+              <span className="tag blue">{item.category}</span>
+              <span className="tag">{item.publishedAt}</span>
+            </div>
+            <h3>{item.title}</h3>
+            <p>{item.summary}</p>
+            <div className="news-card-section">
+              <strong>对卖家的影响</strong>
+              <span>{item.sellerImpact}</span>
+            </div>
+            <div className="news-card-section">
+              <strong>建议动作</strong>
+              <span>{item.recommendedAction}</span>
+            </div>
+            <footer>
+              <span>{item.source}</span>
+              <a href={item.originalUrl} target="_blank" rel="noreferrer">原文链接</a>
+            </footer>
+          </article>
+        ))}
+      </div>
+
+      <div className="panel commerce-history">
+        <div>
+          <h3>验真说明</h3>
+          {latest.verificationNotes.map((note) => <p key={note}>{note}</p>)}
+        </div>
+        <div>
+          <h3>历史记录</h3>
+          {history.length ? history.map((brief) => <p key={brief.date}>{brief.displayDate} · {brief.items.length} 条</p>) : <p>后续每日更新会保留在这里。</p>}
+        </div>
+      </div>
+    </section>
+  );
 }
 
 function ProjectsView() {
@@ -504,3 +582,4 @@ function ProjectsView() {
 function AiView() {
   return <section className="panel"><div className="panel-head"><h2>AI/OEM 产品接入</h2><Activity /></div><div className="card-grid"><article className="info-card"><span>Digital Human</span><strong>数字人体验位</strong><p>预留 API 配置、调用日志和体验页面，不把供应商逻辑写散。</p><em>planned</em></article><article className="info-card"><span>Customer Service</span><strong>智能客服体验位</strong><p>统一 integrations 表和后台配置，后续可接入 OEM 产品。</p><em>planned</em></article><article className="info-card"><span>Analytics</span><strong>调用成本与日志</strong><p>后续记录每次调用状态、耗时、成本和错误，方便商业化。</p><em>ops</em></article></div></section>;
 }
+

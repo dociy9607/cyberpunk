@@ -45,3 +45,30 @@ export type ServiceMode = {
   persistentHealthRecords: boolean;
   supabaseConfigured: boolean;
 };
+
+export type CommerceNewsPriority = "high" | "medium" | "low";
+
+export type CommerceNewsItem = {
+  id: string;
+  title: string;
+  source: string;
+  originalUrl: string;
+  publishedAt: string;
+  category: string;
+  tags: string[];
+  summary: string;
+  sellerImpact: string;
+  recommendedAction: string;
+  verification: string;
+  priority: CommerceNewsPriority;
+};
+
+export type CommerceNewsBrief = {
+  date: string;
+  displayDate: string;
+  generatedAt: string;
+  researchWindow: string;
+  observation: string[];
+  verificationNotes: string[];
+  items: CommerceNewsItem[];
+};

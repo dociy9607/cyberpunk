@@ -487,6 +487,113 @@ input, select {
   font-size: 20px;
 }
 
+.commerce-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.commerce-hero .panel-head p {
+  color: var(--muted);
+  margin: 8px 0 0;
+  line-height: 1.6;
+}
+
+.brief-note {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.brief-note p,
+.commerce-history p {
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.65;
+}
+
+.news-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.news-brief-card {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  display: grid;
+  gap: 12px;
+}
+
+.feature-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.tag.blue {
+  color: #245b80;
+  background: #e7f2f8;
+  border-color: #c5ddea;
+}
+
+.tag.amber {
+  color: #8d4d00;
+  background: #fff3d9;
+  border-color: #f1d39c;
+}
+
+.news-brief-card h3 {
+  font-size: 20px;
+}
+
+.news-brief-card p,
+.news-card-section span {
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.news-card-section {
+  display: grid;
+  gap: 4px;
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+
+.news-brief-card footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.news-brief-card a {
+  color: var(--moss);
+  font-weight: 900;
+}
+
+.commerce-history {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 18px;
+}
+
 .admin-layout {
   display: grid;
   grid-template-columns: 360px 1fr;
@@ -517,14 +624,14 @@ input, select {
 }
 
 @media (max-width: 980px) {
-  .app-shell, .login-panel, .health-layout, .admin-layout {
+  .app-shell, .login-panel, .health-layout, .admin-layout, .commerce-history {
     grid-template-columns: 1fr;
   }
   .sidebar {
     position: static;
     height: auto;
   }
-  .view-grid, .card-grid {
+  .view-grid, .card-grid, .news-card-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -533,7 +640,7 @@ input, select {
   .workspace, .login-copy, .login-form {
     padding: 18px;
   }
-  .view-grid, .card-grid, .form-grid, .toolbar {
+  .view-grid, .card-grid, .form-grid, .toolbar, .news-card-grid {
     grid-template-columns: 1fr;
   }
   .calendar-grid button {
