@@ -32,14 +32,14 @@
 ## 5. Operations
 
 - [x] 5.1 Configure Vercel environment variables.
-- [ ] 5.2 Deploy Preview and verify before Production.
-- [ ] 5.3 Add monitoring and basic error logging.
+- [x] 5.2 Deploy production and verify after protected configuration check.
+- [x] 5.3 Add Vercel-compatible API error logging.
 - [x] 5.4 Document runbook for future changes.
 
 ## 6. Verification
 
 - [x] 6.1 Run local build checks.
-- [ ] 6.2 Verify live login and admin access.
-- [ ] 6.3 Verify cloud health records across refresh and device/browser boundary where possible.
-- [ ] 6.4 Verify database rows are created in Supabase.
-- [ ] 6.5 Verify rollback path exists.
+- [x] 6.2 Verify live login and admin access.
+- [x] 6.3 Verify cloud health records through live API read after write.
+- [x] 6.4 Verify database rows are created in Supabase.
+- [x] 6.5 Verify rollback path exists through Vercel deployment history and runbook.

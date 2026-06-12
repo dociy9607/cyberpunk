@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { getAccounts, safeAccount, serviceMode } from "@/lib/accounts";
+import { logApiError } from "@/lib/log";
 import { verifyPassword } from "@/lib/password";
 import { createSession, setSessionCookie } from "@/lib/session";
 
@@ -16,6 +17,7 @@ export async function POST(request: Request) {
     await setSessionCookie(createSession(account));
     return NextResponse.json({ user: safeAccount(account), service: serviceMode() });
   } catch (error) {
+    logApiError("api.login", error);
     return NextResponse.json({ error: "login_failed", detail: error instanceof Error ? error.message : String(error) }, { status: 500 });
   }
 }

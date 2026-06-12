@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { createAccount, deleteAccount, getAccounts, safeAccount, serviceMode } from "@/lib/accounts";
+import { logApiError } from "@/lib/log";
 import { readSession } from "@/lib/session";
 import type { UserRole } from "@/lib/types";
 
@@ -28,6 +29,7 @@ export async function POST(request: Request) {
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
     const status = message === "account_exists" ? 409 : message === "weak_password" || message === "invalid_username" ? 400 : 500;
+    if (status === 500) logApiError("api.accounts.create", error);
     return NextResponse.json({ error: message, service: serviceMode() }, { status });
   }
 }
@@ -44,6 +46,7 @@ export async function DELETE(request: Request) {
     await deleteAccount(username);
     return NextResponse.json({ ok: true, service: serviceMode() });
   } catch (error) {
+    logApiError("api.accounts.delete", error);
     return NextResponse.json({ error: error instanceof Error ? error.message : String(error), service: serviceMode() }, { status: 400 });
   }
 }

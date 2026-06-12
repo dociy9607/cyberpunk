@@ -104,6 +104,21 @@ alter table public.integrations enable row level security;
 alter table public.integration_call_logs enable row level security;
 alter table public.admin_audit_logs enable row level security;
 
+grant usage on schema public to service_role;
+grant all privileges on table public.admin_accounts to service_role;
+grant all privileges on table public.health_records to service_role;
+grant all privileges on table public.projects to service_role;
+grant all privileges on table public.tools to service_role;
+grant all privileges on table public.commerce_news_items to service_role;
+grant all privileges on table public.integrations to service_role;
+grant all privileges on table public.integration_call_logs to service_role;
+grant all privileges on table public.admin_audit_logs to service_role;
+
+grant usage on schema public to anon, authenticated;
+grant select on table public.projects to anon, authenticated;
+grant select on table public.tools to anon, authenticated;
+grant select on table public.commerce_news_items to anon, authenticated;
+
 do $$
 begin
   if not exists (select 1 from pg_policies where schemaname = 'public' and tablename = 'projects' and policyname = 'Public projects are readable') then
