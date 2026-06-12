@@ -5,7 +5,21 @@ import { getSupabaseAdmin } from "./supabaseAdmin";
 import type { AccountRow, SafeAccount, ServiceMode, UserRole } from "./types";
 
 const ACCOUNTS_KEY = "dehviz:auth:accounts:v1";
+const ACCOUNT_STORE_TIMEOUT_MS = 12000;
 let memoryAccounts: AccountRow[] | null = null;
+
+async function withTimeout<T>(operation: PromiseLike<T>, label: string): Promise<T> {
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  const timeout = new Promise<never>((_, reject) => {
+    timer = setTimeout(() => reject(new Error(`${label}_timeout`)), ACCOUNT_STORE_TIMEOUT_MS);
+  });
+
+  try {
+    return await Promise.race([operation, timeout]);
+  } finally {
+    if (timer) clearTimeout(timer);
+  }
+}
 
 function defaultAccounts(): AccountRow[] {
   return [{
@@ -62,11 +76,17 @@ async function writeUpstashAccounts(accounts: AccountRow[]) {
 export async function getAccounts(): Promise<AccountRow[]> {
   const supabase = getSupabaseAdmin();
   if (supabase) {
-    const { data, error } = await supabase.from("admin_accounts").select("*").order("created_at", { ascending: true });
+    const { data, error } = await withTimeout(
+      supabase.from("admin_accounts").select("*").order("created_at", { ascending: true }),
+      "accounts_read",
+    );
     if (error) throw error;
     if (data.length) return data.map(fromDb);
     const accounts = defaultAccounts();
-    const { error: insertError } = await supabase.from("admin_accounts").insert(accounts.map(toDb));
+    const { error: insertError } = await withTimeout(
+      supabase.from("admin_accounts").insert(accounts.map(toDb)),
+      "accounts_seed",
+    );
     if (insertError) throw insertError;
     return accounts;
   }
@@ -102,7 +122,10 @@ export async function createAccount(username: string, password: string, role: Us
 
   const supabase = getSupabaseAdmin();
   if (supabase) {
-    const { error } = await supabase.from("admin_accounts").insert(toDb(account));
+    const { error } = await withTimeout(
+      supabase.from("admin_accounts").insert(toDb(account)),
+      "accounts_create",
+    );
     if (error) throw error;
     return account;
   }
@@ -118,7 +141,10 @@ export async function deleteAccount(username: string) {
 
   const supabase = getSupabaseAdmin();
   if (supabase) {
-    const { error } = await supabase.from("admin_accounts").delete().eq("username", username);
+    const { error } = await withTimeout(
+      supabase.from("admin_accounts").delete().eq("username", username),
+      "accounts_delete",
+    );
     if (error) throw error;
     return;
   }

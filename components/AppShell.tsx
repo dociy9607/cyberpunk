@@ -73,21 +73,46 @@ function classifyMeal(time: string) {
 }
 
 async function api<T>(path: string, options: RequestInit = {}) {
-  const response = await fetch(path, {
-    credentials: "include",
-    ...options,
-    headers: {
-      "Content-Type": "application/json",
-      ...(options.headers || {}),
-    },
-  });
-  const data = await response.json().catch(() => ({}));
-  if (!response.ok) {
-    const error = new Error(data.error || "request_failed") as ApiError;
-    error.status = response.status;
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), 15000);
+
+  try {
+    const response = await fetch(path, {
+      credentials: "include",
+      ...options,
+      signal: options.signal || controller.signal,
+      headers: {
+        "Content-Type": "application/json",
+        ...(options.headers || {}),
+      },
+    });
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      const error = new Error(data.error || "request_failed") as ApiError;
+      error.status = response.status;
+      throw error;
+    }
+    return data as T;
+  } catch (error) {
+    if (error instanceof DOMException && error.name === "AbortError") {
+      throw new Error("request_timeout");
+    }
     throw error;
+  } finally {
+    window.clearTimeout(timeout);
   }
-  return data as T;
+}
+
+function userMessage(error: unknown) {
+  const message = error instanceof Error ? error.message : String(error);
+  const status = (error as ApiError | undefined)?.status;
+  if (message === "request_timeout" || message.includes("timeout")) return "请求超时，请稍后再试。";
+  if (message === "account_exists") return "这个账号已经存在。";
+  if (message === "weak_password") return "密码至少需要 8 位。";
+  if (message === "invalid_username") return "账号至少需要 3 个字符。";
+  if (status === 401) return "登录已过期，请重新登录。";
+  if (status === 403) return "当前账号没有后台权限。";
+  return `操作失败：${message}`;
 }
 
 function emptyRecord(username: string): HealthRecord {
@@ -139,6 +164,7 @@ export function AppShell() {
   const [loginMessage, setLoginMessage] = useState("");
   const [commerceBriefs, setCommerceBriefs] = useState<CommerceNewsBrief[]>([fallbackCommerceBrief]);
   const [commerceLoading, setCommerceLoading] = useState(false);
+  const [accountSubmitting, setAccountSubmitting] = useState(false);
 
   function notify(message: string) {
     setToast(message);
@@ -298,14 +324,23 @@ export function AppShell() {
 
   async function createAccount(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const form = new FormData(event.currentTarget);
-    await api("/api/accounts", {
-      method: "POST",
-      body: JSON.stringify({ username: form.get("username"), password: form.get("password"), role: form.get("role") }),
-    });
-    event.currentTarget.reset();
-    await refreshAccounts();
-    notify("账号已创建");
+    if (accountSubmitting) return;
+    const formElement = event.currentTarget;
+    const form = new FormData(formElement);
+    setAccountSubmitting(true);
+    try {
+      await api("/api/accounts", {
+        method: "POST",
+        body: JSON.stringify({ username: form.get("username"), password: form.get("password"), role: form.get("role") }),
+      });
+      formElement.reset();
+      await refreshAccounts();
+      notify("账号已创建");
+    } catch (error) {
+      notify(userMessage(error));
+    } finally {
+      setAccountSubmitting(false);
+    }
   }
 
   async function removeAccount(username: string) {
@@ -459,7 +494,7 @@ export function AppShell() {
               <label>账号<input name="username" minLength={3} required /></label>
               <label>密码<input name="password" type="password" minLength={8} required /></label>
               <label>角色<select name="role"><option value="user">普通用户</option><option value="admin">管理员</option></select></label>
-              <button className="primary-btn" type="submit">创建账号</button>
+              <button className="primary-btn" type="submit" disabled={accountSubmitting}>{accountSubmitting ? "创建中..." : "创建账号"}</button>
             </form>
             <section className="panel">
               <h2>账号列表</h2>
@@ -467,7 +502,7 @@ export function AppShell() {
               {accounts.map((account) => (
                 <div className="account-row" key={account.username}>
                   <div><strong>{account.username}</strong><span>{account.role} · {new Date(account.createdAt).toLocaleString()}</span></div>
-                  <button disabled={account.username === "admin" || account.username === session.username} onClick={() => removeAccount(account.username)}><Trash2 size={16} /></button>
+                  <button type="button" disabled={account.username === "admin" || account.username === session.username} onClick={() => removeAccount(account.username)}><Trash2 size={16} /></button>
                 </div>
               ))}
             </section>
