@@ -13,4 +13,4 @@
 ## 3. Verification
 - [x] 3.1 Run typecheck and production build.
 - [x] 3.2 Verify latest API response contains 10 dated items.
-- [ ] 3.3 Commit and push the update for Vercel deployment.
+- [x] 3.3 Commit and push the update for Vercel deployment.
