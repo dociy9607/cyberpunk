@@ -594,6 +594,38 @@ input, select {
   gap: 18px;
 }
 
+.commerce-history-list {
+  display: grid;
+  gap: 8px;
+}
+
+.history-brief-button {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.history-brief-button small {
+  color: var(--muted);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.history-brief-button:hover,
+.history-brief-button.active {
+  border-color: var(--moss);
+  background: #eef5ef;
+}
+
 .admin-layout {
   display: grid;
   grid-template-columns: 360px 1fr;

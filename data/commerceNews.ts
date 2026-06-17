@@ -275,6 +275,388 @@ export const commerceNewsBriefs: CommerceNewsBrief[] = [
     ],
   },
   {
+    date: "2026-06-16",
+    displayDate: "2026年6月16日",
+    generatedAt: "2026-06-16T09:30:00+08:00",
+    researchWindow:
+      "优先核验 2026-06-15 最近 24 小时来源；不足后扩展到按来源时区覆盖 2026-06-11 至 2026-06-15 的近 72 小时窗口。本次共确认 20 条可访问、可核验、与跨境卖家直接相关的资讯。",
+    observation: [
+      "今天的主线不是单个平台放量，而是平台规则、结算链路、广告投放和 AI 搜索入口同时变化。卖家既要准备大促，也要同步调整素材、数据结构和投放权限。",
+      "Amazon 与 Shopify 的更新都在推动更标准化的经营方式：标题、处理时效、结账字段、打款币种和后台接口都在变得更可审计、更自动化，也更不容许粗放运营。",
+      "搜索与广告侧的信息密度明显上升。Google、Microsoft 以及 AI 搜索研究同时指出，未来独立站流量不只拼关键词，还要拼商品数据质量、品牌信号和可被模型引用的内容结构。",
+      "近 72 小时内高可信资讯仍主要集中在官方公告、开发者更新与权威行业媒体。为避免凑数，本次未纳入发布时间模糊、原文不可稳定访问或仅二次转述的内容。",
+    ],
+    verificationNotes: [
+      "优先采用 Amazon Seller Forums、Shopify Changelog、Shopify Developer Changelog、Amazon Ads、Walmart Corporate、Search Engine Land、Marketplace Pulse、EcommerceBytes、Spree Commerce 等可直接访问来源。",
+      "每条资讯均保留原文链接，并在 publishedAt 字段写明页面展示的发布日期，或论坛/页面可见的最近更新时间提示。",
+      "涉及论坛帖的 Amazon 条目，采用页面可见的官方账号发帖或跟进时间，不把普通卖家评论当作事实来源。",
+      "涉及趋势研究的条目，摘要只复述原文已披露的结论，并补充跨境卖家的经营影响与执行动作，不外推未披露的数据。",
+    ],
+    items: [
+      {
+        id: "2026-06-16-amazon-prime-day-dates",
+        title: "亚马逊确认Prime Day六月四天档期",
+        source: "Amazon Seller Forums",
+        originalUrl: "https://sellercentral.amazon.com/seller-forums/discussions/t/512086d0-e9cf-4456-a27b-f850164d704c",
+        publishedAt: "2026-06-15（页面显示 by Jameson_Amazon 2 hours ago）",
+        category: "Amazon",
+        tags: ["Prime Day", "大促", "Amazon"],
+        summary:
+          "Amazon 在官方卖家论坛再次确认 2026 年 Prime Day 将于 6 月 23 日至 26 日举行，并提醒卖家尽快完成库存、价格、优惠与流量准备。档期前移意味着备货、广告、客服和海外仓节奏都要比往年更早收口。",
+        sellerImpact:
+          "仍按 7 月节奏准备 Prime Day 的卖家，会直接压缩提报、到仓和素材测试窗口，容易错过活动前自然流量与站内广告爬升期。",
+        recommendedAction:
+          "把 6 月下旬视为硬截止，立刻复查 FBA 到仓、Deal/Coupon、广告预算、客服排班和站外引流素材，优先保住高转化 ASIN 的供货稳定性。",
+        verification:
+          "原帖为 Amazon 官方账号发布，页面明确展示活动日期与最近更新时间提示，可直接访问。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-16-amazon-accelerate-registration",
+        title: "亚马逊Accelerate 2026报名继续开放",
+        source: "Amazon Seller Forums",
+        originalUrl: "https://sellercentral.amazon.com/seller-forums/discussions/t/1247c1d3-7e6b-443c-a5f6-22e380293a8f",
+        publishedAt: "2026-06-10（页面显示 updated by moderator 2 days ago）",
+        category: "Amazon",
+        tags: ["Amazon Accelerate", "卖家大会", "运营"],
+        summary:
+          "Amazon 宣布 Accelerate 2026 将于 9 月 22 日至 24 日在西雅图举行，报名与早鸟优惠同步开放。对卖家来说，这类官方大会通常会集中释放下半年工具路线、政策重点与服务商生态方向。",
+        sellerImpact:
+          "深耕 Amazon 的卖家和服务商，可以借此提前判断平台在广告、AI、品牌保护、物流和账号治理上的下一步投入重点。",
+        recommendedAction:
+          "评估是否安排团队参会，并提前整理希望向官方确认的广告、物流、合规与账号问题，避免在旺季临近时再被动补课。",
+        verification:
+          "论坛页面可见 Amazon 官方账号发帖内容，且展示最近两天的版主更新时间。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-16-amazon-title-limits",
+        title: "亚马逊标题限长执行进入最后六周",
+        source: "Amazon Seller Forums",
+        originalUrl: "https://sellercentral.amazon.com/seller-forums/discussions/t/145b6d0f-999c-4555-896c-c694bda2e470",
+        publishedAt: "2026-06-10（页面显示 latest activity 7 hours ago）",
+        category: "Amazon",
+        tags: ["Listing", "标题", "合规"],
+        summary:
+          "Amazon 重申自 7 月 27 日起，除媒体类目外，多数商品标题需控制在 75 个字符以内，并建议把材质、场景和补充卖点迁移至 Item Highlights 等其他位置。页面近期仍有官方跟帖释疑，说明执行临近。",
+        sellerImpact:
+          "依赖长标题堆词的 Listing 将失去旧写法空间，若迟迟不改，后续被平台改写后可能影响品牌表达、搜索相关性与广告素材一致性。",
+        recommendedAction:
+          "优先筛出高销量、高广告花费和高评价沉淀的 ASIN，先手工重写 75 字符内标题，再把规格和使用场景补到 Item Highlights、A+ 与图片文案。",
+        verification:
+          "论坛搜索结果和页面均可见原始发布时间及近 7 小时最新互动，正文明确写到 75 字符规则与执行日期。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-16-amazon-handling-time",
+        title: "亚马逊收紧自发货处理时效校准要求",
+        source: "Amazon Seller Forums",
+        originalUrl: "https://sellercentral.amazon.com/seller-forums/discussions/t/ca9da171-b2ab-448d-a9e3-ff1857754e29",
+        publishedAt: "2026-06-04（页面显示 latest activity 15 hours ago）",
+        category: "Amazon",
+        tags: ["FBM", "履约", "处理时效"],
+        summary:
+          "Amazon 正在推进新的 seller-fulfilled handling time 要求，并在近期官方回复中强调，如果系统识别卖家长期比设置更快发货，处理时效可能被自动调快，以提升顾客侧承诺时效的准确性。",
+        sellerImpact:
+          "依赖宽松处理时效给运营留缓冲的 FBM 卖家，未来会更难通过保守承诺换取操作弹性，延迟发货和晚扫单风险也会更直接暴露。",
+        recommendedAction:
+          "复盘近 30 天 FBM 真实出库时效，按仓库、承运商和 SKU 颗粒度重设 handling time，并同步检查客服承诺、备货安全库存与订单切单流程。",
+        verification:
+          "页面可见官方跟帖解释自动校准逻辑，并显示近 15 小时内仍有最新活动。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-16-shopify-multi-currency-payouts",
+        title: "Shopify扩展美港新多币种打款支持",
+        source: "Shopify Changelog",
+        originalUrl: "https://changelog.shopify.com/posts/expanded-multi-currency-payout-support-in-us-hk-and-sg",
+        publishedAt: "2026-06-13",
+        category: "Shopify",
+        tags: ["Shopify Payments", "收款", "多币种"],
+        summary:
+          "Shopify 宣布把 Multi-Currency Payouts 扩展到美国，并为新加坡和香港商家新增更多支持的打款币种。多站点独立站卖家可直接减少不必要的换汇环节，让跨市场结算链路更灵活。",
+        sellerImpact:
+          "面对欧美与亚太多市场同时运营的品牌，回款币种选择变多后，利润核算、广告预算分摊和供应商结算都能更贴近实际收入币种。",
+        recommendedAction:
+          "立即核对 Shopify Payments 账户可开通的币种与银行侧到账条件，并重做汇率、利润率和现金流报表，避免继续沿用单币种视角管理全球收入。",
+        verification:
+          "Shopify 官方 Changelog 页面明确标注 2026-06-13 发布，并列出新增支持地区和币种。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-16-shopify-shop-user-metafields",
+        title: "Shopify开放Shop User结账元字段",
+        source: "Shopify Developer Changelog",
+        originalUrl: "https://shopify.dev/changelog/shop-user-metafields-in-shopify-functions",
+        publishedAt: "2026-06-13",
+        category: "Shopify",
+        tags: ["Shopify Functions", "结账", "会员"],
+        summary:
+          "Shopify Developer Changelog 显示，开发者现在可以在 Shopify Functions 中读取 Shop User metafields，并把买家级数据用于结账阶段逻辑。会员价、分层权益与复购激励的原生化空间进一步扩大。",
+        sellerImpact:
+          "做会员运营或分层折扣的独立站，能够把更多买家身份信息直接接入折扣和结账判断，减少外部服务拼接带来的稳定性和成本压力。",
+        recommendedAction:
+          "让开发团队盘点当前 checkout functions 与会员字段映射关系，优先把高价值用户权益、专属折扣和风控条件迁到原生函数链路。",
+        verification:
+          "Shopify 开发者更新页清晰标注 2026-06-13 发布时间，并说明可读字段与应用场景。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-16-shopify-cartline-viewkey",
+        title: "Shopify购物车行可回传viewKey字段",
+        source: "Shopify Developer Changelog",
+        originalUrl: "https://shopify.dev/changelog/cart-line-view-key-field",
+        publishedAt: "2026-06-12",
+        category: "Shopify",
+        tags: ["Storefront API", "Cart", "开发"],
+        summary:
+          "Shopify 为 CartLine 类型新增可读的 viewKey 回传能力，开发者终于能把前端发送的 view_key 与接口返回的购物车行稳定关联。复杂购物车组件、加购埋点和组合销售场景会更容易排错与跟踪。",
+        sellerImpact:
+          "对于 headless 或深度自定义主题站点，这能减少购物车行识别错位，降低误删、误改、埋点对不上和售前逻辑错绑的风险。",
+        recommendedAction:
+          "安排开发同学排查 cartLinesUpdate、cartLinesRemove 与前端埋点逻辑，尽快把 viewKey 映射纳入购物车状态管理和异常日志。",
+        verification:
+          "Shopify 开发者页面明确显示 2026-06-12 发布，并给出字段变化与示例查询。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-16-shopify-metaobject-api",
+        title: "Shopify简化Metaobject读写接口",
+        source: "Shopify Developer Changelog",
+        originalUrl: "https://shopify.dev/changelog/streamlined-metaobject-api",
+        publishedAt: "2026-06-11",
+        category: "Shopify",
+        tags: ["Admin GraphQL API", "Metaobject", "开发"],
+        summary:
+          "Shopify 推出更简化的 Metaobject API，新增 values 属性后，应用可以直接用 JSON 方式读写字段，减少手动序列化和字段拆解工作。对大量依赖自定义内容结构的品牌站是实打实的开发提效。",
+        sellerImpact:
+          "商品故事、尺码指南、合规说明、买家教育内容等若依赖 metaobject 管理，后续迭代成本会更低，内容治理与多语言结构化会更顺畅。",
+        recommendedAction:
+          "让技术团队评估现有 metaobject 读写封装，优先在后台内容管理、商品资料同步和多语言字段维护中切换到 values 写法。",
+        verification:
+          "Shopify Developer Changelog 页面展示 2026-06-11 发布，正文详细解释了 values 属性的读写逻辑。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-16-google-smart-bidding-promotion-mode",
+        title: "Google升级智能出价探索并加入促销模式",
+        source: "Search Engine Land",
+        originalUrl: "https://searchengineland.com/google-expands-smart-bidding-exploration-adds-promotion-mode-480165",
+        publishedAt: "2026-06-15 08:00",
+        category: "Advertising",
+        tags: ["Google Ads", "智能出价", "Promotion Mode"],
+        summary:
+          "Search Engine Land 报道 Google 扩展了 Smart Bidding Exploration，并新增 Promotion Mode，意味着广告系统会更积极在促销期寻找额外转化机会。对大促投放卖家来说，自动化放量空间与失控风险会同时上升。",
+        sellerImpact:
+          "如果账户转化信号、利润边界和促销节奏设置不清，系统在扩量时更容易把预算推向低质量流量，导致 ROAS 表现大起大落。",
+        recommendedAction:
+          "大促账户先单独划分促销预算、毛利底线与素材包，再观察探索流量与常规流量的转化差异，不要直接用全店自动放量覆盖所有商品。",
+        verification:
+          "Search Engine Land 原文标注 2026-06-15 08:00 发布时间，并聚焦 Google Ads 新功能变更。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-16-google-limited-ad-serving",
+        title: "Google扩大Search有限投放政策范围",
+        source: "Search Engine Land",
+        originalUrl: "https://searchengineland.com/google-expands-limited-ad-serving-policy-on-search-480137",
+        publishedAt: "2026-06-12 16:54",
+        category: "Advertising",
+        tags: ["Google Ads", "政策", "审核"],
+        summary:
+          "Google 正扩大 Search 的 limited ad serving policy 适用范围，部分账户或新广告素材在审核和信任积累不足时，展示量可能被主动限制。依赖快速上新测款的卖家，需要更重视账户历史与素材合规度。",
+        sellerImpact:
+          "新站、新账户或频繁换素材的团队，可能在没有明显报错的情况下遭遇流量受限，影响新品冷启动和节日投放节奏。",
+        recommendedAction:
+          "把审核前置到素材排期中，减少一次性大批量新广告上线；同时确保落地页、商家信息和转化追踪完整，逐步建立账户信任。",
+        verification:
+          "Search Engine Land 页面明确标注 2026-06-12 16:54 发布时间，并说明政策扩展方向。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-16-microsoft-product-explorer",
+        title: "微软广告上线Product Explorer选品洞察",
+        source: "Search Engine Land",
+        originalUrl: "https://searchengineland.com/microsoft-ads-launches-product-explorer-for-catalog-insights-480117",
+        publishedAt: "2026-06-12 14:24",
+        category: "Advertising",
+        tags: ["Microsoft Ads", "商品数据", "选品"],
+        summary:
+          "Microsoft Ads 推出 Product Explorer，为商家提供更直接的目录与商品洞察入口，帮助识别产品覆盖、表现和优化机会。对多平台投放卖家而言，商品级数据管理正变成广告竞争力的一部分。",
+        sellerImpact:
+          "若你的站点或 feed 商品量大、SKU 更新快，这类洞察工具能减少盲投，帮助把预算更多聚焦到库存健康且适合放大的商品上。",
+        recommendedAction:
+          "尽快核对 Merchant Center/商品 feed 字段完整度，把缺失图片、价格、库存和分类映射的问题先补齐，再使用新洞察工具做 SKU 分层。",
+        verification:
+          "Search Engine Land 原文显示发布时间为 2026-06-12 14:24，主题围绕 Microsoft Ads 新工具上线。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-16-google-discover-headlines",
+        title: "Google Discover标题研究给出改写边界",
+        source: "Search Engine Land",
+        originalUrl: "https://searchengineland.com/headline-formats-google-discover-480185",
+        publishedAt: "2026-06-15 13:26",
+        category: "SEO",
+        tags: ["Google Discover", "内容", "标题"],
+        summary:
+          "一项覆盖 340 万篇文章的 Discover 研究指出，单纯套模板式改标题并不能稳定抬升分发，真正影响表现的是标题形式与内容语境是否匹配。做独立站内容带货的团队，不能再只靠情绪化标题试图抢流量。",
+        sellerImpact:
+          "内容团队如果只追求夸张标题，反而可能牺牲点击后的停留和转化质量，导致内容获流和实际成交脱节。",
+        recommendedAction:
+          "把内容优化重点从标题花活转向选题、封面、结构化信息和商品关联度，针对不同内容类型建立标题模板，而非全站统一套用。",
+        verification:
+          "Search Engine Land 页面标注 2026-06-15 13:26 发布时间，并说明研究样本规模与核心结论。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-16-ai-search-retrieval-citation",
+        title: "AI搜索检索与引用逻辑分化影响内容策略",
+        source: "Search Engine Land",
+        originalUrl: "https://searchengineland.com/retrieval-vs-citation-ai-search-content-strategy-480078",
+        publishedAt: "2026-06-15 10:00",
+        category: "SEO",
+        tags: ["AI Search", "GEO", "内容策略"],
+        summary:
+          "Search Engine Land 指出，AI 搜索里的“被检索到”和“被引用出来”正在变成两套不同能力。对跨境品牌而言，能被模型抓取并不等于会被推荐，品牌证据、权威来源和可引用内容结构越来越重要。",
+        sellerImpact:
+          "独立站即便技术 SEO 没问题，也可能在 AI 推荐场景里没有存在感，导致类目词和问题词流量逐步被聚合答案截走。",
+        recommendedAction:
+          "把商品页、FAQ、品牌页、评测内容和第三方背书分开建设，优先补齐可引用的参数、对比、政策和评价证据，而不是只做浅层博客。",
+        verification:
+          "Search Engine Land 原文显示 2026-06-15 10:00 发布，核心讨论 AI 搜索中 retrieval 与 citation 的差异。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-16-ai-search-visibility-trust",
+        title: "新AI搜索数据提示信任与曝光重心转移",
+        source: "Search Engine Land",
+        originalUrl: "https://searchengineland.com/new-ai-search-data-visibility-trust-480089",
+        publishedAt: "2026-06-15 09:00",
+        category: "SEO",
+        tags: ["AI Search", "品牌信任", "流量"],
+        summary:
+          "最新 AI 搜索研究显示，用户对 AI 结果的天然信任正在下降，跨平台复核信息的行为增加，而模型对品牌权威与外部证据的依赖提升。卖家未来获取 AI 搜索曝光，不再只是站内优化问题。",
+        sellerImpact:
+          "品牌若缺少评论、媒体提及、知识库和可验证说明，即便站内页面完整，也更难在 AI 问答和推荐型搜索里获得展示。",
+        recommendedAction:
+          "把品牌资料、售后政策、媒体报道、测评内容和第三方评价统一梳理，并确保官网、商城、社媒和目录信息一致，降低模型判断歧义。",
+        verification:
+          "Search Engine Land 最新文章页面可见 2026-06-15 发布时间，正文聚焦 AI 搜索的可见性与信任变化。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-16-ai-prompt-patterns",
+        title: "行业提示词差异正重塑AI搜索曝光位",
+        source: "Search Engine Land",
+        originalUrl: "https://searchengineland.com/ai-prompt-patterns-industry-search-visibility-479876",
+        publishedAt: "2026-06-12 08:00",
+        category: "SEO",
+        tags: ["AI Search", "提示词", "行业差异"],
+        summary:
+          "Search Engine Land 提醒，不同行业用户使用 AI 搜索时的提问模式差异很大，这会直接影响品牌被召回和推荐的方式。跨境卖家若仍按传统关键词表设计内容，可能错过新型购买意图入口。",
+        sellerImpact:
+          "做礼品、家居、美妆、宠物等类目的品牌，如果不理解用户如何向 AI 提问，商品页和内容页就难以命中更高意图的比较型需求。",
+        recommendedAction:
+          "从客服咨询、站内搜索词、达人评论和社媒问题中整理真实提问表达，按问题场景重写 FAQ、导购页和对比页，而不是只堆关键词。",
+        verification:
+          "Search Engine Land 页面显示 2026-06-12 08:00 发布，文章重点是 AI prompt pattern 对可见性的影响。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-16-claude-brave-rankings",
+        title: "Claude曝光更依赖Brave排名信号",
+        source: "Search Engine Land",
+        originalUrl: "https://searchengineland.com/claude-visibility-brave-search-rankings-480053",
+        publishedAt: "2026-06-12",
+        category: "SEO",
+        tags: ["Claude", "Brave Search", "AI Search"],
+        summary:
+          "一项关于 Claude 可见性的案例研究指出，品牌在 Brave Search 的排名对其在 Claude 中是否被提及影响明显。对于布局海外自然流量的卖家，AI 搜索分发正在从 Google 单点优化转向多引擎协同。",
+        sellerImpact:
+          "只盯 Google 的品牌，可能会忽略 AI 助手背后调用的其他索引源，导致实际被推荐的机会低于预期。",
+        recommendedAction:
+          "把品牌官网在 Bing、Brave 等替代搜索源的抓取、索引和内容一致性纳入监控，避免多平台信息割裂影响 AI 推荐结果。",
+        verification:
+          "Search Engine Land 搜索结果明确显示该文为 2026-06-12 发布，主题即 Claude 与 Brave 搜索可见性关系。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-16-ebay-easy-boost",
+        title: "eBay一键推广功能扩大到全店商品",
+        source: "EcommerceBytes",
+        originalUrl: "https://www.ecommercebytes.com/2026/06/13/new-ebay-feature-lets-sellers-advertise-all-listings-at-once/",
+        publishedAt: "2026-06-13",
+        category: "eBay",
+        tags: ["eBay", "Promoted Listings", "广告"],
+        summary:
+          "EcommerceBytes 报道，eBay 在移动端推出 easy boost，允许卖家用一个广告费率同时推广全店商品，且新刊登商品也会自动纳入。它降低了投放门槛，但也把低毛利与测试型 listing 一并卷入广告成本。",
+        sellerImpact:
+          "对 SKU 结构复杂、利润差异大的卖家而言，一刀切的广告费率很容易吃掉利润，让“省事”变成“放大无效花费”。",
+        recommendedAction:
+          "把 easy boost 仅当成短期试投或低复杂度方案，核心店铺仍应按类目、毛利和生命周期拆广告组，并持续复核自动纳入的新商品。",
+        verification:
+          "EcommerceBytes 原文显示 2026-06-13 发布，并明确解释 easy boost 的自动推广机制。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-16-amazon-ads-creative-testing",
+        title: "Amazon Ads强调用零售信号测创意",
+        source: "Amazon Ads",
+        originalUrl: "https://advertising.amazon.com/library/expert-advice/flywheel-creative-learning",
+        publishedAt: "2026-06-12",
+        category: "Advertising",
+        tags: ["Amazon Ads", "AMC", "创意测试"],
+        summary:
+          "Amazon Ads 最新 Partner Perspectives 强调，创意测试不应只看点击或互动，而要结合 Amazon Marketing Cloud 与零售信号衡量从曝光到转化再到复购的完整影响。站内广告正在从素材审美转向经营指标驱动。",
+        sellerImpact:
+          "广告预算收紧时，只凭 CTR 或主观判断筛素材，会越来越难解释真实增量，创意团队和投放团队需要共用一套商业指标。",
+        recommendedAction:
+          "把主图、视频前 3 秒、利益点和详情页承接拆成可独立测试变量，并按访问、加购、新客占比和复购信号建立素材复盘模板。",
+        verification:
+          "Amazon Ads 原文可访问，页面显示发布于 4 days ago，内容集中说明 AMC 与零售信号驱动创意学习。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-16-spree-commerce-5-5",
+        title: "Spree Commerce 5.5强化后台API与渠道",
+        source: "Spree Commerce",
+        originalUrl: "https://spreecommerce.org/announcing-spree-commerce-5-5/",
+        publishedAt: "2026-06-12",
+        category: "Independent Site",
+        tags: ["Spree Commerce", "独立站", "多渠道"],
+        summary:
+          "Spree Commerce 5.5 发布新版 Admin API、AI Agent Skills 与 Sales Channels，并强化订单路由能力。对自建电商后台或想统一多渠道订单与目录的团队，这轮更新明显提升了开放架构的可用性。",
+        sellerImpact:
+          "具备技术能力的品牌或服务商，可以更低成本地搭建多渠道目录、后台操作和履约路由能力，不必完全受制于单一 SaaS 平台边界。",
+        recommendedAction:
+          "如果正在评估开源独立站栈，重点验证新 Admin API、订单路由与渠道目录是否能替代当前分散的后台、插件和中台方案。",
+        verification:
+          "Spree 官方博客页面显示 2026-06-12 发布，标题即聚焦 Admin API、AI Agent Skills 与 Sales Channels。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-16-tiktok-shop-top-heavy-gmv",
+        title: "TikTok Shop头部卖家集中度继续抬升",
+        source: "Marketplace Pulse",
+        originalUrl: "https://www.marketplacepulse.com/articles/on-tiktok-shop-1-of-sellers-drive-60-of-gmv",
+        publishedAt: "2026-06-11",
+        category: "TikTok Shop",
+        tags: ["TikTok Shop", "GMV", "平台趋势"],
+        summary:
+          "Marketplace Pulse 基于近 10 万美国 TikTok Shop 卖家数据指出，前 1% 卖家贡献了 60% 的 GMV，平台已出现明显头部化。内容电商并未自然拉平差距，流量、达人和履约能力反而在放大集中度。",
+        sellerImpact:
+          "中小卖家若仍把 TikTok Shop 当作纯铺货渠道，后续获取自然曝光和达人合作的边际成本会越来越高。",
+        recommendedAction:
+          "把 TikTok Shop 运营重心放到爆款货盘、达人矩阵、短视频测试和复购商品组合，不要再用单次投流心态粗放扩 SKU。",
+        verification:
+          "Marketplace Pulse 原文可访问并标注 4 days ago，文章明确披露前 1% 卖家贡献 60% GMV 的核心结论。",
+        priority: "high",
+      },
+    ],
+  },
+
+  {
     date: "2026-06-15",
     displayDate: "2026年6月15日",
     generatedAt: "2026-06-15T12:30:00+08:00",

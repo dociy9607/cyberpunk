@@ -549,8 +549,15 @@ function RecordRow({ record, onEdit, onDelete }: { record: HealthRecord; onEdit:
 }
 
 function CommerceNewsView({ briefs, loading, onRefresh }: { briefs: CommerceNewsBrief[]; loading: boolean; onRefresh: () => void }) {
-  const latest = briefs[0] || fallbackCommerceBrief;
-  const history = briefs.slice(1);
+  const [selectedBriefDate, setSelectedBriefDate] = useState("");
+
+  useEffect(() => {
+    if (!briefs.length) return;
+    setSelectedBriefDate((current) => briefs.some((brief) => brief.date === current) ? current : briefs[0].date);
+  }, [briefs]);
+
+  const latest = briefs.find((brief) => brief.date === selectedBriefDate) || briefs[0] || fallbackCommerceBrief;
+  const history = briefs;
   return (
     <section className="commerce-panel">
       <div className="panel commerce-hero">
@@ -603,7 +610,19 @@ function CommerceNewsView({ briefs, loading, onRefresh }: { briefs: CommerceNews
         </div>
         <div>
           <h3>历史记录</h3>
-          {history.length ? history.map((brief) => <p key={brief.date}>{brief.displayDate} · {brief.items.length} 条</p>) : <p>后续每日更新会保留在这里。</p>}
+          <div className="commerce-history-list">
+            {history.length ? history.map((brief) => (
+              <button
+                type="button"
+                className={`history-brief-button ${brief.date === latest.date ? "active" : ""}`}
+                key={brief.date}
+                onClick={() => setSelectedBriefDate(brief.date)}
+              >
+                <span>{brief.displayDate}</span>
+                <small>{brief.items.length} 条</small>
+              </button>
+            )) : <p>后续每日更新会保留在这里。</p>}
+          </div>
         </div>
       </div>
     </section>
