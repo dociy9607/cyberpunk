@@ -2,6 +2,387 @@ import type { CommerceNewsBrief } from "@/lib/types";
 
 export const commerceNewsBriefs: CommerceNewsBrief[] = [
   {
+    date: "2026-06-18",
+    displayDate: "2026年6月18日",
+    generatedAt: "2026-06-18T10:40:00+08:00",
+    researchWindow:
+      "优先核验 2026-06-17 至 2026-06-18 最近 24 小时来源；为补足高可信样本，扩展到按来源时区覆盖 2026-06-15 至 2026-06-18 的近 72 小时窗口。本次确认 20 条可访问、可核验、与跨境卖家经营决策直接相关的资讯。",
+    observation: [
+      "今天最集中的变化来自 Shopify 后台与结账能力的密集更新，重点落在多市场配置、合规披露、消息触达和履约路径，说明独立站精细化运营门槛继续抬高。",
+      "Google、Meta、Microsoft 同时在广告与搜索界面强化 AI 和自动化，跨境卖家不能再把流量问题只看作投放或 SEO 的单点优化，而要把商品数据、受众分层和平台可读性一起治理。",
+      "卖家合规要求继续前移到商品页和结账页。披露字段、订阅说明、地址校验这类基础配置，已经直接影响转化、投诉和平台风控，而不只是法务备档。",
+      "今日 20 条全部来自 Shopify 官方 changelog、Google Search Central 与 Search Engine Land 等可直达来源；未采用无法确认发布时间、原始链接或事实依据的转载内容。",
+    ],
+    verificationNotes: [
+      "Shopify 相关资讯优先采用官方 changelog 详情页；少数无法直接定位到独立详情页的更新，保留到官方 changelog 汇总页并注明该页显示的发布日期与摘要。",
+      "Google 搜索相关资讯统一取自 Google Search Central 文档更新页，发布时间以页面中的 June 17 或 June 15 条目标记为准。",
+      "Search Engine Land 条目均保留文章原始链接，并按页面显示的 Published 时间写入 publishedAt 字段，不外推未披露的数据。",
+      "所有摘要、卖家影响和建议动作均基于原文已公开事实整理，不使用无法核实的市场传言、截图二传或匿名爆料。",
+    ],
+    items: [
+      {
+        id: "2026-06-18-shopify-product-disclosures",
+        title: "Shopify新增商品披露字段便于合规展示",
+        source: "Shopify Changelog",
+        originalUrl: "https://changelog.shopify.com/posts/product-listings-now-support-a-disclosures-field",
+        publishedAt: "2026-06-17",
+        category: "Shopify",
+        tags: ["独立站", "产品合规", "Shopify"],
+        summary:
+          "Shopify 新增商品披露字段，商家可在后台以结构化方式维护 Proposition 65、窒息风险等警示信息，并在支持主题的商品页自动展示。过去散落在描述、模板或手工备注里的合规提示，开始转向平台级标准字段管理。",
+        sellerImpact:
+          "经营美国站点或高合规类目的卖家，后续更容易把安全、材质和法律提示前置到商品详情页，减少因披露缺失引发的投诉、下架和转化争议。",
+        recommendedAction:
+          "盘点需要警示语的 SKU，优先给美国市场商品补齐披露字段，并检查当前主题是否已在 PDP 渲染该区块。",
+        verification:
+          "Shopify 官方 changelog 详情页标注 2026-06-17，明确说明披露字段以 metafield 形式存储并支持主题展示。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-18-shopify-channel-markets",
+        title: "Shopify支持按渠道设置价格库存与币种",
+        source: "Shopify Changelog",
+        originalUrl: "https://changelog.shopify.com/",
+        publishedAt: "2026-06-17",
+        category: "Shopify",
+        tags: ["Markets", "多市场", "定价"],
+        summary:
+          "Shopify 在官方 changelog 公布 Channel Markets，允许商家直接在 Markets 中为不同销售渠道设置价格、商品可售范围和币种，而不必继续依赖分散规则。多渠道独立站运营开始拥有更细粒度的渠道级市场控制能力。",
+        sellerImpact:
+          "对同时经营官网、社媒渠道和其他销售入口的卖家，这会直接改善价格一致性、可售范围和币种体验，减少不同渠道互相串货或前台信息不一致。",
+        recommendedAction:
+          "梳理现有渠道定价和库存策略，确认哪些市场需要单独币种或上架规则，准备迁移到 Channel Markets 做集中管理。",
+        verification:
+          "Shopify 官方 changelog 汇总页在 2026-06-17 条目中写明可按销售渠道设置价格、可售性和币种。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-18-shopify-markets-graph",
+        title: "Shopify重做Markets图谱降低多站排查",
+        source: "Shopify Changelog",
+        originalUrl: "https://changelog.shopify.com/posts/understand-your-markets-setup-at-a-glance-with-the-redesigned-graph",
+        publishedAt: "2026-06-17",
+        category: "Shopify",
+        tags: ["Markets", "运营效率", "多站点"],
+        summary:
+          "Shopify 重做 Markets 图谱，新增更清晰的节点视图和汇总面板，商家可直接看到子市场继承关系、商品数量和折扣配置。过去需要逐页点开的多市场配置检查，正在变成图形化、集中化排查流程。",
+        sellerImpact:
+          "站点和市场层级复杂的卖家能更快发现折扣继承错误、SKU 覆盖缺失和配置冲突，降低大促前多市场人工巡检成本。",
+        recommendedAction:
+          "用新版图谱检查重点市场的折扣继承、商品数量和本地化配置，尤其复核节庆活动前的父子市场关系是否正确。",
+        verification:
+          "Shopify 官方详情页标注 2026-06-17，并写明图谱新增可视化节点与聚合面板能力。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-18-shopify-smart-delivery",
+        title: "Shopify Messaging智能投递开始控频",
+        source: "Shopify Changelog",
+        originalUrl: "https://changelog.shopify.com/posts/smart-delivery-in-shopify-messaging",
+        publishedAt: "2026-06-17",
+        category: "Marketing",
+        tags: ["CRM", "消息触达", "Shopify Messaging"],
+        summary:
+          "Shopify Messaging 新增 smart delivery，会根据客户近期打开和互动情况决定哪些消息继续发送、哪些暂缓发送，以兼顾转化、退订率和营销成本。平台把触达节奏优化内置进消息工具，而非只靠人工分层。",
+        sellerImpact:
+          "邮件和短信疲劳明显的品牌，后续可减少无效触达和垃圾流量，把预算更集中地投向高响应用户群，改善复购链路效率。",
+        recommendedAction:
+          "把当前弃购、唤回和活动消息与 smart delivery 联动测试，对比开启前后的送达率、点击率、退订率和 CPA 变化。",
+        verification:
+          "Shopify 官方详情页标注 2026-06-17，说明会智能优先发送更可能产生互动的消息并压低退订与成本。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-18-shopify-whatsapp-consent-admin",
+        title: "Shopify后台统一管理WhatsApp营销同意",
+        source: "Shopify Changelog",
+        originalUrl: "https://changelog.shopify.com/posts/manage-whatsapp-marketing-consent-in-shopify",
+        publishedAt: "2026-06-17",
+        category: "Marketing",
+        tags: ["WhatsApp", "合规", "CRM"],
+        summary:
+          "Shopify 后台现在可直接查看和更新客户的 WhatsApp 营销同意状态，并支持批量导入导出订阅者数据。邮件、短信和 WhatsApp 的营销许可开始在同一客户档案中统一管理，方便跨渠道做合规触达。",
+        sellerImpact:
+          "依赖 WhatsApp 做复购和客服转化的卖家，可更清晰地管理订阅状态，降低误发营销消息带来的封号、投诉和退订风险。",
+        recommendedAction:
+          "把现有 WhatsApp 订阅名单导回 Shopify 对齐主档，区分营销同意与服务通知场景，重新梳理触达模板和授权留痕。",
+        verification:
+          "Shopify 官方详情页标注 2026-06-17，明确支持在客户资料中管理 WhatsApp consent 并可批量导入导出。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-18-shopify-abandoned-checkout-bots",
+        title: "Shopify过滤机器人弃单提升挽回准确性",
+        source: "Shopify Changelog",
+        originalUrl: "https://changelog.shopify.com/posts/reduced-bot-noise-in-abandoned-checkouts",
+        publishedAt: "2026-06-16",
+        category: "Shopify",
+        tags: ["弃单挽回", "风控", "支付"],
+        summary:
+          "Shopify 现在不会把测试盗刷卡号但未完成付款的机器人会话记为 abandoned checkout。过去这些异常会话会污染弃单列表，误导自动挽回和 CRM 触达，如今弃单数据开始更聚焦真实买家行为。",
+        sellerImpact:
+          "被盗刷测试、异常支付和垃圾会话困扰的卖家，后续能减少对假弃单发送优惠和提醒，提升挽回准确性并降低营销成本。",
+        recommendedAction:
+          "重新观察弃单数量和恢复率口径变化，调低面向弃单人群的误发预算，同时复核支付风控和黑名单规则。",
+        verification:
+          "Shopify 官方详情页标注 2026-06-16，并说明机器卡测会话将不再进入 abandoned checkout 列表。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-18-shopify-customer-account-refresh",
+        title: "Shopify客户账户改版强化移动端转化",
+        source: "Shopify Changelog",
+        originalUrl: "https://changelog.shopify.com/posts/customer-accounts-get-a-design-uplift",
+        publishedAt: "2026-06-17",
+        category: "Shopify",
+        tags: ["客户账户", "移动端", "复购"],
+        summary:
+          "Shopify 更新 customer accounts 页面，采用单栏移动优先布局、增强订单操作入口，并在无订单状态下展示商品推荐。账户页不再只是查询页面，而开始承担更明显的复购和自助服务职责。",
+        sellerImpact:
+          "重视移动端复购和售后体验的卖家，可借新账户页减少查单摩擦、提升订单自助操作率，并把账户页变成新的推荐位。",
+        recommendedAction:
+          "尽快在手机端走查账户页、订单详情和扩展组件展示，确认品牌样式、订单动作和商品推荐逻辑是否正常。",
+        verification:
+          "Shopify 官方详情页标注 2026-06-17，并列出移动导航、订单操作和推荐位等买家体验变化。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-18-shopify-ship-pickup-single-order",
+        title: "Shopify支持一单混合发货与门店自提",
+        source: "Shopify Changelog",
+        originalUrl: "https://changelog.shopify.com/posts/ship-and-pickup-in-one-order",
+        publishedAt: "2026-06-17",
+        category: "Checkout",
+        tags: ["履约", "门店自提", "Plus"],
+        summary:
+          "Shopify 为 Plus 和 Enterprise 商家开放一单内同时选择 shipping 与 pickup 的能力，客户无需拆成两笔订单即可完成不同商品的交付选择。该功能会同步影响订单拆分、履约流和相关集成逻辑。",
+        sellerImpact:
+          "同时经营门店和线上仓的品牌能提升结账灵活性，但订单、WMS、OMS 和第三方履约插件如果未适配，可能带来履约混乱或售后差错。",
+        recommendedAction:
+          "先在测试环境验证拆单、发货通知、库存扣减和售后流程，再决定是否在正式站点开放混合履约。",
+        verification:
+          "Shopify 官方详情页标注 2026-06-17，写明单一 checkout 内可混合 shipping 与 pickup，并提示第三方集成需充分测试。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-18-shopify-subscription-disclosure",
+        title: "Shopify更新订阅商品结账披露默认文案",
+        source: "Shopify Changelog",
+        originalUrl: "https://changelog.shopify.com/posts/updated-disclosure-for-subscription-purchases-on-checkout",
+        publishedAt: "2026-06-17",
+        category: "Checkout",
+        tags: ["订阅", "消费者保护", "结账"],
+        summary:
+          "Shopify 宣布 6 月 22 日起更新订阅型商品在 checkout 的默认披露文案，并启用新的翻译键。平台在消费者知情权与订阅说明上的默认规范继续收紧，未自定义相关提示的商家会直接受到文案变更影响。",
+        sellerImpact:
+          "做订阅、补货制或会员计划的卖家，需要关注默认文案是否与当地法规、品牌承诺和取消规则一致，避免转化后产生争议。",
+        recommendedAction:
+          "在 6 月 22 日前检查 checkout settings 中的订阅披露文案、多语言键值和取消说明，必要时按法务要求定制。",
+        verification:
+          "Shopify 官方详情页标注 2026-06-17，并明确默认披露将在 2026-06-22 生效，附带新的翻译 keys。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-18-shopify-address-validation",
+        title: "Shopify结账规则可拦截不合规收货地址",
+        source: "Shopify Changelog",
+        originalUrl: "https://changelog.shopify.com/posts/checkout-blocks-block-non-compliant-shipping-addresses-at-checkout",
+        publishedAt: "2026-06-17",
+        category: "Checkout",
+        tags: ["物流", "地址校验", "Checkout"],
+        summary:
+          "Shopify Checkout Blocks 的地址格式校验现已向所有商家开放，可在结账阶段直接拦截不合规的收货地址，并在 agentic 与线上结账场景保持一致。地址前置校验正在从插件能力转向平台原生规则。",
+        sellerImpact:
+          "跨境包裹常见的地址缺项、格式错误和尾程拒收问题，有机会在支付前被阻断，减少退件、二次派送和客服修单成本。",
+        recommendedAction:
+          "为重点国家配置地址格式规则，先观察美国、英国、欧盟等高发市场的异常地址占比，再决定是否全面启用。",
+        verification:
+          "Shopify 官方详情页标注 2026-06-17，说明买家在地址不合规时会收到 inline error 且无法完成结账。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-18-google-domain-variants",
+        title: "Google站点迁移文档新增域名变体指引",
+        source: "Google Search Central",
+        originalUrl: "https://developers.google.com/search/updates",
+        publishedAt: "2026-06-17",
+        category: "SEO",
+        tags: ["Google Search", "域名迁移", "独立站"],
+        summary:
+          "Google Search Central 在 6 月 17 日更新 site move 文档，补充要求在域名迁移时为所有子域变体，包括 www 与 non-www，分别使用 Change of Address 工具。国际站迁移流程进一步强调细节完整性而非只看主域。",
+        sellerImpact:
+          "准备换域名、拆分市场站点或做国际化改版的卖家，如果忽略域名变体迁移，可能造成抓取、索引和权重传递不完整。",
+        recommendedAction:
+          "做域名迁移前先列出所有变体和跳转规则，确保 Search Console、站点地图和 Change of Address 配置逐一覆盖。",
+        verification:
+          "Google Search Central 更新页在 June 17, 2026 条目中明确写出 site move guide 新增 domain variants 说明。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-18-google-llms-clarification",
+        title: "Google明确llms.txt不会影响搜索排名",
+        source: "Google Search Central",
+        originalUrl: "https://developers.google.com/search/updates",
+        publishedAt: "2026-06-15",
+        category: "SEO",
+        tags: ["AI SEO", "Google Search", "llms.txt"],
+        summary:
+          "Google 在文档更新中再次澄清，llms.txt 对 Google Search 的可见性和排名既不会加分也不会减分。近期围绕 GEO 与 AI 可见性的讨论很多，但平台明确表态该文件不是 Google 搜索表现的捷径。",
+        sellerImpact:
+          "独立站团队如果把大量资源投入 llms.txt，而忽视商品结构化、站点速度、内容证据和抓取可达性，会错配优化重点。",
+        recommendedAction:
+          "保留 llms.txt 作为对其他系统的补充即可，把主要资源继续投入商品页结构、评测证据和索引治理。",
+        verification:
+          "Google Search Central 更新页在 June 15, 2026 条目中明确说明 llms.txt 不会正向或负向影响 Google Search 排名。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-18-google-faq-docs-removed",
+        title: "Google删除FAQ富结果文档确认退场",
+        source: "Google Search Central",
+        originalUrl: "https://developers.google.com/search/updates",
+        publishedAt: "2026-06-15",
+        category: "SEO",
+        tags: ["结构化数据", "FAQ", "Google Search"],
+        summary:
+          "Google 6 月 15 日从文档中移除 FAQ rich result 功能说明，并解释该展示已不再出现在搜索结果中。卖家站点长期依赖 FAQ 富结果提升 SERP 面积的思路，需要正式接受这个入口已经退场。",
+        sellerImpact:
+          "大量 FAQ schema 不会再换来过去的搜索样式优势，继续堆砌模板化问答内容，收益会低于对商品对比、评价证据和可引用答案的投入。",
+        recommendedAction:
+          "保留真正帮助转化的 FAQ 内容，但别再把 FAQ rich result 当核心流量策略，转而加强规格、对比和售后问答的内容质量。",
+        verification:
+          "Google Search Central 更新页在 June 15, 2026 条目中写明已移除 FAQ rich result 文档，并说明该功能已不再显示。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-18-meta-live-shopping-virtual-card",
+        title: "Meta扩展直播购物广告并测试虚拟卡支付",
+        source: "Search Engine Land",
+        originalUrl: "https://searchengineland.com/meta-expands-live-shopping-ads-and-virtual-card-checkout-to-drive-more-purchases-480532",
+        publishedAt: "2026-06-17 15:46",
+        category: "Advertising",
+        tags: ["Meta", "直播购物", "支付"],
+        summary:
+          "Meta 宣布在 Facebook 全球扩展 Live Video Ads，并把该能力带到 Instagram，同时在美国与 Mastercard、Visa 推进虚拟卡支付体验。平台正把直播流量、社交发现与结账支付更紧地连接起来，压缩购买摩擦。",
+        sellerImpact:
+          "依赖社媒种草和直播转化的品牌，会获得更强的广告放量与站内支付衔接，但素材、直播节奏和转化归因要求也会同步提高。",
+        recommendedAction:
+          "评估是否有稳定直播内容可转为广告，优先测试爆品直播回放、达人带货和直播页承接效率。",
+        verification:
+          "Search Engine Land 页面标注 Published: June 17, 2026 at 3:46 pm，并说明全球扩展 Live Video Ads 及美国虚拟卡支付计划。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-18-google-ads-customer-list-classification",
+        title: "Google Ads将自动分类转化型客户名单",
+        source: "Search Engine Land",
+        originalUrl: "https://searchengineland.com/google-ads-to-automatically-classify-conversion-based-customer-lists-480433",
+        publishedAt: "2026-06-17 10:28",
+        category: "Advertising",
+        tags: ["Google Ads", "Customer Match", "受众"],
+        summary:
+          "Google Ads 将从 2026 年 8 月起，自动把基于转化生成的客户名单归类为现有客户、新客户或其他分组，广告主将不能继续让合规名单保持未分类状态。Google 正在进一步标准化其自动化系统使用的客户生命周期信号。",
+        sellerImpact:
+          "依赖新客获取、留存再营销或客户终身价值分层投放的卖家，若名单分类不准确，自动出价与受众排除逻辑都可能被带偏。",
+        recommendedAction:
+          "现在就去 Audience Manager 审计名单分类，确认哪些受众是新客、老客或混合客群，避免 8 月后被系统强制错误归类。",
+        verification:
+          "Search Engine Land 页面标注 Published: June 17, 2026 at 10:28 am，并写明自动分类将在 2026 年 8 月开始执行。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-18-google-demand-gen-cpm",
+        title: "Google将部分Demand Gen发现流量改按CPM计费",
+        source: "Search Engine Land",
+        originalUrl: "https://searchengineland.com/google-ads-shifts-demand-gen-billing-to-cpm-for-some-discover-campaigns-480300",
+        publishedAt: "2026-06-16 10:31",
+        category: "Advertising",
+        tags: ["Google Ads", "Demand Gen", "CPM"],
+        summary:
+          "Google Ads 通知部分广告主，使用 view-through conversion 优化的 Discover Demand Gen 活动将从 7 月 15 日起由 CPC 改为 CPM 计费。平台正在把计费方式与展示型转化目标更紧地绑定，影响预算节奏和效果解释口径。",
+        sellerImpact:
+          "原本按点击成本评估 Discover 扩量的卖家，后续若继续跑 VTC 优化，可能看到曝光和花费结构明显变化，误判 ROI 风险上升。",
+        recommendedAction:
+          "单独拆出 VTC 优化的 Demand Gen 活动，补看曝光、频次、辅助转化和增量成交，必要时关闭 VTC 以避免自动转 CPM。",
+        verification:
+          "Search Engine Land 页面标注 Published: June 16, 2026 at 10:31 am，并说明该计费切换将于 July 15 自动发生。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-18-microsoft-linkedin-seniority",
+        title: "Microsoft Ads新增LinkedIn职级定向",
+        source: "Search Engine Land",
+        originalUrl: "https://searchengineland.com/microsoft-ads-expands-linkedin-targeting-with-job-seniority-filters-480296",
+        publishedAt: "2026-06-16 10:16",
+        category: "Advertising",
+        tags: ["Microsoft Ads", "LinkedIn", "B2B"],
+        summary:
+          "Microsoft Ads 把 LinkedIn Profile 定向扩展到职级维度，可在 Search 与 Audience 活动中按 CXO、VP、Director、Manager 等十类 seniority 观察或定向。这让 B2B 品牌更容易把同一关键词背后的决策层和执行层区分开来。",
+        sellerImpact:
+          "做 B2B 外贸、分销招商或高客单企业服务的卖家，可以更精细地控制预算和文案，不再把所有搜索流量当成同一类潜客。",
+        recommendedAction:
+          "把核心 B2B 广告按 seniority 拆分观察，验证高质量询盘更多来自决策者还是执行者，再调整素材和出价。",
+        verification:
+          "Search Engine Land 页面标注 Published: June 16, 2026 at 10:16 am，并列出十档职级及覆盖的 Search 与 Audience 场景。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-18-ai-search-trust-study",
+        title: "调研称AI搜索使用上升但消费者信任下降",
+        source: "Search Engine Land",
+        originalUrl: "https://searchengineland.com/ai-search-adoption-rises-consumer-trust-declines-study-480338",
+        publishedAt: "2026-06-17 10:00",
+        category: "SEO",
+        tags: ["AI搜索", "消费者", "独立站"],
+        summary:
+          "Search Engine Land 与 Fractl 的调研显示，70% 消费者比去年更常用 AI 搜索，但认为 AI 比传统搜索更有帮助的比例已从 82% 降到 54%。AI 使用在提升，信任却在回落，品牌证据与可核实内容的重要性同步上升。",
+        sellerImpact:
+          "即使品牌被 AI 提及，若商品页缺乏真实评价、参数对比和可信承诺，也未必能把曝光变成下单，转化链条会被信任缺口截断。",
+        recommendedAction:
+          "优先强化高利润商品页的证据层，包括测评摘录、第三方背书、参数表、配送承诺和清晰售后政策。",
+        verification:
+          "Search Engine Land 页面标注 Published: June 17, 2026 at 10:00 am，并披露样本为 1,008 名消费者和 150 名营销人员。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-18-chatgpt-product-recommendation-study",
+        title: "研究称开启搜索后ChatGPT荐品结果大洗牌",
+        source: "Search Engine Land",
+        originalUrl: "https://searchengineland.com/chatgpt-product-recommendations-change-search-study-480463",
+        publishedAt: "2026-06-17 12:48",
+        category: "SEO",
+        tags: ["ChatGPT", "商品推荐", "AI搜索"],
+        summary:
+          "Visibility Labs 对 2 万条 ChatGPT 回答的研究显示，打开搜索后，产品推荐重合度只剩 19.8%，80.2% 的推荐结果发生变化。AI 是否连网，已经会明显改写品牌与商品被推荐的概率和名单结构。",
+        sellerImpact:
+          "卖家不能再只盯传统搜索排名或单次 AI 提及，商品在被引用来源中的出现频次、品牌证据和全网可见性都会影响 AI 推荐概率。",
+        recommendedAction:
+          "跟踪核心品类在 ChatGPT、Google AI、Perplexity 的被提及情况，重点补强更容易被引用的评测、榜单和第三方内容。",
+        verification:
+          "Search Engine Land 页面标注 Published: June 17, 2026 at 12:48 pm，并写明研究样本来自 1,000 个荐品提示的 20,000 次响应。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-18-meta-ai-mode-facebook-search",
+        title: "Meta在Facebook搜索中推出AI问答模式",
+        source: "Search Engine Land",
+        originalUrl: "https://searchengineland.com/meta-ai-mode-facebook-search-480393",
+        publishedAt: "2026-06-16 15:23",
+        category: "Social Commerce",
+        tags: ["Meta", "Facebook Search", "AI发现"],
+        summary:
+          "Meta 已在 Facebook Search 推出 AI Mode，使用公开帖子、Groups、Reels 和其他 Meta 内容直接生成答案，而不再只展示传统搜索结果列表。Facebook 搜索正在从找内容转向先给答案，再决定引用哪些社交讨论。",
+        sellerImpact:
+          "品牌在公开社群、短视频和用户讨论中的内容质量，将更直接影响商品、场景和口碑在 Meta 生态中的发现路径。",
+        recommendedAction:
+          "检查品牌公开帖子、社群问答和 Reels 是否具备可引用信息密度，优先优化常见问题、使用场景和真实评价表达。",
+        verification:
+          "Search Engine Land 页面标注 Published: June 16, 2026 at 3:23 pm，并说明 AI Mode 回答基于 Facebook 公开帖子、Groups 与 Reels。",
+        priority: "medium",
+      },
+    ],
+  },
+  {
     date: "2026-06-17",
     displayDate: "2026年6月17日",
     generatedAt: "2026-06-17T10:45:00+08:00",

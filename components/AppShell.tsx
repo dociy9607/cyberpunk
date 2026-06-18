@@ -595,6 +595,10 @@ function CommerceNewsView({ briefs, loading, onRefresh }: { briefs: CommerceNews
               <strong>建议动作</strong>
               <span>{item.recommendedAction}</span>
             </div>
+            <div className="news-card-section">
+              <strong>验真说明</strong>
+              <span>{item.verification}</span>
+            </div>
             <footer>
               <span>{item.source}</span>
               <a href={item.originalUrl} target="_blank" rel="noreferrer">原文链接</a>
