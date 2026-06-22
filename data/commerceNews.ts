@@ -2,6 +2,118 @@ import type { CommerceNewsBrief } from "@/lib/types";
 
 export const commerceNewsBriefs: CommerceNewsBrief[] = [
   {
+    date: "2026-06-22",
+    displayDate: "2026年6月22日",
+    generatedAt: "2026-06-22T11:30:00+08:00",
+    researchWindow:
+      "优先核验 2026-06-21 至 2026-06-22 最近 24 小时来源；因该窗口内高质量官方与权威媒体更新不足，扩展到 2026-06-19 至 2026-06-22 最近 72 小时窗口。本次仅确认 5 条可访问、可核验且与跨境卖家经营决策直接相关的资讯。",
+    observation: [
+      "最近 72 小时的高价值更新明显集中在平台规则与支付风控，而不是大规模平台招商。卖家更需要处理履约、退款、支付安全和站内转化细节。",
+      "Amazon 与 Google 的更新都在强调前置配置的重要性：一个是新品激励与资金结构，一个是商品集合页标记规范，都会直接影响投放效率与自然流量。",
+      "eBay、Nacha 与 Shopify 相关变化共同指向一个趋势：客服、退款、撤单与支付合规正在被平台和支付网络进一步标准化，卖家运营容错率继续下降。",
+      "本次未为了凑满 20 条而纳入发布时间不清、无法回溯原文或仅有二次转载的内容，今日卡片数按实际确认条数返回。",
+    ],
+    verificationNotes: [
+      "优先采用 Amazon Seller Central、Google Search Central、Nacha 等官方来源；涉及平台产品解读时，仅补充采用 EcommerceBytes 与 Practical Ecommerce 这类有明确发布时间的行业媒体。",
+      "每条记录均保留原文链接，并按页面明确显示的发布日期、更新时间或生效日期写入 publishedAt；未能确认页面时间的内容一律不采用。",
+      "摘要、卖家影响和建议动作均基于原文已披露事实整理，不外推未经原文确认的数据，不使用截图二传或匿名爆料。",
+      "若来源本身是规则生效提醒而非新增功能公告，摘要中会明确标注“生效”或“实操截止”，避免与新品发布类信息混淆。",
+    ],
+    items: [
+      {
+        id: "2026-06-22-amazon-new-selection-2026",
+        title: "亚马逊新版新品激励7月30日切换",
+        source: "Amazon Seller Central",
+        originalUrl:
+          "https://sellercentral.amazon.com/seller-forums/discussions/t/137ef04f-3fb3-43da-a634-f2fce056048c",
+        publishedAt: "2026-06-20（页面显示 2 days ago）",
+        category: "Amazon",
+        tags: ["FBA", "新品激励", "费用"],
+        summary:
+          "Amazon 在 Seller Central 公布 New Selection Program (2026)，将于 7 月 30 日替代现行新品激励。新方案把前 200 件新品纳入费用返还、免仓储、免退货和免清算支持，并追加 Vine 预热服务的延长期，核心指向新品冷启动和前期现金流压力管理。",
+        sellerImpact:
+          "计划在下半年上新或切换 FBA 的卖家，需要重新核算首批备货规模、优惠券投入和 Vine 节奏。若仍沿用旧激励预估模型，可能会高估返利周期或低估前 120 天的库存与广告回收要求。",
+        recommendedAction:
+          "把 7 月 30 日后的新品上架计划单独拉表，按前 100 件、前 200 件分段重算毛利与返利；同时确认是否需要在 10 月 31 日前完成确认续报，以免过渡期结束后失去资格。",
+        verification:
+          "Amazon Seller Central 官方公告页明确写明由 News_Amazon 发布，页面显示 2 days ago，并列出新计划的 referral fee credit、coupon credit、Vine credit 与 120 天支持范围。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-22-google-carousel-categories",
+        title: "谷歌补充商品集合页轮播标记指南",
+        source: "Google Search Central",
+        originalUrl: "https://developers.google.com/search/updates",
+        publishedAt: "2026-06-20",
+        category: "SEO",
+        tags: ["Google", "结构化数据", "独立站 SEO"],
+        summary:
+          "Google Search Central 在 6 月 20 日更新文档，新增“商品较多的分类页如何使用 structured data carousels（beta）”的实现说明，重点补充了分页列表和无限滚动场景下的标记方式。对品类页、品牌页和活动集合页较多的独立站，这是更靠近交易页的搜索呈现规范更新。",
+        sellerImpact:
+          "如果站内大量流量依赖分类页而非单品页，结构化数据补充不到位会继续限制搜索结果中的可见性和点击率。尤其 SKU 多、分页深的站点，更容易因为实现方式不标准而错失商品集合曝光。",
+        recommendedAction:
+          "检查核心类目页、活动落地页和分页集合页的结构化数据输出，确认无限滚动是否仍保留可抓取分页路径；同步让技术或 SEO 团队评估 beta 标记是否适合优先覆盖高转化集合页。",
+        verification:
+          "Google Search Central 官方“Latest documentation updates”页面在 June 20 条目中写明，已新增对 categories with many items 使用 structured data carousels（beta）的指导。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-22-nacha-fraud-monitoring",
+        title: "美国ACH反欺诈监测规则6月22日实操生效",
+        source: "Nacha",
+        originalUrl: "https://www.nacha.org/newrules",
+        publishedAt: "2026-06-19 / 2026-06-22（规则生效说明）",
+        category: "Payments",
+        tags: ["ACH", "支付风控", "美国市场"],
+        summary:
+          "Nacha 公布的 ACH 风险管理新规原定 6 月 19 日生效，但因美国联邦假日，相关欺诈监测要求实际在 2026 年 6 月 22 日这个银行工作日开始执行。规则要求相关参与方加强欺诈监测与资金追回流程，重点覆盖 WEB 借记等线上支付场景。",
+        sellerImpact:
+          "做美国独立站、订阅制或高频 ACH 扣款业务的卖家，支付服务商和风控逻辑会更关注账户验证、异常交易识别和退款争议链路。风控不过关不仅影响扣款成功率，还可能带来更高审单与拒付成本。",
+        recommendedAction:
+          "立刻与收单、支付或 ERP 团队确认 WEB debit、订阅续费和高风险订单的账户验证与欺诈监测规则，补齐异常交易告警、退款回收和证据留存流程，避免 6 月下旬后被动提额审查。",
+        verification:
+          "Nacha 官方 New Rules 页面明确写明 fraud monitoring 相关修订自 2026-06-19 生效，并说明因 6 月 19 日为联邦假日，实际执行日顺延到 2026-06-22。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-22-ebay-seller-initiated-offers",
+        title: "eBay继续强化卖家主动发价工具",
+        source: "EcommerceBytes",
+        originalUrl: "https://www.ecommercebytes.com/2026/06/20/ebay-makes-updates-to-seller-initiated-offers/",
+        publishedAt: "2026-06-20",
+        category: "eBay",
+        tags: ["eBay", "促销工具", "转化"],
+        summary:
+          "EcommerceBytes 报道，eBay 在“Summer Marketing Tactics”网络研讨会中总结了 Seller Initiated Offers 近期更新，方向是让卖家在买家出现兴趣信号后更快触发优惠，并优化 offer 管理体验。对依赖议价、二次唤回和老品转化的 eBay 卖家，这意味着平台正继续把报价工具前置到成交链路中。",
+        sellerImpact:
+          "主动发价如果变得更即时、更集中，会抬高卖家对报价时机、折扣深度和库存联动的要求。不会用或设置过粗放，容易导致利润被过度让渡，或者在多个潜在买家同时收到优惠时出现库存与毛利错配。",
+        recommendedAction:
+          "复盘过去 30 天的 offer 接受率、成交毛利和触发节点，把高库存老品、关注量高但转化低的 listing 单独分组测试报价策略；并留意 eBay 后续是否开放更多自动化或统计看板。",
+        verification:
+          "EcommerceBytes 文章页面显示发布日期为 2026-06-20，正文说明信息来自 eBay 的 Summer Marketing Tactics webinar，并概述了 Seller Initiated Offers 的近期产品更新方向。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-22-practical-ai-flywheel",
+        title: "Practical Ecommerce建议搭建AI运营飞轮",
+        source: "Practical Ecommerce",
+        originalUrl: "https://www.practicalecommerce.com/build-an-ai-flywheel-for-ecommerce",
+        publishedAt: "2026-06-21",
+        category: "Independent Site",
+        tags: ["AI", "独立站", "运营效率"],
+        summary:
+          "Practical Ecommerce 在 6 月 21 日提出“AI flywheel”框架，主张把客服、商品内容、站内搜索、选品、促销和库存信号连成闭环，而不是把 AI 只当作单点文案工具。文章强调，真正有效的 AI 应用来自跨部门数据回流和持续训练，而非一次性接入某个聊天组件。",
+        sellerImpact:
+          "对跨境 DTC 团队来说，AI 的价值正在从“节省写文案时间”转向“缩短商品、营销、客服和库存之间的反馈周期”。如果数据仍散落在广告后台、客服系统和商品表之间，AI 投入很难转成可持续利润改善。",
+        recommendedAction:
+          "先选一条最容易闭环的链路，例如“客服高频问题-商品页补充-搜索词优化-退货原因回写”，用 2 到 4 周做小范围验证，再决定是否扩展到广告创意和库存补货决策。",
+        verification:
+          "Practical Ecommerce 文章页面显示发布时间为 2026-06-21，标题为 Build an AI Flywheel for Ecommerce，正文摘要强调把 customer service、product content、site search、merchandising 与 promotions 连接起来。",
+        priority: "medium",
+      },
+    ],
+  },
+  {
     date: "2026-06-18",
     displayDate: "2026年6月18日",
     generatedAt: "2026-06-18T10:40:00+08:00",
