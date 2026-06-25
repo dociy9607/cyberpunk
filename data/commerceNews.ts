@@ -2,6 +2,387 @@ import type { CommerceNewsBrief } from "@/lib/types";
 
 export const commerceNewsBriefs: CommerceNewsBrief[] = [
   {
+    date: "2026-06-25",
+    displayDate: "2026年6月25日",
+    generatedAt: "2026-06-25T10:30:00+08:00",
+    researchWindow:
+      "优先核验 2026-06-24 至 2026-06-25 最近 24 小时来源；因高可信、可访问且与卖家经营决策直接相关的增量不足 20 条，扩展到 2026-06-22 至 2026-06-25 最近 72 小时窗口。本次共确认 20 条。",
+    observation: [
+      "最近 72 小时的高价值更新集中在 Shopify 后台流程、Amazon Prime Day 冲刺、eBay 刊登标准化、支付风控和 AI 搜索流量，说明跨境卖家当前更需要同步处理转化效率、合规和履约基础能力。",
+      "Shopify 连续多条更新都在降低多币种、B2B、多仓和 POS 运营摩擦，独立站卖家如果仍靠人工补表或旧 SOP 运转，旺季容易在折扣、库存和员工归因上出现放大误差。",
+      "平台外获客层面，TikTok、Reddit、Google 与 Bing 的更新都指向一个趋势：广告和自然流量正在更深地与 AI 推荐、真实社区语境和结构化数据绑定，单纯追求铺量会越来越低效。",
+      "本次已满 20 条，但其中部分 Amazon Seller Central 页面仅显示相对时间；我在 2026-06-25 抓取时保留了页面原始显示，并将其换算说明写入发布时间与验真字段，避免把相对时间误当成绝对发布日期。",
+    ],
+    verificationNotes: [
+      "优先采用 Shopify Changelog、Amazon Seller Central、eBay Developers、Nacha、TikTok Newsroom、Reddit Newsroom 等官方页面；广告、SEO、趋势和合规补充采用 Search Engine Land、Practical Ecommerce、Retail Dive 等有明确发布日期的行业媒体。",
+      "每条记录均保留原文链接，并按页面明确显示的发布日期、发布时间或规则生效日期写入 publishedAt；若页面仅显示 2 days ago 等相对时间，则在 2026-06-25 抓取时换算并写明依据。",
+      "摘要、对卖家的影响与建议动作均基于原文已披露事实整理，不补造未公开数字，不使用无法访问的二手截图、转述贴或匿名消息源。",
+      "涉及趋势或方法论的媒体条目已在卡片中明确其媒体/研究属性，重点提炼对投放、定价、站点结构、合规与履约的直接动作建议，而非把分析文包装成平台公告。",
+    ],
+    items: [
+      {
+        id: "2026-06-25-shopify-draft-order-presentment-currency",
+        title: "Shopify草稿订单折扣改按呈现币种计算",
+        source: "Shopify Changelog",
+        originalUrl: "https://changelog.shopify.com/posts/improvement-to-draft-order-custom-discount-currency",
+        publishedAt: "2026-06-24",
+        category: "Shopify",
+        tags: ["多币种", "草稿订单", "Shopify"],
+        summary:
+          "Shopify 于 6 月 24 日更新草稿订单逻辑，自定义行项目折扣现在按 draft order 的 presentment currency 而非店铺默认币种计算，减少跨币种报价、人工换算和客户结账时金额理解偏差。",
+        sellerImpact:
+          "对做多站点、多市场报价或人工开单收款的独立站卖家而言，这会直接影响折扣展示一致性和客服沟通成本，尤其是 B2B 报价单、WhatsApp 成交和高客单补单场景。",
+        recommendedAction:
+          "立刻复核所有依赖草稿订单的多币种折扣 SOP、客服话术与 ERP 对账逻辑，抽查主要市场币种下的折扣金额、税费和最终支付页是否一致。",
+        verification:
+          "Shopify Changelog 详情页标注发布日期为 2026-06-24，并明确写明 custom discounts now use the draft order’s presentment currency。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-25-shopify-b2b-discounts-default",
+        title: "Shopify B2B折扣默认开启减少支持依赖",
+        source: "Shopify Changelog",
+        originalUrl: "https://changelog.shopify.com/posts/b2b-discounts-are-now-available-by-default-on-new-stores",
+        publishedAt: "2026-06-23",
+        category: "Shopify",
+        tags: ["B2B", "折扣", "Markets"],
+        summary:
+          "Shopify 6 月 23 日宣布，新 B2B 店铺和符合条件的既有 B2B 店铺将默认开启折扣能力，不再需要联系支持开通；但未做市场资格限制的折扣，默认可能同时作用于 B2B 与非 B2B 客群。",
+        sellerImpact:
+          "这会提升批发店铺的促销执行速度，但也提高折扣误伤零售客群或不同市场客户的风险，尤其是共享后台、共享商品池的混合模式商家需要立刻检查资格范围。",
+        recommendedAction:
+          "检查所有现有 automatic discount 与 code 的 Eligibility 设置，按 B2B company location market 与 region market 分开配置，避免批发价意外外溢到零售端。",
+        verification:
+          "Shopify Changelog 详情页显示 2026-06-23，正文明确写明 discounts for B2B are activated automatically，并提醒 All customers 折扣默认会同时覆盖 B2B 与非 B2B 客群。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-25-shopify-pos-staff-attribution",
+        title: "Shopify POS员工归因默认开启并加报表",
+        source: "Shopify Changelog",
+        originalUrl: "https://changelog.shopify.com/posts/staff-attribution-improvements-in-pos",
+        publishedAt: "2026-06-22",
+        category: "Shopify",
+        tags: ["POS", "员工归因", "门店运营"],
+        summary:
+          "Shopify 于 6 月 22 日更新 POS 员工归因，未配置门店将默认自动归因，并新增更快的 staff picker 与 POS Analytics 归因报表。7 月 6 日起，合格店铺会默认按已 PIN 登录员工自动记账。",
+        sellerImpact:
+          "对同时做线下快闪、门店零售和线上转化归因的品牌，这会直接影响提成、班次绩效和员工销售数据；如果权限与归因规则没先理顺，后续报表可能被错误放大。",
+        recommendedAction:
+          "在 7 月 6 日前检查 PIN 登录、员工角色和提成计算口径，先用真实交易演练自动归因，再决定是否保留默认设置或继续使用自定义归因流程。",
+        verification:
+          "Shopify Changelog 详情页标明 2026-06-22，正文写明 automatic attribution will be turned on by default starting July 6 for eligible shops。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-25-shopify-po-transfers",
+        title: "Shopify采购单自动生成调拨提升多仓协同",
+        source: "Shopify Changelog",
+        originalUrl: "https://changelog.shopify.com/posts/purchase-orders-now-create-transfers-to-move-inventory",
+        publishedAt: "2026-06-22",
+        category: "Shopify",
+        tags: ["采购", "库存", "多仓"],
+        summary:
+          "Shopify 6 月 22 日把 purchase order 与 transfer 直接打通，收货时会自动创建调拨记录，并支持在 Admin 或 POS 收货、跟踪部分到货、用 CSV 导入采购单，以及自动填充历史采购价。",
+        sellerImpact:
+          "对多仓独立站和线下联营卖家来说，采购入库与仓间流转的链路更完整，能减少人工拆单、漏收货和成本记录割裂，但也要求 WMS/ERP 对接逻辑及时跟上。",
+        recommendedAction:
+          "复核采购单、收货、调拨和成本回写流程，确认第三方 ERP/WMS 是否依赖旧结构；优先演练部分到货和多地点收货，避免旺季前出现库存同步偏差。",
+        verification:
+          "Shopify Changelog 页面显示 2026-06-22，正文明确写明 when you’re ready to receive a purchase order, it now creates a transfer。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-25-shopify-checkout-email-tooltip",
+        title: "Shopify结账邮箱提示强化买家信任",
+        source: "Shopify Changelog",
+        originalUrl: "https://changelog.shopify.com/posts/checkout-email-field-new-saved-indicator-and-tooltip",
+        publishedAt: "2026-06-22",
+        category: "Shopify",
+        tags: ["Checkout", "转化", "信任"],
+        summary:
+          "Shopify 于 6 月 22 日更新结账页邮箱字段，新增 saved 指示与 tooltip，向买家说明邮箱会用于订单确认和购物车提醒，目标是让信息保存状态更直观，降低填写犹豫。",
+        sellerImpact:
+          "这类小改动会直接影响移动端结账顺滑度和信任感，特别适合高跳失、陌生流量占比较高的独立站；但如果店铺自定义脚本或主题覆盖过深，显示效果需要复核。",
+        recommendedAction:
+          "抽查移动端与桌面端结账页，确认邮箱提示没有被主题样式、第三方 checkout 扩展或翻译应用遮挡，并记录更新前后的邮箱填写完成率变化。",
+        verification:
+          "Shopify Changelog 页面标注 2026-06-22，正文写明新增 saved indicator 和 email usage tooltip，以提升 buyer confidence and trust。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-25-amazon-prime-day-ready",
+        title: "Amazon Prime Day最后冲刺清单已更新",
+        source: "Amazon Seller Central",
+        originalUrl: "https://sellercentral.amazon.com/seller-forums/discussions/t/e89daf08-0bf8-4435-9517-f91ab3ce6ae3",
+        publishedAt: "页面显示 2 days ago（于 2026-06-25 抓取，按 2026-06-23 计）",
+        category: "Amazon",
+        tags: ["Prime Day", "大促", "Amazon"],
+        summary:
+          "Amazon Seller Central 近两日更新 Prime Day 冲刺帖，确认 2026 年 Prime Day 为 6 月 23 日至 26 日，并再次强调卖家要尽快确认库存、Deal、Prime Exclusive Discount 与 Coupons 的排期和生效状态。",
+        sellerImpact:
+          "还在补库存、调促销或临时改素材的卖家，操作窗口已经非常短；如果库存、A+、详情页和促销承接不到位，Prime Day 流量高峰很容易转成广告浪费与缺货损失。",
+        recommendedAction:
+          "逐个核对核心 ASIN 的可售天数、入仓状态、促销时间和主图/A+ 是否匹配大促诉求，并为高流量 SKU 预留客服响应、价格监控和备货回补预案。",
+        verification:
+          "Seller Central 帖文正文明确写明 Prime Day runs from June 23–26；页面仅显示 2 days ago，本次于 2026-06-25 抓取，按 2026-06-23 记录并保留相对时间说明。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-25-amazon-new-selection-2026",
+        title: "Amazon新版新品激励七月底切换上量",
+        source: "Amazon Seller Central",
+        originalUrl: "https://sellercentral.amazon.com/seller-forums/discussions/t/137ef04f-3fb3-43da-a634-f2fce056048c",
+        publishedAt: "页面显示 2 days ago（于 2026-06-25 抓取，按 2026-06-23 计）",
+        category: "Amazon",
+        tags: ["FBA", "新品", "费用"],
+        summary:
+          "Amazon 近两日公告 New Selection Program 2026 将于 7 月 30 日启用，针对新 branded FBA ASIN 提供前 200 件费用减免、Vine credit、coupon fee credit、免仓储与免退货等新组合激励。",
+        sellerImpact:
+          "计划在三季度上新的卖家需要重新测算首批备货、投放和 Vine 节奏。若仍按旧版激励模型预算现金流，可能会误判新品前 120 天的真实成本和回本速度。",
+        recommendedAction:
+          "把 7 月 30 日后的新品分批建模，拆分前 100 件与前 200 件的毛利、仓储和返利回收路径，并确认是否要配合 Vine Pre-launch 服务拉长激励窗口。",
+        verification:
+          "Seller Central 原帖正文明确写明 Effective July 30, 2026；页面仅显示 2 days ago，本次于 2026-06-25 抓取，按 2026-06-23 记录并保留说明。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-25-ebay-immutable-user-ids",
+        title: "eBay API将以不可变用户ID替代用户名",
+        source: "eBay Developers Program",
+        originalUrl: "https://developer.ebay.com/updates/api-updates",
+        publishedAt: "2026-06-25 抓取时页面置顶公告",
+        category: "eBay",
+        tags: ["API", "数据处理", "eBay"],
+        summary:
+          "eBay Developers API Updates 页面当前置顶提醒，为满足特定开发者的数据处理要求，部分 API 集成将把 usernames 替换为 immutable user IDs，并对特定用户的财务数据做额外保护。",
+        sellerImpact:
+          "依赖 eBay 用户名做订单映射、客服识别、风控标签或历史报表的服务商和卖家，若不提前兼容不可变 ID，后续可能出现对账、检索和数据关联断裂。",
+        recommendedAction:
+          "排查所有把 eBay username 作为主键或展示字段的接口、数据库与导出报表，新增 immutable user ID 映射层，并评估财务字段访问受限后的补救方案。",
+        verification:
+          "eBay Developers API Updates 页面在 2026-06-25 抓取时的顶部 banner 明确写明 Usernames will be replaced with immutable user IDs and financial data will be protected for certain users。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-25-ebay-size-standardization",
+        title: "eBay服饰尺码标准化七月起拦截异常刊登",
+        source: "eBay Developers Program",
+        originalUrl: "https://developer.ebay.com/updates/blog/size-standardization",
+        publishedAt: "2026-06-25 抓取时页面生效说明",
+        category: "eBay",
+        tags: ["刊登合规", "服饰", "尺码标准化"],
+        summary:
+          "eBay 开发者博客说明，服饰和鞋类尺码标准化已自 6 月开始自动规范高置信值，并对低置信或无效值给出警告；从 7 月起，非标准、缺失或不完整尺码/condition 的刊登将被拦截或挂起。",
+        sellerImpact:
+          "做 eBay 服饰鞋靴、依赖 ERP 或第三方刊登工具批量上新的卖家，如果仍使用 Small、N/A、See description 等自定义值，7 月后会更频繁遭遇隐藏、拦截和流量损失。",
+        recommendedAction:
+          "立即核查尺码字段传参、刊登模板和类目映射，把常用值统一到 eBay 标准枚举，同时抽测重传后是否被平台自动规范，避免 7 月全面拦截时集中报错。",
+        verification:
+          "eBay Developers 博文写明 Starting from June 2026 开始 normalization，Starting from July 2026 非标准或缺失值会 be blocked from the site or placed on hold。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-25-ebay-row-return-reason",
+        title: "eBay欧盟退货原因枚举新增需兼容未知值",
+        source: "eBay Developers Program",
+        originalUrl: "https://developer.ebay.com/updates/api-updates",
+        publishedAt: "2026-06-25 抓取时页面置顶公告",
+        category: "eBay",
+        tags: ["欧盟退货", "API", "合规"],
+        summary:
+          "eBay API Updates 页面同时置顶提醒，getReturnDetails API 将为符合条件的欧盟退货新增 Right of Withdrawal 返回原因，开发者需要让集成安全处理新的或未知枚举值，避免调用报错。",
+        sellerImpact:
+          "做欧盟站点退货管理、售后自动化或 ERP 对接的卖家，如果系统对返回原因采用硬编码枚举，新增 ROW 原因后可能触发接口失败、工单漏分配或退款状态异常。",
+        recommendedAction:
+          "尽快把退货原因解析逻辑从白名单硬编码改成可扩展枚举，补充 unknown fallback 分支，并针对 EU return 流程做一次回归测试与客服 SOP 更新。",
+        verification:
+          "eBay Developers API Updates 顶部公告明确写明 A new Right of Withdrawal return reason will be added to the getReturnDetails API，并要求 safely handle new/unknown enum values。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-25-nacha-fraud-monitoring-phase2",
+        title: "Nacha ACH反欺诈监测规则本周全面落地",
+        source: "Nacha",
+        originalUrl: "https://www.nacha.org/rules/risk-management-topics-fraud-monitoring-phase-2",
+        publishedAt: "生效日 2026-06-19；页面注明实际执行日为 2026-06-22",
+        category: "Payments",
+        tags: ["ACH", "支付风控", "合规"],
+        summary:
+          "Nacha 规则页说明，Fraud Monitoring Phase 2 原定 6 月 19 日生效，但因联邦假日，实际执行日顺延到 6 月 22 日，要求更多 Originator、TPSP、TPS 与 RDFI 建立基于风险的欺诈监测流程。",
+        sellerImpact:
+          "做美国独立站订阅扣款、ACH 收款或高频回款业务的卖家，会面临更严格的支付异常识别和资料留存要求；忽视规则升级，容易引发拒付、拦截和账户审查成本上升。",
+        recommendedAction:
+          "复核所有 WEB debit、订阅续费和大额 ACH 场景的验证规则、异常告警与证据留存流程，并和支付服务商确认 6 月 22 日后新增的监测和报送口径。",
+        verification:
+          "Nacha 规则页标明 Effective Date 为 2026-06-19，并在正文注明 practical effective date 为 Monday, June 22, 2026。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-25-reddit-shopping-listing-ads",
+        title: "Reddit测试购物广告把讨论流量导向成交",
+        source: "Reddit Newsroom",
+        originalUrl: "https://redditinc.com/news/live-from-cannes-2026-real-conversations-are-driving-the-new-consumer-decision-journey",
+        publishedAt: "2026-06-22",
+        category: "Advertising",
+        tags: ["Reddit", "购物广告", "社区营销"],
+        summary:
+          "Reddit 6 月 22 日在官方新闻稿中披露 Shopping Listing Ads（Alpha），可把品牌商品匹配到真实讨论语境中的高意图对话，帮助用户在比较、验证和推荐场景里直接接触商品卡片。",
+        sellerImpact:
+          "对做欧美兴趣消费品、品牌种草和高客单决策商品的卖家，社区讨论正在从上游种草变成更接近转化的流量入口，广告素材需要更贴近真实问答语境而非纯促销图。",
+        recommendedAction:
+          "筛选适合 Reddit 社区讨论承接的品类，准备 FAQ、对比点和真实使用场景素材，并单独搭建能承接搜索式意图和社区验证流量的落地页。",
+        verification:
+          "Reddit Newsroom 页面标注日期为 2026-06-22，并明确列出 Shopping Listing Ads (Alpha) 会将商品匹配到 real conversations 的 carousel 中。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-25-tiktok-cannes-business-impact",
+        title: "TikTok在戛纳主推AI创意与转化工具",
+        source: "TikTok Newsroom",
+        originalUrl: "https://newsroom.tiktok.com/tiktok-at-cannes-lions-2026-where-creative-solutions-creator-voices-and-culture-turn-creativity-into-business-impact?lang=en",
+        publishedAt: "2026-06-22",
+        category: "TikTok",
+        tags: ["TikTok", "广告投放", "AI创意"],
+        summary:
+          "TikTok 于 6 月 22 日发布戛纳内容，强调其正用 agentic AI solutions、创作者合作和更紧密的文化参与方式，把 discovery、consideration 与 conversion 压缩到同一环境里，加速品牌转化闭环。",
+        sellerImpact:
+          "对依赖短视频获客的跨境品牌，TikTok 的产品方向更加明确地偏向创意效率和可衡量转化，单靠机械投流已不够，内容、达人和转化落地页需要一起设计。",
+        recommendedAction:
+          "复盘近 30 天 TikTok 投放和达人合作素材，优先保留能承接 discovery to action 的内容组合，并为 AI 生成创意、达人白名单和站外落地页建立统一测试框架。",
+        verification:
+          "TikTok Newsroom 页面显示 2026-06-22，正文写明平台正在展示 new agentic AI solutions，并强调 discovery、consideration、conversion increasingly happen in the same environment。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-25-google-ads-budget-limited-bidding",
+        title: "Google Ads预算受限出价逻辑八月收紧",
+        source: "Search Engine Land",
+        originalUrl: "https://searchengineland.com/google-ads-updates-target-based-bidding-for-budget-limited-campaigns-480752",
+        publishedAt: "2026-06-22 11:34 ET",
+        category: "Advertising",
+        tags: ["Google Ads", "ROAS", "出价优化"],
+        summary:
+          "Search Engine Land 6 月 22 日披露，Google 将在 8 月 17 日调整预算受限 campaign 的 target-based bidding 行为，让 Target CPA/ROAS 在预算受限时更贴近设定目标，并于 7 月 6 日开放 Bid Target Adjustment Tool。",
+        sellerImpact:
+          "如果你的购物广告目前长期跑赢目标 CPA/ROAS，新规则可能会把表现拉回到系统设定目标，导致获客成本抬升或量级变化，利润较薄的跨境卖家影响更明显。",
+        recommendedAction:
+          "立即筛查所有 budget-limited 且历史表现优于目标的广告系列，提前调整目标值、预算和实验计划，不要等到 8 月中旬再被动修正历史高效组合。",
+        verification:
+          "Search Engine Land 文章显示发布时间为 2026-06-22 11:34 ET，并明确写出 August 17 生效、July 6 上线 Bid Target Adjustment Tool。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-25-google-june-spam-update",
+        title: "Google六月垃圾更新发布独立站SEO需自查",
+        source: "Search Engine Land",
+        originalUrl: "https://searchengineland.com/google-releases-june-2026-spam-update-481002",
+        publishedAt: "2026-06-24 12:10 ET",
+        category: "SEO",
+        tags: ["Google", "SEO", "垃圾更新"],
+        summary:
+          "Search Engine Land 6 月 24 日报道称，Google 已发布 June 2026 spam update，适用于全球所有语言，预计数日内完成滚动。官方提醒受影响站点需回看 spam policies，避免操纵式内容与结构继续掉排名。",
+        sellerImpact:
+          "对依赖自然搜索获客的独立站卖家，这轮更新会放大低质聚合页、机器堆砌内容和失真测评页的风险；若站内 SEO 过度追求量产，近期流量波动可能加剧。",
+        recommendedAction:
+          "优先审查流量占比高的类目页、测评页和 AI 批量内容，检查是否存在重复、误导、关键词堆砌或外链操纵，并同步监控 Search Console 曝光和点击变化。",
+        verification:
+          "Search Engine Land 页面标注 Published: June 24, 2026 at 12:10 pm，且引用 Google 状态页说明该 spam update applies globally and to all languages。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-25-retaildive-prime-day-forecast",
+        title: "Prime Day预计带动美国电商销售263亿美元",
+        source: "Retail Dive",
+        originalUrl: "https://www.retaildive.com/news/amazon-prime-day-sale-twenty-six-billion-us-e-commerce-2026/823368/",
+        publishedAt: "2026-06-22",
+        category: "Market Trend",
+        tags: ["Prime Day", "美国市场", "消费趋势"],
+        summary:
+          "Retail Dive 6 月 22 日援引 Adobe 预测称，本次 Prime Day 将在美国带动 263 亿美元电商销售，同比增长 9%；Numerator 同时指出，大量消费者会同步查看 Walmart、Target、Costco、Best Buy 和 Temu 的竞品促销。",
+        sellerImpact:
+          "今年 Prime Day 更像全渠道比价周而非单一平台促销，卖家如果只盯 Amazon 排名，不同步处理独立站和其他平台的价格、库存与再营销承接，流量很容易被分走。",
+        recommendedAction:
+          "给核心 SKU 制定跨平台价格护栏和库存优先级，提前准备站外承接页、短信邮件和再营销计划，避免 Prime Day 期间不同渠道互相抢量和冲突促销。",
+        verification:
+          "Retail Dive 文章页面显示发布日期为 2026-06-22，正文写明 Adobe 预计 Prime Day 将带动 26.3 billion 美元电商销售，并引用 Numerator 的跨平台比价数据。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-25-walmart-texas-dc-remodel",
+        title: "Walmart继续追加德州仓配自动化投入",
+        source: "Retail Dive",
+        originalUrl: "https://www.retaildive.com/news/walmart-plans-8m-texas-distribution-center-remodel/823178/",
+        publishedAt: "2026-06-22",
+        category: "Logistics",
+        tags: ["Walmart", "自动化", "履约"],
+        summary:
+          "Retail Dive 6 月 22 日报道，Walmart 将继续推进德州 New Braunfels 配送中心改造，本阶段预算约 800 万美元。报道同时指出，Walmart 正为美国 42 个区域配送中心中的 23 个加装自动化，并计划最终升级全部网络。",
+        sellerImpact:
+          "大型平台正持续把自动化与履约稳定性变成竞争壁垒。想做 Walmart Marketplace 或向大型零售渠道供货的卖家，必须提前匹配更稳的补货节奏、包装规范和履约 SLA。",
+        recommendedAction:
+          "审查对美仓配 SLA、补货周期、外箱与托盘规范及预约入仓流程，特别是高周转 SKU，要准备能跟上平台自动化节奏的数据回传和履约响应机制。",
+        verification:
+          "Retail Dive 页面显示 2026-06-22 发布，正文写明该项目是 Walmart broader strategy to automate its distribution network 的一部分，并点明 23 of 42 regional distribution centers 正在 retrofit。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-25-practicalecommerce-new-tools",
+        title: "Practical Ecommerce盘点本周商家新工具",
+        source: "Practical Ecommerce",
+        originalUrl: "https://www.practicalecommerce.com/new-ecommerce-tools-june-24-2026",
+        publishedAt: "2026-06-24",
+        category: "Independent Site",
+        tags: ["工具", "独立站", "AI"],
+        summary:
+          "Practical Ecommerce 于 6 月 24 日汇总本周商家新工具，涵盖 agentic commerce、GEO、AI 营销、analytics、payment links、B2B、personalization 与 fulfillment，并点名 Shopify 春季版本带来的 agentic commerce 和外站 Shop Pay 扩展。",
+        sellerImpact:
+          "这说明独立站技术栈正在快速向 AI 驱动和多渠道协同升级，卖家如果仍把工具采购停留在单点插件层面，后续会在数据连通和获客效率上逐步落后。",
+        recommendedAction:
+          "梳理当前独立站的搜索、支付、个性化和履约工具栈，优先补足能直接提升转化或减少人工操作的环节，避免同时试用过多新工具造成数据碎片化。",
+        verification:
+          "Practical Ecommerce 文章页标注日期为 2026-06-24，导语明确说明本周更新覆盖 agentic commerce、GEO、AI-powered marketing、analytics、payments、B2B 与 fulfillment。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-25-practicalecommerce-eu-warranties",
+        title: "欧盟保修规则再提醒跨境卖家别沿用美规",
+        source: "Practical Ecommerce",
+        originalUrl: "https://www.practicalecommerce.com/how-e-u-warranties-trap-u-s-sellers",
+        publishedAt: "2026-06-23",
+        category: "Compliance",
+        tags: ["欧盟", "保修", "消费者保护"],
+        summary:
+          "Practical Ecommerce 6 月 23 日提醒，美国及其他境外卖家经常把本土保修做法直接套到欧盟销售，这是典型合规误区。跨境卖家若忽视欧盟消费者保护框架，售后承诺、页面表述和退款责任都可能失真。",
+        sellerImpact:
+          "对做欧盟独立站、平台店或海外仓履约的卖家，这不是文案细节，而是潜在的投诉、退款、监管和平台申诉风险来源，尤其会影响高客单耐用品和电子类目。",
+        recommendedAction:
+          "按欧盟市场重新审查保修、退货、维修和详情页承诺文本，区分美国与欧盟站点政策，不要再用统一英文模板覆盖所有市场。",
+        verification:
+          "Practical Ecommerce 分类页显示文章《How E.U. Warranties Trap U.S. Sellers》发布时间为 2026-06-23，标题与导语均明确指向 foreign sellers 将 domestic warranty practices 套用于 E.U. 销售的风险。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-25-practicalecommerce-bing-ai-report",
+        title: "Bing AI可见度报告增强便于监控引流",
+        source: "Practical Ecommerce",
+        originalUrl: "https://www.practicalecommerce.com/bings-improved-ai-performance-section",
+        publishedAt: "2026-06-22",
+        category: "SEO",
+        tags: ["Bing", "AI Search", "流量监控"],
+        summary:
+          "Practical Ecommerce 6 月 22 日指出，Bing 的 AI Performance Report 进一步增强，可跟踪品牌在 Microsoft Copilot、Bing AI summaries 及部分 AI partner integrations 中的引用与页面表现，让 AI 搜索监控更接近常规 SEO 报表。",
+        sellerImpact:
+          "对依赖英文搜索获客的独立站卖家，AI 搜索已经不再只是概念。谁能更早监控品牌被引用、哪些页面被当作答案源，就更有机会优化产品数据和内容结构抢先获客。",
+        recommendedAction:
+          "把 Bing AI Performance 报表纳入周度 SEO 复盘，重点观察 grounding queries 与 pages 表现，并把表现差的高价值页面补足结构化信息、FAQ 和产品事实。",
+        verification:
+          "Practical Ecommerce 搜索结果与站点首页均显示该文发布时间为 2026-06-22，摘要明确说明更新后的报告会跟踪 citations in Microsoft Copilot、Bing summaries 和 select AI partner integrations。",
+        priority: "medium",
+      },
+    ],
+  },
+  {
     date: "2026-06-23",
     displayDate: "2026年6月23日",
     generatedAt: "2026-06-23T10:30:00+08:00",
