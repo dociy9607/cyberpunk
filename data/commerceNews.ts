@@ -2,6 +2,387 @@ import type { CommerceNewsBrief } from "@/lib/types";
 
 export const commerceNewsBriefs: CommerceNewsBrief[] = [
   {
+    date: "2026-06-26",
+    displayDate: "2026年6月26日",
+    generatedAt: "2026-06-26T11:30:00+08:00",
+    researchWindow:
+      "优先核验 2026-06-25 至 2026-06-26 最近 24 小时来源；因高可信、可访问且与卖家经营决策直接相关的增量不足 20 条，扩展到 2026-06-22 至 2026-06-26 近 72 小时窗口。本次共确认 20 条。",
+    observation: [
+      "近 72 小时的高价值增量仍集中在 Shopify 后台流程、eBay 刊登标准、Amazon Prime Day 节奏、Google 与 Microsoft 广告自动化，以及 Walmart 零售媒体。卖家当前更需要同时处理转化效率、履约协同与广告可见性。",
+      "平台正在把更多运营动作做成默认能力或强制规则，例如 Shopify B2B 折扣默认开启、eBay 尺码标准化和 Google Ads API 安全审批。对跨境卖家来说，旧 SOP、硬编码字段和人工兜底会在旺季前暴露风险。",
+      "流量侧的变化也很明确：Demand Gen、YouTube 创作者洞察、Merchant Center 商品诊断、CTV 与 AI 搜索都在争夺预算。靠单一搜索词投放或单纯追求低 CPC 的打法，后续会越来越难拿到稳定增量。",
+      "本次 20 条中，部分 Amazon Seller Central 页面只显示相对时间。我在 2026-06-26 抓取时保留了页面原始显示，并在发布时间与验真说明中写明换算依据，避免把相对时间误记为绝对发布日期。",
+    ],
+    verificationNotes: [
+      "优先采用 Shopify Changelog、eBay Developers、Amazon Seller Central、Google Ads & Commerce Blog、Google Ads Developer Blog、Microsoft Advertising Blog、Walmart Corporate 等官方来源；搜索与工具趋势补充采用 Search Engine Land、Practical Ecommerce 等有明确发布日期的行业媒体。",
+      "每条记录均保留原文链接，并使用页面明确显示的发布日期、发布时间或页面相对时间换算结果写入 publishedAt；对于 Seller Central 的 2 hours ago、9 hours ago 等相对时间，均注明抓取日期 2026-06-26。",
+      "摘要、对卖家的影响与建议动作均基于原文已披露事实整理，不补造未公开数字，不使用无法访问的转述截图、匿名社媒帖或二手搬运内容。",
+      "若资讯属于功能发布、接口变更、广告能力更新或规则生效提醒，卡片中会明确写出适用对象、关键时间点和需要卖家或服务商立即排查的动作，避免把平台更新写成泛泛行业评论。",
+    ],
+    items: [
+      {
+        id: "2026-06-26-shopify-draft-order-presentment-currency",
+        title: "Shopify草稿订单折扣改按呈现币种计算",
+        source: "Shopify Changelog",
+        originalUrl: "https://changelog.shopify.com/posts/improvement-to-draft-order-custom-discount-currency",
+        publishedAt: "2026-06-24",
+        category: "Shopify",
+        tags: ["多币种", "草稿订单", "报价"],
+        summary:
+          "Shopify 于 6 月 24 日更新草稿订单折扣逻辑，自定义行项目折扣将按 draft order 的呈现币种而非店铺默认币种计算。对做多币种报价、人工补单和 B2B 定制开单的商家，这能减少换算误差与客户对账争议。",
+        sellerImpact:
+          "多市场报价和人工开单场景的金额展示会更一致，但也意味着旧有客服话术、ERP 对账逻辑和折扣模板可能与新结算口径不一致，旺季前若不复核容易放大财务和售后偏差。",
+        recommendedAction:
+          "立即抽查主要币种下的草稿订单，复核折扣金额、税费与最终支付页是否一致，并同步更新客服报价 SOP、财务对账说明和任何依赖店铺币种的自动化脚本。",
+        verification:
+          "Shopify Changelog 页面标注发布日期为 2026-06-24，正文明确写明 custom discounts now use the draft order’s presentment currency。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-26-shopify-b2b-discounts-default",
+        title: "Shopify B2B 折扣默认开启减少支持依赖",
+        source: "Shopify Changelog",
+        originalUrl: "https://changelog.shopify.com/posts/b2b-discounts-are-now-available-by-default-on-new-stores",
+        publishedAt: "2026-06-23",
+        category: "Shopify",
+        tags: ["B2B", "折扣", "Markets"],
+        summary:
+          "Shopify 6 月 23 日宣布，新建 B2B 店铺和符合条件的既有 B2B 店铺将默认启用折扣能力，不再需要联系支持开通。但官方同时提醒，未按市场限制的折扣可能同时作用于 B2B 与非 B2B 客群。",
+        sellerImpact:
+          "这会提升批发促销执行速度，但混合经营零售和批发的独立站卖家若没细分 eligibility 和 market，可能把批发折扣误放给零售客户，直接压缩毛利并制造价格体系冲突。",
+        recommendedAction:
+          "检查所有 automatic discount 和 discount code 的适用市场与客户资格，把 B2B company location market 与普通区域市场分开配置，并在促销上线前做一轮真实结账回归测试。",
+        verification:
+          "Shopify Changelog 页面显示 2026-06-23，正文写明 discounts for B2B are activated automatically，并提示 All customers 折扣默认可能覆盖 B2B 与非 B2B 客户。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-26-shopify-pos-staff-attribution",
+        title: "Shopify POS 员工归因默认开启并加报表",
+        source: "Shopify Changelog",
+        originalUrl: "https://changelog.shopify.com/posts/staff-attribution-improvements-in-pos",
+        publishedAt: "2026-06-22",
+        category: "Shopify",
+        tags: ["POS", "员工归因", "线下零售"],
+        summary:
+          "Shopify 在 6 月 22 日更新 POS 员工归因，未配置门店会逐步默认启用自动归因，并新增更快的 staff picker 与 POS Analytics 归因报表。自 7 月 6 日起，符合条件门店将按已 PIN 登录员工自动记账。",
+        sellerImpact:
+          "对同时经营线下门店、快闪店和线上转化归因的品牌，这会直接影响提成、班次绩效和销售分析。若角色权限、PIN 使用和报表口径没先理顺，后续数据会被系统性放大偏差。",
+        recommendedAction:
+          "在 7 月 6 日前检查 PIN 登录、员工角色和提成口径，用真实交易演练自动归因，再决定是否保留默认设置或继续使用自定义归因流程。",
+        verification:
+          "Shopify Changelog 页面标注 2026-06-22，正文写明 automatic attribution will be turned on by default starting July 6 for eligible shops。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-26-shopify-po-transfers",
+        title: "Shopify 采购单自动建调拨提升多仓协同",
+        source: "Shopify Changelog",
+        originalUrl: "https://changelog.shopify.com/posts/purchase-orders-now-create-transfers-to-move-inventory",
+        publishedAt: "2026-06-22",
+        category: "Shopify",
+        tags: ["采购", "库存", "多仓"],
+        summary:
+          "Shopify 6 月 22 日打通 purchase order 与 transfer，商家在收货时会自动生成调拨记录，并支持在 Admin 或 POS 收货、跟踪部分到货、CSV 导入采购单和自动填充历史采购价，减少多地收货断层。",
+        sellerImpact:
+          "做海外仓、多门店和多仓协同的卖家，采购入库与仓间流转会更顺，但第三方 ERP 或 WMS 若依赖旧字段和旧事件，很容易在旺季前出现库存回写错位或成本口径不一致。",
+        recommendedAction:
+          "复核采购、收货、调拨与成本回写流程，确认 ERP/WMS 是否兼容新结构，优先测试部分到货和多地点收货场景，避免库存同步误差拖累广告投放与补货决策。",
+        verification:
+          "Shopify Changelog 页面显示 2026-06-22，正文明确写明 when you’re ready to receive a purchase order, it now creates a transfer。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-26-shopify-checkout-email-tooltip",
+        title: "Shopify 结账邮箱提示强化买家信任",
+        source: "Shopify Changelog",
+        originalUrl: "https://changelog.shopify.com/posts/checkout-email-field-new-saved-indicator-and-tooltip",
+        publishedAt: "2026-06-22",
+        category: "Shopify",
+        tags: ["Checkout", "转化率", "信任"],
+        summary:
+          "Shopify 在 6 月 22 日更新结账页邮箱字段，新增 saved 指示与 tooltip，向买家解释邮箱会用于订单确认和购物车提醒。更新重点不大，但会直接影响陌生流量和移动端结账时的信任反馈。",
+        sellerImpact:
+          "对依赖付费流量和移动端成交的独立站卖家，这类细节优化可能提升邮箱填写完成率与结账顺畅度；若主题、翻译应用或扩展样式覆盖过深，也可能导致新提示不正常显示。",
+        recommendedAction:
+          "抽查桌面端和移动端结账页，确认邮箱提示未被主题、第三方结账扩展或翻译插件遮挡，并对比更新前后的邮箱填写率和结账放弃率变化。",
+        verification:
+          "Shopify Changelog 页面标注 2026-06-22，正文写明新增 saved indicator 和 email usage tooltip，用于提升 buyer confidence and trust。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-26-ebay-immutable-user-ids",
+        title: "eBay API 将以不可变用户 ID 取代用户名",
+        source: "eBay Developers Program",
+        originalUrl: "https://developer.ebay.com/updates/api-updates",
+        publishedAt: "2026-06-25",
+        category: "eBay",
+        tags: ["API", "数据映射", "eBay"],
+        summary:
+          "eBay Developers API Updates 页面在 6 月 25 日置顶提醒，为满足特定开发者数据处理要求，部分集成将把 usernames 替换为 immutable user IDs，并对特定用户财务数据增加保护。依赖用户名做主键的系统需要尽快改造。",
+        sellerImpact:
+          "如果卖家或服务商用 eBay 用户名做订单映射、风控标记、客服检索或历史报表关联，后续将面临数据断链、接口字段不兼容和财务可见性下降的风险，影响售后和对账效率。",
+        recommendedAction:
+          "排查所有以 eBay username 为主键或展示字段的接口、数据库和报表，新增 immutable user ID 映射层，并评估财务字段受限后对风控、客服和 BI 看板的补救方案。",
+        verification:
+          "eBay Developers 的 API Updates 页面于 2026-06-25 抓取时顶部 banner 明确写明 Usernames will be replaced with immutable user IDs and financial data will be protected for certain users。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-26-ebay-size-standardization",
+        title: "eBay 服饰尺码标准化七月起拦截异常刊登",
+        source: "eBay Developers Program",
+        originalUrl: "https://developer.ebay.com/updates/blog/size-standardization",
+        publishedAt: "2026-06-25",
+        category: "eBay",
+        tags: ["刊登合规", "服饰", "尺码标准化"],
+        summary:
+          "eBay 开发者博客 6 月 25 日说明，服饰和鞋类尺码标准化已自 6 月开始自动规范高置信值并警告低置信或无效值；自 7 月起，非标准、缺失或不完整的尺码与 condition 数据将被拦截、隐藏或挂起。",
+        sellerImpact:
+          "做 eBay 服饰鞋靴、批量刊登或依赖 ERP 与第三方工具上新的卖家，若仍使用 Small、N/A、See description 等自定义值，7 月后更容易遭遇刊登失败、隐藏和流量损失。",
+        recommendedAction:
+          "立即核查尺码字段映射、模板值和类目 condition 数据，把常用值统一到 eBay 标准枚举，并在 7 月前完成一次批量重发与报错监控，避免旺季前集中触发拦截。",
+        verification:
+          "eBay Developers 博文写明 Starting from June 2026 开始 normalization，Starting from July 2026 非标准或缺失值会 be blocked from the site or placed on hold。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-26-ebay-row-return-reason",
+        title: "eBay 欧盟退货原因新增枚举需兼容未知值",
+        source: "eBay Developers Program",
+        originalUrl: "https://developer.ebay.com/updates/api-updates",
+        publishedAt: "2026-06-25",
+        category: "eBay",
+        tags: ["欧盟退货", "API", "合规"],
+        summary:
+          "eBay API Updates 页面同日提醒，GetReturnDetails API 将为符合条件的欧盟退货新增 Right of Withdrawal 返回原因。官方要求集成方安全处理新的或未知的枚举值，避免接口报错和售后流程中断。",
+        sellerImpact:
+          "做欧盟站点退货自动化、ERP 接单或售后工单分发的卖家，如果系统把退货原因写死为白名单枚举，新值上线后可能出现退款状态异常、客服漏单或 API 调用失败。",
+        recommendedAction:
+          "把退货原因解析逻辑改成可扩展枚举，增加 unknown fallback 分支，并对 EU return 流程做一轮回归测试，同步更新客服和财务对 Right of Withdrawal 的处理说明。",
+        verification:
+          "eBay Developers API Updates 页面顶部提示写明 A new Right of Withdrawal return reason will be added to the getReturnDetails API for eligible EU returns。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-26-amazon-prime-day-ready",
+        title: "Amazon 确认 Prime Day 6 月 23 日至 26 日举行",
+        source: "Amazon Seller Central",
+        originalUrl: "https://sellercentral.amazon.com/seller-forums/discussions/t/512086d0-e9cf-4456-a27b-f850164d704c",
+        publishedAt: "页面显示 2 hours ago（于 2026-06-26 抓取）",
+        category: "Amazon",
+        tags: ["Prime Day", "大促", "Amazon"],
+        summary:
+          "Amazon Seller Central 论坛在 2026-06-26 抓取时显示官方帖子于 2 小时前更新，确认 Prime Day 2026 将于 6 月 23 日至 26 日举行，并提醒卖家在最后窗口完成库存、广告、详情页与促销节奏核查。",
+        sellerImpact:
+          "对仍在冲刺促销、补货和广告预算的卖家，这意味着运营窗口已经极短。若 FBA 到货、促销生效、A+ 页面和客服排班存在短板，高峰流量更容易转化成广告浪费和断货损失。",
+        recommendedAction:
+          "逐个复核核心 ASIN 的库存可售天数、促销状态、广告预算与主图 A+ 是否匹配大促诉求，并为高流量 SKU 准备补货、改价和客服快速响应预案。",
+        verification:
+          "Seller Central 官方帖标题为 It’s Official! Prime Day 2026 is June 23–26. Are You Ready?；页面于 2026-06-26 抓取时显示 by Jameson_Amazon 2 hours ago。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-26-amazon-prime-day-megathread",
+        title: "Amazon Prime Day 实时总帖开放问题汇总入口",
+        source: "Amazon Seller Central",
+        originalUrl: "https://sellercentral.amazon.com/seller-forums/discussions/t/9b1acbff-2b37-4c2c-83bf-9574c18e9715",
+        publishedAt: "页面显示 9 hours ago（于 2026-06-26 抓取）",
+        category: "Amazon",
+        tags: ["Prime Day", "论坛公告", "旺季支持"],
+        summary:
+          "Amazon Seller Central 于 2026-06-26 抓取时显示官方 Prime Day 2026 Megathread 在 9 小时前发布，明确活动时间为 6 月 23 日 12:01 AM PDT 至 6 月 26 日 11:59 PM PDT，并集中承接促销、广告、履约和异常问题。",
+        sellerImpact:
+          "对活动中实时盯盘的卖家，这个总帖相当于官方问题聚合入口。遇到流量、促销、库存或支持响应异常时，能更快确认是否为普遍问题，减少团队内部误判和重复排查时间。",
+        recommendedAction:
+          "安排运营同事在活动期固定查看总帖与支持通道，记录价格、Deal、Coupons、广告和配送异常的截图与时间点，必要时同步提交 Seller Support 工单留痕。",
+        verification:
+          "Seller Central 页面标题为 Your Prime Day 2026 Megathread!；页面于 2026-06-26 抓取时显示 by Indy_Amazon 9 hours ago，并给出活动起止时间。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-26-google-smart-campaign-api-end",
+        title: "Google Ads API 八月停建新 Smart Campaign",
+        source: "Google Ads Developer Blog",
+        originalUrl: "https://ads-developers.googleblog.com/2026/06/changes-to-support-for-smart-campaigns.html",
+        publishedAt: "2026-06-23",
+        category: "Advertising",
+        tags: ["Google Ads", "API", "自动化广告"],
+        summary:
+          "Google Ads Developer Blog 6 月 23 日宣布，自 8 月 3 日起将无法通过 Google Ads API 创建新的 Smart Campaign，但现有 Smart Campaign 仍可继续更新和投放。依赖 API 批量开广告的商家需要调整建模路径。",
+        sellerImpact:
+          "跨境卖家若使用第三方工具、脚本或代理服务批量新建 Smart Campaign，后续新增账户或新活动将受阻。短期不改造会影响小预算测试、门店广告和自动化开户节奏。",
+        recommendedAction:
+          "盘点是否有系统通过 API 新建 Smart Campaign，尽快与服务商确认替代方案，优先测试 Search、Performance Max 或其它可持续的建投流程，避免 8 月后新建失败。",
+        verification:
+          "Google Ads Developer Blog 页面标注 Tuesday, June 23, 2026，并写明 Starting on August 3, 2026 you will no longer be able to create new Smart Campaigns using the Google Ads API。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-26-google-ads-api-v24-2",
+        title: "Google Ads API v24.2 加入 AI 标注与报表更新",
+        source: "Google Ads Developer Blog",
+        originalUrl: "https://ads-developers.googleblog.com/2026/06/announcing-v242-of-google-ads-api.html",
+        publishedAt: "2026-06-24",
+        category: "Advertising",
+        tags: ["Google Ads API", "AI 透明度", "报表"],
+        summary:
+          "Google Ads API v24.2 于 6 月 24 日发布，带来安全更新、AI 生成内容透明标注、报表增强和规划能力改进。官方要求开发者升级客户端库和代码，才能使用 SyntheticContentInfo 等新结构和最新审批支持。",
+        sellerImpact:
+          "对自建投放后台、代理商中台和多店广告自动化系统，这会影响素材合规、用户权限控制和报表字段兼容。若继续停留旧版本，后续广告管理和审计透明度都会受限。",
+        recommendedAction:
+          "安排开发尽快评估 v24.2 升级，核对素材对象、审批流程和报表字段是否受影响，尤其是 AI 生成广告素材的标注、访问控制和多账号管理逻辑。",
+        verification:
+          "Google Ads Developer Blog 页面标注 Wednesday, June 24, 2026，正文说明 v24.2 带来 security updates、AI transparency features、reporting enhancements。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-26-google-ads-api-multi-party-approvals",
+        title: "Google Ads API 敏感操作将要求双人审批",
+        source: "Google Ads Developer Blog",
+        originalUrl: "https://ads-developers.googleblog.com/2026/?m=0",
+        publishedAt: "2026-06-25",
+        category: "Advertising",
+        tags: ["Google Ads API", "权限安全", "审批"],
+        summary:
+          "Google Ads Developer Blog 年度页显示，Google Ads API 将从 7 月 27 日开始逐步要求 multi-party approvals 处理敏感动作，包括邀请新用户和更新用户权限等级。广告账号权限管理会从单人操作转向双人确认。",
+        sellerImpact:
+          "广告代理、品牌总部与代投团队共管账户时，权限调整和邀请成员的流程会变慢。若内部没有审批预案，旺季前的人手调度、交接和紧急权限开通可能直接卡住投放执行。",
+        recommendedAction:
+          "尽快梳理广告账户管理员名单和权限审批链，给团队补充双人审批流程，并测试邀请账号、调权限和紧急交接场景，避免 7 月底后临时加人失败。",
+        verification:
+          "Google Ads Developer Blog 2026 页面列出 Thursday, June 25, 2026 的 Multi-party approvals in the Google Ads API，正文写明 security updates will start rolling out starting on July 27, 2026。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-26-google-demand-gen-drop",
+        title: "Google Demand Gen 六月更新强化视频创意优化",
+        source: "Google Ads & Commerce Blog",
+        originalUrl: "https://blog.google/products/ads-commerce/demand-gen-drop-june-2026/",
+        publishedAt: "2026-06-25",
+        category: "Advertising",
+        tags: ["Demand Gen", "YouTube", "创意优化"],
+        summary:
+          "Google Ads & Commerce Blog 6 月 25 日发布 June Demand Gen Drop，新增更广的视频尺寸转换、Gemini 创意建议和 Web to App Acquisition Measurement，重点帮助广告主在 YouTube 场景拉新并提升多素材适配效率。",
+        sellerImpact:
+          "对依赖视频种草和再营销的跨境卖家，这意味着短视频素材能更低成本地扩成多版位使用，且能更清楚看到 Demand Gen 对 app 安装和新客获取的实际贡献。",
+        recommendedAction:
+          "把现有竖版、方版和横版视频素材重新整理成可复用资产包，测试 Gemini 创意建议与新测量维度，并按新客获客成本而非单纯点击率重估 Demand Gen 预算。",
+        verification:
+          "Google Ads & Commerce Blog 页面标注 Published today，正文说明 June’s Demand Gen Drop 扩展 video resizing、creative insights powered by Gemini 与 Web to App Acquisition Measurement。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-26-youtube-creator-insights-api",
+        title: "YouTube 新增创作者洞察 API 帮助品牌选人",
+        source: "Google Ads & Commerce Blog",
+        originalUrl: "https://blog.google/products/ads-commerce/youtube-insights-tools-cannes-lions-2026/",
+        publishedAt: "2026-06-23",
+        category: "Advertising",
+        tags: ["YouTube", "创作者营销", "API"],
+        summary:
+          "Google 在 6 月 23 日的 Cannes Lions 更新中宣布，Google Ads Insights Finder 将提供更细的 YouTube 热点数据，品牌脉搏指标也将并入，同时开放 Content & Creator Insights API，帮助代理商与品牌更高效做创作者媒介规划。",
+        sellerImpact:
+          "做海外红人投放和内容种草的卖家，可以更快识别适合的创作者和受众趋势，减少只靠人工选人和经验投放造成的错配，提高创意协作与投产比。",
+        recommendedAction:
+          "把 YouTube 创作者合作纳入标准投放流程，优先验证新洞察数据能否改善达人筛选、选题方向和素材表现，并把创作者投放结果与站内转化数据联动复盘。",
+        verification:
+          "Google Ads & Commerce Blog 页面标注 Jun 23, 2026，正文列出 new Content & Creator Insights API、trending insights 与 brand pulse insights 更新。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-26-microsoft-merchant-center-product-explorer",
+        title: "微软商家中心 Product Explorer 上线强化选品诊断",
+        source: "Microsoft Advertising Blog",
+        originalUrl: "https://about.ads.microsoft.com/en/blog/post/june-2026/product-explorer-in-merchant-center-and-other-product-news-for-June-2026",
+        publishedAt: "页面显示 3 days ago（于 2026-06-26 抓取）",
+        category: "Advertising",
+        tags: ["Microsoft Advertising", "Merchant Center", "商品目录"],
+        summary:
+          "Microsoft Advertising 6 月产品更新提出 Merchant Center 的 Product explorer，可统一查看和优化整套商品目录，并同步加入免责声明显示能力。对同时跑 Bing、购物广告和多目录商品投放的卖家，商品诊断会更直接。",
+        sellerImpact:
+          "商品目录表现过去容易碎片化，卖家常在标题、属性、违规说明和投放表现之间来回排错。新入口有助于更快发现低曝光、低转化和合规展示问题，减少目录级浪费。",
+        recommendedAction:
+          "检查是否已接入 Microsoft Merchant Center，并按新品、低效 SKU 和高利润品类分层审查目录表现，优先修正属性缺失、说明不清和 feed 质量问题。",
+        verification:
+          "Microsoft Advertising Blog 页面于 2026-06-26 抓取时显示 3 days ago，正文标题为 Product explorer in Merchant Center and other product news for June 2026。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-26-walmart-vibe-ctv",
+        title: "Walmart 收购 Vibe 扩大中小品牌 CTV 广告入口",
+        source: "Walmart Corporate",
+        originalUrl: "https://corporate.walmart.com/news/2026/06/23/walmart-to-acquire-vibe-co-to-expand-access-to-connected-tv-advertising",
+        publishedAt: "2026-06-23",
+        category: "Walmart",
+        tags: ["CTV", "零售媒体", "Walmart"],
+        summary:
+          "Walmart 与 Vibe.co 于 6 月 23 日宣布达成收购协议，Walmart 将借此扩大自助式 Connected TV 广告能力，重点服务 SMB 和中型品牌。跨境品牌未来通过沃尔玛体系做电视化触达和站外种草的门槛会下降。",
+        sellerImpact:
+          "做美国市场增长的卖家会迎来新的零售媒体入口，尤其适合已有站内转化基础、希望用更强品牌曝光拉动 Walmart 与独立站搜索量的品牌型卖家。",
+        recommendedAction:
+          "如果你已在 Walmart Marketplace 或美国站外渠道稳定投放，开始评估 CTV 素材、归因和预算分层，提前准备能承接大屏曝光的品牌视频和落地页。",
+        verification:
+          "Walmart Corporate 新闻稿标注 2026-06-23，正文写明 Walmart will acquire Vibe.co, a self-serve, connected TV advertising platform designed for SMB and mid-market brands。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-26-walmart-connect-shoppable-tv",
+        title: "Walmart Connect 联手 VIZIO 推动可购物电视广告",
+        source: "Walmart Corporate",
+        originalUrl: "https://corporate.walmart.com/news/2026/06/23/walmart-connect-at-cannes-lions",
+        publishedAt: "2026-06-23",
+        category: "Walmart",
+        tags: ["零售媒体", "CTV", "可购物广告"],
+        summary:
+          "Walmart Connect 在 6 月 23 日的 Cannes Lions 公告中展示与 VIZIO 的下一代 commerce media 方案，重点是把大屏广告做成可购物体验，让品牌在电视场景里直接衔接浏览、加购与购买路径。",
+        sellerImpact:
+          "对重视美国本土品牌化和零售媒体布局的卖家，这意味着广告不再只是做曝光，未来更需要准备能在大屏上完成商品展示与行动引导的创意资产和归因方案。",
+        recommendedAction:
+          "优先梳理适合大屏展示的爆款和品牌视频，评估是否需要单独制作可购物 TV 素材，并把 Walmart、独立站和社媒渠道的品牌资产做成统一叙事。",
+        verification:
+          "Walmart Corporate 页面标注 2026-06-23，正文说明 Walmart Connect and VIZIO are showcasing the next evolution of commerce media to deliver fully integrated, shoppable experiences。",
+        priority: "medium",
+      },
+      {
+        id: "2026-06-26-google-spam-update",
+        title: "Google 六月垃圾更新开始影响全球自然流量",
+        source: "Search Engine Land",
+        originalUrl: "https://searchengineland.com/google-releases-june-2026-spam-update-481002",
+        publishedAt: "2026-06-24",
+        category: "SEO",
+        tags: ["Google", "SEO", "自然流量"],
+        summary:
+          "Search Engine Land 6 月 24 日报道，Google 已发布 June 2026 spam update，面向全球和所有语言，预计数天内完成。依赖自然搜索吃量的独立站卖家，需要把异常波动优先归因到算法清洗而非简单判断为投放或页面故障。",
+        sellerImpact:
+          "若站点存在低质聚合页、批量 AI 软文、失真外链或模板化垃圾内容，更新期间可能出现曝光和点击突然回落。对旺季前依赖 SEO 补量的卖家，这会直接影响免费流量稳定性。",
+        recommendedAction:
+          "立刻监控 Search Console 的曝光、点击和索引变化，优先排查薄内容、重复页、站群外链与程序化低质页面，并避免在波动期频繁误改标题结构与站点模板。",
+        verification:
+          "Search Engine Land 文章标注 Published yesterday，正文引用 Google 说明 Released the June 2026 spam update, which applies globally and to all languages。",
+        priority: "high",
+      },
+      {
+        id: "2026-06-26-practical-ecommerce-new-tools",
+        title: "本周电商工具更新转向 GEO 与代理式运营",
+        source: "Practical Ecommerce",
+        originalUrl: "https://www.practicalecommerce.com/new-ecommerce-tools-june-24-2026",
+        publishedAt: "2026-06-24",
+        category: "Tooling",
+        tags: ["工具", "GEO", "运营效率"],
+        summary:
+          "Practical Ecommerce 于 6 月 24 日汇总本周新电商工具，重点覆盖 agentic commerce、GEO、AI 营销、分析、销售代理、支付链接、B2B、个性化和履约等方向。卖家工具栈正在加速从单点插件转向代理式运营组合。",
+        sellerImpact:
+          "这说明下半年竞争不仅是流量价格，更是工具落地速度。能更快把 GEO、AI 分析和履约自动化接入业务的团队，会在内容生产、选品诊断和客服响应上形成结构性优势。",
+        recommendedAction:
+          "不要盲目上新工具，先按获客、转化、履约和复购四段漏斗梳理最大瓶颈，再筛选能直接替代人工重复动作的工具，优先做小范围试点和 ROI 复盘。",
+        verification:
+          "Practical Ecommerce 文章页面标注 June 24, 2026，正文说明本周工具更新涵盖 agentic commerce、GEO、AI-powered marketing、payments、B2B 与 fulfillment。",
+        priority: "medium",
+      },
+    ],
+  },
+  {
     date: "2026-06-25",
     displayDate: "2026年6月25日",
     generatedAt: "2026-06-25T10:30:00+08:00",
