@@ -1,236 +1,200 @@
 import type { CommerceNewsBrief } from "@/lib/types";
 
-export const latestCommerceNews_2026_06_29: CommerceNewsBrief = {
-  date: "2026-06-29",
-  displayDate: "2026年6月29日",
-  generatedAt: "2026-06-29T12:30:00+08:00",
+export const latestCommerceNews_2026_06_30: CommerceNewsBrief = {
+  date: "2026-06-30",
+  displayDate: "2026年6月30日",
+  generatedAt: "2026-06-30T12:30:00+08:00",
   researchWindow:
-    "优先核验 2026-06-28 至 2026-06-29 最近 24 小时资讯；因高可信且可访问的增量不足 20 条，扩展到 2026-06-26 至 2026-06-29 最近 72 小时窗口。本次共确认 12 条。",
+    "优先核验 2026-06-29 至 2026-06-30 最近 24 小时资讯；因高可信、可访问且与跨境卖家经营决策直接相关的增量不足 20 条，扩展到 2026-06-27 至 2026-06-30 最近 72 小时窗口。本次共确认 10 条。",
   observation: [
-    "最近 72 小时里，真正值得卖家立即处理的变化仍集中在 Shopify 的欧盟税费与运费配置、TikTok Shop 的达人协作规则，以及 Google 与搜索广告生态对投放和自然流量的同步收紧。",
-    "这批更新的共同点不是单纯给流量，而是要求卖家把报价、素材、归因、站点索引和合作分销的底层数据做得更准确。数据和流程不稳，自动化广告与 AI 搜索会先放大错误。",
-    "本轮没有为了凑满 20 条而纳入发布时间超出 72 小时、正文无法访问、或搜索摘要与原文日期不一致的内容，因此页面与 API 会如实返回 12 条已核验资讯。",
+    "最近 72 小时的高价值增量明显偏向平台后台能力、AI 搜索与广告归因，以及 Prime Day 前的流量与大盘信号，而不是新的大规模平台红利。",
+    "这轮资讯的共同点是卖家不能再只看单点流量，要同时把商品数据、支付对账、SEO 基础设施和多渠道归因做扎实，否则 AI 驱动的获客和自动化投放会先放大数据误差。",
+    "本次没有纳入发布时间超出 72 小时、正文日期不清晰、重复前一日主题、或无法确认原始发布时间的低质量转载内容，因此页面与 API 会如实返回 10 条已核验资讯。",
   ],
   verificationNotes: [
-    "优先采用 Shopify Changelog、Shopify Developer Changelog、TikTok Shop Academy 等官方来源；广告与 SEO 侧补充采用 Search Engine Land、Practical Ecommerce 等带明确发布时间的权威行业媒体。",
-    "对 Search Engine Land 这类页面，优先使用搜索结果中直接可见的 Published 时间与文章摘要交叉核验；仅保留可打开正文链接且能确认标题、发布时间的条目。",
-    "凡是搜索摘要显示为 06/26/2026、但正文实际发布日期更早的 TikTok Shop Academy 页面，本次均剔除；因此确认数量少于目标 20 条。",
+    "优先采用 Shopify Changelog、Shopify Developer Changelog、Google 官方博客等官方来源；行业解读补充采用 Search Engine Land、Practical Ecommerce、Retail Dive 等带明确发布时间的权威媒体。",
+    "每条记录均保留原文链接，并以页面可见发布时间、站点元数据时间或搜索结果中可见的发布时间交叉核验后写入 publishedAt。",
+    "72 小时窗口内，可靠且与跨境卖家直接相关的新增内容不足 20 条，因此本次不为凑数纳入旧闻、二次转载或正文与摘要时间不一致的条目。",
   ],
   items: [
     {
-      id: "2026-06-29-shopify-eu-duty-3-euro",
-      title: "Shopify支持欧盟3欧元低值进口关税代收",
+      id: "2026-06-30-shopify-pos-device-admin",
+      title: "Shopify后台可集中查看与管理POS设备",
       source: "Shopify Changelog",
-      originalUrl: "https://changelog.shopify.com/posts/new-3-eu-import-customs-duty-arrives-july-1",
-      publishedAt: "2026-06-26",
+      originalUrl: "https://changelog.shopify.com/posts/view-and-manage-all-your-pos-devices-from-shopify-admin",
+      publishedAt: "2026-06-29",
       category: "Shopify",
-      tags: ["欧盟关税", "Managed Markets", "结账税费"],
+      tags: ["POS", "门店运营", "设备管理"],
       summary:
-        "Shopify 于 2026-06-26 公告，已支持欧盟对 150 欧元及以下低值进口包裹按税则行征收 3 欧元关税，并在 Managed Markets 与 import tax and duty calculation 中自动计入结账费用，7 月 1 日起生效。",
+        "Shopify 于 2026-06-29 更新后台设备管理能力，商家现在可在 Shopify Admin 直接集中查看并管理全部 POS 设备状态，而不必逐店排查。对同时经营线下门店、快闪店和跨境直营网点的品牌，这类可视化能力会直接提升设备运维效率。",
       sellerImpact:
-        "面向欧盟发货的独立站卖家，结账展示、毛利测算和含税报价会立即受影响。若仍按旧低值免税逻辑定价，容易出现低价冲量后利润被税费吞噬，或到岸补费引发拒收与差评。",
+        "一旦 POS 设备状态、分配门店和异常排查集中到后台，门店扩张期的设备失联、错配和收银中断风险会下降。对做海外线下零售联动的卖家，这会影响门店开张节奏和销售连续性。",
       recommendedAction:
-        "立即复核欧盟市场的含税售价、促销毛利和多品类混装订单的税则行数，统一客服话术，明确新增加收的是 3 欧元关税而非 VAT 重复收费。",
+        "检查现有 POS 设备分配、命名和门店映射是否统一，建立设备异常巡检清单，并在旺季前先用新后台确认备用设备、离线设备和高流量门店的部署完整性。",
       verification:
-        "Shopify Changelog 页面标题为 Shopify now supports €3 EU import customs duty collection，页面显示日期为 June 26, 2026。",
-      priority: "high",
+        "Shopify Changelog 页面显示日期为 June 29, 2026，标题为 View and manage all your POS devices from Shopify admin。",
+      priority: "medium",
     },
     {
-      id: "2026-06-29-shopify-carrier-services-profile",
-      title: "Shopify承运服务不再默认加入运费模板",
+      id: "2026-06-30-shopify-payment-mandate-id",
+      title: "Shopify支付授权ID字段公开影响订阅对账",
       source: "Shopify Developer Changelog",
-      originalUrl: "https://shopify.dev/changelog/carrier-services-will-no-longer-be-automatically-added-to-the-default-shipping-profile",
-      publishedAt: "2026-06-26",
+      originalUrl: "https://shopify.dev/changelog/payment-mandates-graphql-api-now-returns-mandate-id",
+      publishedAt: "2026-06-27",
       category: "Shopify",
-      tags: ["开发者", "运费模板", "Admin API"],
+      tags: ["GraphQL API", "支付", "订阅"],
       summary:
-        "Shopify Developer Changelog 于 2026-06-26 说明，自 Admin API 2026-10 起，新建 carrier service 后将只完成注册，不再自动挂到 General shipping profile，商家或服务商需手动或通过 API 补齐运费配置。",
+        "Shopify Developer Changelog 在 2026-06-27 公告，Payment Mandates GraphQL API 现已返回 mandate ID。对订阅、分期扣款和支付授权链路较长的商家与服务商而言，这让支付授权记录与订单、账单系统之间的映射更容易做精确对账。",
       sellerImpact:
-        "依赖第三方物流插件、自研运费接口或海外仓动态报价的卖家，若升级版本后没补挂运费模板，最直接的结果就是结账页不出运费，导致买家无法下单或运费错误。",
+        "依赖订阅续费、预授权扣款或第三方账单系统的出海商家，过去若缺少稳定授权主键，容易在失败扣款、退款申诉和财务对账时出现链路断点。新字段能降低支付侧排障成本。",
       recommendedAction:
-        "排查当前 ERP、物流中间件和私有应用是否依赖旧自动挂载逻辑，在测试店先验证 2026-10 版本下的 carrier service 创建、费率写入与 checkout 展示。",
+        "排查订阅、会员或分期付款相关应用是否已接入 mandate ID，把授权映射、失败扣款追踪和退款核对改成基于稳定 ID 的对账逻辑，而不是继续依赖模糊匹配。",
       verification:
-        "Shopify Developer Changelog 页面显示日期为 June 26, 2026，并明确写明 creating a carrier service no longer automatically adds it to the shop’s General shipping profile。",
+        "Shopify Developer Changelog 页面显示日期为 June 27, 2026，并明确写明 Payment Mandates GraphQL API now returns mandate ID。",
       priority: "high",
     },
     {
-      id: "2026-06-29-tiktok-creator-sample-score",
-      title: "TikTok创作者样品分数前台化影响寄样合作",
-      source: "TikTok Shop Academy",
-      originalUrl: "https://seller-us.tiktok.com/university/essay?knowledge_id=8083637359675149",
-      publishedAt: "2026-06-26",
-      category: "TikTok Shop",
-      tags: ["达人合作", "样品", "分数机制"],
+      id: "2026-06-30-google-youtube-brand-insights",
+      title: "Google发布YouTube品牌广告更深归因洞察",
+      source: "Google Ads & Commerce Blog",
+      originalUrl: "https://blog.google/products/ads-commerce/unlock-deeper-insights-for-youtube-brand-campaigns/",
+      publishedAt: "2026-06-29",
+      category: "Ads",
+      tags: ["YouTube", "品牌广告", "归因"],
       summary:
-        "TikTok Shop Academy 在 2026-06-26 上线 Creator Sample Score 指南，按履约、活跃度、销售激活和内容质量给创作者打分，并允许卖家在样品合作审核等场景看到该分数，用来判断达人可靠性。",
+        "Google 于 2026-06-29 发布 YouTube 品牌广告新洞察能力，强调帮助广告主更深入理解品牌活动在触达、观看和后续业务结果上的贡献。对出海品牌而言，这类更新意味着品牌投放不再只能看曝光与观看，而是更接近经营层面的效果判断。",
       sellerImpact:
-        "寄样招商将从看粉丝量、报价，转向看履约和内容稳定性。若品牌仍靠人工经验挑达人，容易把样品预算投向履约差、内容不稳定的账号，放大寄样浪费与转化波动。",
+        "做 YouTube 品牌投放的卖家，如果仍把品牌预算视为无法量化的纯上层漏斗支出，后续会更难和绩效广告协同分配预算。平台正推动品牌广告进入更细的归因比较与优化周期。",
       recommendedAction:
-        "把达人筛选表从粉丝与佣金扩展到样品分数、履约时效和历史内容质量，对高客单或新品寄样优先做小批量测试，再放大合作名单。",
+        "把 YouTube 品牌活动与站内搜索量、品牌词转化、再营销表现和新品首访数据联动观察，区分纯曝光活动与实际拉动搜索和成交的活动，避免继续用单一观看成本评价品牌预算。",
       verification:
-        "TikTok Shop Academy 页面标题为 Understand and Improve Your Creator Sample Score，正文页显示日期为 06/26/2026。",
+        "Google Ads & Commerce Blog 页面标题为 Unlock deeper insights for YouTube brand campaigns，页面显示发布时间为 June 29, 2026。",
       priority: "high",
     },
     {
-      id: "2026-06-29-practicalecommerce-ai-affiliates",
-      title: "联盟分销进入AI效率竞争期",
+      id: "2026-06-30-practicalecommerce-search-console-ai",
+      title: "Search Console新增AI曝光数据但筛选仍有限",
       source: "Practical Ecommerce",
-      originalUrl: "https://www.practicalecommerce.com/ai-forces-affiliates-to-innovate-or-die",
-      publishedAt: "2026-06-28",
-      category: "Affiliate",
-      tags: ["联盟营销", "AI", "流量合作"],
+      originalUrl: "https://www.practicalecommerce.com/search-console-ai-data-is-a-start-not-a-solution",
+      publishedAt: "2026-06-29",
+      category: "SEO",
+      tags: ["Search Console", "AI 搜索", "独立站"],
       summary:
-        "Practical Ecommerce 于 2026-06-28 指出，AI 正在重塑联盟分销商的生产方式，能持续产出高质量购物内容、做更细颗粒度归因和个性化跟进的合作方，会比只发链接和优惠码的旧型 affiliates 更有价值。",
+        "Practical Ecommerce 于 2026-06-29 指出，Search Console 新增 AI 曝光数据是积极信号，但当前筛选维度和可操作性仍有限，卖家还不能把它当成完整的 AI 搜索运营面板。对独立站团队来说，这意味着 AI 搜索监测刚起步。",
       sellerImpact:
-        "卖家未来衡量联盟渠道，不应只看最后一跳佣金成本，还要看内容生产能力、产品数据接入深度和转化追踪能力。合作方越依赖 AI，越需要品牌提供干净、可用的数据资产。",
+        "如果卖家误把新增 AI 数据当作完整答案，容易高估平台可见度、低估站内内容与日志监控的重要性。AI 搜索带来的流量仍需要和站内查询、点击与转化数据并行判断。",
       recommendedAction:
-        "梳理联盟分销商的素材包、产品 feed、库存和活动规则输出方式，对核心合作方提供更规范的数据接口与归因口径，淘汰只拿券码不做内容的低效合作伙伴。",
+        "把 Search Console 的 AI 数据仅作为补充视角，继续保留日志分析、Landing Page 级别转化跟踪和内容页收录监控，先建立 AI 搜索曝光到会话再到转化的独立观察表。",
       verification:
-        "Practical Ecommerce 文章标题为 AI Forces Affiliates to Innovate or Die，页面元数据 datePublished 为 2026-06-28T12:53:34+00:00。",
-      priority: "medium",
+        "Practical Ecommerce 文章标题为 Search Console AI Data Is a Start, Not a Solution，页面显示日期为 June 29, 2026。",
+      priority: "high",
     },
     {
-      id: "2026-06-29-practicalecommerce-printful-pod",
-      title: "Printful披露POD卖家毛利与图像质量关键点",
+      id: "2026-06-30-retaildive-prime-day-growth",
+      title: "Prime Day预计拉动美国电商销售增长9.3%",
+      source: "Retail Dive",
+      originalUrl: "https://www.retaildive.com/news/prime-day-2026-online-sales-adobe/822601/",
+      publishedAt: "2026-06-29",
+      category: "Marketplace",
+      tags: ["Amazon", "Prime Day", "消费趋势"],
+      summary:
+        "Retail Dive 于 2026-06-29 引述 Adobe 预测，Prime Day 期间美国电商销售额预计同比增长 9.3%。这不是单一平台公告，而是对整个促销周在线消费热度的前瞻信号，适合用来校准广告预算、备货节奏和活动期望值。",
+      sellerImpact:
+        "对参加 Prime Day 或同步做站外承接的卖家来说，若整体需求抬升但自身库存、页面承接和客服排班没跟上，高峰流量更容易转化为断货、投放浪费和售后挤压。",
+      recommendedAction:
+        "以高流量 SKU 为核心，复核库存可售天数、广告预算上限、站内落地页速度和客服响应班表；同时准备 Prime Day 期间的站外承接方案，避免只把需求押在单一平台内曝光。",
+      verification:
+        "Retail Dive 文章页面显示发布时间为 June 29, 2026，并明确引用 Adobe 对 Prime Day 2026 在线销售增长 9.3% 的预测。",
+      priority: "high",
+    },
+    {
+      id: "2026-06-30-practicalecommerce-india-foreign-sellers",
+      title: "印度电商准入收紧考验跨境品牌本地化布局",
       source: "Practical Ecommerce",
-      originalUrl: "https://www.practicalecommerce.com/printful-exec-on-profitable-print-on-demand",
-      publishedAt: "2026-06-26",
-      category: "DTC",
-      tags: ["POD", "定价", "商品图"],
+      originalUrl: "https://www.practicalecommerce.com/foreign-sellers-can-they-sell-into-india",
+      publishedAt: "2026-06-29",
+      category: "Compliance",
+      tags: ["印度市场", "本地化", "合规"],
       summary:
-        "Practical Ecommerce 在 2026-06-26 发布对 Printful 高管的访谈，强调 POD 卖家通常需要维持约 40% 毛利，低于 30% 风险明显上升，同时真实模特图、多角度图和优质 mockup 直接影响转化。",
+        "Practical Ecommerce 在 2026-06-29 讨论外资卖家进入印度电商市场的现实门槛，指出跨境直卖、税务、落地主体与本地化运营要求仍显著高于许多成熟市场。对考虑新兴市场扩张的卖家，这提醒印度不是简单复制欧美站点即可进入。",
       sellerImpact:
-        "对做 Etsy、Shopify 或站外广告引流的 POD 卖家，这意味着竞争焦点不只是选品，而是毛利模型和素材质量。低毛利叠加低质量商品图，放量后很难覆盖广告与售后成本。",
+        "如果团队把印度当作普通流量扩张市场推进，容易低估主体结构、税务处理、支付与本地履约复杂度，导致站点上线后难以稳定获客或无法合规放量。",
       recommendedAction:
-        "重新测算 POD SKU 的最低可投放毛利线，优先升级头部商品的主图、模特图和细节图，对低于目标毛利且转化平平的款式尽快下架或提价。",
+        "在进入印度前先核实主体、税务、收款、物流与平台准入要求，优先评估本地合作伙伴和试点品类，而不是直接复制现有独立站与平台运营模型。",
       verification:
-        "Practical Ecommerce 文章标题为 Printful Exec on Profitable Print-on-Demand，页面元数据 datePublished 为 2026-06-26T13:45:44+00:00。",
+        "Practical Ecommerce 文章标题为 Foreign Sellers: Can They Sell into India?，页面显示日期为 June 29, 2026。",
       priority: "medium",
     },
     {
-      id: "2026-06-29-sel-standard-shopping-mcv",
-      title: "Google标准购物广告开放最大化转化价值出价",
+      id: "2026-06-30-sel-safe-technical-seo-changes",
+      title: "技术SEO改动前置风控成独立站必修动作",
       source: "Search Engine Land",
-      originalUrl: "https://searchengineland.com/google-brings-maximize-conversion-value-bidding-to-standard-shopping-481209",
-      publishedAt: "2026-06-26 12:13 ET",
-      category: "Ads",
-      tags: ["Google Ads", "Shopping", "出价策略"],
-      summary:
-        "Search Engine Land 于 2026-06-26 报道，Google 已让 Standard Shopping 在不强制设置 Target ROAS 的情况下使用 Maximize Conversion Value。过去很多卖家为跑价值出价被迫转向 PMax，现在标准购物的策略灵活度提升。",
-      sellerImpact:
-        "对想保留商品级结构化控制、又希望按转化价值放量的卖家，这是重新评估 Standard Shopping 与 PMax 分工的窗口。预算不必再单纯为了价值出价被压向黑盒化更强的投放形态。",
-      recommendedAction:
-        "选择已有稳定转化价值数据的标准购物广告组做小范围 A/B 测试，对比 Target ROAS、Max Conversion Value 与 PMax 的获客成本、ROAS 和查询词可控性。",
-      verification:
-        "Search Engine Land 搜索结果页直接显示标题、摘要与 Published: June 26, 2026 at 12:13 pm。",
-      priority: "high",
-    },
-    {
-      id: "2026-06-29-sel-page-indexing-delay",
-      title: "Google搜索控制台索引报告延迟影响站点排查",
-      source: "Search Engine Land",
-      originalUrl: "https://searchengineland.com/page-indexing-report-in-google-search-console-delayed-481210",
-      publishedAt: "2026-06-26 11:45 ET",
+      originalUrl: "https://searchengineland.com/how-to-make-safe-technical-seo-changes-481358",
+      publishedAt: "2026-06-29",
       category: "SEO",
-      tags: ["Search Console", "索引", "独立站"],
+      tags: ["Technical SEO", "独立站", "变更管理"],
       summary:
-        "Search Engine Land 在 2026-06-26 提醒，Google Search Console 的 Page indexing report 已延迟超过两周，最近更新时间停留在 6 月 11 日。这会让站点无法及时看到新页面是否被发现、抓取和编入索引。",
+        "Search Engine Land 于 2026-06-29 强调，技术 SEO 变更不该只追求上线速度，而要在模板、重定向、抓取与渲染层面先做安全检查。对频繁改版、上新和多语言扩张的独立站团队，这是典型的风险控制提醒。",
       sellerImpact:
-        "依赖新品页、专题页和活动页快速收录的独立站卖家，近期若只看 Search Console 索引报告，很容易误判站点健康度，错过真实的抓取、模板或渲染问题。",
+        "站点结构和模板一旦改坏，最直接的后果不是当天报错，而是几天后收录、排名和自然转化同步下滑。跨境站点越依赖自然流量，越不能把技术改动交给无回滚方案的临时操作。",
       recommendedAction:
-        "把排查重心临时转到 URL Inspection、服务器日志、站内抓取工具和 sitemap 监控，别等索引报告恢复后才发现新品或活动页错过最佳收录窗口。",
+        "把模板改动、URL 规则、canonical、重定向和 robots 变更纳入上线前检查清单，对核心品类页与国家站建立变更回滚预案，避免旺季前出现系统性索引事故。",
       verification:
-        "Search Engine Land 搜索结果页显示标题、摘要与 Published: June 26, 2026 at 11:45 am，并指出报告最后更新时间停在 June 11, 2026。",
+        "Search Engine Land 页面显示发布时间为 June 29, 2026，标题为 How to make safe technical SEO changes。",
       priority: "high",
     },
     {
-      id: "2026-06-29-sel-google-spam-update-done",
-      title: "Google六月垃圾更新完成独立站流量需复盘",
+      id: "2026-06-30-sel-technical-seo-roi",
+      title: "技术SEO价值更难归因但风险管理更关键",
       source: "Search Engine Land",
-      originalUrl: "https://searchengineland.com/google-june-2026-spam-update-done-rolling-out-481063",
-      publishedAt: "2026-06-26 14:00 ET",
+      originalUrl: "https://searchengineland.com/how-do-you-report-on-technical-seo-work-481364",
+      publishedAt: "2026-06-29",
       category: "SEO",
-      tags: ["Google", "Spam Update", "自然流量"],
+      tags: ["Technical SEO", "ROI", "站点治理"],
       summary:
-        "Search Engine Land 于 2026-06-26 报道，Google June 2026 spam update 已在 6 月 26 日下午完成滚动发布。对依赖自然搜索获客的品牌站和内容站来说，接下来几天将是观察流量、收录和词排名波动的关键窗口。",
+        "Search Engine Land 在 2026-06-29 讨论技术 SEO 工作如何汇报成效，指出很多价值并非直接体现在单页流量增长，而是体现在索引稳定、抓取效率和风险规避。对跨境独立站团队，这是一种更现实的绩效衡量方式。",
       sellerImpact:
-        "如果站内仍有低质量聚合页、过度模板化内容或灰区外链操作，这轮更新会加快风险暴露。旺季前自然流量一旦下滑，后续往往要用更贵的广告预算去补缺口。",
+        "如果团队只用短期流量数字衡量技术 SEO，很容易削弱基础设施投入，直到站点在多语言、多市场扩张时暴露大规模抓取与索引问题。技术 SEO 的核心往往是避免损失而非制造虚高增长。",
       recommendedAction:
-        "按目录和模板复盘近两周流量、转化与收录波动，优先审查薄内容页、批量伪原创页和异常外链来源，尽快处理最可能触发 spam 信号的页面簇。",
+        "把技术 SEO 复盘从单一流量指标扩展到索引覆盖、抓取错误、模板一致性和变更风险四类指标，向团队明确哪些投入是在防止未来损失，而不是只追求即时增长曲线。",
       verification:
-        "Search Engine Land 搜索结果页显示标题、摘要与 Published: June 26, 2026 at 2:00 pm，并说明该更新已完成滚动。",
-      priority: "high",
-    },
-    {
-      id: "2026-06-29-sel-bad-data-ad-delivery",
-      title: "广告脏数据已开始直接拖累自动化投放",
-      source: "Search Engine Land",
-      originalUrl: "https://searchengineland.com/bad-data-bad-reports-poor-ad-delivery-481109",
-      publishedAt: "2026-06-26 11:00 ET",
-      category: "Ads",
-      tags: ["数据质量", "自动化投放", "归因"],
-      summary:
-        "Search Engine Land 在 2026-06-26 指出，广告平台自动化程度越高，数据脏污造成的后果越不只是报表失真，而是会直接把预算优化到错误人群、错误素材和错误转化信号上。",
-      sellerImpact:
-        "跨境卖家常见的重复转化、漏回传、事件定义混乱和站内埋点漂移，会在自动出价与智能创意阶段被成倍放大。短期看像是广告波动，长期看其实是训练数据出了问题。",
-      recommendedAction:
-        "立即核对像素、CAPI、GA4 与广告平台回传的一致性，建立转化事件变更记录，把高客单品类和重点市场的归因校验纳入每周例行巡检。",
-      verification:
-        "Search Engine Land 搜索结果页显示标题、摘要与 Published: June 26, 2026 at 11:00 am。",
-      priority: "high",
-    },
-    {
-      id: "2026-06-29-sel-paid-brand-mentions-geo",
-      title: "GEO付费品牌提及风险升温影响AI搜索可见度",
-      source: "Search Engine Land",
-      originalUrl: "https://searchengineland.com/paid-brand-mention-geo-481092",
-      publishedAt: "2026-06-26 09:00 ET",
-      category: "SEO",
-      tags: ["GEO", "AI 搜索", "品牌提及"],
-      summary:
-        "Search Engine Land 于 2026-06-26 讨论，随着 GEO 兴起，市场上开始出现用付费品牌提及换取 AI 搜索可见度的做法。文章提醒品牌不要把 AI 搜索优化简单等同于买站外提及量。",
-      sellerImpact:
-        "对做独立站和内容营销的卖家，这意味着 GEO 预算若缺少规则边界，容易被带向高成本、低沉淀的伪公关投放，既难复用，也可能伤害品牌信任与长期 SEO 资产。",
-      recommendedAction:
-        "把 GEO 预算优先投向可验证的专家内容、产品资料页、媒体关系与真实用户口碑，而不是只追求付费提及数量；同步建立 AI 搜索曝光与转化的独立观测表。",
-      verification:
-        "Search Engine Land 搜索结果页显示标题、摘要与 Published: June 26, 2026 at 9:00 am。",
+        "Search Engine Land 页面显示发布时间为 June 29, 2026，标题为 How do you report on technical SEO work?",
       priority: "medium",
     },
     {
-      id: "2026-06-29-sel-linkedin-cpc-benchmarks",
-      title: "LinkedIn获客成本与Google搜索差距缩窄",
+      id: "2026-06-30-sel-weekly-seo-workflow",
+      title: "每周120分钟SEO流程更适合小团队持续执行",
       source: "Search Engine Land",
-      originalUrl: "https://searchengineland.com/linkedin-ads-cpc-benchmarks-how-costs-compare-with-google-ads-481010",
-      publishedAt: "2026-06-26 08:00 ET",
-      category: "Ads",
-      tags: ["LinkedIn Ads", "B2B", "获客成本"],
+      originalUrl: "https://searchengineland.com/the-120-minute-weekly-seo-workflow-that-actually-gets-results-481266",
+      publishedAt: "2026-06-29",
+      category: "SEO",
+      tags: ["SEO Workflow", "独立站", "运营效率"],
       summary:
-        "Search Engine Land 于 2026-06-26 发布基准分析，按同一批账户看，LinkedIn 平均 CPC 高于 Google Ads，但若对比获取新高意向 B2B 受众的 prospecting 与 non-branded search，二者成本差距明显缩小。",
+        "Search Engine Land 于 2026-06-29 给出一套每周 120 分钟的 SEO 工作流，覆盖检查表现、处理技术问题、更新内容和观察机会点。对人手有限的跨境品牌团队，这比零散式 SEO 更适合稳定执行和长期积累。",
       sellerImpact:
-        "对做高客单 B2B 出海、批发询盘和专业服务获客的团队，这意味着 LinkedIn 不该只因表面 CPC 高就被排除。若线索质量更高，它可能比泛搜索流量更适合作为前链路。",
+        "很多中小团队的问题不是不知道要做 SEO，而是无法持续执行。若没有固定节奏，站内问题、旧内容衰退和新词机会往往在旺季前一起堆积，最终被广告成本吞没。",
       recommendedAction:
-        "分开核算品牌词、非品牌词、Demand Gen 与 LinkedIn prospecting 的真实线索成本和成单周期，别再用混合 CPC 直接判断渠道优劣。",
+        "把 SEO 工作拆成固定周节奏，至少保留性能检查、索引巡检、内容更新和机会词复盘四个动作，用最少的人力先建立可持续流程，再决定是否扩充专题内容和外链投入。",
       verification:
-        "Search Engine Land 搜索结果页与相关转载摘要均显示标题与发布时间为 June 26, 2026 at 8:00 am。",
+        "Search Engine Land 页面显示发布时间为 June 29, 2026，标题为 The 120-minute weekly SEO workflow that actually gets results。",
       priority: "medium",
     },
     {
-      id: "2026-06-29-sel-claude-content-audits",
-      title: "内容团队开始把Claude用于站内内容审计",
+      id: "2026-06-30-sel-ai-search-callrail",
+      title: "AI搜索已成获客来源但归因口径需要单列",
       source: "Search Engine Land",
-      originalUrl: "https://searchengineland.com/content-audit-workflows-claude-481099",
-      publishedAt: "2026-06-26",
+      originalUrl: "https://searchengineland.com/how-ai-search-is-driving-customers-and-how-to-measure-it-481278",
+      publishedAt: "2026-06-29",
       category: "SEO",
-      tags: ["Claude", "内容审计", "独立站运营"],
+      tags: ["AI 搜索", "归因", "获客分析"],
       summary:
-        "Search Engine Land 在 2026-06-26 发布内容审计方法，建议把 Claude 用于单篇页面诊断、批量内容盘点与可复用审计流程搭建。对 SKU 多、专题页多的独立站团队，这类半自动审计开始具备规模化价值。",
+        "Search Engine Land 于 2026-06-29 讨论 AI 搜索已开始带来真实客户，但传统分析面板往往无法完整识别这部分流量。对依赖内容获客和自然转化的品牌站，这意味着 AI 搜索需要独立的观察和归因口径。",
       sellerImpact:
-        "如果内容团队仍完全依赖人工抽查，站内旧文、集合页和说明页的问题会长期堆积，直到影响 AI 搜索引用率和自然转化。AI 审计的意义在于提升发现问题的速度，而非替代判断。",
+        "如果卖家继续把 AI 搜索访问混在普通自然流量里看，既难判断内容改动是否有效，也容易低估新的获客入口。后续预算分配、内容优先级和品牌提及策略都会受到影响。",
       recommendedAction:
-        "先从高流量集合页、转化差的商品内容页和长期未更新博客试跑统一审计模板，把结构化问题、重复信息和转化缺口分层记录后再批量修。",
+        "为 AI 搜索流量单列 Landing Page、询盘和成交观察指标，结合 Search Console、站内分析和销售线索来源标记，逐步建立与传统 SEO 分开的归因视图。",
       verification:
-        "Search Engine Land 搜索结果聚合页可确认该文章标题与日期为 Jun 26, 2026，相关分享页摘要与时间戳也与之对应。",
+        "Search Engine Land 页面显示发布时间为 June 29, 2026，标题为 How AI search is driving customers and how to measure it。",
       priority: "medium",
     },
   ],
