@@ -72,3 +72,28 @@ export type CommerceNewsBrief = {
   verificationNotes: string[];
   items: CommerceNewsItem[];
 };
+
+export type ProductDailyTocItem = {
+  id: string;
+  level: number;
+  title: string;
+};
+
+export type ProductDailyEntry = {
+  id: string;
+  title: string;
+  section: string;
+  kind: "github" | "product" | "event" | "pick" | "other";
+};
+
+export type ProductDailyReport = {
+  date: string;
+  title: string;
+  summary: string;
+  generatedAt: string;
+  sourcePath: string;
+  markdown: string;
+  contentHtml: string;
+  toc: ProductDailyTocItem[];
+  entries: ProductDailyEntry[];
+};

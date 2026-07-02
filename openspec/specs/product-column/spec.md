@@ -23,6 +23,18 @@
 - AND 报告文件名使用日期格式，例如 `2026-07-02.md`
 - AND 旧日期报告不得被删除或覆盖
 
+### Requirement: 网页读取每日任务内容合同
+
+系统 SHALL 从 `content/product-daily/YYYY-MM-DD.md` 读取产品专栏日报，并通过网站接口返回给前端展示。
+
+#### Scenario: 自动任务写入日报后网页展示
+- GIVEN 每日任务写入 `content/product-daily/2026-07-02.md`
+- AND Markdown Front Matter 包含 `title`、`summary`、`generatedAt`
+- AND Markdown 正文使用二级到四级标题组织板块和条目
+- WHEN 用户打开产品专栏
+- THEN 网站通过 `/api/product-daily` 返回最新日报和历史日报
+- AND 前端展示报告正文、历史日期、锚点目录和可高亮条目
+
 ### Requirement: 报告包含固定内容板块
 
 系统 SHALL 将每日 AI 产品动态报告组织为固定板块，便于长期阅读和比较。
@@ -124,4 +136,3 @@
 - WHEN 自动化准备提交
 - THEN 系统运行 `npm run typecheck` 和 `npm run build`
 - AND 验证失败时应修复后重试，不能直接推送失败状态
-

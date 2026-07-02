@@ -18,9 +18,9 @@ import {
   Wrench,
 } from "lucide-react";
 import { FormEvent, useEffect, useMemo, useState } from "react";
-import type { CommerceNewsBrief, HealthRecord, SafeAccount, ServiceMode, UserRole } from "@/lib/types";
+import type { CommerceNewsBrief, HealthRecord, ProductDailyReport, SafeAccount, ServiceMode, UserRole } from "@/lib/types";
 
-type View = "home" | "health" | "commerce" | "projects" | "ai" | "admin";
+type View = "home" | "health" | "commerce" | "product" | "projects" | "ai" | "admin";
 type Session = { username: string; role: UserRole };
 type ApiError = Error & { status?: number };
 
@@ -164,6 +164,8 @@ export function AppShell() {
   const [loginMessage, setLoginMessage] = useState("");
   const [commerceBriefs, setCommerceBriefs] = useState<CommerceNewsBrief[]>([fallbackCommerceBrief]);
   const [commerceLoading, setCommerceLoading] = useState(false);
+  const [productReports, setProductReports] = useState<ProductDailyReport[]>([]);
+  const [productLoading, setProductLoading] = useState(false);
   const [accountSubmitting, setAccountSubmitting] = useState(false);
 
   function notify(message: string) {
@@ -194,6 +196,16 @@ export function AppShell() {
     }
   }
 
+  async function refreshProductDaily() {
+    setProductLoading(true);
+    try {
+      const payload = await api<{ reports: ProductDailyReport[] }>("/api/product-daily");
+      setProductReports(payload.reports || []);
+    } finally {
+      setProductLoading(false);
+    }
+  }
+
   useEffect(() => {
     api<{ authenticated: boolean; user?: Session; service: ServiceMode }>("/api/session")
       .then((payload) => {
@@ -216,6 +228,10 @@ export function AppShell() {
 
   useEffect(() => {
     if (view === "commerce") refreshCommerceNews().catch(() => notify("跨境资讯暂时不可用"));
+  }, [view]);
+
+  useEffect(() => {
+    if (view === "product") refreshProductDaily().catch(() => notify("产品专栏暂时不可用"));
   }, [view]);
 
   const statsByDay = useMemo(() => {
@@ -379,6 +395,7 @@ export function AppShell() {
     ["home", "首页", <Sparkles key="home" size={17} />],
     ["health", "养胃记录", <Stethoscope key="health" size={17} />],
     ["commerce", "跨境资讯", <Newspaper key="commerce" size={17} />],
+    ["product", "产品专栏", <BarChart3 key="product" size={17} />],
     ["projects", "项目简历", <BriefcaseBusiness key="projects" size={17} />],
     ["ai", "AI 产品", <Wrench key="ai" size={17} />],
     ["admin", "后台", <ShieldCheck key="admin" size={17} />],
@@ -417,6 +434,7 @@ export function AppShell() {
           <section className="view-grid">
             <FeatureCard icon={<Stethoscope />} title="钱大少养胃记录" text="吃饭、排泄、呕吐、睡觉记录迁移到云端 API，支持后续手机电脑同步。" onClick={() => setView("health")} />
             <FeatureCard icon={<Newspaper />} title="每日跨境资讯" text="保留亚马逊、独立站、平台政策观察入口，后续可接入定时采集和审核。" onClick={() => setView("commerce")} />
+            <FeatureCard icon={<BarChart3 />} title="AI 产品专栏" text="每日 AI 产品情报、GitHub 新项目、大湾区活动和高亮追踪，直接读取自动化产出的 Markdown。" onClick={() => setView("product")} />
             <FeatureCard icon={<BriefcaseBusiness />} title="项目展示与简历" text="从工具站升级到个人品牌主页，承载能力、案例、作品和联系方式。" onClick={() => setView("projects")} />
             <FeatureCard icon={<Wrench />} title="AI/OEM 产品入口" text="为数字人、智能客服、AI 获客等产品预留统一 integration 架构。" onClick={() => setView("ai")} />
           </section>
@@ -485,6 +503,7 @@ export function AppShell() {
         )}
 
         {view === "commerce" && <CommerceNewsView briefs={commerceBriefs} loading={commerceLoading} onRefresh={refreshCommerceNews} />}
+        {view === "product" && <ProductDailyView reports={productReports} loading={productLoading} onRefresh={refreshProductDaily} />}
         {view === "projects" && <ProjectsView />}
         {view === "ai" && <AiView />}
         {view === "admin" && (
@@ -628,6 +647,149 @@ function CommerceNewsView({ briefs, loading, onRefresh }: { briefs: CommerceNews
             )) : <p>后续每日更新会保留在这里。</p>}
           </div>
         </div>
+      </div>
+    </section>
+  );
+}
+
+function ProductDailyView({ reports, loading, onRefresh }: { reports: ProductDailyReport[]; loading: boolean; onRefresh: () => void }) {
+  const [selectedDate, setSelectedDate] = useState("");
+  const [highlights, setHighlights] = useState<Record<string, boolean>>({});
+
+  useEffect(() => {
+    if (!reports.length) return;
+    setSelectedDate((current) => reports.some((report) => report.date === current) ? current : reports[0].date);
+  }, [reports]);
+
+  useEffect(() => {
+    try {
+      const saved = window.localStorage.getItem("dehviz_product_highlights_v1");
+      if (saved) setHighlights(JSON.parse(saved));
+    } catch {
+      setHighlights({});
+    }
+  }, []);
+
+  function toggleHighlight(id: string) {
+    setHighlights((current) => {
+      const next = { ...current, [id]: !current[id] };
+      if (!next[id]) delete next[id];
+      try {
+        window.localStorage.setItem("dehviz_product_highlights_v1", JSON.stringify(next));
+      } catch {
+        // Browser storage can fail in private modes; keep the current-session state.
+      }
+      return next;
+    });
+  }
+
+  const current = reports.find((report) => report.date === selectedDate) || reports[0];
+  const highlightDays = reports
+    .map((report) => ({
+      date: report.date,
+      count: report.entries.filter((entry) => highlights[entry.id]).length,
+    }))
+    .filter((item) => item.count > 0);
+
+  if (!current) {
+    return (
+      <section className="product-panel">
+        <div className="panel product-empty">
+          <span className="eyebrow">AI PRODUCT RADAR</span>
+          <h2>产品专栏等待首份日报</h2>
+          <p>每日任务会把 Markdown 写入 content/product-daily/YYYY-MM-DD.md，网站会自动读取并展示。</p>
+          <button className="ghost-btn" onClick={onRefresh} disabled={loading}>
+            <BarChart3 size={17} /> {loading ? "读取中" : "刷新"}
+          </button>
+        </div>
+      </section>
+    );
+  }
+
+  return (
+    <section className="product-panel">
+      <div className="product-hero">
+        <div>
+          <span className="eyebrow">AI PRODUCT RADAR</span>
+          <h2>{current.title}</h2>
+          <p>{current.summary}</p>
+        </div>
+        <div className="product-metrics">
+          <span><strong>{reports.length}</strong><small>历史日报</small></span>
+          <span><strong>{current.entries.length}</strong><small>可高亮条目</small></span>
+          <span><strong>{current.toc.length}</strong><small>目录节点</small></span>
+        </div>
+        <button className="ghost-btn" onClick={onRefresh} disabled={loading}>
+          <BarChart3 size={17} /> {loading ? "同步中" : "同步日报"}
+        </button>
+      </div>
+
+      <div className="product-layout">
+        <article className="product-reader panel">
+          <div className="product-report-meta">
+            <span>{current.date}</span>
+            <span>{current.sourcePath}</span>
+            {current.generatedAt && <span>{new Date(current.generatedAt).toLocaleString()}</span>}
+          </div>
+          <div className="product-markdown" dangerouslySetInnerHTML={{ __html: current.contentHtml }} />
+        </article>
+
+        <aside className="product-sidebar">
+          <section className="panel">
+            <h3>历史日报</h3>
+            <div className="commerce-history-list">
+              {reports.map((report) => (
+                <button
+                  type="button"
+                  className={`history-brief-button ${report.date === current.date ? "active" : ""}`}
+                  key={report.date}
+                  onClick={() => setSelectedDate(report.date)}
+                >
+                  <span>{report.date}</span>
+                  <small>{report.entries.length} 条</small>
+                </button>
+              ))}
+            </div>
+          </section>
+
+          <section className="panel">
+            <h3>锚点目录</h3>
+            <div className="product-toc">
+              {current.toc.map((item) => (
+                <a key={item.id} href={`#${item.id}`} className={`level-${item.level}`}>
+                  {item.title}
+                </a>
+              ))}
+            </div>
+          </section>
+
+          <section className="panel">
+            <h3>高亮追踪</h3>
+            <div className="product-highlight-list">
+              {current.entries.length ? current.entries.map((entry) => (
+                <button
+                  type="button"
+                  key={entry.id}
+                  className={`highlight-toggle ${highlights[entry.id] ? "active" : ""}`}
+                  onClick={() => toggleHighlight(entry.id)}
+                >
+                  <span>{entry.title}</span>
+                  <small>{highlights[entry.id] ? "已高亮" : "高亮"}</small>
+                </button>
+              )) : <p className="subtle">这份日报还没有可高亮条目。</p>}
+            </div>
+          </section>
+
+          <section className="panel">
+            <h3>高亮日历</h3>
+            {highlightDays.length ? highlightDays.map((day) => (
+              <button type="button" className="highlight-day" key={day.date} onClick={() => setSelectedDate(day.date)}>
+                <span>{day.date}</span>
+                <strong>{day.count}</strong>
+              </button>
+            )) : <p className="subtle">还没有高亮条目。</p>}
+          </section>
+        </aside>
       </div>
     </section>
   );
