@@ -1,8 +1,5 @@
 import type { CommerceNewsBrief } from "@/lib/types";
-import { latestCommerceNews_2026_07_01 } from "@/data/commerceNewsLatest";
-
 export const commerceNewsBriefs: CommerceNewsBrief[] = [
-  latestCommerceNews_2026_07_01,
   {
   date: "2026-06-30",
   displayDate: "2026年6月30日",
