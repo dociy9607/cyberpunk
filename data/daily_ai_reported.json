@@ -1,1 +1,93 @@
-[]
+[
+  {
+    "kind": "github",
+    "name": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "firstReportedAt": "2026-07-02",
+    "sourcePath": "content/product-daily/2026-07-02.md"
+  },
+  {
+    "kind": "github",
+    "name": "NousResearch/hermes-agent",
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "firstReportedAt": "2026-07-02",
+    "sourcePath": "content/product-daily/2026-07-02.md"
+  },
+  {
+    "kind": "github",
+    "name": "firecrawl/firecrawl",
+    "url": "https://github.com/firecrawl/firecrawl",
+    "firstReportedAt": "2026-07-02",
+    "sourcePath": "content/product-daily/2026-07-02.md"
+  },
+  {
+    "kind": "github",
+    "name": "langchain-ai/langchain",
+    "url": "https://github.com/langchain-ai/langchain",
+    "firstReportedAt": "2026-07-02",
+    "sourcePath": "content/product-daily/2026-07-02.md"
+  },
+  {
+    "kind": "github",
+    "name": "google-gemini/gemini-cli",
+    "url": "https://github.com/google-gemini/gemini-cli",
+    "firstReportedAt": "2026-07-02",
+    "sourcePath": "content/product-daily/2026-07-02.md"
+  },
+  {
+    "kind": "product",
+    "name": "Claude Sonnet 5",
+    "url": "https://www.anthropic.com/news/claude-sonnet-5",
+    "firstReportedAt": "2026-07-02",
+    "sourcePath": "content/product-daily/2026-07-02.md"
+  },
+  {
+    "kind": "product",
+    "name": "Claude Science",
+    "url": "https://www.anthropic.com/news/claude-science-ai-workbench",
+    "firstReportedAt": "2026-07-02",
+    "sourcePath": "content/product-daily/2026-07-02.md"
+  },
+  {
+    "kind": "product",
+    "name": "Claude Tag",
+    "url": "https://www.anthropic.com/news/introducing-claude-tag",
+    "firstReportedAt": "2026-07-02",
+    "sourcePath": "content/product-daily/2026-07-02.md"
+  },
+  {
+    "kind": "product",
+    "name": "OpenAI Secure MCP Tunnel",
+    "url": "https://developers.openai.com/blog/connect-private-mcp-servers-to-openai-products",
+    "firstReportedAt": "2026-07-02",
+    "sourcePath": "content/product-daily/2026-07-02.md"
+  },
+  {
+    "kind": "product",
+    "name": "GitHub Copilot Agent in JetBrains AI Assistant",
+    "url": "https://github.blog/changelog/2026-06-30-copilot-agent-is-now-available-in-jetbrains-ai-assistant/",
+    "firstReportedAt": "2026-07-02",
+    "sourcePath": "content/product-daily/2026-07-02.md"
+  },
+  {
+    "kind": "product",
+    "name": "Google Play in Gemini",
+    "url": "https://support.google.com/gemini/thread/445046856/discover-download-and-play-introducing-google-play-in-gemini?hl=en",
+    "firstReportedAt": "2026-07-02",
+    "sourcePath": "content/product-daily/2026-07-02.md"
+  },
+  {
+    "kind": "product",
+    "name": "Runway Seedance 2.0 Mini API",
+    "url": "https://docs.dev.runwayml.com/api-details/api_changelog/",
+    "firstReportedAt": "2026-07-02",
+    "sourcePath": "content/product-daily/2026-07-02.md"
+  },
+  {
+    "kind": "product",
+    "name": "Anthropic Claude in Microsoft 365 Copilot Chat",
+    "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes",
+    "firstReportedAt": "2026-07-02",
+    "sourcePath": "content/product-daily/2026-07-02.md"
+  }
+]
