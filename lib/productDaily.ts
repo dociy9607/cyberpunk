@@ -18,7 +18,7 @@ function escapeHtml(value: string) {
 function slugify(value: string) {
   const ascii = value
     .toLowerCase()
-    .replace(/[`*_~()[\]{}:：,，.。/\\|]/g, "")
+    .replace(/[`*_~()[\]{}:，。：\\|]/g, "")
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-")
     .replace(/^-|-$/g, "");
@@ -49,10 +49,10 @@ function readFrontMatter(markdown: string) {
 }
 
 function inferKind(section: string): ProductDailyEntry["kind"] {
-  if (section.includes("GitHub")) return "github";
-  if (section.includes("产品/功能") || section.includes("产品")) return "product";
-  if (section.includes("活动")) return "event";
-  if (section.includes("借鉴")) return "pick";
+  if (/(GitHub|板块一|专区)/.test(section)) return "github";
+  if (/(产品\/功能|产品|板块二|值得关注)/.test(section)) return "product";
+  if (/(活动|板块三|粤港澳大湾区)/.test(section)) return "event";
+  if (/(借鉴|板块四)/.test(section)) return "pick";
   return "other";
 }
 
@@ -70,8 +70,11 @@ function parseTocAndEntries(date: string, markdown: string) {
     const id = `${date}-${slugify(title)}`;
     toc.push({ id, level, title });
 
-    if (level === 2 || (level === 3 && title.includes("板块"))) currentSection = title;
-    if (level >= 3 && !title.includes("板块") && title !== "目录") {
+    const isSectionMarker = /板块/.test(title);
+    const isTocTitle = title === "目录";
+
+    if (level === 2 || (level === 3 && isSectionMarker)) currentSection = title;
+    if (level >= 3 && !isSectionMarker && !isTocTitle) {
       entries.push({
         id,
         title,

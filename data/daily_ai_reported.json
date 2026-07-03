@@ -89,5 +89,131 @@
     "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes",
     "firstReportedAt": "2026-07-02",
     "sourcePath": "content/product-daily/2026-07-02.md"
+  },
+  {
+    "kind": "github",
+    "name": "deepseek-ai/DeepSpec",
+    "url": "https://github.com/deepseek-ai/DeepSpec",
+    "firstReportedAt": "2026-07-03",
+    "sourcePath": "content/product-daily/2026-07-03.md"
+  },
+  {
+    "kind": "github",
+    "name": "Kulaxyz/self-learning-skills",
+    "url": "https://github.com/Kulaxyz/self-learning-skills",
+    "firstReportedAt": "2026-07-03",
+    "sourcePath": "content/product-daily/2026-07-03.md"
+  },
+  {
+    "kind": "github",
+    "name": "CopilotKit/OpenTag",
+    "url": "https://github.com/CopilotKit/OpenTag",
+    "firstReportedAt": "2026-07-03",
+    "sourcePath": "content/product-daily/2026-07-03.md"
+  },
+  {
+    "kind": "github",
+    "name": "lycorp-jp/sim-use",
+    "url": "https://github.com/lycorp-jp/sim-use",
+    "firstReportedAt": "2026-07-03",
+    "sourcePath": "content/product-daily/2026-07-03.md"
+  },
+  {
+    "kind": "github",
+    "name": "eli-labz/Godcoder",
+    "url": "https://github.com/eli-labz/Godcoder",
+    "firstReportedAt": "2026-07-03",
+    "sourcePath": "content/product-daily/2026-07-03.md"
+  },
+  {
+    "kind": "product",
+    "name": "GPT-5.6 Sol",
+    "url": "https://openai.com/index/previewing-gpt-5-6-sol/",
+    "firstReportedAt": "2026-07-03",
+    "sourcePath": "content/product-daily/2026-07-03.md"
+  },
+  {
+    "kind": "product",
+    "name": "Claude Fable 5（恢复上线）",
+    "url": "https://www.anthropic.com/news/redeploying-fable-5",
+    "firstReportedAt": "2026-07-03",
+    "sourcePath": "content/product-daily/2026-07-03.md"
+  },
+  {
+    "kind": "product",
+    "name": "Gemini Omni Flash",
+    "url": "https://cloud.google.com/blog/products/ai-machine-learning/nano-banana-2-lite-and-gemini-omni-flash-available",
+    "firstReportedAt": "2026-07-03",
+    "sourcePath": "content/product-daily/2026-07-03.md"
+  },
+  {
+    "kind": "product",
+    "name": "Nano Banana 2 Lite",
+    "url": "https://cloud.google.com/blog/products/ai-machine-learning/nano-banana-2-lite-and-gemini-omni-flash-available",
+    "firstReportedAt": "2026-07-03",
+    "sourcePath": "content/product-daily/2026-07-03.md"
+  },
+  {
+    "kind": "product",
+    "name": "Mistral OCR 4",
+    "url": "https://mistral.ai/news/mistral-ocr/",
+    "firstReportedAt": "2026-07-03",
+    "sourcePath": "content/product-daily/2026-07-03.md"
+  },
+  {
+    "kind": "product",
+    "name": "Microsoft Discovery App Preview",
+    "url": "https://news.microsoft.com/build-2026/",
+    "firstReportedAt": "2026-07-03",
+    "sourcePath": "content/product-daily/2026-07-03.md"
+  },
+  {
+    "kind": "product",
+    "name": "GitHub Copilot 上线 Kimi K2.7 Code",
+    "url": "https://github.blog/changelog/2026-07-01-kimi-k2-7-is-now-available-in-github-copilot/",
+    "firstReportedAt": "2026-07-03",
+    "sourcePath": "content/product-daily/2026-07-03.md"
+  },
+  {
+    "kind": "product",
+    "name": "HappyHorse 1.1",
+    "url": "https://www.alibabacloud.com/en/news/product/happyhorse-11-released-mqn",
+    "firstReportedAt": "2026-07-03",
+    "sourcePath": "content/product-daily/2026-07-03.md"
+  },
+  {
+    "kind": "event",
+    "name": "HKML S8E3 - Meetup @ Maven Securities",
+    "url": "https://www.meetup.com/hong-kong-machine-learning-meetup/events/315328779/",
+    "firstReportedAt": "2026-07-03",
+    "sourcePath": "content/product-daily/2026-07-03.md"
+  },
+  {
+    "kind": "event",
+    "name": "2026中国智能制造产业大会",
+    "url": "https://cd.huodongxing.com/event/9856318455600?qd=8828363103856&utm_campaign=eventspage&utm_medium=&utm_source=%E5%8F%91%E7%8E%B0%E6%B4%BB%E5%8A%A8%E9%A1%B5",
+    "firstReportedAt": "2026-07-03",
+    "sourcePath": "content/product-daily/2026-07-03.md"
+  },
+  {
+    "kind": "event",
+    "name": "香港AI 創科高峰會",
+    "url": "https://www.gycsi.org/zh/ai-innovators-summit",
+    "firstReportedAt": "2026-07-03",
+    "sourcePath": "content/product-daily/2026-07-03.md"
+  },
+  {
+    "kind": "event",
+    "name": "HKPUG #100 - Trace the Clue, Find What’s True: An Opik LLM Debugging Night",
+    "url": "https://www.meetup.com/pythonhk/",
+    "firstReportedAt": "2026-07-03",
+    "sourcePath": "content/product-daily/2026-07-03.md"
+  },
+  {
+    "kind": "event",
+    "name": "AGIC2026深圳人工智能展",
+    "url": "https://www.szaiexpo.com/",
+    "firstReportedAt": "2026-07-03",
+    "sourcePath": "content/product-daily/2026-07-03.md"
   }
 ]
