@@ -7,6 +7,17 @@ const DATE_FILE_RE = /^\d{4}-\d{2}-\d{2}\.md$/;
 
 type FrontMatter = Record<string, string>;
 
+const SECTION_MARKERS = ["板块", "鏉垮潡"];
+const TOC_TITLES = new Set(["目录", "鐩綍"]);
+
+const KIND_KEYWORDS: Record<ProductDailyEntry["kind"], string[]> = {
+  github: ["GitHub", "板块一", "专区", "鏉垮潡涓€", "涓撳尯"],
+  product: ["板块二", "产品", "功能", "鏉垮潡浜", "浜у搧", "鍔熻兘"],
+  event: ["板块三", "活动", "大湾区", "鏉垮潡涓", "娲诲姩", "澶ф咕鍖"],
+  pick: ["板块四", "借鉴", "鏉垮潡鍥", "鍊熼壌"],
+  other: [],
+};
+
 function escapeHtml(value: string) {
   return value
     .replace(/&/g, "&amp;")
@@ -18,10 +29,11 @@ function escapeHtml(value: string) {
 function slugify(value: string) {
   const ascii = value
     .toLowerCase()
-    .replace(/[`*_~()[\]{}:，。：\\|]/g, "")
+    .replace(/[`*_~()[\]{}:：【】（）\/，。；！？、\\|]/g, "")
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-")
     .replace(/^-|-$/g, "");
+
   if (ascii) return ascii;
   return Buffer.from(value).toString("hex").slice(0, 24);
 }
@@ -42,17 +54,24 @@ function readFrontMatter(markdown: string) {
   const raw = markdown.slice(3, end).trim();
   const meta = raw.split(/\r?\n/).reduce<FrontMatter>((result, line) => {
     const index = line.indexOf(":");
-    if (index > -1) result[line.slice(0, index).trim()] = line.slice(index + 1).trim().replace(/^"|"$/g, "");
+    if (index > -1) {
+      result[line.slice(0, index).trim()] = line.slice(index + 1).trim().replace(/^"|"$/g, "");
+    }
     return result;
   }, {});
+
   return { meta, body: markdown.slice(end + 4).trimStart() };
 }
 
+function containsKeyword(value: string, keywords: string[]) {
+  return keywords.some((keyword) => value.includes(keyword));
+}
+
 function inferKind(section: string): ProductDailyEntry["kind"] {
-  if (/(GitHub|板块一|专区)/.test(section)) return "github";
-  if (/(产品\/功能|产品|板块二|值得关注)/.test(section)) return "product";
-  if (/(活动|板块三|粤港澳大湾区)/.test(section)) return "event";
-  if (/(借鉴|板块四)/.test(section)) return "pick";
+  if (containsKeyword(section, KIND_KEYWORDS.github)) return "github";
+  if (containsKeyword(section, KIND_KEYWORDS.product)) return "product";
+  if (containsKeyword(section, KIND_KEYWORDS.event)) return "event";
+  if (containsKeyword(section, KIND_KEYWORDS.pick)) return "pick";
   return "other";
 }
 
@@ -70,8 +89,8 @@ function parseTocAndEntries(date: string, markdown: string) {
     const id = `${date}-${slugify(title)}`;
     toc.push({ id, level, title });
 
-    const isSectionMarker = /板块/.test(title);
-    const isTocTitle = title === "目录";
+    const isSectionMarker = containsKeyword(title, SECTION_MARKERS);
+    const isTocTitle = TOC_TITLES.has(title);
 
     if (level === 2 || (level === 3 && isSectionMarker)) currentSection = title;
     if (level >= 3 && !isSectionMarker && !isTocTitle) {
@@ -137,8 +156,8 @@ function readReport(fileName: string): ProductDailyReport {
   const sourcePath = `content/product-daily/${fileName}`;
   const raw = fs.readFileSync(path.join(REPORT_DIR, fileName), "utf8");
   const { meta, body } = readFrontMatter(raw);
-  const title = meta.title || body.match(/^#\s+(.+)$/m)?.[1]?.trim() || `AI 产品日报 ${date}`;
-  const summary = meta.summary || body.match(/^>\s+(.+)$/m)?.[1]?.trim() || "每日 AI 产品动态、开源项目与活动观察。";
+  const title = meta.title || body.match(/^#\s+(.+)$/m)?.[1]?.trim() || `每日 AI 产品动态报告 ${date}`;
+  const summary = meta.summary || body.match(/^>\s+(.+)$/m)?.[1]?.trim() || "每日 AI 产品动态、开源项目与湾区活动观察。";
   const { toc, entries } = parseTocAndEntries(date, body);
 
   return {

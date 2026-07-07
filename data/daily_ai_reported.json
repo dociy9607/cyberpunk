@@ -215,5 +215,124 @@
     "url": "https://www.szaiexpo.com/",
     "firstReportedAt": "2026-07-03",
     "sourcePath": "content/product-daily/2026-07-03.md"
+  },
+  {
+    "kind": "github",
+    "name": "elder-plinius/T3MP3ST",
+    "url": "https://github.com/elder-plinius/T3MP3ST",
+    "firstReportedAt": "2026-07-07",
+    "sourcePath": "content/product-daily/2026-07-07.md"
+  },
+  {
+    "kind": "github",
+    "name": "synthetic-sciences/openscience",
+    "url": "https://github.com/synthetic-sciences/openscience",
+    "firstReportedAt": "2026-07-07",
+    "sourcePath": "content/product-daily/2026-07-07.md"
+  },
+  {
+    "kind": "github",
+    "name": "jmerelnyc/Talos",
+    "url": "https://github.com/jmerelnyc/Talos",
+    "firstReportedAt": "2026-07-07",
+    "sourcePath": "content/product-daily/2026-07-07.md"
+  },
+  {
+    "kind": "github",
+    "name": "HKUDS/OpenOPC",
+    "url": "https://github.com/HKUDS/OpenOPC",
+    "firstReportedAt": "2026-07-07",
+    "sourcePath": "content/product-daily/2026-07-07.md"
+  },
+  {
+    "kind": "github",
+    "name": "michaelshimeles/boring-computers",
+    "url": "https://github.com/michaelshimeles/boring-computers",
+    "firstReportedAt": "2026-07-07",
+    "sourcePath": "content/product-daily/2026-07-07.md"
+  },
+  {
+    "kind": "product",
+    "name": "Hugging Face Speech-to-Speech（Gemma 4 × Cerebras）",
+    "url": "https://huggingface.co/blog/cerebras-gemma4-voice-ai",
+    "firstReportedAt": "2026-07-07",
+    "sourcePath": "content/product-daily/2026-07-07.md"
+  },
+  {
+    "kind": "product",
+    "name": "Gemini Spark for macOS",
+    "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026/",
+    "firstReportedAt": "2026-07-07",
+    "sourcePath": "content/product-daily/2026-07-07.md"
+  },
+  {
+    "kind": "product",
+    "name": "Gemini 3.5 Flash",
+    "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-5-flash",
+    "firstReportedAt": "2026-07-07",
+    "sourcePath": "content/product-daily/2026-07-07.md"
+  },
+  {
+    "kind": "product",
+    "name": "Microsoft Scout",
+    "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/introducing-microsoft-scout-your-always-on-personal-agent/",
+    "firstReportedAt": "2026-07-07",
+    "sourcePath": "content/product-daily/2026-07-07.md"
+  },
+  {
+    "kind": "product",
+    "name": "Foundry IQ",
+    "url": "https://devblogs.microsoft.com/foundry/build-smarter-agents-faster-with-foundry-iq/",
+    "firstReportedAt": "2026-07-07",
+    "sourcePath": "content/product-daily/2026-07-07.md"
+  },
+  {
+    "kind": "product",
+    "name": "Snowflake AI Security Posture Management",
+    "url": "https://www.snowflake.com/en/blog/enterprise-ai-security/",
+    "firstReportedAt": "2026-07-07",
+    "sourcePath": "content/product-daily/2026-07-07.md"
+  },
+  {
+    "kind": "product",
+    "name": "Azure HorizonDB",
+    "url": "https://techcommunity.microsoft.com/blog/adforpostgresql/azure-horizondb-enterprise-ready-postgres-engineered-for-the-ai-era/4524094",
+    "firstReportedAt": "2026-07-07",
+    "sourcePath": "content/product-daily/2026-07-07.md"
+  },
+  {
+    "kind": "event",
+    "name": "HKML S8E3 - Meetup @ Maven Securities",
+    "url": "https://www.meetup.com/pt-br/hong-kong-machine-learning-meetup/",
+    "firstReportedAt": "2026-07-07",
+    "sourcePath": "content/product-daily/2026-07-07.md"
+  },
+  {
+    "kind": "event",
+    "name": "HKPUG #100 - Trace the Clue, Find What’s True: An Opik LLM Debugging Night",
+    "url": "https://www.meetup.com/pythonhk/",
+    "firstReportedAt": "2026-07-07",
+    "sourcePath": "content/product-daily/2026-07-07.md"
+  },
+  {
+    "kind": "event",
+    "name": "2026中国智能制造产业大会",
+    "url": "https://cd.huodongxing.com/events?city=%E6%B7%B1%E5%9C%B3",
+    "firstReportedAt": "2026-07-07",
+    "sourcePath": "content/product-daily/2026-07-07.md"
+  },
+  {
+    "kind": "event",
+    "name": "「智源新纪·范式跃迁」福布斯中国人工智能科技峰会暨 2026 福布斯中国人工智能科技企业 TOP 50 评选颁奖典礼",
+    "url": "https://forbeschina.com/technology/71777",
+    "firstReportedAt": "2026-07-07",
+    "sourcePath": "content/product-daily/2026-07-07.md"
+  },
+  {
+    "kind": "event",
+    "name": "〖轻量化·全天候·真智能〗AIZQE 2026深圳（全球）下一代消费级AI眼镜创新千人峰会",
+    "url": "https://cd.huodongxing.com/event/3857033346300?qd=8828363103856&utm_campaign=eventspage&utm_medium=&utm_source=%E5%8F%91%E7%8E%B0%E6%B4%BB%E5%8A%A8%E9%A1%B5",
+    "firstReportedAt": "2026-07-07",
+    "sourcePath": "content/product-daily/2026-07-07.md"
   }
 ]
