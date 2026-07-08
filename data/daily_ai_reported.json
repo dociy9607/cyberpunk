@@ -334,5 +334,117 @@
     "url": "https://cd.huodongxing.com/event/3857033346300?qd=8828363103856&utm_campaign=eventspage&utm_medium=&utm_source=%E5%8F%91%E7%8E%B0%E6%B4%BB%E5%8A%A8%E9%A1%B5",
     "firstReportedAt": "2026-07-07",
     "sourcePath": "content/product-daily/2026-07-07.md"
+  },
+  {
+    "kind": "github",
+    "name": "uzairansaruzi/hermex",
+    "url": "https://github.com/uzairansaruzi/hermex",
+    "firstReportedAt": "2026-07-08",
+    "sourcePath": "content/product-daily/2026-07-08.md"
+  },
+  {
+    "kind": "github",
+    "name": "yynxxxxx/Codex-X",
+    "url": "https://github.com/yynxxxxx/Codex-X",
+    "firstReportedAt": "2026-07-08",
+    "sourcePath": "content/product-daily/2026-07-08.md"
+  },
+  {
+    "kind": "github",
+    "name": "simonlin1212/Vibe-Research",
+    "url": "https://github.com/simonlin1212/Vibe-Research",
+    "firstReportedAt": "2026-07-08",
+    "sourcePath": "content/product-daily/2026-07-08.md"
+  },
+  {
+    "kind": "github",
+    "name": "nagisanzenin/engram",
+    "url": "https://github.com/nagisanzenin/engram",
+    "firstReportedAt": "2026-07-08",
+    "sourcePath": "content/product-daily/2026-07-08.md"
+  },
+  {
+    "kind": "github",
+    "name": "Bike4Mind/bike4mind",
+    "url": "https://github.com/Bike4Mind/bike4mind",
+    "firstReportedAt": "2026-07-08",
+    "sourcePath": "content/product-daily/2026-07-08.md"
+  },
+  {
+    "kind": "product",
+    "name": "OpenAI GPT-Realtime-2.1 / GPT-Realtime-2.1-mini",
+    "url": "https://developers.openai.com/api/docs/changelog",
+    "firstReportedAt": "2026-07-08",
+    "sourcePath": "content/product-daily/2026-07-08.md"
+  },
+  {
+    "kind": "product",
+    "name": "GitHub Copilot App 全计划开放",
+    "url": "https://github.blog/changelog/2026-07-07-github-copilot-app-available-to-all/",
+    "firstReportedAt": "2026-07-08",
+    "sourcePath": "content/product-daily/2026-07-08.md"
+  },
+  {
+    "kind": "product",
+    "name": "Gemini Enterprise Agent Platform Remote MCP Server",
+    "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-enterprise-agent-platform-remote-mcp-server/",
+    "firstReportedAt": "2026-07-08",
+    "sourcePath": "content/product-daily/2026-07-08.md"
+  },
+  {
+    "kind": "product",
+    "name": "AlloyDB Remote MCP Server GA",
+    "url": "https://cloud.google.com/blog/products/data-analytics/alloydb-remote-mcp-server-ga-secure-ai-agent-access-to-your-data",
+    "firstReportedAt": "2026-07-08",
+    "sourcePath": "content/product-daily/2026-07-08.md"
+  },
+  {
+    "kind": "product",
+    "name": "Microsoft Project Solara",
+    "url": "https://commandline.microsoft.com/project-solara-build-2026/",
+    "firstReportedAt": "2026-07-08",
+    "sourcePath": "content/product-daily/2026-07-08.md"
+  },
+  {
+    "kind": "product",
+    "name": "Microsoft Project Rayfin",
+    "url": "https://github.com/microsoft/awesome-rayfin",
+    "firstReportedAt": "2026-07-08",
+    "sourcePath": "content/product-daily/2026-07-08.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI硬件出海大会",
+    "url": "https://cd.huodongxing.com/event/4863946102800?qd=8828363103856&utm_campaign=eventspage&utm_medium=&utm_source=%E5%8F%91%E7%8E%B0%E6%B4%BB%E5%8A%A8%E9%A1%B5",
+    "firstReportedAt": "2026-07-08",
+    "sourcePath": "content/product-daily/2026-07-08.md"
+  },
+  {
+    "kind": "event",
+    "name": "企业级AI项目合作沟通会：2026可落地的AI项目〖深圳〗",
+    "url": "https://cd.huodongxing.com/event/1866974446500?qd=8828363103856&utm_campaign=eventspage&utm_medium=&utm_source=%E5%8F%91%E7%8E%B0%E6%B4%BB%E5%8A%A8%E9%A1%B5",
+    "firstReportedAt": "2026-07-08",
+    "sourcePath": "content/product-daily/2026-07-08.md"
+  },
+  {
+    "kind": "event",
+    "name": "芯动力，赋能 AI+AR眼镜",
+    "url": "https://cd.huodongxing.com/event/9865815928200?qd=8828363103856&utm_campaign=eventspage&utm_medium=&utm_source=%E5%8F%91%E7%8E%B0%E6%B4%BB%E5%8A%A8%E9%A1%B5",
+    "firstReportedAt": "2026-07-08",
+    "sourcePath": "content/product-daily/2026-07-08.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI Community Conference - Hong Kong",
+    "url": "https://www.eventbrite.ca/e/ai-community-conference-hong-kong-tickets-1993173568799",
+    "firstReportedAt": "2026-07-08",
+    "sourcePath": "content/product-daily/2026-07-08.md"
+  },
+  {
+    "kind": "event",
+    "name": "〖智驭具身.链通全球〗AIZQE 2026深圳（全球）具身智能机器人产业发展千人峰会",
+    "url": "https://cd.huodongxing.com/event/9856925395600?qd=8828363103856&utm_campaign=eventspage&utm_medium=&utm_source=%E5%8F%91%E7%8E%B0%E6%B4%BB%E5%8A%A8%E9%A1%B5",
+    "firstReportedAt": "2026-07-08",
+    "sourcePath": "content/product-daily/2026-07-08.md"
   }
 ]
