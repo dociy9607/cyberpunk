@@ -446,5 +446,131 @@
     "url": "https://cd.huodongxing.com/event/9856925395600?qd=8828363103856&utm_campaign=eventspage&utm_medium=&utm_source=%E5%8F%91%E7%8E%B0%E6%B4%BB%E5%8A%A8%E9%A1%B5",
     "firstReportedAt": "2026-07-08",
     "sourcePath": "content/product-daily/2026-07-08.md"
+  },
+  {
+    "kind": "github",
+    "name": "ai4s-research/open-science",
+    "url": "https://github.com/ai4s-research/open-science",
+    "firstReportedAt": "2026-07-09",
+    "sourcePath": "content/product-daily/2026-07-09.md"
+  },
+  {
+    "kind": "github",
+    "name": "nexu-io/motion-anything",
+    "url": "https://github.com/nexu-io/motion-anything",
+    "firstReportedAt": "2026-07-09",
+    "sourcePath": "content/product-daily/2026-07-09.md"
+  },
+  {
+    "kind": "github",
+    "name": "xiaotianfotos/homerail",
+    "url": "https://github.com/xiaotianfotos/homerail",
+    "firstReportedAt": "2026-07-09",
+    "sourcePath": "content/product-daily/2026-07-09.md"
+  },
+  {
+    "kind": "github",
+    "name": "shlokkhemani/rabbithole",
+    "url": "https://github.com/shlokkhemani/rabbithole",
+    "firstReportedAt": "2026-07-09",
+    "sourcePath": "content/product-daily/2026-07-09.md"
+  },
+  {
+    "kind": "github",
+    "name": "ahwanulm/AMRouter",
+    "url": "https://github.com/ahwanulm/AMRouter",
+    "firstReportedAt": "2026-07-09",
+    "sourcePath": "content/product-daily/2026-07-09.md"
+  },
+  {
+    "kind": "product",
+    "name": "GitHub Copilot Vision GA",
+    "url": "https://github.blog/changelog/2026-07-01-copilot-vision-is-generally-available/",
+    "firstReportedAt": "2026-07-09",
+    "sourcePath": "content/product-daily/2026-07-09.md"
+  },
+  {
+    "kind": "product",
+    "name": "GitHub Copilot Browser Tools for VS Code GA",
+    "url": "https://github.blog/changelog/2026-07-01-browser-tools-for-github-copilot-in-vs-code-are-generally-available/",
+    "firstReportedAt": "2026-07-09",
+    "sourcePath": "content/product-daily/2026-07-09.md"
+  },
+  {
+    "kind": "product",
+    "name": "Google AI Threat Defense",
+    "url": "https://cloud.google.com/blog/products/identity-security/introducing-google-ai-threat-defense",
+    "firstReportedAt": "2026-07-09",
+    "sourcePath": "content/product-daily/2026-07-09.md"
+  },
+  {
+    "kind": "product",
+    "name": "NotebookLM Agentic Research Upgrade",
+    "url": "https://blog.google/innovation-and-ai/products/notebooklm/better-research-notebooklm/",
+    "firstReportedAt": "2026-07-09",
+    "sourcePath": "content/product-daily/2026-07-09.md"
+  },
+  {
+    "kind": "product",
+    "name": "Hugging Face Models on Foundry Managed Compute",
+    "url": "https://huggingface.co/blog/microsoft/foundry-managed-compute",
+    "firstReportedAt": "2026-07-09",
+    "sourcePath": "content/product-daily/2026-07-09.md"
+  },
+  {
+    "kind": "product",
+    "name": "Hugging Face to Amazon SageMaker Studio in One Click",
+    "url": "https://aws.amazon.com/blogs/machine-learning/from-hugging-face-to-amazon-sagemaker-studio-in-one-click-2/",
+    "firstReportedAt": "2026-07-09",
+    "sourcePath": "content/product-daily/2026-07-09.md"
+  },
+  {
+    "kind": "product",
+    "name": "LeRobot v0.6.0",
+    "url": "https://huggingface.co/blog/lerobot-release-v060",
+    "firstReportedAt": "2026-07-09",
+    "sourcePath": "content/product-daily/2026-07-09.md"
+  },
+  {
+    "kind": "product",
+    "name": "Elastic Training with MaxText",
+    "url": "https://developers.googleblog.com/we-terminated-a-tpu-mid-training-and-it-recovered-in-seconds-introduction-to-elastic-training-with-maxtext/",
+    "firstReportedAt": "2026-07-09",
+    "sourcePath": "content/product-daily/2026-07-09.md"
+  },
+  {
+    "kind": "event",
+    "name": "AING ECO 创新加速计划开放日",
+    "url": "https://cd.huodongxing.com/event/6864808542000?qd=8828363103856&utm_campaign=eventspage&utm_medium=&utm_source=%E5%8F%91%E7%8E%B0%E6%B4%BB%E5%8A%A8%E9%A1%B5",
+    "firstReportedAt": "2026-07-09",
+    "sourcePath": "content/product-daily/2026-07-09.md"
+  },
+  {
+    "kind": "event",
+    "name": "奇灵·第十三届AI短剧产业供需洽谈会2026/7/10深圳",
+    "url": "https://cd.huodongxing.com/event/4864384135200?qd=8828363103856&utm_campaign=eventspage&utm_medium=&utm_source=%E5%8F%91%E7%8E%B0%E6%B4%BB%E5%8A%A8%E9%A1%B5",
+    "firstReportedAt": "2026-07-09",
+    "sourcePath": "content/product-daily/2026-07-09.md"
+  },
+  {
+    "kind": "event",
+    "name": "SZOOIA“助企强链”系列活动之—— 走进智立方集团",
+    "url": "https://cd.huodongxing.com/event/8862611841800?qd=8828363103856&utm_campaign=eventspage&utm_medium=&utm_source=%E5%8F%91%E7%8E%B0%E6%B4%BB%E5%8A%A8%E9%A1%B5",
+    "firstReportedAt": "2026-07-09",
+    "sourcePath": "content/product-daily/2026-07-09.md"
+  },
+  {
+    "kind": "event",
+    "name": "2026湾区微短剧OPC生态创新发展分享会",
+    "url": "https://cd.huodongxing.com/event/2862363366100?utm_campaign=calendarpage&utm_medium=&utm_source=%E6%B4%BB%E5%8A%A8%E6%97%A5%E5%8E%86%E9%A6%96%E9%A1%B5",
+    "firstReportedAt": "2026-07-09",
+    "sourcePath": "content/product-daily/2026-07-09.md"
+  },
+  {
+    "kind": "event",
+    "name": "〖IP智伴.潮玩新生〗AIZQE 2026深圳（全球）AI 玩具&潮玩创新发展千人峰会",
+    "url": "https://www.huodongxing.com/event/1857028067000?qd=7141735291448&utm_campaign=calendarpage&utm_medium=&utm_source=%E6%B4%BB%E5%8A%A8%E6%97%A5%E5%8E%86%E5%BD%93%E6%97%A5%E9%A1%B5",
+    "firstReportedAt": "2026-07-09",
+    "sourcePath": "content/product-daily/2026-07-09.md"
   }
 ]
