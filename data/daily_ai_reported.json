@@ -572,5 +572,131 @@
     "url": "https://www.huodongxing.com/event/1857028067000?qd=7141735291448&utm_campaign=calendarpage&utm_medium=&utm_source=%E6%B4%BB%E5%8A%A8%E6%97%A5%E5%8E%86%E5%BD%93%E6%97%A5%E9%A1%B5",
     "firstReportedAt": "2026-07-09",
     "sourcePath": "content/product-daily/2026-07-09.md"
+  },
+  {
+    "kind": "github",
+    "name": "MaximeRivest/riddle",
+    "url": "https://github.com/MaximeRivest/riddle",
+    "firstReportedAt": "2026-07-10",
+    "sourcePath": "content/product-daily/2026-07-10.md"
+  },
+  {
+    "kind": "github",
+    "name": "eli-labz/Cognitive-Core-Skills",
+    "url": "https://github.com/eli-labz/Cognitive-Core-Skills",
+    "firstReportedAt": "2026-07-10",
+    "sourcePath": "content/product-daily/2026-07-10.md"
+  },
+  {
+    "kind": "github",
+    "name": "ronak-create/FableCut",
+    "url": "https://github.com/ronak-create/FableCut",
+    "firstReportedAt": "2026-07-10",
+    "sourcePath": "content/product-daily/2026-07-10.md"
+  },
+  {
+    "kind": "github",
+    "name": "oxbshw/watch-skill",
+    "url": "https://github.com/oxbshw/watch-skill",
+    "firstReportedAt": "2026-07-10",
+    "sourcePath": "content/product-daily/2026-07-10.md"
+  },
+  {
+    "kind": "github",
+    "name": "HaochengLu/contextvc",
+    "url": "https://github.com/HaochengLu/contextvc",
+    "firstReportedAt": "2026-07-10",
+    "sourcePath": "content/product-daily/2026-07-10.md"
+  },
+  {
+    "kind": "product",
+    "name": "ChatGPT Work",
+    "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work/",
+    "firstReportedAt": "2026-07-10",
+    "sourcePath": "content/product-daily/2026-07-10.md"
+  },
+  {
+    "kind": "product",
+    "name": "新 ChatGPT 桌面应用（Chat / Work / Codex 合并）",
+    "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work/",
+    "firstReportedAt": "2026-07-10",
+    "sourcePath": "content/product-daily/2026-07-10.md"
+  },
+  {
+    "kind": "product",
+    "name": "ChatGPT Sites",
+    "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+    "firstReportedAt": "2026-07-10",
+    "sourcePath": "content/product-daily/2026-07-10.md"
+  },
+  {
+    "kind": "product",
+    "name": "GPT-Live",
+    "url": "https://openai.com/index/introducing-gpt-live/",
+    "firstReportedAt": "2026-07-10",
+    "sourcePath": "content/product-daily/2026-07-10.md"
+  },
+  {
+    "kind": "product",
+    "name": "Grok 4.5",
+    "url": "https://x.ai/news/grok-4-5",
+    "firstReportedAt": "2026-07-10",
+    "sourcePath": "content/product-daily/2026-07-10.md"
+  },
+  {
+    "kind": "product",
+    "name": "ZCode",
+    "url": "https://zcode.z.ai/en/docs",
+    "firstReportedAt": "2026-07-10",
+    "sourcePath": "content/product-daily/2026-07-10.md"
+  },
+  {
+    "kind": "product",
+    "name": "SharePoint Copilot Apps",
+    "url": "https://devblogs.microsoft.com/microsoft365dev/sharepoint-copilot-apps-now-in-public-preview-from-intent-to-action-in-microsoft-365-copilot/",
+    "firstReportedAt": "2026-07-10",
+    "sourcePath": "content/product-daily/2026-07-10.md"
+  },
+  {
+    "kind": "product",
+    "name": "Google AI Edge Gallery（MCP / reminders / session continuity 更新）",
+    "url": "https://developers.googleblog.com/a-smarter-google-ai-edge-gallery-mcp-integration-notifications-and-session-continuity/",
+    "firstReportedAt": "2026-07-10",
+    "sourcePath": "content/product-daily/2026-07-10.md"
+  },
+  {
+    "kind": "event",
+    "name": "HKPUG #100 - Trace the Clue, Find What’s True: An Opik LLM Debugging Night",
+    "url": "https://www.meetup.com/pythonhk/events/315438524/",
+    "firstReportedAt": "2026-07-10",
+    "sourcePath": "content/product-daily/2026-07-10.md"
+  },
+  {
+    "kind": "event",
+    "name": "游戏×AI漫剧峰会，共探产业出海新路径",
+    "url": "https://www.huodongxing.com/event/6867413038000?qd=8828363103856&utm_campaign=eventspage&utm_medium=&utm_source=%E5%8F%91%E7%8E%B0%E6%B4%BB%E5%8A%A8%E9%A1%B5",
+    "firstReportedAt": "2026-07-10",
+    "sourcePath": "content/product-daily/2026-07-10.md"
+  },
+  {
+    "kind": "event",
+    "name": "AIZQE2026深圳（全球）AIoT终端与场景生态创新千人峰会",
+    "url": "https://www.huodongxing.com/event/6856920070000?qd=8828363103856&utm_campaign=eventspage&utm_medium=&utm_source=%E5%8F%91%E7%8E%B0%E6%B4%BB%E5%8A%A8%E9%A1%B5",
+    "firstReportedAt": "2026-07-10",
+    "sourcePath": "content/product-daily/2026-07-10.md"
+  },
+  {
+    "kind": "event",
+    "name": "AIZQE 2026深圳（全球）具身智能机器人产业发展千人峰会",
+    "url": "https://www.huodongxing.com/event/9856925395600?layout=EN&qd=5428363092855",
+    "firstReportedAt": "2026-07-10",
+    "sourcePath": "content/product-daily/2026-07-10.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI Seminar Series: Smart Risk Control Strategies: Fraud Detection and Prevention in Finance",
+    "url": "https://ftea.astri.org/event/ai-seminar-5/",
+    "firstReportedAt": "2026-07-10",
+    "sourcePath": "content/product-daily/2026-07-10.md"
   }
 ]
