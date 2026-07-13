@@ -698,5 +698,117 @@
     "url": "https://ftea.astri.org/event/ai-seminar-5/",
     "firstReportedAt": "2026-07-10",
     "sourcePath": "content/product-daily/2026-07-10.md"
+  },
+  {
+    "kind": "github",
+    "name": "yusukebe/ax",
+    "url": "https://github.com/yusukebe/ax",
+    "firstReportedAt": "2026-07-13",
+    "sourcePath": "content/product-daily/2026-07-13.md"
+  },
+  {
+    "kind": "github",
+    "name": "Sahir619/fable-method",
+    "url": "https://github.com/Sahir619/fable-method",
+    "firstReportedAt": "2026-07-13",
+    "sourcePath": "content/product-daily/2026-07-13.md"
+  },
+  {
+    "kind": "github",
+    "name": "ninjahawk/Subtext",
+    "url": "https://github.com/ninjahawk/Subtext",
+    "firstReportedAt": "2026-07-13",
+    "sourcePath": "content/product-daily/2026-07-13.md"
+  },
+  {
+    "kind": "github",
+    "name": "pillar-labs/sail-skill",
+    "url": "https://github.com/pillar-labs/sail-skill",
+    "firstReportedAt": "2026-07-13",
+    "sourcePath": "content/product-daily/2026-07-13.md"
+  },
+  {
+    "kind": "github",
+    "name": "xiaolongbao0709/ai-virtual-phone",
+    "url": "https://github.com/xiaolongbao0709/ai-virtual-phone",
+    "firstReportedAt": "2026-07-13",
+    "sourcePath": "content/product-daily/2026-07-13.md"
+  },
+  {
+    "kind": "product",
+    "name": "Claude Cowork on web and mobile",
+    "url": "https://claude.com/blog/cowork-web-mobile",
+    "firstReportedAt": "2026-07-13",
+    "sourcePath": "content/product-daily/2026-07-13.md"
+  },
+  {
+    "kind": "product",
+    "name": "Claude Reflect",
+    "url": "https://www.anthropic.com/news/reflect-with-claude",
+    "firstReportedAt": "2026-07-13",
+    "sourcePath": "content/product-daily/2026-07-13.md"
+  },
+  {
+    "kind": "product",
+    "name": "Google AI ads transparency labels",
+    "url": "https://blog.google/products/ads-commerce/google-ads-ai-transparency-labels/",
+    "firstReportedAt": "2026-07-13",
+    "sourcePath": "content/product-daily/2026-07-13.md"
+  },
+  {
+    "kind": "product",
+    "name": "Windows AI vulnerability management / MDASH",
+    "url": "https://blogs.windows.com/windowsexperience/2026/07/09/evolving-windows-vulnerability-management-to-meet-the-speed-of-ai-powered-discovery/",
+    "firstReportedAt": "2026-07-13",
+    "sourcePath": "content/product-daily/2026-07-13.md"
+  },
+  {
+    "kind": "product",
+    "name": "FL Studio 2026 Gopher AI",
+    "url": "https://www.image-line.com/fl-studio/release/2026",
+    "firstReportedAt": "2026-07-13",
+    "sourcePath": "content/product-daily/2026-07-13.md"
+  },
+  {
+    "kind": "product",
+    "name": "Cloudflare AI traffic defaults",
+    "url": "https://blog.cloudflare.com/content-independence-day-ai-options/",
+    "firstReportedAt": "2026-07-13",
+    "sourcePath": "content/product-daily/2026-07-13.md"
+  },
+  {
+    "kind": "event",
+    "name": "Blooming with AI: HKSTP Summer Talent Fest 2026",
+    "url": "https://talentjobseeker.hkstp.org/events/22/Blooming-with-AI-HKSTP-Summer-Talent-Fest-2026",
+    "firstReportedAt": "2026-07-13",
+    "sourcePath": "content/product-daily/2026-07-13.md"
+  },
+  {
+    "kind": "event",
+    "name": "SURREALITY MR × AI Digital Art Cross-City Exhibition",
+    "url": "https://hkust.edu.hk/news/hkust-and-hkustgz-present-surreality-mr-ai-digital-art-cross-city-exhibition",
+    "firstReportedAt": "2026-07-13",
+    "sourcePath": "content/product-daily/2026-07-13.md"
+  },
+  {
+    "kind": "event",
+    "name": "AIZQE 2026全球AI硬件与AIoT终端创新千人峰会.深圳站",
+    "url": "https://sz.huodongxing.com/event/4857076101000?qd=8828363103856&utm_campaign=eventspage&utm_medium=&utm_source=%E5%8F%91%E7%8E%B0%E6%B4%BB%E5%8A%A8%E9%A1%B5",
+    "firstReportedAt": "2026-07-13",
+    "sourcePath": "content/product-daily/2026-07-13.md"
+  },
+  {
+    "kind": "event",
+    "name": "Africa's AI Opportunities: The 2026 Update",
+    "url": "https://www.meetup.com/startupgrindhk/events/313170113/",
+    "firstReportedAt": "2026-07-13",
+    "sourcePath": "content/product-daily/2026-07-13.md"
+  },
+  {
+    "kind": "event",
+    "name": "In It for the Long Run - with Thomas Butter",
+    "url": "https://www.meetup.com/startupgrindhk/events/313707784/",
+    "firstReportedAt": "2026-07-13",
+    "sourcePath": "content/product-daily/2026-07-13.md"
   }
 ]
