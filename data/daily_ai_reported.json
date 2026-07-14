@@ -810,5 +810,131 @@
     "url": "https://www.meetup.com/startupgrindhk/events/313707784/",
     "firstReportedAt": "2026-07-13",
     "sourcePath": "content/product-daily/2026-07-13.md"
+  },
+  {
+    "kind": "github",
+    "name": "bkingfilm/lapian-notes",
+    "url": "https://github.com/bkingfilm/lapian-notes",
+    "firstReportedAt": "2026-07-14",
+    "sourcePath": "content/product-daily/2026-07-14.md"
+  },
+  {
+    "kind": "github",
+    "name": "EXXETA/exxperts",
+    "url": "https://github.com/EXXETA/exxperts",
+    "firstReportedAt": "2026-07-14",
+    "sourcePath": "content/product-daily/2026-07-14.md"
+  },
+  {
+    "kind": "github",
+    "name": "ohad6k/ditto",
+    "url": "https://github.com/ohad6k/ditto",
+    "firstReportedAt": "2026-07-14",
+    "sourcePath": "content/product-daily/2026-07-14.md"
+  },
+  {
+    "kind": "github",
+    "name": "SilentFleetKK/ai-market-pulse",
+    "url": "https://github.com/SilentFleetKK/ai-market-pulse",
+    "firstReportedAt": "2026-07-14",
+    "sourcePath": "content/product-daily/2026-07-14.md"
+  },
+  {
+    "kind": "github",
+    "name": "TencentCloud/Octop",
+    "url": "https://github.com/TencentCloud/Octop",
+    "firstReportedAt": "2026-07-14",
+    "sourcePath": "content/product-daily/2026-07-14.md"
+  },
+  {
+    "kind": "product",
+    "name": "Meta Muse Spark 1.1",
+    "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
+    "firstReportedAt": "2026-07-14",
+    "sourcePath": "content/product-daily/2026-07-14.md"
+  },
+  {
+    "kind": "product",
+    "name": "Meta Muse Image and Muse Video",
+    "url": "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/",
+    "firstReportedAt": "2026-07-14",
+    "sourcePath": "content/product-daily/2026-07-14.md"
+  },
+  {
+    "kind": "product",
+    "name": "ChatGPT returns to WhatsApp in the EEA",
+    "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+    "firstReportedAt": "2026-07-14",
+    "sourcePath": "content/product-daily/2026-07-14.md"
+  },
+  {
+    "kind": "product",
+    "name": "Microsoft 365 Copilot Jira Data Center connector",
+    "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/connectors/jira-data-center-overview",
+    "firstReportedAt": "2026-07-14",
+    "sourcePath": "content/product-daily/2026-07-14.md"
+  },
+  {
+    "kind": "product",
+    "name": "Akeneo Agentic Ziggy",
+    "url": "https://www.akeneo.com/press-release/akeneo-introduces-the-first-truly-agentic-product-experience-platform/",
+    "firstReportedAt": "2026-07-14",
+    "sourcePath": "content/product-daily/2026-07-14.md"
+  },
+  {
+    "kind": "product",
+    "name": "Citrine Catalyst and Apex",
+    "url": "https://citrine.io/media-post/citrine-launches-catalyst-and-apex-to-make-ai-easier-for-materials-scientists-to-use-and-trust/",
+    "firstReportedAt": "2026-07-14",
+    "sourcePath": "content/product-daily/2026-07-14.md"
+  },
+  {
+    "kind": "product",
+    "name": "ByteDance UniVR-34B-Planning",
+    "url": "https://huggingface.co/ByteDance/UniVR-34B-Planning",
+    "firstReportedAt": "2026-07-14",
+    "sourcePath": "content/product-daily/2026-07-14.md"
+  },
+  {
+    "kind": "product",
+    "name": "Claude India rupee pricing",
+    "url": "https://m.economictimes.com/tech/artificial-intelligence/anthropic-rolls-out-rupee-pricing-for-claude-ai-in-india/articleshow/132373053.cms",
+    "firstReportedAt": "2026-07-14",
+    "sourcePath": "content/product-daily/2026-07-14.md"
+  },
+  {
+    "kind": "event",
+    "name": "Generative AI: networking, Vibe coding, Automaton, News and much more",
+    "url": "https://www.meetup.com/data-science-andgenai-hk/events/315639543/",
+    "firstReportedAt": "2026-07-14",
+    "sourcePath": "content/product-daily/2026-07-14.md"
+  },
+  {
+    "kind": "event",
+    "name": "2026 AI????????????????",
+    "url": "https://sz.huodongxing.com/events?city=%E6%B7%B1%E5%9C%B3&tag=AI",
+    "firstReportedAt": "2026-07-14",
+    "sourcePath": "content/product-daily/2026-07-14.md"
+  },
+  {
+    "kind": "event",
+    "name": "?7.23/??????GEO?????AI??????",
+    "url": "https://6123825679383.huodongxing.com/event/2865802816911",
+    "firstReportedAt": "2026-07-14",
+    "sourcePath": "content/product-daily/2026-07-14.md"
+  },
+  {
+    "kind": "event",
+    "name": "2026 Elastic Meetup ???",
+    "url": "https://sz.huodongxing.com/events?city=%E6%B7%B1%E5%9C%B3&tag=AI",
+    "firstReportedAt": "2026-07-14",
+    "sourcePath": "content/product-daily/2026-07-14.md"
+  },
+  {
+    "kind": "event",
+    "name": "???????????????",
+    "url": "https://sz.huodongxing.com/events?city=%E6%B7%B1%E5%9C%B3&tag=AI",
+    "firstReportedAt": "2026-07-14",
+    "sourcePath": "content/product-daily/2026-07-14.md"
   }
 ]
