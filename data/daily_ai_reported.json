@@ -936,5 +936,124 @@
     "url": "https://sz.huodongxing.com/events?city=%E6%B7%B1%E5%9C%B3&tag=AI",
     "firstReportedAt": "2026-07-14",
     "sourcePath": "content/product-daily/2026-07-14.md"
+  },
+  {
+    "kind": "github",
+    "name": "mereyabdenbekuly-ctrl/clodex-ide",
+    "url": "https://github.com/mereyabdenbekuly-ctrl/clodex-ide",
+    "firstReportedAt": "2026-07-15",
+    "sourcePath": "content/product-daily/2026-07-15.md"
+  },
+  {
+    "kind": "github",
+    "name": "AlephAITech/WorkBuddyGuide",
+    "url": "https://github.com/AlephAITech/WorkBuddyGuide",
+    "firstReportedAt": "2026-07-15",
+    "sourcePath": "content/product-daily/2026-07-15.md"
+  },
+  {
+    "kind": "github",
+    "name": "William-Lu-stack/Flawless",
+    "url": "https://github.com/William-Lu-stack/Flawless",
+    "firstReportedAt": "2026-07-15",
+    "sourcePath": "content/product-daily/2026-07-15.md"
+  },
+  {
+    "kind": "github",
+    "name": "modiqo/waggle",
+    "url": "https://github.com/modiqo/waggle",
+    "firstReportedAt": "2026-07-15",
+    "sourcePath": "content/product-daily/2026-07-15.md"
+  },
+  {
+    "kind": "github",
+    "name": "cosmtrek/mindwalk",
+    "url": "https://github.com/cosmtrek/mindwalk",
+    "firstReportedAt": "2026-07-15",
+    "sourcePath": "content/product-daily/2026-07-15.md"
+  },
+  {
+    "kind": "product",
+    "name": "Claude for Teachers",
+    "url": "https://www.anthropic.com/news/claude-for-teachers",
+    "firstReportedAt": "2026-07-15",
+    "sourcePath": "content/product-daily/2026-07-15.md"
+  },
+  {
+    "kind": "product",
+    "name": "GitHub Copilot App /security-review",
+    "url": "https://github.blog/changelog/2026-07-14-security-reviews-now-available-in-the-github-copilot-app/",
+    "firstReportedAt": "2026-07-15",
+    "sourcePath": "content/product-daily/2026-07-15.md"
+  },
+  {
+    "kind": "product",
+    "name": "GitHub Code Scanning AI security detections on pull requests",
+    "url": "https://github.blog/changelog/2026-07-14-code-scanning-shows-ai-security-detections-on-pull-requests/",
+    "firstReportedAt": "2026-07-15",
+    "sourcePath": "content/product-daily/2026-07-15.md"
+  },
+  {
+    "kind": "product",
+    "name": "Claude at scale on Google Cloud",
+    "url": "https://cloud.google.com/blog/products/ai-machine-learning/claude-at-scale-on-google-cloud-frontier-ai-built-for-enterprise-production",
+    "firstReportedAt": "2026-07-15",
+    "sourcePath": "content/product-daily/2026-07-15.md"
+  },
+  {
+    "kind": "product",
+    "name": "Waze Gemini Navigation Updates",
+    "url": "https://blog.google/waze/waze-updates-gemini-motorcycle-mode/",
+    "firstReportedAt": "2026-07-15",
+    "sourcePath": "content/product-daily/2026-07-15.md"
+  },
+  {
+    "kind": "product",
+    "name": "YouCam Video AI MV",
+    "url": "https://www.businesswire.com/news/home/20260714536137/en/Perfect-Corp.-Launches-AI-MV-in-YouCam-Video-Turning-Any-Song-into-a-Fully-Produced-Music-Video-in-Minutes",
+    "firstReportedAt": "2026-07-15",
+    "sourcePath": "content/product-daily/2026-07-15.md"
+  },
+  {
+    "kind": "product",
+    "name": "TIDAL AI Music Policy",
+    "url": "https://support.tidal.com/hc/en-us/articles/48031883413521-AI-Policy",
+    "firstReportedAt": "2026-07-15",
+    "sourcePath": "content/product-daily/2026-07-15.md"
+  },
+  {
+    "kind": "event",
+    "name": "2026（第七届）国际 AI+IoT 生态发展大会",
+    "url": "https://www.huodongxing.com/event/3867518825200?qd=7141735291448&utm_campaign=calendarpage&utm_medium=&utm_source=%E6%B4%BB%E5%8A%A8%E6%97%A5%E5%8E%86%E5%BD%93%E6%97%A5%E9%A1%B5",
+    "firstReportedAt": "2026-07-15",
+    "sourcePath": "content/product-daily/2026-07-15.md"
+  },
+  {
+    "kind": "event",
+    "name": "Empowering Modern HR Teams with AI | Hong Kong",
+    "url": "https://www.eventbrite.com/d/hong-kong-sar/artificial-intelligence/",
+    "firstReportedAt": "2026-07-15",
+    "sourcePath": "content/product-daily/2026-07-15.md"
+  },
+  {
+    "kind": "event",
+    "name": "Technical Visit: AI-Driven Field Inspection Platform",
+    "url": "https://www.eventbrite.hk/e/1-technical-visit-ai-driven-field-inspection-platform-tickets-1993641238612",
+    "firstReportedAt": "2026-07-15",
+    "sourcePath": "content/product-daily/2026-07-15.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI Implementation in Business | Hong Kong",
+    "url": "https://www.eventbrite.com/d/hong-kong-sar/artificial-intelligence/",
+    "firstReportedAt": "2026-07-15",
+    "sourcePath": "content/product-daily/2026-07-15.md"
+  },
+  {
+    "kind": "event",
+    "name": "Practical AI Skills, Strategies & Smart Decision-Making for Surveyors",
+    "url": "https://www.eventbrite.hk/e/practical-ai-skills-strategies-smart-decision-making-for-surveyors-tickets-1992483449634",
+    "firstReportedAt": "2026-07-15",
+    "sourcePath": "content/product-daily/2026-07-15.md"
   }
 ]

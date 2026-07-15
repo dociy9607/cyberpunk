@@ -7,11 +7,11 @@ const DATE_FILE_RE = /^\d{4}-\d{2}-\d{2}\.md$/;
 
 type FrontMatter = Record<string, string>;
 
-const SECTION_MARKERS = ["板块", "鏉垮潡"];
-const TOC_TITLES = new Set(["目录", "鐩綍"]);
+const SECTION_MARKERS = ["板块", "鏉垮潡", "閺夊灝娼"];
+const TOC_TITLES = new Set(["目录", "鐩綍", "閻╊喖缍"]);
 
 const KIND_KEYWORDS: Record<ProductDailyEntry["kind"], string[]> = {
-  github: ["GitHub", "板块一", "专区", "鏉垮潡涓€", "涓撳尯"],
+  github: ["GitHub", "板块一", "专区", "鏉垮潡涓", "涓撳尯"],
   product: ["板块二", "产品", "功能", "鏉垮潡浜", "浜у搧", "鍔熻兘"],
   event: ["板块三", "活动", "大湾区", "鏉垮潡涓", "娲诲姩", "澶ф咕鍖"],
   pick: ["板块四", "借鉴", "鏉垮潡鍥", "鍊熼壌"],
@@ -27,14 +27,14 @@ function escapeHtml(value: string) {
 }
 
 function slugify(value: string) {
-  const ascii = value
+  const slug = value
     .toLowerCase()
-    .replace(/[`*_~()[\]{}:：【】（）\/，。；！？、\\|]/g, "")
+    .replace(/[`*_~()[\]{}:：。【】（）/，。；！？、|\\]/g, "")
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-")
     .replace(/^-|-$/g, "");
 
-  if (ascii) return ascii;
+  if (slug) return slug;
   return Buffer.from(value).toString("hex").slice(0, 24);
 }
 
