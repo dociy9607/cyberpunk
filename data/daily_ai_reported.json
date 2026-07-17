@@ -1055,5 +1055,145 @@
     "url": "https://www.eventbrite.hk/e/practical-ai-skills-strategies-smart-decision-making-for-surveyors-tickets-1992483449634",
     "firstReportedAt": "2026-07-15",
     "sourcePath": "content/product-daily/2026-07-15.md"
+  },
+  {
+    "kind": "github",
+    "name": "yetone/kill-ai-slop",
+    "url": "https://github.com/yetone/kill-ai-slop",
+    "firstReportedAt": "2026-07-17",
+    "sourcePath": "content/product-daily/2026-07-17.md"
+  },
+  {
+    "kind": "github",
+    "name": "Intuition-Lab/personal-model",
+    "url": "https://github.com/Intuition-Lab/personal-model",
+    "firstReportedAt": "2026-07-17",
+    "sourcePath": "content/product-daily/2026-07-17.md"
+  },
+  {
+    "kind": "github",
+    "name": "QuantumByteOSS/quantumbyte",
+    "url": "https://github.com/QuantumByteOSS/quantumbyte",
+    "firstReportedAt": "2026-07-17",
+    "sourcePath": "content/product-daily/2026-07-17.md"
+  },
+  {
+    "kind": "github",
+    "name": "vshulcz/deja-vu",
+    "url": "https://github.com/vshulcz/deja-vu",
+    "firstReportedAt": "2026-07-17",
+    "sourcePath": "content/product-daily/2026-07-17.md"
+  },
+  {
+    "kind": "github",
+    "name": "ShenSeanChen/waku-agent",
+    "url": "https://github.com/ShenSeanChen/waku-agent",
+    "firstReportedAt": "2026-07-17",
+    "sourcePath": "content/product-daily/2026-07-17.md"
+  },
+  {
+    "kind": "product",
+    "name": "Roblox Build",
+    "url": "https://about.roblox.com/newsroom/2026/07/build-without-limits-on-roblox",
+    "firstReportedAt": "2026-07-17",
+    "sourcePath": "content/product-daily/2026-07-17.md"
+  },
+  {
+    "kind": "product",
+    "name": "OpenAI Codex Micro",
+    "url": "https://worklouder.cc/codex-micro",
+    "firstReportedAt": "2026-07-17",
+    "sourcePath": "content/product-daily/2026-07-17.md"
+  },
+  {
+    "kind": "product",
+    "name": "Gemini Omni Flash in Google Vids",
+    "url": "https://workspace.google.com/blog/product-announcements/introducing-gemini-omni-flash-in-google-vids",
+    "firstReportedAt": "2026-07-17",
+    "sourcePath": "content/product-daily/2026-07-17.md"
+  },
+  {
+    "kind": "product",
+    "name": "Grounding with Parallel Web Search",
+    "url": "https://developers.googleblog.com/expanding-choice-in-gemini-enterprise-agent-platform-introducing-grounding-with-parallel-web-search/",
+    "firstReportedAt": "2026-07-17",
+    "sourcePath": "content/product-daily/2026-07-17.md"
+  },
+  {
+    "kind": "product",
+    "name": "GitHub Agentic Autofix for code scanning alerts",
+    "url": "https://github.blog/changelog/2026-07-10-agentic-autofix-for-code-scanning-alerts-in-public-preview/",
+    "firstReportedAt": "2026-07-17",
+    "sourcePath": "content/product-daily/2026-07-17.md"
+  },
+  {
+    "kind": "product",
+    "name": "Cohere Transcribe Arabic",
+    "url": "https://cohere.com/blog/transcribe-arabic",
+    "firstReportedAt": "2026-07-17",
+    "sourcePath": "content/product-daily/2026-07-17.md"
+  },
+  {
+    "kind": "product",
+    "name": "AlphaEvolve on Gemini Enterprise Agent Platform",
+    "url": "https://cloud.google.com/blog/products/ai-machine-learning/alphaevolve-is-available-for-everyone",
+    "firstReportedAt": "2026-07-17",
+    "sourcePath": "content/product-daily/2026-07-17.md"
+  },
+  {
+    "kind": "product",
+    "name": "Copilot in SharePoint July 2026 updates",
+    "url": "https://techcommunity.microsoft.com/blog/spblog/what%E2%80%99s-new-in-copilot-in-sharepoint-july-2026/4535420",
+    "firstReportedAt": "2026-07-17",
+    "sourcePath": "content/product-daily/2026-07-17.md"
+  },
+  {
+    "kind": "product",
+    "name": "Apple Intelligence China Approval",
+    "url": "https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/",
+    "firstReportedAt": "2026-07-17",
+    "sourcePath": "content/product-daily/2026-07-17.md"
+  },
+  {
+    "kind": "product",
+    "name": "GitHub Models retirement timeline",
+    "url": "https://github.blog/changelog/2026-07-01-github-models-is-being-fully-retired-on-july-30-2026/",
+    "firstReportedAt": "2026-07-17",
+    "sourcePath": "content/product-daily/2026-07-17.md"
+  },
+  {
+    "kind": "event",
+    "name": "Agent Go! Shenzhen｜AI Agent 应用交流会",
+    "url": "https://luma.com/cy06fiou",
+    "firstReportedAt": "2026-07-17",
+    "sourcePath": "content/product-daily/2026-07-17.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI 幫到你定幫倒你？超實用 AI 創業分享會",
+    "url": "https://luma.com/n0uw6cem",
+    "firstReportedAt": "2026-07-17",
+    "sourcePath": "content/product-daily/2026-07-17.md"
+  },
+  {
+    "kind": "event",
+    "name": "HR Gathering & Luncheon: Designing work for the age of agentic AI",
+    "url": "https://luma.com/gh04q746",
+    "firstReportedAt": "2026-07-17",
+    "sourcePath": "content/product-daily/2026-07-17.md"
+  },
+  {
+    "kind": "event",
+    "name": "Agent Go：Hong Kong｜AI Agent 应用交流会",
+    "url": "https://luma.com/t009vgge",
+    "firstReportedAt": "2026-07-17",
+    "sourcePath": "content/product-daily/2026-07-17.md"
+  },
+  {
+    "kind": "event",
+    "name": "Manus Fellow Event｜From Physical to Digital: Scaling F&B Tech with AI",
+    "url": "https://luma.com/2wbxuwth",
+    "firstReportedAt": "2026-07-17",
+    "sourcePath": "content/product-daily/2026-07-17.md"
   }
 ]
