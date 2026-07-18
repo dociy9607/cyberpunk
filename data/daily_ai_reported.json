@@ -1195,5 +1195,145 @@
     "url": "https://luma.com/2wbxuwth",
     "firstReportedAt": "2026-07-17",
     "sourcePath": "content/product-daily/2026-07-17.md"
+  },
+  {
+    "kind": "github",
+    "name": "yuwen-cool/yuwen-publish-precheck",
+    "url": "https://github.com/yuwen-cool/yuwen-publish-precheck",
+    "firstReportedAt": "2026-07-18",
+    "sourcePath": "content/product-daily/2026-07-18.md"
+  },
+  {
+    "kind": "github",
+    "name": "barretlee/agent-pulse",
+    "url": "https://github.com/barretlee/agent-pulse",
+    "firstReportedAt": "2026-07-18",
+    "sourcePath": "content/product-daily/2026-07-18.md"
+  },
+  {
+    "kind": "github",
+    "name": "erickong/penecho",
+    "url": "https://github.com/erickong/penecho",
+    "firstReportedAt": "2026-07-18",
+    "sourcePath": "content/product-daily/2026-07-18.md"
+  },
+  {
+    "kind": "github",
+    "name": "Nexis-AI/NexBench",
+    "url": "https://github.com/Nexis-AI/NexBench",
+    "firstReportedAt": "2026-07-18",
+    "sourcePath": "content/product-daily/2026-07-18.md"
+  },
+  {
+    "kind": "github",
+    "name": "KlaatAI/klaatcode",
+    "url": "https://github.com/KlaatAI/klaatcode",
+    "firstReportedAt": "2026-07-18",
+    "sourcePath": "content/product-daily/2026-07-18.md"
+  },
+  {
+    "kind": "product",
+    "name": "Kimi K3",
+    "url": "https://platform.moonshot.ai/docs/guide/kimi-k3-quickstart",
+    "firstReportedAt": "2026-07-18",
+    "sourcePath": "content/product-daily/2026-07-18.md"
+  },
+  {
+    "kind": "product",
+    "name": "Repository-level GitHub Copilot usage metrics",
+    "url": "https://github.blog/changelog/2026-07-17-repository-level-github-copilot-usage-metrics-generally-available/",
+    "firstReportedAt": "2026-07-18",
+    "sourcePath": "content/product-daily/2026-07-18.md"
+  },
+  {
+    "kind": "product",
+    "name": "GitHub Copilot app in usage metrics API",
+    "url": "https://github.blog/changelog/2026-07-17-github-copilot-app-now-available-in-the-usage-metrics-api/",
+    "firstReportedAt": "2026-07-18",
+    "sourcePath": "content/product-daily/2026-07-18.md"
+  },
+  {
+    "kind": "product",
+    "name": "Copilot code review customization and configurability improvements",
+    "url": "https://github.blog/changelog/2026-07-17-copilot-code-review-customization-and-configurability-improvements/",
+    "firstReportedAt": "2026-07-18",
+    "sourcePath": "content/product-daily/2026-07-18.md"
+  },
+  {
+    "kind": "product",
+    "name": "GitHub Mobile Fix with Copilot",
+    "url": "https://github.blog/changelog/2026-07-17-github-mobile-fix-pull-request-comments-with-copilot-cloud-agent/",
+    "firstReportedAt": "2026-07-18",
+    "sourcePath": "content/product-daily/2026-07-18.md"
+  },
+  {
+    "kind": "product",
+    "name": "Google Cloud Data Agent Kit extension",
+    "url": "https://docs.cloud.google.com/data-cloud-extension",
+    "firstReportedAt": "2026-07-18",
+    "sourcePath": "content/product-daily/2026-07-18.md"
+  },
+  {
+    "kind": "product",
+    "name": "Alibaba Cloud MaxCompute Agentic ecosystem",
+    "url": "https://www.alibabacloud.com/en/news/product/maxcompute-agentic-ecosystem-tools-launched-n03",
+    "firstReportedAt": "2026-07-18",
+    "sourcePath": "content/product-daily/2026-07-18.md"
+  },
+  {
+    "kind": "product",
+    "name": "Oracle OCI Enterprise AI July 2026 updates",
+    "url": "https://blogs.oracle.com/ai-and-datascience/whats-new-in-ai-july-2026",
+    "firstReportedAt": "2026-07-18",
+    "sourcePath": "content/product-daily/2026-07-18.md"
+  },
+  {
+    "kind": "product",
+    "name": "Copilot in Microsoft Fabric worldwide availability",
+    "url": "https://learn.microsoft.com/en-us/fabric/fundamentals/whats-new",
+    "firstReportedAt": "2026-07-18",
+    "sourcePath": "content/product-daily/2026-07-18.md"
+  },
+  {
+    "kind": "product",
+    "name": "Snowflake per-user quotas for Cortex AI features",
+    "url": "https://docs.snowflake.com/en/release-notes/2026/10_24",
+    "firstReportedAt": "2026-07-18",
+    "sourcePath": "content/product-daily/2026-07-18.md"
+  },
+  {
+    "kind": "event",
+    "name": "2026 AI Investment Copilot 分享会",
+    "url": "https://luma.com/98lqnjf7",
+    "firstReportedAt": "2026-07-18",
+    "sourcePath": "content/product-daily/2026-07-18.md"
+  },
+  {
+    "kind": "event",
+    "name": "2026 AI Web3 投資實戰分享會",
+    "url": "https://luma.com/8emxcvae",
+    "firstReportedAt": "2026-07-18",
+    "sourcePath": "content/product-daily/2026-07-18.md"
+  },
+  {
+    "kind": "event",
+    "name": "Founder Labs+: Intro to AI & Vibe Coding 101",
+    "url": "https://luma.com/4czlkm10",
+    "firstReportedAt": "2026-07-18",
+    "sourcePath": "content/product-daily/2026-07-18.md"
+  },
+  {
+    "kind": "event",
+    "name": "Agent Creativity Hackathon for Autism Charity",
+    "url": "https://www.meetup.com/ai-builders-hong-kong/events/315648732/",
+    "firstReportedAt": "2026-07-18",
+    "sourcePath": "content/product-daily/2026-07-18.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI Agent Summit @ Hong Kong",
+    "url": "https://luma.com/49t856vk",
+    "firstReportedAt": "2026-07-18",
+    "sourcePath": "content/product-daily/2026-07-18.md"
   }
 ]
