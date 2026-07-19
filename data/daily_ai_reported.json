@@ -1335,5 +1335,138 @@
     "url": "https://luma.com/49t856vk",
     "firstReportedAt": "2026-07-18",
     "sourcePath": "content/product-daily/2026-07-18.md"
+  },
+  {
+    "kind": "github",
+    "name": "xai-org/grok-build",
+    "url": "https://github.com/xai-org/grok-build",
+    "firstReportedAt": "2026-07-19",
+    "sourcePath": "content/product-daily/2026-07-19.md"
+  },
+  {
+    "kind": "github",
+    "name": "nethical6/conversation-steganography",
+    "url": "https://github.com/nethical6/conversation-steganography",
+    "firstReportedAt": "2026-07-19",
+    "sourcePath": "content/product-daily/2026-07-19.md"
+  },
+  {
+    "kind": "github",
+    "name": "Blueturboguy07/cue",
+    "url": "https://github.com/Blueturboguy07/cue",
+    "firstReportedAt": "2026-07-19",
+    "sourcePath": "content/product-daily/2026-07-19.md"
+  },
+  {
+    "kind": "github",
+    "name": "PengZhang64/circuit-framework",
+    "url": "https://github.com/PengZhang64/circuit-framework",
+    "firstReportedAt": "2026-07-19",
+    "sourcePath": "content/product-daily/2026-07-19.md"
+  },
+  {
+    "kind": "github",
+    "name": "stackblitz/bolt-slides",
+    "url": "https://github.com/stackblitz/bolt-slides",
+    "firstReportedAt": "2026-07-19",
+    "sourcePath": "content/product-daily/2026-07-19.md"
+  },
+  {
+    "kind": "product",
+    "name": "Google AI Mode Connected Apps",
+    "url": "https://blog.google/products-and-platforms/products/search/connected-apps/",
+    "firstReportedAt": "2026-07-19",
+    "sourcePath": "content/product-daily/2026-07-19.md"
+  },
+  {
+    "kind": "product",
+    "name": "Canva Code 2.0",
+    "url": "https://www.canva.com/newsroom/news/Canva-Code/",
+    "firstReportedAt": "2026-07-19",
+    "sourcePath": "content/product-daily/2026-07-19.md"
+  },
+  {
+    "kind": "product",
+    "name": "Google Pics",
+    "url": "https://workspace.google.com/products/pics/",
+    "firstReportedAt": "2026-07-19",
+    "sourcePath": "content/product-daily/2026-07-19.md"
+  },
+  {
+    "kind": "product",
+    "name": "OpenAI GPT-5.6 Sol/Terra/Luna on Amazon Bedrock",
+    "url": "https://aws.amazon.com/blogs/machine-learning/openai-gpt-5-6-sol-terra-and-luna-are-now-generally-available-on-amazon-bedrock/",
+    "firstReportedAt": "2026-07-19",
+    "sourcePath": "content/product-daily/2026-07-19.md"
+  },
+  {
+    "kind": "product",
+    "name": "Alation Intelligence Operating System (AIOS)",
+    "url": "https://www.alation.com/blog/introducing-aios-alation-intelligence-operating-system/",
+    "firstReportedAt": "2026-07-19",
+    "sourcePath": "content/product-daily/2026-07-19.md"
+  },
+  {
+    "kind": "product",
+    "name": "Cloudera and VAST Unified AI Factory",
+    "url": "https://www.cloudera.com/about/news-and-blogs/press-releases/2026-07-14-cloudera-and-vast-data-announce-strategic-partnership-to-deliver-ai-data-platform-anywhere.html",
+    "firstReportedAt": "2026-07-19",
+    "sourcePath": "content/product-daily/2026-07-19.md"
+  },
+  {
+    "kind": "product",
+    "name": "Databricks AI Search High QPS",
+    "url": "https://learn.microsoft.com/en-nz/azure/databricks/release-notes/product/2026/july",
+    "firstReportedAt": "2026-07-19",
+    "sourcePath": "content/product-daily/2026-07-19.md"
+  },
+  {
+    "kind": "product",
+    "name": "Databricks Genie app in Microsoft Teams",
+    "url": "https://docs.databricks.com/aws/en/integrations/msft-teams",
+    "firstReportedAt": "2026-07-19",
+    "sourcePath": "content/product-daily/2026-07-19.md"
+  },
+  {
+    "kind": "product",
+    "name": "Ode with Anthropic",
+    "url": "https://www.anthropic.com/news/enterprise-ai-services-company",
+    "firstReportedAt": "2026-07-19",
+    "sourcePath": "content/product-daily/2026-07-19.md"
+  },
+  {
+    "kind": "event",
+    "name": "Launch Your Own Successful AI App | AI Startup | Workshop 2026",
+    "url": "https://www.eventbrite.com/e/launch-your-own-successful-ai-app-ai-startup-workshop-2026-tickets-892936947447",
+    "firstReportedAt": "2026-07-19",
+    "sourcePath": "content/product-daily/2026-07-19.md"
+  },
+  {
+    "kind": "event",
+    "name": "Harnessing AI for Marketing Innovation | Hong Kong",
+    "url": "https://www.eventbrite.com/d/hong-kong-sar/digital-marketing/",
+    "firstReportedAt": "2026-07-19",
+    "sourcePath": "content/product-daily/2026-07-19.md"
+  },
+  {
+    "kind": "event",
+    "name": "IOTE 2026 第二十五届国际物联网展・深圳站",
+    "url": "https://www.huodongxing.com/event/1851566397200?qd=8641735297249",
+    "firstReportedAt": "2026-07-19",
+    "sourcePath": "content/product-daily/2026-07-19.md"
+  },
+  {
+    "kind": "event",
+    "name": "Digital Marketing Asia Hong Kong 2026",
+    "url": "https://conferences.marketing-interactive.com/digital-marketing-hk/",
+    "firstReportedAt": "2026-07-19",
+    "sourcePath": "content/product-daily/2026-07-19.md"
+  },
+  {
+    "kind": "event",
+    "name": "What’s NEXT in Marketing: Hong Kong 2026",
+    "url": "https://marketech-apac.com/conference/whats-next-in-marketing-hong-kong-2026/",
+    "firstReportedAt": "2026-07-19",
+    "sourcePath": "content/product-daily/2026-07-19.md"
   }
 ]
