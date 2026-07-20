@@ -1468,5 +1468,124 @@
     "url": "https://marketech-apac.com/conference/whats-next-in-marketing-hong-kong-2026/",
     "firstReportedAt": "2026-07-19",
     "sourcePath": "content/product-daily/2026-07-19.md"
+  },
+  {
+    "kind": "github",
+    "name": "Fei-Away/Codex-Dream-Skin",
+    "url": "https://github.com/Fei-Away/Codex-Dream-Skin",
+    "firstReportedAt": "2026-07-20",
+    "sourcePath": "content/product-daily/2026-07-20.md"
+  },
+  {
+    "kind": "github",
+    "name": "pixel-point/aval",
+    "url": "https://github.com/pixel-point/aval",
+    "firstReportedAt": "2026-07-20",
+    "sourcePath": "content/product-daily/2026-07-20.md"
+  },
+  {
+    "kind": "github",
+    "name": "littledivy/mimic",
+    "url": "https://github.com/littledivy/mimic",
+    "firstReportedAt": "2026-07-20",
+    "sourcePath": "content/product-daily/2026-07-20.md"
+  },
+  {
+    "kind": "github",
+    "name": "PromptPartner/agentsmith",
+    "url": "https://github.com/PromptPartner/agentsmith",
+    "firstReportedAt": "2026-07-20",
+    "sourcePath": "content/product-daily/2026-07-20.md"
+  },
+  {
+    "kind": "github",
+    "name": "CyberSunil/LLMVault",
+    "url": "https://github.com/CyberSunil/LLMVault",
+    "firstReportedAt": "2026-07-20",
+    "sourcePath": "content/product-daily/2026-07-20.md"
+  },
+  {
+    "kind": "product",
+    "name": "ChatGPT desktop app experience updates",
+    "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+    "firstReportedAt": "2026-07-20",
+    "sourcePath": "content/product-daily/2026-07-20.md"
+  },
+  {
+    "kind": "product",
+    "name": "ChatGPT increased custom instructions limit",
+    "url": "https://help.openai.com/en/articles/8096356-chatgpt-custom-instructions",
+    "firstReportedAt": "2026-07-20",
+    "sourcePath": "content/product-daily/2026-07-20.md"
+  },
+  {
+    "kind": "product",
+    "name": "ChatGPT Enterprise expanded Admin APIs and analytics",
+    "url": "https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes",
+    "firstReportedAt": "2026-07-20",
+    "sourcePath": "content/product-daily/2026-07-20.md"
+  },
+  {
+    "kind": "product",
+    "name": "Gemini Notebook",
+    "url": "https://workspaceupdates.googleblog.com/2026/07/notebooklm-now-gemini-notebook.html",
+    "firstReportedAt": "2026-07-20",
+    "sourcePath": "content/product-daily/2026-07-20.md"
+  },
+  {
+    "kind": "product",
+    "name": "Gemini Enterprise BYOID for mobile apps",
+    "url": "https://docs.cloud.google.com/gemini/enterprise/docs/release-notes",
+    "firstReportedAt": "2026-07-20",
+    "sourcePath": "content/product-daily/2026-07-20.md"
+  },
+  {
+    "kind": "product",
+    "name": "Proton Lumo 2.0",
+    "url": "https://proton.me/blog/lumo-2",
+    "firstReportedAt": "2026-07-20",
+    "sourcePath": "content/product-daily/2026-07-20.md"
+  },
+  {
+    "kind": "product",
+    "name": "Standalone Zoom Virtual Agent Receptionist",
+    "url": "https://news.zoom.com/standalone-zoom-virtual-agent-receptionist/",
+    "firstReportedAt": "2026-07-20",
+    "sourcePath": "content/product-daily/2026-07-20.md"
+  },
+  {
+    "kind": "event",
+    "name": "WikiEXPO HongKong 2026",
+    "url": "https://luma.com/kol6y571",
+    "firstReportedAt": "2026-07-20",
+    "sourcePath": "content/product-daily/2026-07-20.md"
+  },
+  {
+    "kind": "event",
+    "name": "2026 2nd International Conference on Generative Artificial Intelligence for Business",
+    "url": "https://conferenceindex.org/event/international-conference-on-generative-artificial-intelligence-for-business-gaib-2026-july-hong-kong-cn",
+    "firstReportedAt": "2026-07-20",
+    "sourcePath": "content/product-daily/2026-07-20.md"
+  },
+  {
+    "kind": "event",
+    "name": "2026 International Conference on Artificial Intelligence and Low Altitude Technology",
+    "url": "https://manuscriptlink.com/cfp/detail/event/ISXNJAWL35979660",
+    "firstReportedAt": "2026-07-20",
+    "sourcePath": "content/product-daily/2026-07-20.md"
+  },
+  {
+    "kind": "event",
+    "name": "FutureTech 2026: Artificial Intelligence, Quantum Computing & Intelligent Computing Systems",
+    "url": "https://www.srcmeetings.com/upcoming-conferences/future-tech-2026-artificial-intelligence-quantum-computing-intelligent-computing-systems",
+    "firstReportedAt": "2026-07-20",
+    "sourcePath": "content/product-daily/2026-07-20.md"
+  },
+  {
+    "kind": "event",
+    "name": "Large Language Models & the Social Sciences Conference",
+    "url": "https://www.eps-academic.org/ai-conference",
+    "firstReportedAt": "2026-07-20",
+    "sourcePath": "content/product-daily/2026-07-20.md"
   }
 ]
