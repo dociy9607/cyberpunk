@@ -7,7 +7,10 @@ import {
   CalendarDays,
   Cloud,
   Database,
+  Eye,
+  EyeOff,
   LogOut,
+  LoaderCircle,
   Newspaper,
   Plus,
   ShieldCheck,
@@ -162,6 +165,8 @@ export function AppShell() {
   const [filterType, setFilterType] = useState("all");
   const [accounts, setAccounts] = useState<SafeAccount[]>([]);
   const [loginMessage, setLoginMessage] = useState("");
+  const [loginSubmitting, setLoginSubmitting] = useState(false);
+  const [showLoginPassword, setShowLoginPassword] = useState(false);
   const [commerceBriefs, setCommerceBriefs] = useState<CommerceNewsBrief[]>([fallbackCommerceBrief]);
   const [commerceLoading, setCommerceLoading] = useState(false);
   const [productReports, setProductReports] = useState<ProductDailyReport[]>([]);
@@ -257,8 +262,10 @@ export function AppShell() {
 
   async function handleLogin(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (loginSubmitting) return;
     setLoginMessage("");
     const form = new FormData(event.currentTarget);
+    setLoginSubmitting(true);
     try {
       const payload = await api<{ user: Session; service: ServiceMode }>("/api/login", {
         method: "POST",
@@ -269,8 +276,14 @@ export function AppShell() {
       setRecordDraft(emptyRecord(payload.user.username));
       setView("home");
       notify("登录成功");
-    } catch {
-      setLoginMessage("账号或密码不对");
+    } catch (error) {
+      const status = (error as ApiError | undefined)?.status;
+      const message = error instanceof Error ? error.message : String(error);
+      if (status === 401) setLoginMessage("账号或密码不对");
+      else if (message === "request_timeout") setLoginMessage("登录请求超时，请稍后再试");
+      else setLoginMessage("登录服务暂时不可用，请稍后再试");
+    } finally {
+      setLoginSubmitting(false);
     }
   }
 
@@ -380,10 +393,34 @@ export function AppShell() {
           </div>
           <form className="login-form" onSubmit={handleLogin}>
             <h2>登录工作台</h2>
-            <label>账号<input name="username" autoComplete="username" required /></label>
-            <label>密码<input name="password" type="password" autoComplete="current-password" required /></label>
-            <button className="primary-btn" type="submit"><ShieldCheck size={18} /> 登录</button>
-            {loginMessage && <p className="form-error">{loginMessage}</p>}
+            <label>账号<input name="username" autoComplete="username" autoFocus required /></label>
+            <label>
+              密码
+              <span className="password-field">
+                <input
+                  name="password"
+                  type={showLoginPassword ? "text" : "password"}
+                  autoComplete="current-password"
+                  aria-describedby={loginMessage ? "login-error" : undefined}
+                  required
+                />
+                <button
+                  className="password-toggle"
+                  type="button"
+                  aria-label={showLoginPassword ? "隐藏密码" : "显示密码"}
+                  aria-pressed={showLoginPassword}
+                  title={showLoginPassword ? "隐藏密码" : "显示密码"}
+                  onClick={() => setShowLoginPassword((current) => !current)}
+                >
+                  {showLoginPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                </button>
+              </span>
+            </label>
+            <button className="primary-btn" type="submit" disabled={loginSubmitting}>
+              {loginSubmitting ? <LoaderCircle className="spin" size={18} /> : <ShieldCheck size={18} />}
+              {loginSubmitting ? "正在登录" : "登录"}
+            </button>
+            {loginMessage && <p className="form-error" id="login-error" aria-live="polite">{loginMessage}</p>}
             <p className="subtle">初始管理员账号仍为 admin。登录态使用 30 天安全 Cookie。</p>
           </form>
         </section>

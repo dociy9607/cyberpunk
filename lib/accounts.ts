@@ -5,7 +5,7 @@ import { getSupabaseAdmin } from "./supabaseAdmin";
 import type { AccountRow, SafeAccount, ServiceMode, UserRole } from "./types";
 
 const ACCOUNTS_KEY = "dehviz:auth:accounts:v1";
-const ACCOUNT_STORE_TIMEOUT_MS = 12000;
+const ACCOUNT_STORE_TIMEOUT_MS = 5000;
 let memoryAccounts: AccountRow[] | null = null;
 
 async function withTimeout<T>(operation: PromiseLike<T>, label: string): Promise<T> {
@@ -73,34 +73,71 @@ async function writeUpstashAccounts(accounts: AccountRow[]) {
   await kvRequest(`/set/${encodeURIComponent(ACCOUNTS_KEY)}/${encodeURIComponent(JSON.stringify(accounts))}`, { method: "POST" });
 }
 
-export async function getAccounts(): Promise<AccountRow[]> {
-  const supabase = getSupabaseAdmin();
-  if (supabase) {
-    const { data, error } = await withTimeout(
-      supabase.from("admin_accounts").select("*").order("created_at", { ascending: true }),
-      "accounts_read",
-    );
-    if (error) throw error;
-    if (data.length) return data.map(fromDb);
-    const accounts = defaultAccounts();
-    const { error: insertError } = await withTimeout(
-      supabase.from("admin_accounts").insert(accounts.map(toDb)),
-      "accounts_seed",
-    );
-    if (insertError) throw insertError;
-    return accounts;
-  }
+function logStoreFallback(context: string, error: unknown) {
+  const details = error && typeof error === "object"
+    ? error as Record<string, unknown>
+    : { message: String(error) };
+  console.warn(JSON.stringify({
+    level: "warn",
+    context,
+    message: String(details.message || "account_store_unavailable"),
+    code: details.code,
+    hint: details.hint,
+  }));
+}
 
+async function readFallbackAccounts(): Promise<AccountRow[]> {
   if (kvConfigured()) {
-    const accounts = await readUpstashAccounts();
-    if (accounts) return accounts;
-    const defaults = defaultAccounts();
-    await writeUpstashAccounts(defaults);
-    return defaults;
+    try {
+      const accounts = await readUpstashAccounts();
+      if (accounts) return accounts;
+      const defaults = defaultAccounts();
+      await writeUpstashAccounts(defaults);
+      return defaults;
+    } catch (error) {
+      logStoreFallback("accounts.upstash.read", error);
+    }
   }
 
   if (!memoryAccounts) memoryAccounts = defaultAccounts();
   return memoryAccounts;
+}
+
+async function writeFallbackAccounts(accounts: AccountRow[]) {
+  if (kvConfigured()) {
+    try {
+      await writeUpstashAccounts(accounts);
+      return;
+    } catch (error) {
+      logStoreFallback("accounts.upstash.write", error);
+    }
+  }
+  memoryAccounts = accounts;
+}
+
+export async function getAccounts(): Promise<AccountRow[]> {
+  const supabase = getSupabaseAdmin();
+  if (supabase) {
+    try {
+      const { data, error } = await withTimeout(
+        supabase.from("admin_accounts").select("*").order("created_at", { ascending: true }),
+        "accounts_read",
+      );
+      if (error) throw error;
+      if (data?.length) return data.map(fromDb);
+      const accounts = defaultAccounts();
+      const { error: insertError } = await withTimeout(
+        supabase.from("admin_accounts").insert(accounts.map(toDb)),
+        "accounts_seed",
+      );
+      if (insertError) throw insertError;
+      return accounts;
+    } catch (error) {
+      logStoreFallback("accounts.supabase.read", error);
+    }
+  }
+
+  return readFallbackAccounts();
 }
 
 export async function createAccount(username: string, password: string, role: UserRole) {
@@ -122,17 +159,20 @@ export async function createAccount(username: string, password: string, role: Us
 
   const supabase = getSupabaseAdmin();
   if (supabase) {
-    const { error } = await withTimeout(
-      supabase.from("admin_accounts").insert(toDb(account)),
-      "accounts_create",
-    );
-    if (error) throw error;
-    return account;
+    try {
+      const { error } = await withTimeout(
+        supabase.from("admin_accounts").insert(toDb(account)),
+        "accounts_create",
+      );
+      if (error) throw error;
+      return account;
+    } catch (error) {
+      logStoreFallback("accounts.supabase.create", error);
+    }
   }
 
   const nextAccounts = [...accounts, account];
-  if (kvConfigured()) await writeUpstashAccounts(nextAccounts);
-  else memoryAccounts = nextAccounts;
+  await writeFallbackAccounts(nextAccounts);
   return account;
 }
 
@@ -141,18 +181,21 @@ export async function deleteAccount(username: string) {
 
   const supabase = getSupabaseAdmin();
   if (supabase) {
-    const { error } = await withTimeout(
-      supabase.from("admin_accounts").delete().eq("username", username),
-      "accounts_delete",
-    );
-    if (error) throw error;
-    return;
+    try {
+      const { error } = await withTimeout(
+        supabase.from("admin_accounts").delete().eq("username", username),
+        "accounts_delete",
+      );
+      if (error) throw error;
+      return;
+    } catch (error) {
+      logStoreFallback("accounts.supabase.delete", error);
+    }
   }
 
   const accounts = await getAccounts();
   const nextAccounts = accounts.filter((account) => account.username !== username);
-  if (kvConfigured()) await writeUpstashAccounts(nextAccounts);
-  else memoryAccounts = nextAccounts;
+  await writeFallbackAccounts(nextAccounts);
 }
 
 export function serviceMode(): ServiceMode {
