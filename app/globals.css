@@ -746,9 +746,12 @@ input, select {
   grid-template-columns: minmax(0, 1fr) 360px;
   gap: 14px;
   align-items: start;
+  min-width: 0;
 }
 
-.product-reader {
+.product-panel,
+.product-reader,
+.product-sidebar {
   min-width: 0;
 }
 
@@ -766,11 +769,18 @@ input, select {
   border: 1px solid var(--line);
   background: var(--paper);
   padding: 5px 8px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .product-markdown {
   display: grid;
   gap: 12px;
+}
+
+.product-markdown > * {
+  min-width: 0;
+  max-width: 100%;
 }
 
 .product-markdown h1,
@@ -801,6 +811,7 @@ input, select {
 .product-markdown blockquote {
   color: var(--muted);
   line-height: 1.75;
+  overflow-wrap: anywhere;
 }
 
 .product-markdown ul {
@@ -820,6 +831,15 @@ input, select {
 .product-markdown a {
   color: var(--moss);
   font-weight: 900;
+  overflow-wrap: anywhere;
+}
+
+.product-markdown code,
+.product-markdown h1,
+.product-markdown h2,
+.product-markdown h3,
+.product-markdown h4 {
+  overflow-wrap: anywhere;
 }
 
 .product-sidebar {
@@ -833,6 +853,67 @@ input, select {
   margin-top: 0;
 }
 
+.product-sidebar-heading {
+  min-height: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.product-sidebar-heading > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-sidebar-heading > small {
+  flex: 0 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--muted);
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.product-history-list {
+  max-height: 334px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  padding-right: 5px;
+}
+
+.product-history-list .history-brief-button {
+  min-height: 46px;
+  padding: 8px 10px;
+  font-size: 14px;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+.product-history-list .history-brief-button small {
+  font-size: 12px;
+}
+
+.product-history-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.product-history-list::-webkit-scrollbar-thumb {
+  border: 2px solid var(--panel);
+  border-radius: 999px;
+  background: #bdc8be;
+}
+
+.product-history-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 .product-toc {
   display: grid;
   gap: 7px;
@@ -843,6 +924,7 @@ input, select {
   text-decoration: none;
   line-height: 1.35;
   font-weight: 800;
+  overflow-wrap: anywhere;
 }
 
 .product-toc a.level-3 {
@@ -976,5 +1058,8 @@ input, select {
   }
   .record-row, .account-row {
     grid-template-columns: 1fr;
+  }
+  .product-history-list {
+    max-height: 282px;
   }
 }

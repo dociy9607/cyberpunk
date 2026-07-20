@@ -773,14 +773,18 @@ function ProductDailyView({ reports, loading, onRefresh }: { reports: ProductDai
 
         <aside className="product-sidebar">
           <section className="panel">
-            <h3>历史日报</h3>
-            <div className="commerce-history-list">
+            <div className="product-sidebar-heading">
+              <span><CalendarDays size={17} /><strong>历史日报</strong></span>
+              <small>共 {reports.length} 期</small>
+            </div>
+            <div className="commerce-history-list product-history-list" aria-label="历史日报列表">
               {reports.map((report) => (
                 <button
                   type="button"
                   className={`history-brief-button ${report.date === current.date ? "active" : ""}`}
                   key={report.date}
                   onClick={() => setSelectedDate(report.date)}
+                  aria-pressed={report.date === current.date}
                 >
                   <span>{report.date}</span>
                   <small>{report.entries.length} 条</small>
