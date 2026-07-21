@@ -1587,5 +1587,131 @@
     "url": "https://www.eps-academic.org/ai-conference",
     "firstReportedAt": "2026-07-20",
     "sourcePath": "content/product-daily/2026-07-20.md"
+  },
+  {
+    "kind": "github",
+    "name": "1jehuang/jcode",
+    "url": "https://github.com/1jehuang/jcode",
+    "firstReportedAt": "2026-07-21",
+    "sourcePath": "content/product-daily/2026-07-21.md"
+  },
+  {
+    "kind": "github",
+    "name": "diegosouzapw/OmniRoute",
+    "url": "https://github.com/diegosouzapw/OmniRoute",
+    "firstReportedAt": "2026-07-21",
+    "sourcePath": "content/product-daily/2026-07-21.md"
+  },
+  {
+    "kind": "github",
+    "name": "MoonshotAI/kimi-cli",
+    "url": "https://github.com/MoonshotAI/kimi-cli",
+    "firstReportedAt": "2026-07-21",
+    "sourcePath": "content/product-daily/2026-07-21.md"
+  },
+  {
+    "kind": "github",
+    "name": "KnockOutEZ/wigolo",
+    "url": "https://github.com/KnockOutEZ/wigolo",
+    "firstReportedAt": "2026-07-21",
+    "sourcePath": "content/product-daily/2026-07-21.md"
+  },
+  {
+    "kind": "github",
+    "name": "jamiepine/voicebox",
+    "url": "https://github.com/jamiepine/voicebox",
+    "firstReportedAt": "2026-07-21",
+    "sourcePath": "content/product-daily/2026-07-21.md"
+  },
+  {
+    "kind": "product",
+    "name": "GitHub Code Quality GA",
+    "url": "https://github.blog/changelog/2026-07-20-github-code-quality-is-now-generally-available/",
+    "firstReportedAt": "2026-07-21",
+    "sourcePath": "content/product-daily/2026-07-21.md"
+  },
+  {
+    "kind": "product",
+    "name": "GitHub Copilot AI Credit Usage Visibility",
+    "url": "https://github.blog/changelog/2026-07-20-copilot-users-can-now-see-ai-credits-used-per-billing-cycle/",
+    "firstReportedAt": "2026-07-21",
+    "sourcePath": "content/product-daily/2026-07-21.md"
+  },
+  {
+    "kind": "product",
+    "name": "GitHub AI Credit Pools in Billing UI",
+    "url": "https://github.blog/changelog/2026-07-20-ai-credit-pools-for-cost-centers-in-the-billing-ui",
+    "firstReportedAt": "2026-07-21",
+    "sourcePath": "content/product-daily/2026-07-21.md"
+  },
+  {
+    "kind": "product",
+    "name": "Adobe Project Indigo AI Playground",
+    "url": "https://research.adobe.com/articles/playground/playground.html",
+    "firstReportedAt": "2026-07-21",
+    "sourcePath": "content/product-daily/2026-07-21.md"
+  },
+  {
+    "kind": "product",
+    "name": "ByteDance Seed Audio 1.0",
+    "url": "https://seed.bytedance.com/en/blog/from-speech-to-audio-creation-introducing-the-seed-audio-1-0-audio-creation-model",
+    "firstReportedAt": "2026-07-21",
+    "sourcePath": "content/product-daily/2026-07-21.md"
+  },
+  {
+    "kind": "product",
+    "name": "Natural Agentic Payments",
+    "url": "https://www.natural.com/blog/natural-series-a",
+    "firstReportedAt": "2026-07-21",
+    "sourcePath": "content/product-daily/2026-07-21.md"
+  },
+  {
+    "kind": "product",
+    "name": "Alibaba HappyOyster 1.0",
+    "url": "https://www.alibabacloud.com/blog/alibaba-upgrades-happyoyster-1-0-with-enhanced-interactivity-for-content-creation_603270",
+    "firstReportedAt": "2026-07-21",
+    "sourcePath": "content/product-daily/2026-07-21.md"
+  },
+  {
+    "kind": "product",
+    "name": "智象未来 vivago R1",
+    "url": "https://vivago.ai/",
+    "firstReportedAt": "2026-07-21",
+    "sourcePath": "content/product-daily/2026-07-21.md"
+  },
+  {
+    "kind": "event",
+    "name": "Smart QS Hackathon 2026",
+    "url": "https://www.cyberport.hk/en/smart_qs_hackathon_2026/",
+    "firstReportedAt": "2026-07-21",
+    "sourcePath": "content/product-daily/2026-07-21.md"
+  },
+  {
+    "kind": "event",
+    "name": "The Intersection of Law & Code",
+    "url": "https://luma.com/hgntiqun",
+    "firstReportedAt": "2026-07-21",
+    "sourcePath": "content/product-daily/2026-07-21.md"
+  },
+  {
+    "kind": "event",
+    "name": "2026 Maker in China Hong Kong Chapter",
+    "url": "https://makerinchina.hk/en/",
+    "firstReportedAt": "2026-07-21",
+    "sourcePath": "content/product-daily/2026-07-21.md"
+  },
+  {
+    "kind": "event",
+    "name": "CRIE 深圳国际机器人产业博览会",
+    "url": "https://szrie.com/",
+    "firstReportedAt": "2026-07-21",
+    "sourcePath": "content/product-daily/2026-07-21.md"
+  },
+  {
+    "kind": "event",
+    "name": "2026 深圳国际人工智能与机器人展览会",
+    "url": "https://www.acewlz.com/",
+    "firstReportedAt": "2026-07-21",
+    "sourcePath": "content/product-daily/2026-07-21.md"
   }
 ]
