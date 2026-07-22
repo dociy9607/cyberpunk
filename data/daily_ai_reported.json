@@ -1713,5 +1713,117 @@
     "url": "https://www.acewlz.com/",
     "firstReportedAt": "2026-07-21",
     "sourcePath": "content/product-daily/2026-07-21.md"
+  },
+  {
+    "kind": "github",
+    "name": "koala73/worldmonitor",
+    "url": "https://github.com/koala73/worldmonitor",
+    "firstReportedAt": "2026-07-22",
+    "sourcePath": "content/product-daily/2026-07-22.md"
+  },
+  {
+    "kind": "github",
+    "name": "bojieli/ai-agent-book",
+    "url": "https://github.com/bojieli/ai-agent-book",
+    "firstReportedAt": "2026-07-22",
+    "sourcePath": "content/product-daily/2026-07-22.md"
+  },
+  {
+    "kind": "github",
+    "name": "tirth8205/code-review-graph",
+    "url": "https://github.com/tirth8205/code-review-graph",
+    "firstReportedAt": "2026-07-22",
+    "sourcePath": "content/product-daily/2026-07-22.md"
+  },
+  {
+    "kind": "github",
+    "name": "ayghri/i-have-adhd",
+    "url": "https://github.com/ayghri/i-have-adhd",
+    "firstReportedAt": "2026-07-22",
+    "sourcePath": "content/product-daily/2026-07-22.md"
+  },
+  {
+    "kind": "github",
+    "name": "earthtojake/text-to-cad",
+    "url": "https://github.com/earthtojake/text-to-cad",
+    "firstReportedAt": "2026-07-22",
+    "sourcePath": "content/product-daily/2026-07-22.md"
+  },
+  {
+    "kind": "product",
+    "name": "Qwen-Image-3.0",
+    "url": "https://qwen.ai/blog?id=qwen-image-3.0",
+    "firstReportedAt": "2026-07-22",
+    "sourcePath": "content/product-daily/2026-07-22.md"
+  },
+  {
+    "kind": "product",
+    "name": "Hunyuan Hyra-1.0",
+    "url": "https://hy.tencent.com/research",
+    "firstReportedAt": "2026-07-22",
+    "sourcePath": "content/product-daily/2026-07-22.md"
+  },
+  {
+    "kind": "product",
+    "name": "Grok for Excel",
+    "url": "https://x.ai/news/introducing-excel-addin",
+    "firstReportedAt": "2026-07-22",
+    "sourcePath": "content/product-daily/2026-07-22.md"
+  },
+  {
+    "kind": "product",
+    "name": "XPeng TuringViT",
+    "url": "https://arxiv.org/abs/2606.24253",
+    "firstReportedAt": "2026-07-22",
+    "sourcePath": "content/product-daily/2026-07-22.md"
+  },
+  {
+    "kind": "product",
+    "name": "Acti Agentic Keyboard",
+    "url": "https://openacti.com/",
+    "firstReportedAt": "2026-07-22",
+    "sourcePath": "content/product-daily/2026-07-22.md"
+  },
+  {
+    "kind": "product",
+    "name": "Context.dev",
+    "url": "https://www.context.dev/",
+    "firstReportedAt": "2026-07-22",
+    "sourcePath": "content/product-daily/2026-07-22.md"
+  },
+  {
+    "kind": "event",
+    "name": "TQX: From Prompt to P&L, AI Trading in Practice",
+    "url": "https://luma.com/dawwrdxk",
+    "firstReportedAt": "2026-07-22",
+    "sourcePath": "content/product-daily/2026-07-22.md"
+  },
+  {
+    "kind": "event",
+    "name": "???? Hong Kong Stories?AI ??????",
+    "url": "https://luma.com/cs0ra1n2",
+    "firstReportedAt": "2026-07-22",
+    "sourcePath": "content/product-daily/2026-07-22.md"
+  },
+  {
+    "kind": "event",
+    "name": "Google Cloud ? OpenClaw Asia: AI Agent Startup Day",
+    "url": "https://luma.com/agentgba",
+    "firstReportedAt": "2026-07-22",
+    "sourcePath": "content/product-daily/2026-07-22.md"
+  },
+  {
+    "kind": "event",
+    "name": "W3H MIX Webinar: Managing Enterprise Risk After OpenClaw",
+    "url": "https://luma.com/9twox02u",
+    "firstReportedAt": "2026-07-22",
+    "sourcePath": "content/product-daily/2026-07-22.md"
+  },
+  {
+    "kind": "event",
+    "name": "?34??????",
+    "url": "https://www.gzfair.com.cn/",
+    "firstReportedAt": "2026-07-22",
+    "sourcePath": "content/product-daily/2026-07-22.md"
   }
 ]
