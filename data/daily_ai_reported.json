@@ -1825,5 +1825,117 @@
     "url": "https://www.gzfair.com.cn/",
     "firstReportedAt": "2026-07-22",
     "sourcePath": "content/product-daily/2026-07-22.md"
+  },
+  {
+    "kind": "github",
+    "name": "ruvnet/RuView",
+    "url": "https://github.com/ruvnet/RuView",
+    "firstReportedAt": "2026-07-23",
+    "sourcePath": "content/product-daily/2026-07-23.md"
+  },
+  {
+    "kind": "github",
+    "name": "shiyu-coder/Kronos",
+    "url": "https://github.com/shiyu-coder/Kronos",
+    "firstReportedAt": "2026-07-23",
+    "sourcePath": "content/product-daily/2026-07-23.md"
+  },
+  {
+    "kind": "github",
+    "name": "ComposioHQ/awesome-claude-skills",
+    "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+    "firstReportedAt": "2026-07-23",
+    "sourcePath": "content/product-daily/2026-07-23.md"
+  },
+  {
+    "kind": "github",
+    "name": "agegr/pi-web",
+    "url": "https://github.com/agegr/pi-web",
+    "firstReportedAt": "2026-07-23",
+    "sourcePath": "content/product-daily/2026-07-23.md"
+  },
+  {
+    "kind": "github",
+    "name": "rohitg00/ai-engineering-from-scratch",
+    "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+    "firstReportedAt": "2026-07-23",
+    "sourcePath": "content/product-daily/2026-07-23.md"
+  },
+  {
+    "kind": "product",
+    "name": "Gemini 3.6 Flash Family",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
+    "firstReportedAt": "2026-07-23",
+    "sourcePath": "content/product-daily/2026-07-23.md"
+  },
+  {
+    "kind": "product",
+    "name": "Claude Code iOS Simulator support",
+    "url": "https://claude.com/docs/cowork/changelog",
+    "firstReportedAt": "2026-07-23",
+    "sourcePath": "content/product-daily/2026-07-23.md"
+  },
+  {
+    "kind": "product",
+    "name": "Tencent Design Miora public launch",
+    "url": "https://miora.design/",
+    "firstReportedAt": "2026-07-23",
+    "sourcePath": "content/product-daily/2026-07-23.md"
+  },
+  {
+    "kind": "product",
+    "name": "Kastra Runtime Authorization",
+    "url": "https://kastra.ai/",
+    "firstReportedAt": "2026-07-23",
+    "sourcePath": "content/product-daily/2026-07-23.md"
+  },
+  {
+    "kind": "product",
+    "name": "box by ASCII",
+    "url": "https://box.ascii.dev/",
+    "firstReportedAt": "2026-07-23",
+    "sourcePath": "content/product-daily/2026-07-23.md"
+  },
+  {
+    "kind": "product",
+    "name": "Humalike x Hermes",
+    "url": "https://humalike.ai/hermes",
+    "firstReportedAt": "2026-07-23",
+    "sourcePath": "content/product-daily/2026-07-23.md"
+  },
+  {
+    "kind": "event",
+    "name": "Agent Go?Hong Kong?AI Agent ?????",
+    "url": "https://luma.com/t009vgge",
+    "firstReportedAt": "2026-07-23",
+    "sourcePath": "content/product-daily/2026-07-23.md"
+  },
+  {
+    "kind": "event",
+    "name": "The Agentic Economy: AI Agents & The New Financial Stack",
+    "url": "https://luma.com/sfwxwo7w",
+    "firstReportedAt": "2026-07-23",
+    "sourcePath": "content/product-daily/2026-07-23.md"
+  },
+  {
+    "kind": "event",
+    "name": "Money Frontier 2026 x Openclawasia",
+    "url": "https://luma.com/ae1phvao",
+    "firstReportedAt": "2026-07-23",
+    "sourcePath": "content/product-daily/2026-07-23.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI PoC - Starting AI Journey from People, not Tech",
+    "url": "https://luma.com/wtq4thm7",
+    "firstReportedAt": "2026-07-23",
+    "sourcePath": "content/product-daily/2026-07-23.md"
+  },
+  {
+    "kind": "event",
+    "name": "HKWD Teaching Taste to an Agent",
+    "url": "https://luma.com/twmkm81e",
+    "firstReportedAt": "2026-07-23",
+    "sourcePath": "content/product-daily/2026-07-23.md"
   }
 ]
