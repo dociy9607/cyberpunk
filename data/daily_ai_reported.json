@@ -1937,5 +1937,110 @@
     "url": "https://luma.com/twmkm81e",
     "firstReportedAt": "2026-07-23",
     "sourcePath": "content/product-daily/2026-07-23.md"
+  },
+  {
+    "kind": "github",
+    "name": "lopopolo/harness-engineering",
+    "url": "https://github.com/lopopolo/harness-engineering",
+    "firstReportedAt": "2026-07-24",
+    "sourcePath": "content/product-daily/2026-07-24.md"
+  },
+  {
+    "kind": "github",
+    "name": "gnipbao/story-to-handdrawn-video",
+    "url": "https://github.com/gnipbao/story-to-handdrawn-video",
+    "firstReportedAt": "2026-07-24",
+    "sourcePath": "content/product-daily/2026-07-24.md"
+  },
+  {
+    "kind": "github",
+    "name": "livetennisapi/livetennisapi-mcp",
+    "url": "https://github.com/livetennisapi/livetennisapi-mcp",
+    "firstReportedAt": "2026-07-24",
+    "sourcePath": "content/product-daily/2026-07-24.md"
+  },
+  {
+    "kind": "github",
+    "name": "TryCaspian/caspian-sdk",
+    "url": "https://github.com/TryCaspian/caspian-sdk",
+    "firstReportedAt": "2026-07-24",
+    "sourcePath": "content/product-daily/2026-07-24.md"
+  },
+  {
+    "kind": "product",
+    "name": "OpenAI Presence",
+    "url": "https://openai.com/index/introducing-openai-presence/",
+    "firstReportedAt": "2026-07-24",
+    "sourcePath": "content/product-daily/2026-07-24.md"
+  },
+  {
+    "kind": "product",
+    "name": "Health in ChatGPT",
+    "url": "https://openai.com/index/health-in-chatgpt/",
+    "firstReportedAt": "2026-07-24",
+    "sourcePath": "content/product-daily/2026-07-24.md"
+  },
+  {
+    "kind": "product",
+    "name": "Claude Voice Mode with Opus and Sonnet",
+    "url": "https://claude.com/blog/think-through-hard-problems-in-voice-mode",
+    "firstReportedAt": "2026-07-24",
+    "sourcePath": "content/product-daily/2026-07-24.md"
+  },
+  {
+    "kind": "product",
+    "name": "GitHub Copilot cloud agent for Linear",
+    "url": "https://github.blog/changelog/2026-07-23-copilot-cloud-agent-for-linear-is-now-generally-available/",
+    "firstReportedAt": "2026-07-24",
+    "sourcePath": "content/product-daily/2026-07-24.md"
+  },
+  {
+    "kind": "product",
+    "name": "GitHub Issues Agent Automation Controls",
+    "url": "https://github.blog/changelog/2026-07-23-agent-automation-controls-in-github-issues-in-public-preview/",
+    "firstReportedAt": "2026-07-24",
+    "sourcePath": "content/product-daily/2026-07-24.md"
+  },
+  {
+    "kind": "product",
+    "name": "Microsoft 365 Copilot Federated Connectors",
+    "url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/release-notes",
+    "firstReportedAt": "2026-07-24",
+    "sourcePath": "content/product-daily/2026-07-24.md"
+  },
+  {
+    "kind": "product",
+    "name": "Framer AI Agents",
+    "url": "https://www.framer.com/agents/",
+    "firstReportedAt": "2026-07-24",
+    "sourcePath": "content/product-daily/2026-07-24.md"
+  },
+  {
+    "kind": "event",
+    "name": "腾讯云 WorkBuddy 企业智能化实践大会",
+    "url": "https://luma.com/1aj3y3e5",
+    "firstReportedAt": "2026-07-24",
+    "sourcePath": "content/product-daily/2026-07-24.md"
+  },
+  {
+    "kind": "event",
+    "name": "Mind Made — Think + Build with AI",
+    "url": "https://luma.com/2u3ea3xq",
+    "firstReportedAt": "2026-07-24",
+    "sourcePath": "content/product-daily/2026-07-24.md"
+  },
+  {
+    "kind": "event",
+    "name": "「AI落地·赢在出海」深圳企业级AI战略峰会",
+    "url": "https://luma.com/cocoai-wsxb?locale=zh",
+    "firstReportedAt": "2026-07-24",
+    "sourcePath": "content/product-daily/2026-07-24.md"
+  },
+  {
+    "kind": "event",
+    "name": "Agent Creativity Hackathon for Autism Charity",
+    "url": "https://luma.com/agentcreativity",
+    "firstReportedAt": "2026-07-24",
+    "sourcePath": "content/product-daily/2026-07-24.md"
   }
 ]
