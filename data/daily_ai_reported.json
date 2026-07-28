@@ -2042,5 +2042,117 @@
     "url": "https://luma.com/agentcreativity",
     "firstReportedAt": "2026-07-24",
     "sourcePath": "content/product-daily/2026-07-24.md"
+  },
+  {
+    "kind": "github",
+    "name": "mikiarlo3/ai-copywriter",
+    "url": "https://github.com/mikiarlo3/ai-copywriter",
+    "firstReportedAt": "2026-07-28",
+    "sourcePath": "content/product-daily/2026-07-28.md"
+  },
+  {
+    "kind": "github",
+    "name": "makecindy/cindy",
+    "url": "https://github.com/makecindy/cindy",
+    "firstReportedAt": "2026-07-28",
+    "sourcePath": "content/product-daily/2026-07-28.md"
+  },
+  {
+    "kind": "github",
+    "name": "VictorTaelin/OptMem",
+    "url": "https://github.com/VictorTaelin/OptMem",
+    "firstReportedAt": "2026-07-28",
+    "sourcePath": "content/product-daily/2026-07-28.md"
+  },
+  {
+    "kind": "github",
+    "name": "kvcache-ai/AgentENV",
+    "url": "https://github.com/kvcache-ai/AgentENV",
+    "firstReportedAt": "2026-07-28",
+    "sourcePath": "content/product-daily/2026-07-28.md"
+  },
+  {
+    "kind": "github",
+    "name": "mikehasa/agentacct",
+    "url": "https://github.com/mikehasa/agentacct",
+    "firstReportedAt": "2026-07-28",
+    "sourcePath": "content/product-daily/2026-07-28.md"
+  },
+  {
+    "kind": "product",
+    "name": "Claude Opus 5",
+    "url": "https://www.anthropic.com/news/claude-opus-5",
+    "firstReportedAt": "2026-07-28",
+    "sourcePath": "content/product-daily/2026-07-28.md"
+  },
+  {
+    "kind": "product",
+    "name": "GitHub MCP Server supports 2026-07-28 MCP specification",
+    "url": "https://github.blog/changelog/2026-07-23-github-mcp-server-supports-the-next-mcp-specification/",
+    "firstReportedAt": "2026-07-28",
+    "sourcePath": "content/product-daily/2026-07-28.md"
+  },
+  {
+    "kind": "product",
+    "name": "Midjourney V8.2",
+    "url": "https://updates.midjourney.com/version-8-2/",
+    "firstReportedAt": "2026-07-28",
+    "sourcePath": "content/product-daily/2026-07-28.md"
+  },
+  {
+    "kind": "product",
+    "name": "千问办公",
+    "url": "https://qwenwork.cn/",
+    "firstReportedAt": "2026-07-28",
+    "sourcePath": "content/product-daily/2026-07-28.md"
+  },
+  {
+    "kind": "product",
+    "name": "企业微信智能助理“大圆”",
+    "url": "https://view.inews.qq.com/a/20260727A073Z400",
+    "firstReportedAt": "2026-07-28",
+    "sourcePath": "content/product-daily/2026-07-28.md"
+  },
+  {
+    "kind": "product",
+    "name": "Open Secure AI Alliance",
+    "url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
+    "firstReportedAt": "2026-07-28",
+    "sourcePath": "content/product-daily/2026-07-28.md"
+  },
+  {
+    "kind": "event",
+    "name": "從 0 到 1：用 AI 幫自己建一個投資大腦",
+    "url": "https://luma.com/e39nd66a",
+    "firstReportedAt": "2026-07-28",
+    "sourcePath": "content/product-daily/2026-07-28.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI Agent Workshop: Run Your Agents with Nosana On-demand GPUs",
+    "url": "https://luma.com/nosanahku",
+    "firstReportedAt": "2026-07-28",
+    "sourcePath": "content/product-daily/2026-07-28.md"
+  },
+  {
+    "kind": "event",
+    "name": "2026 Enterprise AI Application Guide: Copilot in Action x AI-Powered Operations",
+    "url": "https://campaigns.hkpc.org/en/rsvp/copilot-in-action-x-ai-powered-operations",
+    "firstReportedAt": "2026-07-28",
+    "sourcePath": "content/product-daily/2026-07-28.md"
+  },
+  {
+    "kind": "event",
+    "name": "AGIC2026 深圳国际通用人工智能大会暨产业博览会",
+    "url": "https://www.agicexpo.com/",
+    "firstReportedAt": "2026-07-28",
+    "sourcePath": "content/product-daily/2026-07-28.md"
+  },
+  {
+    "kind": "event",
+    "name": "Manufacturing Beyond Industry 4.0: AI, Robotics, Data Ecosystems and Sustainable Growth",
+    "url": "https://campaigns.hkpc.org/event-registration-manufacturing-beyond-industry-4.0-ai-robotics-data-ecosystems-and-sustainable-growth",
+    "firstReportedAt": "2026-07-28",
+    "sourcePath": "content/product-daily/2026-07-28.md"
   }
 ]
