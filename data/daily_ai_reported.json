@@ -2154,5 +2154,110 @@
     "url": "https://campaigns.hkpc.org/event-registration-manufacturing-beyond-industry-4.0-ai-robotics-data-ecosystems-and-sustainable-growth",
     "firstReportedAt": "2026-07-28",
     "sourcePath": "content/product-daily/2026-07-28.md"
+  },
+  {
+    "kind": "github",
+    "name": "moeru-ai/airi",
+    "url": "https://github.com/moeru-ai/airi",
+    "firstReportedAt": "2026-07-29",
+    "sourcePath": "content/product-daily/2026-07-29.md"
+  },
+  {
+    "kind": "github",
+    "name": "bradautomates/claude-video",
+    "url": "https://github.com/bradautomates/claude-video",
+    "firstReportedAt": "2026-07-29",
+    "sourcePath": "content/product-daily/2026-07-29.md"
+  },
+  {
+    "kind": "github",
+    "name": "virgiliojr94/book-to-skill",
+    "url": "https://github.com/virgiliojr94/book-to-skill",
+    "firstReportedAt": "2026-07-29",
+    "sourcePath": "content/product-daily/2026-07-29.md"
+  },
+  {
+    "kind": "github",
+    "name": "microsoft/agent-governance-toolkit",
+    "url": "https://github.com/microsoft/agent-governance-toolkit",
+    "firstReportedAt": "2026-07-29",
+    "sourcePath": "content/product-daily/2026-07-29.md"
+  },
+  {
+    "kind": "github",
+    "name": "andrewyng/aisuite",
+    "url": "https://github.com/andrewyng/aisuite",
+    "firstReportedAt": "2026-07-29",
+    "sourcePath": "content/product-daily/2026-07-29.md"
+  },
+  {
+    "kind": "product",
+    "name": "Claude MCP 2026-07-28 support",
+    "url": "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude",
+    "firstReportedAt": "2026-07-29",
+    "sourcePath": "content/product-daily/2026-07-29.md"
+  },
+  {
+    "kind": "product",
+    "name": "Cursor Start",
+    "url": "https://cursor.com/blog/cursor-start-india",
+    "firstReportedAt": "2026-07-29",
+    "sourcePath": "content/product-daily/2026-07-29.md"
+  },
+  {
+    "kind": "product",
+    "name": "ChatGPT Voice and multi-folder projects 26.715",
+    "url": "https://learn.chatgpt.com/docs/changelog",
+    "firstReportedAt": "2026-07-29",
+    "sourcePath": "content/product-daily/2026-07-29.md"
+  },
+  {
+    "kind": "product",
+    "name": "Vercel AI Gateway Regional Inference",
+    "url": "https://vercel.com/changelog/regional-inference-now-available-on-ai-gateway",
+    "firstReportedAt": "2026-07-29",
+    "sourcePath": "content/product-daily/2026-07-29.md"
+  },
+  {
+    "kind": "product",
+    "name": "Cursor Router",
+    "url": "https://cursor.com/blog/router",
+    "firstReportedAt": "2026-07-29",
+    "sourcePath": "content/product-daily/2026-07-29.md"
+  },
+  {
+    "kind": "event",
+    "name": "Manus Fellow Event｜Accelerate and Unlock Your AI Agent Skills",
+    "url": "https://somo.social/da/e/manus-fellow-eventaccelerate-and-unlock-your-ai-agent-4-augusti-2026",
+    "firstReportedAt": "2026-07-29",
+    "sourcePath": "content/product-daily/2026-07-29.md"
+  },
+  {
+    "kind": "event",
+    "name": "Firebird Hackathon Audience Registration",
+    "url": "https://somo.social/de/e/firebird-hackathon-audience-registration-8-augusti-2026",
+    "firstReportedAt": "2026-07-29",
+    "sourcePath": "content/product-daily/2026-07-29.md"
+  },
+  {
+    "kind": "event",
+    "name": "香港青少年AI黑客松第三期",
+    "url": "https://luma.com/tnugh5hs",
+    "firstReportedAt": "2026-07-29",
+    "sourcePath": "content/product-daily/2026-07-29.md"
+  },
+  {
+    "kind": "event",
+    "name": "2026 Startup World Cup Shenzhen Regional Competition",
+    "url": "https://luma.com/vmslz239",
+    "firstReportedAt": "2026-07-29",
+    "sourcePath": "content/product-daily/2026-07-29.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI Agent Secure by Design Programme (Aug 2026)",
+    "url": "https://academy.cyberport.hk/trainings/ai-agent-secure-by-design-programme-aug-2026",
+    "firstReportedAt": "2026-07-29",
+    "sourcePath": "content/product-daily/2026-07-29.md"
   }
 ]
