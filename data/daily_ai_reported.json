@@ -2259,5 +2259,89 @@
     "url": "https://academy.cyberport.hk/trainings/ai-agent-secure-by-design-programme-aug-2026",
     "firstReportedAt": "2026-07-29",
     "sourcePath": "content/product-daily/2026-07-29.md"
+  },
+  {
+    "kind": "github",
+    "name": "MadsLorentzen/ai-job-search",
+    "url": "https://github.com/MadsLorentzen/ai-job-search",
+    "firstReportedAt": "2026-07-30",
+    "sourcePath": "content/product-daily/2026-07-30.md"
+  },
+  {
+    "kind": "github",
+    "name": "stablyai/orca",
+    "url": "https://github.com/stablyai/orca",
+    "firstReportedAt": "2026-07-30",
+    "sourcePath": "content/product-daily/2026-07-30.md"
+  },
+  {
+    "kind": "github",
+    "name": "iOfficeAI/OfficeCLI",
+    "url": "https://github.com/iOfficeAI/OfficeCLI",
+    "firstReportedAt": "2026-07-30",
+    "sourcePath": "content/product-daily/2026-07-30.md"
+  },
+  {
+    "kind": "github",
+    "name": "Graphify-Labs/graphify",
+    "url": "https://github.com/Graphify-Labs/graphify",
+    "firstReportedAt": "2026-07-30",
+    "sourcePath": "content/product-daily/2026-07-30.md"
+  },
+  {
+    "kind": "product",
+    "name": "ChatGPT for Academic Researchers",
+    "url": "https://openai.com/products/release-notes/",
+    "firstReportedAt": "2026-07-30",
+    "sourcePath": "content/product-daily/2026-07-30.md"
+  },
+  {
+    "kind": "product",
+    "name": "Kimi K3 Open Weights",
+    "url": "https://huggingface.co/moonshotai/Kimi-K3",
+    "firstReportedAt": "2026-07-30",
+    "sourcePath": "content/product-daily/2026-07-30.md"
+  },
+  {
+    "kind": "product",
+    "name": "Fish Audio S2.1 Pro Free API",
+    "url": "https://fish.audio/blog/s2-1-pro-free-api/",
+    "firstReportedAt": "2026-07-30",
+    "sourcePath": "content/product-daily/2026-07-30.md"
+  },
+  {
+    "kind": "product",
+    "name": "360 纳米Work",
+    "url": "https://finance.eastmoney.com/a/202607283823609076.html",
+    "firstReportedAt": "2026-07-30",
+    "sourcePath": "content/product-daily/2026-07-30.md"
+  },
+  {
+    "kind": "product",
+    "name": "Prelint",
+    "url": "https://prelint.com/",
+    "firstReportedAt": "2026-07-30",
+    "sourcePath": "content/product-daily/2026-07-30.md"
+  },
+  {
+    "kind": "event",
+    "name": "ROBOTS & BEERS",
+    "url": "https://luma.com/2e1awap3",
+    "firstReportedAt": "2026-07-30",
+    "sourcePath": "content/product-daily/2026-07-30.md"
+  },
+  {
+    "kind": "event",
+    "name": "The Atlantis Experience - MegaYacht Party",
+    "url": "https://luma.com/6j6b7ffj",
+    "firstReportedAt": "2026-07-30",
+    "sourcePath": "content/product-daily/2026-07-30.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI ULTRA Festival by MooMeetup x Lunatechs",
+    "url": "https://luma.com/d1jjswiy",
+    "firstReportedAt": "2026-07-30",
+    "sourcePath": "content/product-daily/2026-07-30.md"
   }
 ]
