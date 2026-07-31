@@ -2343,5 +2343,110 @@
     "url": "https://luma.com/d1jjswiy",
     "firstReportedAt": "2026-07-30",
     "sourcePath": "content/product-daily/2026-07-30.md"
+  },
+  {
+    "kind": "github",
+    "name": "Tencent/AngelSpec",
+    "url": "https://github.com/Tencent/AngelSpec",
+    "firstReportedAt": "2026-07-31",
+    "sourcePath": "content/product-daily/2026-07-31.md"
+  },
+  {
+    "kind": "github",
+    "name": "gavamedia/deltafin",
+    "url": "https://github.com/gavamedia/deltafin",
+    "firstReportedAt": "2026-07-31",
+    "sourcePath": "content/product-daily/2026-07-31.md"
+  },
+  {
+    "kind": "github",
+    "name": "QwenAudio/qwen-audio-agent",
+    "url": "https://github.com/QwenAudio/qwen-audio-agent",
+    "firstReportedAt": "2026-07-31",
+    "sourcePath": "content/product-daily/2026-07-31.md"
+  },
+  {
+    "kind": "github",
+    "name": "deerwork-ai/deer-workflow",
+    "url": "https://github.com/deerwork-ai/deer-workflow",
+    "firstReportedAt": "2026-07-31",
+    "sourcePath": "content/product-daily/2026-07-31.md"
+  },
+  {
+    "kind": "github",
+    "name": "Autumn-27/ARTEX",
+    "url": "https://github.com/Autumn-27/ARTEX",
+    "firstReportedAt": "2026-07-31",
+    "sourcePath": "content/product-daily/2026-07-31.md"
+  },
+  {
+    "kind": "product",
+    "name": "OpenAI GPT-5.6 price-performance update",
+    "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
+    "firstReportedAt": "2026-07-31",
+    "sourcePath": "content/product-daily/2026-07-31.md"
+  },
+  {
+    "kind": "product",
+    "name": "Gemini Robotics 2",
+    "url": "https://deepmind.google/models/gemini-robotics/",
+    "firstReportedAt": "2026-07-31",
+    "sourcePath": "content/product-daily/2026-07-31.md"
+  },
+  {
+    "kind": "product",
+    "name": "WorkBuddy ????",
+    "url": "https://developer.cloud.tencent.com/article/2705721",
+    "firstReportedAt": "2026-07-31",
+    "sourcePath": "content/product-daily/2026-07-31.md"
+  },
+  {
+    "kind": "product",
+    "name": "????????",
+    "url": "https://www.volcengine.com/docs/82379/2301412",
+    "firstReportedAt": "2026-07-31",
+    "sourcePath": "content/product-daily/2026-07-31.md"
+  },
+  {
+    "kind": "product",
+    "name": "Liquid AI LFM2.5-Encoders",
+    "url": "https://www.liquid.ai/",
+    "firstReportedAt": "2026-07-31",
+    "sourcePath": "content/product-daily/2026-07-31.md"
+  },
+  {
+    "kind": "product",
+    "name": "OlmoEarth Platform",
+    "url": "https://allenai.org/blog/olmoearth-infrastructure",
+    "firstReportedAt": "2026-07-31",
+    "sourcePath": "content/product-daily/2026-07-31.md"
+  },
+  {
+    "kind": "product",
+    "name": "NVIDIA Cosmos-H-Dreams",
+    "url": "https://developer.nvidia.com/blog/developing-healthcare-robotics-with-gpu-native-medical-physics-simulation/",
+    "firstReportedAt": "2026-07-31",
+    "sourcePath": "content/product-daily/2026-07-31.md"
+  },
+  {
+    "kind": "event",
+    "name": "HK AI Global Expansion Summit Forum ??AI????????",
+    "url": "https://luma.com/um3x8ea9",
+    "firstReportedAt": "2026-07-31",
+    "sourcePath": "content/product-daily/2026-07-31.md"
+  },
+  {
+    "kind": "event",
+    "name": "IOTE 2026????????",
+    "url": "https://www.iotexpo.com.cn/sz/",
+    "firstReportedAt": "2026-07-31",
+    "sourcePath": "content/product-daily/2026-07-31.md"
+  },
+  {
+    "kind": "event",
+    "name": "2026 AI ???????????????",
+    "url": "https://www.huodongxing.com/event/8865522236400?layout=EN&qd=5428363092855",
+    "firstReportedAt": "2026-07-31",
+    "sourcePath": "content/product-daily/2026-07-31.md"
   }
 ]
