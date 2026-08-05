@@ -2574,5 +2574,117 @@
     "url": "https://itknowledgezone.com/event/nextech-ai-agent-in-action/",
     "firstReportedAt": "2026-08-03",
     "sourcePath": "content/product-daily/2026-08-03.md"
+  },
+  {
+    "kind": "github",
+    "name": "uber/ADR",
+    "url": "https://github.com/uber/ADR",
+    "firstReportedAt": "2026-08-05",
+    "sourcePath": "content/product-daily/2026-08-05.md"
+  },
+  {
+    "kind": "github",
+    "name": "livekit/agents",
+    "url": "https://github.com/livekit/agents",
+    "firstReportedAt": "2026-08-05",
+    "sourcePath": "content/product-daily/2026-08-05.md"
+  },
+  {
+    "kind": "github",
+    "name": "browser-use/video-use",
+    "url": "https://github.com/browser-use/video-use",
+    "firstReportedAt": "2026-08-05",
+    "sourcePath": "content/product-daily/2026-08-05.md"
+  },
+  {
+    "kind": "github",
+    "name": "huangruiteng/loopx",
+    "url": "https://github.com/huangruiteng/loopx",
+    "firstReportedAt": "2026-08-05",
+    "sourcePath": "content/product-daily/2026-08-05.md"
+  },
+  {
+    "kind": "github",
+    "name": "TencentCloud/TencentDB-Agent-Memory",
+    "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+    "firstReportedAt": "2026-08-05",
+    "sourcePath": "content/product-daily/2026-08-05.md"
+  },
+  {
+    "kind": "product",
+    "name": "OpenAI 教育插件 for ChatGPT Work and Codex",
+    "url": "https://openai.com/index/learn-teach-chatgpt-work-codex/",
+    "firstReportedAt": "2026-08-05",
+    "sourcePath": "content/product-daily/2026-08-05.md"
+  },
+  {
+    "kind": "product",
+    "name": "Mistral Shieldstral",
+    "url": "https://mistral.ai/news/shieldstral/",
+    "firstReportedAt": "2026-08-05",
+    "sourcePath": "content/product-daily/2026-08-05.md"
+  },
+  {
+    "kind": "product",
+    "name": "Liquid AI LFM2.5-2.6B",
+    "url": "https://www.liquid.ai/blog/lfm2-5-2-6b",
+    "firstReportedAt": "2026-08-05",
+    "sourcePath": "content/product-daily/2026-08-05.md"
+  },
+  {
+    "kind": "product",
+    "name": "Cloudflare Agent Development Lifecycle",
+    "url": "https://blog.cloudflare.com/agent-development-lifecycle/",
+    "firstReportedAt": "2026-08-05",
+    "sourcePath": "content/product-daily/2026-08-05.md"
+  },
+  {
+    "kind": "product",
+    "name": "Cloudflare Wallets and cloudflare.pay",
+    "url": "https://www.cloudflare.com/press/press-releases/2026/cloudflare-gives-ai-agents-an-identity-and-a-wallet/",
+    "firstReportedAt": "2026-08-05",
+    "sourcePath": "content/product-daily/2026-08-05.md"
+  },
+  {
+    "kind": "product",
+    "name": "GitHub Code Quality 覆盖率自动启用",
+    "url": "https://github.blog/changelog/2026-08-04-code-coverage-automatic-enablement-in-code-quality-settings/",
+    "firstReportedAt": "2026-08-05",
+    "sourcePath": "content/product-daily/2026-08-05.md"
+  },
+  {
+    "kind": "event",
+    "name": "Agentic Commerce | Founders Social & Demo Day",
+    "url": "https://luma.com/1xv16b4a",
+    "firstReportedAt": "2026-08-05",
+    "sourcePath": "content/product-daily/2026-08-05.md"
+  },
+  {
+    "kind": "event",
+    "name": "CFO Roundtable: AI in the Finance Function",
+    "url": "https://luma.com/iqc2fgxs",
+    "firstReportedAt": "2026-08-05",
+    "sourcePath": "content/product-daily/2026-08-05.md"
+  },
+  {
+    "kind": "event",
+    "name": "IxDF HK - AI Series: Building with AI #2",
+    "url": "https://luma.com/35k5nbp8",
+    "firstReportedAt": "2026-08-05",
+    "sourcePath": "content/product-daily/2026-08-05.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI with HKPC Business Empowerment - AI and Digital Transformation Zone",
+    "url": "https://campaigninfo.hkpc.org/ai-with-hkpc-business-empowerment-en",
+    "firstReportedAt": "2026-08-05",
+    "sourcePath": "content/product-daily/2026-08-05.md"
+  },
+  {
+    "kind": "event",
+    "name": "Physical AI Summit Shenzhen 2026",
+    "url": "https://luma.com/szopenday2026",
+    "firstReportedAt": "2026-08-05",
+    "sourcePath": "content/product-daily/2026-08-05.md"
   }
 ]
