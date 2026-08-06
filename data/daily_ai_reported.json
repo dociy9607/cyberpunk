@@ -2686,5 +2686,103 @@
     "url": "https://luma.com/szopenday2026",
     "firstReportedAt": "2026-08-05",
     "sourcePath": "content/product-daily/2026-08-05.md"
+  },
+  {
+    "kind": "github",
+    "name": "cloudflare/computer",
+    "url": "https://github.com/cloudflare/computer",
+    "firstReportedAt": "2026-08-06",
+    "sourcePath": "content/product-daily/2026-08-06.md"
+  },
+  {
+    "kind": "github",
+    "name": "firecrawl/pdf-inspector",
+    "url": "https://github.com/firecrawl/pdf-inspector",
+    "firstReportedAt": "2026-08-06",
+    "sourcePath": "content/product-daily/2026-08-06.md"
+  },
+  {
+    "kind": "github",
+    "name": "esengine/DeepSeek-Reasonix",
+    "url": "https://github.com/esengine/DeepSeek-Reasonix",
+    "firstReportedAt": "2026-08-06",
+    "sourcePath": "content/product-daily/2026-08-06.md"
+  },
+  {
+    "kind": "github",
+    "name": "addyosmani/agent-skills",
+    "url": "https://github.com/addyosmani/agent-skills",
+    "firstReportedAt": "2026-08-06",
+    "sourcePath": "content/product-daily/2026-08-06.md"
+  },
+  {
+    "kind": "product",
+    "name": "Wispr Flow Notetaker",
+    "url": "https://wisprflow.ai/whats-new",
+    "firstReportedAt": "2026-08-06",
+    "sourcePath": "content/product-daily/2026-08-06.md"
+  },
+  {
+    "kind": "product",
+    "name": "ngrok AI Gateway",
+    "url": "https://ngrok.com/docs/ai-gateway/overview",
+    "firstReportedAt": "2026-08-06",
+    "sourcePath": "content/product-daily/2026-08-06.md"
+  },
+  {
+    "kind": "product",
+    "name": "Vercel AI Gateway on AWS Marketplace",
+    "url": "https://vercel.com/changelog/ai-gateway-is-now-available-on-aws-marketplace",
+    "firstReportedAt": "2026-08-06",
+    "sourcePath": "content/product-daily/2026-08-06.md"
+  },
+  {
+    "kind": "product",
+    "name": "Gemini Enterprise connector tracing",
+    "url": "https://docs.cloud.google.com/gemini/enterprise/docs/release-notes",
+    "firstReportedAt": "2026-08-06",
+    "sourcePath": "content/product-daily/2026-08-06.md"
+  },
+  {
+    "kind": "product",
+    "name": "Cloudflare @cloudflare/computer preview",
+    "url": "https://blog.cloudflare.com/cloudflare-computer/",
+    "firstReportedAt": "2026-08-06",
+    "sourcePath": "content/product-daily/2026-08-06.md"
+  },
+  {
+    "kind": "product",
+    "name": "AdAnt AI",
+    "url": "https://adant.ai/",
+    "firstReportedAt": "2026-08-06",
+    "sourcePath": "content/product-daily/2026-08-06.md"
+  },
+  {
+    "kind": "event",
+    "name": "Preface Dev Con 2026 | Deeper Than _______",
+    "url": "https://luma.com/kbwp7gve",
+    "firstReportedAt": "2026-08-06",
+    "sourcePath": "content/product-daily/2026-08-06.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI CAREER SEMINAR - AI ?????? 5 ??????",
+    "url": "https://luma.com/yes5kdm1",
+    "firstReportedAt": "2026-08-06",
+    "sourcePath": "content/product-daily/2026-08-06.md"
+  },
+  {
+    "kind": "event",
+    "name": "Qwen Conference Hong Kong 2026",
+    "url": "https://luma.com/sz4j9ewj",
+    "firstReportedAt": "2026-08-06",
+    "sourcePath": "content/product-daily/2026-08-06.md"
+  },
+  {
+    "kind": "event",
+    "name": "Digital Entertainment Leadership Forum 2026",
+    "url": "https://www.cyberport.hk/en/news/events/",
+    "firstReportedAt": "2026-08-06",
+    "sourcePath": "content/product-daily/2026-08-06.md"
   }
 ]
