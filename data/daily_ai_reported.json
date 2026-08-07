@@ -2784,5 +2784,117 @@
     "url": "https://www.cyberport.hk/en/news/events/",
     "firstReportedAt": "2026-08-06",
     "sourcePath": "content/product-daily/2026-08-06.md"
+  },
+  {
+    "kind": "github",
+    "name": "usestrix/strix",
+    "url": "https://github.com/usestrix/strix",
+    "firstReportedAt": "2026-08-07",
+    "sourcePath": "content/product-daily/2026-08-07.md"
+  },
+  {
+    "kind": "github",
+    "name": "aws/agent-toolkit-for-aws",
+    "url": "https://github.com/aws/agent-toolkit-for-aws",
+    "firstReportedAt": "2026-08-07",
+    "sourcePath": "content/product-daily/2026-08-07.md"
+  },
+  {
+    "kind": "github",
+    "name": "K-Dense-AI/scientific-agent-skills",
+    "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+    "firstReportedAt": "2026-08-07",
+    "sourcePath": "content/product-daily/2026-08-07.md"
+  },
+  {
+    "kind": "github",
+    "name": "superloglabs/superlog",
+    "url": "https://github.com/superloglabs/superlog",
+    "firstReportedAt": "2026-08-07",
+    "sourcePath": "content/product-daily/2026-08-07.md"
+  },
+  {
+    "kind": "product",
+    "name": "ChatGPT GPT-5.6 Sol/Luna access update",
+    "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
+    "firstReportedAt": "2026-08-07",
+    "sourcePath": "content/product-daily/2026-08-07.md"
+  },
+  {
+    "kind": "product",
+    "name": "Cloudflare OS",
+    "url": "https://blog.cloudflare.com/cloudflare-os/",
+    "firstReportedAt": "2026-08-07",
+    "sourcePath": "content/product-daily/2026-08-07.md"
+  },
+  {
+    "kind": "product",
+    "name": "Rippling AI Spend Console",
+    "url": "https://www.rippling.com/blog/introducing-ai-spend-console",
+    "firstReportedAt": "2026-08-07",
+    "sourcePath": "content/product-daily/2026-08-07.md"
+  },
+  {
+    "kind": "product",
+    "name": "Cloudflare Kitesurf",
+    "url": "https://blog.cloudflare.com/kitesurf/",
+    "firstReportedAt": "2026-08-07",
+    "sourcePath": "content/product-daily/2026-08-07.md"
+  },
+  {
+    "kind": "product",
+    "name": "Cloudflare WebMCP",
+    "url": "https://blog.cloudflare.com/webmcp/",
+    "firstReportedAt": "2026-08-07",
+    "sourcePath": "content/product-daily/2026-08-07.md"
+  },
+  {
+    "kind": "product",
+    "name": "CopilotKit Channels SDK",
+    "url": "https://docs.showcase.copilotkit.ai/reference/channels",
+    "firstReportedAt": "2026-08-07",
+    "sourcePath": "content/product-daily/2026-08-07.md"
+  },
+  {
+    "kind": "product",
+    "name": "Superlog Responder",
+    "url": "https://superlog.sh/",
+    "firstReportedAt": "2026-08-07",
+    "sourcePath": "content/product-daily/2026-08-07.md"
+  },
+  {
+    "kind": "event",
+    "name": "???? AI ?????????",
+    "url": "https://lianpu.com/event/zhong-xiao-qi-ye-ai-luo-di-sheng-tai-gong-jian-qi-dong-hui-w",
+    "firstReportedAt": "2026-08-07",
+    "sourcePath": "content/product-daily/2026-08-07.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI + ??????",
+    "url": "https://lianpu.com/event/ai-bao-xian-sha-long-huo-dong",
+    "firstReportedAt": "2026-08-07",
+    "sourcePath": "content/product-daily/2026-08-07.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI ????????",
+    "url": "https://www.snisa.org.cn/event_info/huodongjiaoliu/376/",
+    "firstReportedAt": "2026-08-07",
+    "sourcePath": "content/product-daily/2026-08-07.md"
+  },
+  {
+    "kind": "event",
+    "name": "2026 2nd Global Innovation Show ? Hong Kong?GIS?",
+    "url": "https://www.startmeup.hk/events-detail/2026-2nd-global-lnnovation-show-%C2%B7-hong-kong%EF%BC%88gis%EF%BC%89/",
+    "firstReportedAt": "2026-08-07",
+    "sourcePath": "content/product-daily/2026-08-07.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI Community Conference Hong Kong",
+    "url": "https://www.startmeup.hk/events-detail/ai-community-conference-hong-kong/",
+    "firstReportedAt": "2026-08-07",
+    "sourcePath": "content/product-daily/2026-08-07.md"
   }
 ]
