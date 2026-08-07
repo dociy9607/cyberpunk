@@ -2896,5 +2896,12 @@
     "url": "https://www.startmeup.hk/events-detail/ai-community-conference-hong-kong/",
     "firstReportedAt": "2026-08-07",
     "sourcePath": "content/product-daily/2026-08-07.md"
+  },
+  {
+    "kind": "github",
+    "name": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills",
+    "firstReportedAt": "2026-08-07",
+    "sourcePath": "content/product-daily/2026-08-07.md"
   }
 ]
