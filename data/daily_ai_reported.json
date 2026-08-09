@@ -2903,5 +2903,124 @@
     "url": "https://github.com/mattpocock/skills",
     "firstReportedAt": "2026-08-07",
     "sourcePath": "content/product-daily/2026-08-07.md"
+  },
+  {
+    "kind": "github",
+    "name": "PrimeIntellect-ai/prime-agent",
+    "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+    "firstReportedAt": "2026-08-09",
+    "sourcePath": "content/product-daily/2026-08-09.md"
+  },
+  {
+    "kind": "github",
+    "name": "google/skills",
+    "url": "https://github.com/google/skills",
+    "firstReportedAt": "2026-08-09",
+    "sourcePath": "content/product-daily/2026-08-09.md"
+  },
+  {
+    "kind": "github",
+    "name": "TauricResearch/TradingAgents",
+    "url": "https://github.com/TauricResearch/TradingAgents",
+    "firstReportedAt": "2026-08-09",
+    "sourcePath": "content/product-daily/2026-08-09.md"
+  },
+  {
+    "kind": "github",
+    "name": "google/agents-cli",
+    "url": "https://github.com/google/agents-cli",
+    "firstReportedAt": "2026-08-09",
+    "sourcePath": "content/product-daily/2026-08-09.md"
+  },
+  {
+    "kind": "product",
+    "name": "Agent Plugins 1.0.0",
+    "url": "https://vercel.com/blog/introducing-agent-plugins",
+    "firstReportedAt": "2026-08-09",
+    "sourcePath": "content/product-daily/2026-08-09.md"
+  },
+  {
+    "kind": "product",
+    "name": "Google Data Agent Kit / Agents CLI Agent Plugins support",
+    "url": "https://developers.googleblog.com/agent-plugins-package-your-skills-tools-and-more/",
+    "firstReportedAt": "2026-08-09",
+    "sourcePath": "content/product-daily/2026-08-09.md"
+  },
+  {
+    "kind": "product",
+    "name": "ChatGPT Voice files and Projects support",
+    "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+    "firstReportedAt": "2026-08-09",
+    "sourcePath": "content/product-daily/2026-08-09.md"
+  },
+  {
+    "kind": "product",
+    "name": "Claude Managed Agents budget advisor geo and GitHub skills update",
+    "url": "https://platform.claude.com/docs/en/release-notes/overview",
+    "firstReportedAt": "2026-08-09",
+    "sourcePath": "content/product-daily/2026-08-09.md"
+  },
+  {
+    "kind": "product",
+    "name": "Claude Skill and Plugin Security Scanning Beta",
+    "url": "https://support.claude.com/en/articles/12138966-release-notes",
+    "firstReportedAt": "2026-08-09",
+    "sourcePath": "content/product-daily/2026-08-09.md"
+  },
+  {
+    "kind": "product",
+    "name": "Toolport",
+    "url": "https://toolport.app/",
+    "firstReportedAt": "2026-08-09",
+    "sourcePath": "content/product-daily/2026-08-09.md"
+  },
+  {
+    "kind": "product",
+    "name": "The GTM Co-Founder",
+    "url": "https://gtmcofounder.com/",
+    "firstReportedAt": "2026-08-09",
+    "sourcePath": "content/product-daily/2026-08-09.md"
+  },
+  {
+    "kind": "product",
+    "name": "Hexis by Bevel",
+    "url": "https://www.bevel.software/",
+    "firstReportedAt": "2026-08-09",
+    "sourcePath": "content/product-daily/2026-08-09.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI Agent Workshop: Run Your Agents with Nosana On-demand GPUs",
+    "url": "https://www.eventmatch.co/de/events/ai-agent-workshop-run-your-agents-with-nosana-on-demand-gpus-20260819",
+    "firstReportedAt": "2026-08-09",
+    "sourcePath": "content/product-daily/2026-08-09.md"
+  },
+  {
+    "kind": "event",
+    "name": "??????? AI-in-One ?????",
+    "url": "https://luma.com/dotai-azti",
+    "firstReportedAt": "2026-08-09",
+    "sourcePath": "content/product-daily/2026-08-09.md"
+  },
+  {
+    "kind": "event",
+    "name": "WAIE 2026 AI ?????????",
+    "url": "https://www.ofweek.com/ai/2026-07/ART-201715-8120-30696426.html",
+    "firstReportedAt": "2026-08-09",
+    "sourcePath": "content/product-daily/2026-08-09.md"
+  },
+  {
+    "kind": "event",
+    "name": "Grow Smarter, Go Global: AI & Funding for SME Expansion",
+    "url": "https://campaigns.hkpc.org/registration-webinar-ai-funding-for-sme-expansion",
+    "firstReportedAt": "2026-08-09",
+    "sourcePath": "content/product-daily/2026-08-09.md"
+  },
+  {
+    "kind": "event",
+    "name": "Dyna Day Hong Kong 2026 - AI-Powered Customer Operations: From Insight to Impact",
+    "url": "https://luma.com/v5wkkeec",
+    "firstReportedAt": "2026-08-09",
+    "sourcePath": "content/product-daily/2026-08-09.md"
   }
 ]
