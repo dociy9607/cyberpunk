@@ -3022,5 +3022,110 @@
     "url": "https://luma.com/v5wkkeec",
     "firstReportedAt": "2026-08-09",
     "sourcePath": "content/product-daily/2026-08-09.md"
+  },
+  {
+    "kind": "github",
+    "name": "vitali87/code-graph-rag",
+    "url": "https://github.com/vitali87/code-graph-rag",
+    "firstReportedAt": "2026-08-10",
+    "sourcePath": "content/product-daily/2026-08-10.md"
+  },
+  {
+    "kind": "github",
+    "name": "msitarzewski/agency-agents",
+    "url": "https://github.com/msitarzewski/agency-agents",
+    "firstReportedAt": "2026-08-10",
+    "sourcePath": "content/product-daily/2026-08-10.md"
+  },
+  {
+    "kind": "github",
+    "name": "vectorize-io/hindsight",
+    "url": "https://github.com/vectorize-io/hindsight",
+    "firstReportedAt": "2026-08-10",
+    "sourcePath": "content/product-daily/2026-08-10.md"
+  },
+  {
+    "kind": "github",
+    "name": "harveyai/harvey-labs",
+    "url": "https://github.com/harveyai/harvey-labs",
+    "firstReportedAt": "2026-08-10",
+    "sourcePath": "content/product-daily/2026-08-10.md"
+  },
+  {
+    "kind": "product",
+    "name": "GitHub Copilot Kimi K3",
+    "url": "https://github.blog/changelog/2026-08-06-kimi-k3-is-now-available-in-github-copilot/",
+    "firstReportedAt": "2026-08-10",
+    "sourcePath": "content/product-daily/2026-08-10.md"
+  },
+  {
+    "kind": "product",
+    "name": "GitHub Copilot Code Review Effort Levels GA",
+    "url": "https://github.blog/changelog/2026-08-07-copilot-code-review-effort-levels-are-generally-available/",
+    "firstReportedAt": "2026-08-10",
+    "sourcePath": "content/product-daily/2026-08-10.md"
+  },
+  {
+    "kind": "product",
+    "name": "GitHub Copilot MCP Allowlists",
+    "url": "https://github.blog/changelog/2026-08-06-mcp-allowlists-in-enterprise-managed-settings/",
+    "firstReportedAt": "2026-08-10",
+    "sourcePath": "content/product-daily/2026-08-10.md"
+  },
+  {
+    "kind": "product",
+    "name": "Claude Fable 5 Biology Safeguards",
+    "url": "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards",
+    "firstReportedAt": "2026-08-10",
+    "sourcePath": "content/product-daily/2026-08-10.md"
+  },
+  {
+    "kind": "product",
+    "name": "Omniwork",
+    "url": "https://omniwork.ai/",
+    "firstReportedAt": "2026-08-10",
+    "sourcePath": "content/product-daily/2026-08-10.md"
+  },
+  {
+    "kind": "event",
+    "name": "AGI Summit HK 2026 | The AGI Frontier, from Silicon Valley to Hong Kong",
+    "url": "https://luma.com/agisummithk",
+    "firstReportedAt": "2026-08-10",
+    "sourcePath": "content/product-daily/2026-08-10.md"
+  },
+  {
+    "kind": "event",
+    "name": "?????AI x ?????",
+    "url": "https://luma.com/hpdama4o",
+    "firstReportedAt": "2026-08-10",
+    "sourcePath": "content/product-daily/2026-08-10.md"
+  },
+  {
+    "kind": "github",
+    "name": "MervinPraison/PraisonAI",
+    "url": "https://github.com/MervinPraison/PraisonAI",
+    "firstReportedAt": "2026-08-10",
+    "sourcePath": "content/product-daily/2026-08-10.md"
+  },
+  {
+    "kind": "event",
+    "name": "Building the Low-Latency AI Trading Ecosystem",
+    "url": "https://luma.com/r0pj9ilz",
+    "firstReportedAt": "2026-08-10",
+    "sourcePath": "content/product-daily/2026-08-10.md"
+  },
+  {
+    "kind": "event",
+    "name": "The Student Breakout Session: Sustainable Development in Action",
+    "url": "https://luma.com/g34raxi6",
+    "firstReportedAt": "2026-08-10",
+    "sourcePath": "content/product-daily/2026-08-10.md"
+  },
+  {
+    "kind": "event",
+    "name": "Cut the hype, show the plumbing: AI Agents, Unsexy Security & The New Rules of Digital Wealth",
+    "url": "https://luma.com/od5ntv8p",
+    "firstReportedAt": "2026-08-10",
+    "sourcePath": "content/product-daily/2026-08-10.md"
   }
 ]
