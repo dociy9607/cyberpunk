@@ -3127,5 +3127,96 @@
     "url": "https://luma.com/od5ntv8p",
     "firstReportedAt": "2026-08-10",
     "sourcePath": "content/product-daily/2026-08-10.md"
+  },
+  {
+    "kind": "github",
+    "name": "semantica-agi/semantica",
+    "url": "https://github.com/semantica-agi/semantica",
+    "firstReportedAt": "2026-08-11",
+    "sourcePath": "content/product-daily/2026-08-11.md"
+  },
+  {
+    "kind": "github",
+    "name": "paperclipai/paperclip",
+    "url": "https://github.com/paperclipai/paperclip",
+    "firstReportedAt": "2026-08-11",
+    "sourcePath": "content/product-daily/2026-08-11.md"
+  },
+  {
+    "kind": "product",
+    "name": "ChatGPT 餐厅预订",
+    "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+    "firstReportedAt": "2026-08-11",
+    "sourcePath": "content/product-daily/2026-08-11.md"
+  },
+  {
+    "kind": "product",
+    "name": "ChatGPT Business Premium Seats",
+    "url": "https://openai.com/index/premium-seats-chatgpt-business/",
+    "firstReportedAt": "2026-08-11",
+    "sourcePath": "content/product-daily/2026-08-11.md"
+  },
+  {
+    "kind": "product",
+    "name": "Grok Imagine Image 2.0",
+    "url": "https://x.ai/news/grok-imagine-image-2",
+    "firstReportedAt": "2026-08-11",
+    "sourcePath": "content/product-daily/2026-08-11.md"
+  },
+  {
+    "kind": "product",
+    "name": "Meoo 秒悟团队版",
+    "url": "https://docs.meoo.com/file-10",
+    "firstReportedAt": "2026-08-11",
+    "sourcePath": "content/product-daily/2026-08-11.md"
+  },
+  {
+    "kind": "product",
+    "name": "NVIDIA NemotronLabs VoiceChat 11B",
+    "url": "https://huggingface.co/nvidia/NVIDIA-NemotronLabs-VoiceChat-11B",
+    "firstReportedAt": "2026-08-11",
+    "sourcePath": "content/product-daily/2026-08-11.md"
+  },
+  {
+    "kind": "product",
+    "name": "Meta Muse Glimmer 30B",
+    "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+    "firstReportedAt": "2026-08-11",
+    "sourcePath": "content/product-daily/2026-08-11.md"
+  },
+  {
+    "kind": "product",
+    "name": "Google Ads / Analytics 新 AI agent 能力",
+    "url": "https://blog.google/products/ads-commerce/google-ads-analytics-ai-updates/",
+    "firstReportedAt": "2026-08-11",
+    "sourcePath": "content/product-daily/2026-08-11.md"
+  },
+  {
+    "kind": "event",
+    "name": "Crazy Thursday Meetup - AI & App Builder [Aug 13]",
+    "url": "https://luma.com/uz1v1twk",
+    "firstReportedAt": "2026-08-11",
+    "sourcePath": "content/product-daily/2026-08-11.md"
+  },
+  {
+    "kind": "event",
+    "name": "Advanced Microsoft 365 Copilot, AI Agents, and Business Process Transformation",
+    "url": "https://www.hkpcacademy.org/en/advanced-microsoft-365-copilot-ai-agents-and-business-process-transformation-2/",
+    "firstReportedAt": "2026-08-11",
+    "sourcePath": "content/product-daily/2026-08-11.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI Tinkerers Hong Kong: August Meetup with OAX Foundation and GMAsia",
+    "url": "https://hong-kong.aitinkerers.org/",
+    "firstReportedAt": "2026-08-11",
+    "sourcePath": "content/product-daily/2026-08-11.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI x Cybersecurity Challenge",
+    "url": "https://www.hkcert.org/event/ai-x-cybersecurity-challenge",
+    "firstReportedAt": "2026-08-11",
+    "sourcePath": "content/product-daily/2026-08-11.md"
   }
 ]
