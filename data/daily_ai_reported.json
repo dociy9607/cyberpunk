@@ -3316,5 +3316,110 @@
     "url": "https://campaigns.hkpc.org/zh-hk/rsvp/copilot-in-action-x-ai-powered-operations",
     "firstReportedAt": "2026-08-12",
     "sourcePath": "content/product-daily/2026-08-12.md"
+  },
+  {
+    "kind": "github",
+    "name": "cathrynlavery/diagram-design",
+    "url": "https://github.com/cathrynlavery/diagram-design",
+    "firstReportedAt": "2026-08-13",
+    "sourcePath": "content/product-daily/2026-08-13.md"
+  },
+  {
+    "kind": "github",
+    "name": "macro-inc/macro",
+    "url": "https://github.com/macro-inc/macro",
+    "firstReportedAt": "2026-08-13",
+    "sourcePath": "content/product-daily/2026-08-13.md"
+  },
+  {
+    "kind": "github",
+    "name": "hugohe3/ppt-master",
+    "url": "https://github.com/hugohe3/ppt-master",
+    "firstReportedAt": "2026-08-13",
+    "sourcePath": "content/product-daily/2026-08-13.md"
+  },
+  {
+    "kind": "github",
+    "name": "NVIDIA-NeMo/Switchyard",
+    "url": "https://github.com/NVIDIA-NeMo/Switchyard",
+    "firstReportedAt": "2026-08-13",
+    "sourcePath": "content/product-daily/2026-08-13.md"
+  },
+  {
+    "kind": "github",
+    "name": "cactus-compute/needle",
+    "url": "https://github.com/cactus-compute/needle",
+    "firstReportedAt": "2026-08-13",
+    "sourcePath": "content/product-daily/2026-08-13.md"
+  },
+  {
+    "kind": "product",
+    "name": "Grok Bot",
+    "url": "https://x.ai/news/introducing-grok-bot",
+    "firstReportedAt": "2026-08-13",
+    "sourcePath": "content/product-daily/2026-08-13.md"
+  },
+  {
+    "kind": "product",
+    "name": "GitHub Copilot MAI-Code-1.1-Flash",
+    "url": "https://github.blog/changelog/2026-08-11-mai-code-1-1-flash-available-in-github-copilot/",
+    "firstReportedAt": "2026-08-13",
+    "sourcePath": "content/product-daily/2026-08-13.md"
+  },
+  {
+    "kind": "product",
+    "name": "L&T Technology Services AgenticIQ",
+    "url": "https://www.ltts.com/press-release/AgenticIQ",
+    "firstReportedAt": "2026-08-13",
+    "sourcePath": "content/product-daily/2026-08-13.md"
+  },
+  {
+    "kind": "product",
+    "name": "Unsloth Desktop / Studio",
+    "url": "https://unsloth.ai/",
+    "firstReportedAt": "2026-08-13",
+    "sourcePath": "content/product-daily/2026-08-13.md"
+  },
+  {
+    "kind": "product",
+    "name": "Fantasy Premier League Companion powered by Copilot",
+    "url": "https://news.microsoft.com/source/emea/features/fantasy-premier-league-companion-gives-managers-a-new-tool-for-success/",
+    "firstReportedAt": "2026-08-13",
+    "sourcePath": "content/product-daily/2026-08-13.md"
+  },
+  {
+    "kind": "event",
+    "name": "Mastering Google Gemini & Nano Banana",
+    "url": "https://www.hkpcacademy.org/en/10019204-03-mastering-google-gemini-nano-banana/",
+    "firstReportedAt": "2026-08-13",
+    "sourcePath": "content/product-daily/2026-08-13.md"
+  },
+  {
+    "kind": "event",
+    "name": "Open Design x Hong Kong",
+    "url": "https://luma.com/2hk2ftmn",
+    "firstReportedAt": "2026-08-13",
+    "sourcePath": "content/product-daily/2026-08-13.md"
+  },
+  {
+    "kind": "event",
+    "name": "Certificate in Mobile Video Production with AI for Commercial and Social Media Use",
+    "url": "https://www.hkpcacademy.org/en/certificate-in-mobile-video-production-with-ai-for-commercial-and-social-media-use-2/",
+    "firstReportedAt": "2026-08-13",
+    "sourcePath": "content/product-daily/2026-08-13.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI & Crypto: Global Asset Allocation",
+    "url": "https://luma.com/kopu6by1",
+    "firstReportedAt": "2026-08-13",
+    "sourcePath": "content/product-daily/2026-08-13.md"
+  },
+  {
+    "kind": "event",
+    "name": "Professional Scrum Product Owner-AI Essentials (PSPO-AI Essentials)",
+    "url": "https://www.hkpcacademy.org/en/professional-scrum-product-owner-ai-essentials-pspo-ai-essentials-6/",
+    "firstReportedAt": "2026-08-13",
+    "sourcePath": "content/product-daily/2026-08-13.md"
   }
 ]
