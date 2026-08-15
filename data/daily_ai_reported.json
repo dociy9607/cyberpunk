@@ -3533,5 +3533,117 @@
     "url": "https://www.hkpcacademy.org/10018951-22-mastering-ai-communication-prompt-engineering/",
     "firstReportedAt": "2026-08-14",
     "sourcePath": "content/product-daily/2026-08-14.md"
+  },
+  {
+    "kind": "github",
+    "name": "github/spec-kit",
+    "url": "https://github.com/github/spec-kit",
+    "firstReportedAt": "2026-08-15",
+    "sourcePath": "content/product-daily/2026-08-15.md"
+  },
+  {
+    "kind": "github",
+    "name": "citrolabs/ego-lite",
+    "url": "https://github.com/citrolabs/ego-lite",
+    "firstReportedAt": "2026-08-15",
+    "sourcePath": "content/product-daily/2026-08-15.md"
+  },
+  {
+    "kind": "github",
+    "name": "lightningpixel/modly",
+    "url": "https://github.com/lightningpixel/modly",
+    "firstReportedAt": "2026-08-15",
+    "sourcePath": "content/product-daily/2026-08-15.md"
+  },
+  {
+    "kind": "github",
+    "name": "cursor/plugins",
+    "url": "https://github.com/cursor/plugins",
+    "firstReportedAt": "2026-08-15",
+    "sourcePath": "content/product-daily/2026-08-15.md"
+  },
+  {
+    "kind": "github",
+    "name": "deepseek-ai/awesome-deepseek-agent",
+    "url": "https://github.com/deepseek-ai/awesome-deepseek-agent",
+    "firstReportedAt": "2026-08-15",
+    "sourcePath": "content/product-daily/2026-08-15.md"
+  },
+  {
+    "kind": "product",
+    "name": "OpenAI GPT-5.6 Sol Ultrafast mode",
+    "url": "https://developers.openai.com/api/docs/changelog",
+    "firstReportedAt": "2026-08-15",
+    "sourcePath": "content/product-daily/2026-08-15.md"
+  },
+  {
+    "kind": "product",
+    "name": "DeepSeek V4 Pro 正式版",
+    "url": "https://api-docs.deepseek.com/zh-cn/news/news260813/",
+    "firstReportedAt": "2026-08-15",
+    "sourcePath": "content/product-daily/2026-08-15.md"
+  },
+  {
+    "kind": "product",
+    "name": "MiniMax Music3",
+    "url": "https://huggingface.co/MiniMaxAI/MiniMax-Music3",
+    "firstReportedAt": "2026-08-15",
+    "sourcePath": "content/product-daily/2026-08-15.md"
+  },
+  {
+    "kind": "product",
+    "name": "百度文库网盘“库库AI”独立端",
+    "url": "https://wangpan.baidu.com/disk/version",
+    "firstReportedAt": "2026-08-15",
+    "sourcePath": "content/product-daily/2026-08-15.md"
+  },
+  {
+    "kind": "product",
+    "name": "Qwen3.8-27B open-weight model",
+    "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+    "firstReportedAt": "2026-08-15",
+    "sourcePath": "content/product-daily/2026-08-15.md"
+  },
+  {
+    "kind": "product",
+    "name": "Grok 4.6 in GitHub Copilot",
+    "url": "https://github.blog/changelog/2026-08-14-grok-4-6-is-now-available-in-github-copilot/",
+    "firstReportedAt": "2026-08-15",
+    "sourcePath": "content/product-daily/2026-08-15.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI Agent Secure by Design Programme (Aug 2026)",
+    "url": "https://academy.cyberport.hk/trainings/ai-agent-secure-by-design-programme-aug-2026",
+    "firstReportedAt": "2026-08-15",
+    "sourcePath": "content/product-daily/2026-08-15.md"
+  },
+  {
+    "kind": "event",
+    "name": "AICon 深圳 2026",
+    "url": "https://itknowledgezone.com/cn/event/aicon-shenzhen-2026/",
+    "firstReportedAt": "2026-08-15",
+    "sourcePath": "content/product-daily/2026-08-15.md"
+  },
+  {
+    "kind": "event",
+    "name": "Qwen Conference Hong Kong 2026",
+    "url": "https://luma.com/sz4j9ewj",
+    "firstReportedAt": "2026-08-15",
+    "sourcePath": "content/product-daily/2026-08-15.md"
+  },
+  {
+    "kind": "event",
+    "name": "AGIC2026 深圳国际通用人工智能大会暨产业博览会",
+    "url": "https://www.agicexpo.com/NewsView/912EC610FBD8958A.html",
+    "firstReportedAt": "2026-08-15",
+    "sourcePath": "content/product-daily/2026-08-15.md"
+  },
+  {
+    "kind": "event",
+    "name": "2026 · 深圳 · 物理 AI 峰会",
+    "url": "https://www.huodongxing.com/event/1871787088100",
+    "firstReportedAt": "2026-08-15",
+    "sourcePath": "content/product-daily/2026-08-15.md"
   }
 ]
