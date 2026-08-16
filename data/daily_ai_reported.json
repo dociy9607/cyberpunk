@@ -3645,5 +3645,124 @@
     "url": "https://www.huodongxing.com/event/1871787088100",
     "firstReportedAt": "2026-08-15",
     "sourcePath": "content/product-daily/2026-08-15.md"
+  },
+  {
+    "kind": "github",
+    "name": "cordiverse/cordis",
+    "url": "https://github.com/cordiverse/cordis",
+    "firstReportedAt": "2026-08-16",
+    "sourcePath": "content/product-daily/2026-08-16.md"
+  },
+  {
+    "kind": "github",
+    "name": "MakazhanAlpamys/Soup",
+    "url": "https://github.com/MakazhanAlpamys/Soup",
+    "firstReportedAt": "2026-08-16",
+    "sourcePath": "content/product-daily/2026-08-16.md"
+  },
+  {
+    "kind": "github",
+    "name": "unslothai/unsloth",
+    "url": "https://github.com/unslothai/unsloth",
+    "firstReportedAt": "2026-08-16",
+    "sourcePath": "content/product-daily/2026-08-16.md"
+  },
+  {
+    "kind": "github",
+    "name": "ToolJet/ToolJet",
+    "url": "https://github.com/ToolJet/ToolJet",
+    "firstReportedAt": "2026-08-16",
+    "sourcePath": "content/product-daily/2026-08-16.md"
+  },
+  {
+    "kind": "github",
+    "name": "HKUDS/CLI-Anything",
+    "url": "https://github.com/HKUDS/CLI-Anything",
+    "firstReportedAt": "2026-08-16",
+    "sourcePath": "content/product-daily/2026-08-16.md"
+  },
+  {
+    "kind": "product",
+    "name": "Z.ai GLM-5.3",
+    "url": "https://z.ai/blog/glm-5.3",
+    "firstReportedAt": "2026-08-16",
+    "sourcePath": "content/product-daily/2026-08-16.md"
+  },
+  {
+    "kind": "product",
+    "name": "Google Gemini 3.7 Flash",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+    "firstReportedAt": "2026-08-16",
+    "sourcePath": "content/product-daily/2026-08-16.md"
+  },
+  {
+    "kind": "product",
+    "name": "Mistral Shieldstral 1.0 3B",
+    "url": "https://mistral.ai/news/shieldstral/",
+    "firstReportedAt": "2026-08-16",
+    "sourcePath": "content/product-daily/2026-08-16.md"
+  },
+  {
+    "kind": "product",
+    "name": "Pixel 11 Gemini Intelligence",
+    "url": "https://blog.google/products-and-platforms/devices/pixel/pixel-11-features/",
+    "firstReportedAt": "2026-08-16",
+    "sourcePath": "content/product-daily/2026-08-16.md"
+  },
+  {
+    "kind": "product",
+    "name": "金山办公灵犀专业版接入 DeepSeek-V4-Pro",
+    "url": "https://www.stdaily.com/web/gdxw/2026-08/14/content_564243.html",
+    "firstReportedAt": "2026-08-16",
+    "sourcePath": "content/product-daily/2026-08-16.md"
+  },
+  {
+    "kind": "product",
+    "name": "Strands Agents + LeRobot + Hugging Face Storage Buckets 数据闭环",
+    "url": "https://huggingface.co/blog/amazon/strands-lerobot-streaming-data-loop",
+    "firstReportedAt": "2026-08-16",
+    "sourcePath": "content/product-daily/2026-08-16.md"
+  },
+  {
+    "kind": "product",
+    "name": "京东七鲜咖啡 24 小时智能化无人咖啡店",
+    "url": "https://wap.eastmoney.com/a/202608143841616873.html",
+    "firstReportedAt": "2026-08-16",
+    "sourcePath": "content/product-daily/2026-08-16.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI CAN DO IT | Tencent Cloud Hackathon Demo Day",
+    "url": "https://luma.com/aicandoit",
+    "firstReportedAt": "2026-08-16",
+    "sourcePath": "content/product-daily/2026-08-16.md"
+  },
+  {
+    "kind": "event",
+    "name": "Meta x SHOPLINE x Omnichat x Q-Pets: AI Marketing Summit",
+    "url": "https://www.omnichat.ai/hk/events/",
+    "firstReportedAt": "2026-08-16",
+    "sourcePath": "content/product-daily/2026-08-16.md"
+  },
+  {
+    "kind": "event",
+    "name": "AIHK Retail & Consumer Committee Event",
+    "url": "https://luma.com/3ckftghg",
+    "firstReportedAt": "2026-08-16",
+    "sourcePath": "content/product-daily/2026-08-16.md"
+  },
+  {
+    "kind": "event",
+    "name": "Agentic AI for Professionals",
+    "url": "https://humantyze.com/events/",
+    "firstReportedAt": "2026-08-16",
+    "sourcePath": "content/product-daily/2026-08-16.md"
+  },
+  {
+    "kind": "event",
+    "name": "Human + AI Leadership Simulation",
+    "url": "https://humantyze.com/events/",
+    "firstReportedAt": "2026-08-16",
+    "sourcePath": "content/product-daily/2026-08-16.md"
   }
 ]
