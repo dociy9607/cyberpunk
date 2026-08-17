@@ -3764,5 +3764,117 @@
     "url": "https://humantyze.com/events/",
     "firstReportedAt": "2026-08-16",
     "sourcePath": "content/product-daily/2026-08-16.md"
+  },
+  {
+    "kind": "github",
+    "name": "liustack/modlens",
+    "url": "https://github.com/liustack/modlens",
+    "firstReportedAt": "2026-08-17",
+    "sourcePath": "content/product-daily/2026-08-17.md"
+  },
+  {
+    "kind": "github",
+    "name": "t8y2/dbx",
+    "url": "https://github.com/t8y2/dbx",
+    "firstReportedAt": "2026-08-17",
+    "sourcePath": "content/product-daily/2026-08-17.md"
+  },
+  {
+    "kind": "github",
+    "name": "earendil-works/pi",
+    "url": "https://github.com/earendil-works/pi",
+    "firstReportedAt": "2026-08-17",
+    "sourcePath": "content/product-daily/2026-08-17.md"
+  },
+  {
+    "kind": "github",
+    "name": "vercel-labs/deepsec",
+    "url": "https://github.com/vercel-labs/deepsec",
+    "firstReportedAt": "2026-08-17",
+    "sourcePath": "content/product-daily/2026-08-17.md"
+  },
+  {
+    "kind": "github",
+    "name": "pacifio/atlas",
+    "url": "https://github.com/pacifio/atlas",
+    "firstReportedAt": "2026-08-17",
+    "sourcePath": "content/product-daily/2026-08-17.md"
+  },
+  {
+    "kind": "product",
+    "name": "Meta Muse Glimmer 30B",
+    "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+    "firstReportedAt": "2026-08-17",
+    "sourcePath": "content/product-daily/2026-08-17.md"
+  },
+  {
+    "kind": "product",
+    "name": "Lightricks LTX-2.5",
+    "url": "https://huggingface.co/Lightricks/LTX-2.5",
+    "firstReportedAt": "2026-08-17",
+    "sourcePath": "content/product-daily/2026-08-17.md"
+  },
+  {
+    "kind": "product",
+    "name": "Google Imagen 4 API retirement and Nano Banana migration window",
+    "url": "https://ai.google.dev/gemini-api/docs/deprecations",
+    "firstReportedAt": "2026-08-17",
+    "sourcePath": "content/product-daily/2026-08-17.md"
+  },
+  {
+    "kind": "product",
+    "name": "HarnessRouter Community Edition",
+    "url": "https://harnessrouter.ai/open-source",
+    "firstReportedAt": "2026-08-17",
+    "sourcePath": "content/product-daily/2026-08-17.md"
+  },
+  {
+    "kind": "product",
+    "name": "Chert FaceTime AI Video Agents",
+    "url": "https://www.trychert.com/facetime",
+    "firstReportedAt": "2026-08-17",
+    "sourcePath": "content/product-daily/2026-08-17.md"
+  },
+  {
+    "kind": "product",
+    "name": "Blume",
+    "url": "https://useblume.dev/",
+    "firstReportedAt": "2026-08-17",
+    "sourcePath": "content/product-daily/2026-08-17.md"
+  },
+  {
+    "kind": "event",
+    "name": "Hong Kong AI Game Jam 2026 & Creator Workshop 2026",
+    "url": "https://delf.cyberport.hk/en/agenda",
+    "firstReportedAt": "2026-08-17",
+    "sourcePath": "content/product-daily/2026-08-17.md"
+  },
+  {
+    "kind": "event",
+    "name": "Dyna Day Hong Kong 2026 - AI-Powered Customer Operations",
+    "url": "https://luma.com/v5wkkeec",
+    "firstReportedAt": "2026-08-17",
+    "sourcePath": "content/product-daily/2026-08-17.md"
+  },
+  {
+    "kind": "event",
+    "name": "2026 Startup World Cup Asia Finale",
+    "url": "https://luma.com/c0vhli5o",
+    "firstReportedAt": "2026-08-17",
+    "sourcePath": "content/product-daily/2026-08-17.md"
+  },
+  {
+    "kind": "event",
+    "name": "Ultralytics YOLO Vision 2026",
+    "url": "https://luma.com/uunmcjxd",
+    "firstReportedAt": "2026-08-17",
+    "sourcePath": "content/product-daily/2026-08-17.md"
+  },
+  {
+    "kind": "event",
+    "name": "2026 Maker in China Hong Kong Chapter Final and Project Docking",
+    "url": "https://www.cyberport.hk/wp-content/uploads/Press-Release-2026-%E2%80%98Maker-in-China-Hong-Kong-Chapter-Opens-for-Enrolment.pdf",
+    "firstReportedAt": "2026-08-17",
+    "sourcePath": "content/product-daily/2026-08-17.md"
   }
 ]
