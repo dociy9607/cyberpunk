@@ -4093,5 +4093,138 @@
     "url": "https://www.zsxrexpo.com/news.asp?id=12",
     "firstReportedAt": "2026-08-20",
     "sourcePath": "content/product-daily/2026-08-20.md"
+  },
+  {
+    "kind": "github",
+    "name": "RyanCodrai/turbovec",
+    "url": "https://github.com/RyanCodrai/turbovec",
+    "firstReportedAt": "2026-08-21",
+    "sourcePath": "content/product-daily/2026-08-21.md"
+  },
+  {
+    "kind": "github",
+    "name": "apache/maka",
+    "url": "https://github.com/apache/maka",
+    "firstReportedAt": "2026-08-21",
+    "sourcePath": "content/product-daily/2026-08-21.md"
+  },
+  {
+    "kind": "github",
+    "name": "magnitudedev/magnitude",
+    "url": "https://github.com/magnitudedev/magnitude",
+    "firstReportedAt": "2026-08-21",
+    "sourcePath": "content/product-daily/2026-08-21.md"
+  },
+  {
+    "kind": "github",
+    "name": "Tencent/AI-Infra-Guard",
+    "url": "https://github.com/Tencent/AI-Infra-Guard",
+    "firstReportedAt": "2026-08-21",
+    "sourcePath": "content/product-daily/2026-08-21.md"
+  },
+  {
+    "kind": "github",
+    "name": "zzet/gortex",
+    "url": "https://github.com/zzet/gortex",
+    "firstReportedAt": "2026-08-21",
+    "sourcePath": "content/product-daily/2026-08-21.md"
+  },
+  {
+    "kind": "product",
+    "name": "ChatGPT Apple Messages plugin",
+    "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+    "firstReportedAt": "2026-08-21",
+    "sourcePath": "content/product-daily/2026-08-21.md"
+  },
+  {
+    "kind": "product",
+    "name": "MiniMax Design",
+    "url": "https://www.producthunt.com/products/minimax",
+    "firstReportedAt": "2026-08-21",
+    "sourcePath": "content/product-daily/2026-08-21.md"
+  },
+  {
+    "kind": "product",
+    "name": "Google Search and Gemini AI study tools",
+    "url": "https://techcrunch.com/2026/08/19/google-launches-new-study-tools-for-students-across-search-and-gemini/",
+    "firstReportedAt": "2026-08-21",
+    "sourcePath": "content/product-daily/2026-08-21.md"
+  },
+  {
+    "kind": "product",
+    "name": "Gemini Enterprise Antigravity for IDEs",
+    "url": "https://docs.cloud.google.com/gemini/enterprise/docs/release-notes",
+    "firstReportedAt": "2026-08-21",
+    "sourcePath": "content/product-daily/2026-08-21.md"
+  },
+  {
+    "kind": "product",
+    "name": "Claude Developer Platform GA toolsets",
+    "url": "https://platform.claude.com/docs/en/release-notes/overview",
+    "firstReportedAt": "2026-08-21",
+    "sourcePath": "content/product-daily/2026-08-21.md"
+  },
+  {
+    "kind": "product",
+    "name": "OpenAI Zero Data Retention for frontier models",
+    "url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models/",
+    "firstReportedAt": "2026-08-21",
+    "sourcePath": "content/product-daily/2026-08-21.md"
+  },
+  {
+    "kind": "product",
+    "name": "Replit Free Mode powered by GPT-5.6 Luna",
+    "url": "https://replit.com/blog/replit-introduces-free-mode",
+    "firstReportedAt": "2026-08-21",
+    "sourcePath": "content/product-daily/2026-08-21.md"
+  },
+  {
+    "kind": "product",
+    "name": "Unsloth Dynamic V3 Qwen3.8-27B GGUF",
+    "url": "https://unsloth.ai/docs/basics/dynamic-3.0-ggufs",
+    "firstReportedAt": "2026-08-21",
+    "sourcePath": "content/product-daily/2026-08-21.md"
+  },
+  {
+    "kind": "product",
+    "name": "Unitree R1 bionic 7-axis dexterous robotic arm",
+    "url": "https://www.unitree.com/cn/R1-ARM",
+    "firstReportedAt": "2026-08-21",
+    "sourcePath": "content/product-daily/2026-08-21.md"
+  },
+  {
+    "kind": "event",
+    "name": "AgentCon 2026 深圳站",
+    "url": "https://lianpu.com/event/agentcon2026-shen-zhen-zhan-cong-token-jing-ji-dao-chan-ye-l",
+    "firstReportedAt": "2026-08-21",
+    "sourcePath": "content/product-daily/2026-08-21.md"
+  },
+  {
+    "kind": "event",
+    "name": "HKWD Teaching Taste to an Agent",
+    "url": "https://luma.com/twmkm81e",
+    "firstReportedAt": "2026-08-21",
+    "sourcePath": "content/product-daily/2026-08-21.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI Agents, Unsexy Security & The New Rules of Digital Wealth",
+    "url": "https://luma.com/od5ntv8p",
+    "firstReportedAt": "2026-08-21",
+    "sourcePath": "content/product-daily/2026-08-21.md"
+  },
+  {
+    "kind": "event",
+    "name": "Digital Entertainment Leadership Forum 2026",
+    "url": "https://delf.cyberport.hk/",
+    "firstReportedAt": "2026-08-21",
+    "sourcePath": "content/product-daily/2026-08-21.md"
+  },
+  {
+    "kind": "event",
+    "name": "From One Bay Area to Another: Rethinking AI innovation across Shenzhen & Silicon Valley",
+    "url": "https://luma.com/2k1q38zv",
+    "firstReportedAt": "2026-08-21",
+    "sourcePath": "content/product-daily/2026-08-21.md"
   }
 ]
