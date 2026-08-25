@@ -4226,5 +4226,110 @@
     "url": "https://luma.com/2k1q38zv",
     "firstReportedAt": "2026-08-21",
     "sourcePath": "content/product-daily/2026-08-21.md"
+  },
+  {
+    "kind": "github",
+    "name": "openai/codex",
+    "url": "https://github.com/openai/codex",
+    "firstReportedAt": "2026-08-25",
+    "sourcePath": "content/product-daily/2026-08-25.md"
+  },
+  {
+    "kind": "github",
+    "name": "PostHog/posthog",
+    "url": "https://github.com/PostHog/posthog",
+    "firstReportedAt": "2026-08-25",
+    "sourcePath": "content/product-daily/2026-08-25.md"
+  },
+  {
+    "kind": "github",
+    "name": "tinyhumansai/openhuman",
+    "url": "https://github.com/tinyhumansai/openhuman",
+    "firstReportedAt": "2026-08-25",
+    "sourcePath": "content/product-daily/2026-08-25.md"
+  },
+  {
+    "kind": "github",
+    "name": "AgriciDaniel/claude-obsidian",
+    "url": "https://github.com/AgriciDaniel/claude-obsidian",
+    "firstReportedAt": "2026-08-25",
+    "sourcePath": "content/product-daily/2026-08-25.md"
+  },
+  {
+    "kind": "github",
+    "name": "freestylefly/awesome-gpt-image-2",
+    "url": "https://github.com/freestylefly/awesome-gpt-image-2",
+    "firstReportedAt": "2026-08-25",
+    "sourcePath": "content/product-daily/2026-08-25.md"
+  },
+  {
+    "kind": "product",
+    "name": "Alibaba Cloud Wan3.0",
+    "url": "https://www.alibabacloud.com/blog/wan3-0-30-second-ai-video-generation-from-any-input_603452",
+    "firstReportedAt": "2026-08-25",
+    "sourcePath": "content/product-daily/2026-08-25.md"
+  },
+  {
+    "kind": "product",
+    "name": "Shokz OpenFit 2 AI",
+    "url": "https://www.shokz.com.cn/OpenFit2AI",
+    "firstReportedAt": "2026-08-25",
+    "sourcePath": "content/product-daily/2026-08-25.md"
+  },
+  {
+    "kind": "product",
+    "name": "OpenRouter Ox Alpha",
+    "url": "https://openrouter.ai/stealth",
+    "firstReportedAt": "2026-08-25",
+    "sourcePath": "content/product-daily/2026-08-25.md"
+  },
+  {
+    "kind": "product",
+    "name": "xAI Grok Build",
+    "url": "https://x.ai/news/grok-build-for-everyone",
+    "firstReportedAt": "2026-08-25",
+    "sourcePath": "content/product-daily/2026-08-25.md"
+  },
+  {
+    "kind": "product",
+    "name": "Decawork",
+    "url": "https://decawork.ai/",
+    "firstReportedAt": "2026-08-25",
+    "sourcePath": "content/product-daily/2026-08-25.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI Beyond | 应用增长与商业化新机会",
+    "url": "https://appgrowing.net/blog/0827shenzhen/",
+    "firstReportedAt": "2026-08-25",
+    "sourcePath": "content/product-daily/2026-08-25.md"
+  },
+  {
+    "kind": "event",
+    "name": "2026 中国智能产业高峰论坛",
+    "url": "https://www.caai.cn/site/content/8671.html",
+    "firstReportedAt": "2026-08-25",
+    "sourcePath": "content/product-daily/2026-08-25.md"
+  },
+  {
+    "kind": "event",
+    "name": "第三届 AI 赋能消费电子创新论坛",
+    "url": "https://www.iicieexpo.com/ConferenceList.html",
+    "firstReportedAt": "2026-08-25",
+    "sourcePath": "content/product-daily/2026-08-25.md"
+  },
+  {
+    "kind": "event",
+    "name": "AIZQ2026 AI 硬件出海生态投融资大会",
+    "url": "https://www.aizqexpo.com/index.php?a=index&c=Lists&m=home&tid=5",
+    "firstReportedAt": "2026-08-25",
+    "sourcePath": "content/product-daily/2026-08-25.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI in Action: AI Industry Seminar 2026 - From Practice to Value",
+    "url": "https://www.linkedin.com/posts/hkufbe_hkubusinessschool-aiinaction-aiindustryseminar-activity-7490945701296689152-J5Jg",
+    "firstReportedAt": "2026-08-25",
+    "sourcePath": "content/product-daily/2026-08-25.md"
   }
 ]
