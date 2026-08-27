@@ -4331,5 +4331,117 @@
     "url": "https://www.linkedin.com/posts/hkufbe_hkubusinessschool-aiinaction-aiindustryseminar-activity-7490945701296689152-J5Jg",
     "firstReportedAt": "2026-08-25",
     "sourcePath": "content/product-daily/2026-08-25.md"
+  },
+  {
+    "kind": "github",
+    "name": "tt-a1i/archify",
+    "url": "https://github.com/tt-a1i/archify",
+    "firstReportedAt": "2026-08-27",
+    "sourcePath": "content/product-daily/2026-08-27.md"
+  },
+  {
+    "kind": "github",
+    "name": "anthropics/claude-plugins-official",
+    "url": "https://github.com/anthropics/claude-plugins-official",
+    "firstReportedAt": "2026-08-27",
+    "sourcePath": "content/product-daily/2026-08-27.md"
+  },
+  {
+    "kind": "github",
+    "name": "Alishahryar1/free-claude-code",
+    "url": "https://github.com/Alishahryar1/free-claude-code",
+    "firstReportedAt": "2026-08-27",
+    "sourcePath": "content/product-daily/2026-08-27.md"
+  },
+  {
+    "kind": "github",
+    "name": "anthropics/claude-plugins-community",
+    "url": "https://github.com/anthropics/claude-plugins-community",
+    "firstReportedAt": "2026-08-27",
+    "sourcePath": "content/product-daily/2026-08-27.md"
+  },
+  {
+    "kind": "github",
+    "name": "ConardLi/garden-skills",
+    "url": "https://github.com/ConardLi/garden-skills",
+    "firstReportedAt": "2026-08-27",
+    "sourcePath": "content/product-daily/2026-08-27.md"
+  },
+  {
+    "kind": "product",
+    "name": "Z.ai GLM-5.3-Flash",
+    "url": "https://docs.z.ai/release-notes/new-released",
+    "firstReportedAt": "2026-08-27",
+    "sourcePath": "content/product-daily/2026-08-27.md"
+  },
+  {
+    "kind": "product",
+    "name": "OpenAI GPT-5.6 in Kiro",
+    "url": "https://openai.com/index/gpt-5-6-in-kiro/",
+    "firstReportedAt": "2026-08-27",
+    "sourcePath": "content/product-daily/2026-08-27.md"
+  },
+  {
+    "kind": "product",
+    "name": "ChatGPT for Teachers 学区扩展",
+    "url": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts/",
+    "firstReportedAt": "2026-08-27",
+    "sourcePath": "content/product-daily/2026-08-27.md"
+  },
+  {
+    "kind": "product",
+    "name": "OpenAI API 缓存与区域处理更新",
+    "url": "https://developers.openai.com/api/docs/changelog",
+    "firstReportedAt": "2026-08-27",
+    "sourcePath": "content/product-daily/2026-08-27.md"
+  },
+  {
+    "kind": "product",
+    "name": "Claude Memory across chat and Cowork",
+    "url": "https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it",
+    "firstReportedAt": "2026-08-27",
+    "sourcePath": "content/product-daily/2026-08-27.md"
+  },
+  {
+    "kind": "product",
+    "name": "Salesforce in Claude / Claudeforce",
+    "url": "https://investor.salesforce.com/news/news-details/2026/Salesforce-and-Anthropic-Announce-Claudeforce-The-1-AI-Meets-the-1-AI-CRM/default.aspx",
+    "firstReportedAt": "2026-08-27",
+    "sourcePath": "content/product-daily/2026-08-27.md"
+  },
+  {
+    "kind": "event",
+    "name": "One Google AIDC 深圳生态峰会",
+    "url": "https://www.10100.com/hd/149258156",
+    "firstReportedAt": "2026-08-27",
+    "sourcePath": "content/product-daily/2026-08-27.md"
+  },
+  {
+    "kind": "event",
+    "name": "Build a Secure Cyberspace 2026 AI Comic Seminar",
+    "url": "https://campaigninfo.hkpc.org/en-rsvp-cybersecurity-build-a-secure-cyberspace-2026-innovate-with-grace-peace-in-cyberspace-seminar-and-ai-generated-four-panel-comic-contest-award-ceremony",
+    "firstReportedAt": "2026-08-27",
+    "sourcePath": "content/product-daily/2026-08-27.md"
+  },
+  {
+    "kind": "event",
+    "name": "International Conference on Innovative Predictive Maintenance Technologies",
+    "url": "https://campaigns.hkpc.org/en-rsvp-international-conference-on-innovative-predictive-maintenance-technologies",
+    "firstReportedAt": "2026-08-27",
+    "sourcePath": "content/product-daily/2026-08-27.md"
+  },
+  {
+    "kind": "event",
+    "name": "ISACA China Hong Kong Chapter 2026 Annual Conference",
+    "url": "https://www.isacaconference.hk/2026/",
+    "firstReportedAt": "2026-08-27",
+    "sourcePath": "content/product-daily/2026-08-27.md"
+  },
+  {
+    "kind": "event",
+    "name": "OFweek 2026 中国人工智能与物联网技术创新大会",
+    "url": "https://robot.ofweek.com/2026-08/ART-8321205-8120-30697133.html",
+    "firstReportedAt": "2026-08-27",
+    "sourcePath": "content/product-daily/2026-08-27.md"
   }
 ]
