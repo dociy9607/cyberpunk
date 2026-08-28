@@ -4443,5 +4443,110 @@
     "url": "https://robot.ofweek.com/2026-08/ART-8321205-8120-30697133.html",
     "firstReportedAt": "2026-08-27",
     "sourcePath": "content/product-daily/2026-08-27.md"
+  },
+  {
+    "kind": "github",
+    "name": "JetBrains/go-modern-guidelines",
+    "url": "https://github.com/JetBrains/go-modern-guidelines",
+    "firstReportedAt": "2026-08-28",
+    "sourcePath": "content/product-daily/2026-08-28.md"
+  },
+  {
+    "kind": "github",
+    "name": "DietrichGebert/ponytail",
+    "url": "https://github.com/DietrichGebert/ponytail",
+    "firstReportedAt": "2026-08-28",
+    "sourcePath": "content/product-daily/2026-08-28.md"
+  },
+  {
+    "kind": "github",
+    "name": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem",
+    "firstReportedAt": "2026-08-28",
+    "sourcePath": "content/product-daily/2026-08-28.md"
+  },
+  {
+    "kind": "github",
+    "name": "marin-community/marin",
+    "url": "https://github.com/marin-community/marin",
+    "firstReportedAt": "2026-08-28",
+    "sourcePath": "content/product-daily/2026-08-28.md"
+  },
+  {
+    "kind": "product",
+    "name": "Gemini Omni 1.1 Flash",
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/",
+    "firstReportedAt": "2026-08-28",
+    "sourcePath": "content/product-daily/2026-08-28.md"
+  },
+  {
+    "kind": "product",
+    "name": "Gemini 3.5 Transcribe",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
+    "firstReportedAt": "2026-08-28",
+    "sourcePath": "content/product-daily/2026-08-28.md"
+  },
+  {
+    "kind": "product",
+    "name": "Claude Cowork built-in browser",
+    "url": "https://claude.com/blog/cowork-built-in-browser",
+    "firstReportedAt": "2026-08-28",
+    "sourcePath": "content/product-daily/2026-08-28.md"
+  },
+  {
+    "kind": "product",
+    "name": "Claude in Chrome GA",
+    "url": "https://claude.com/blog/claude-in-chrome-generally-available",
+    "firstReportedAt": "2026-08-28",
+    "sourcePath": "content/product-daily/2026-08-28.md"
+  },
+  {
+    "kind": "product",
+    "name": "Qwen3.8-Flash / Qwen3.8-Flash-Next",
+    "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+    "firstReportedAt": "2026-08-28",
+    "sourcePath": "content/product-daily/2026-08-28.md"
+  },
+  {
+    "kind": "product",
+    "name": "ChatGPT temporary chat personalization controls",
+    "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+    "firstReportedAt": "2026-08-28",
+    "sourcePath": "content/product-daily/2026-08-28.md"
+  },
+  {
+    "kind": "event",
+    "name": "AIX ORIGIN SUMMIT 2026 Hachthon 黑客松",
+    "url": "https://luma.com/wn5zdbzm",
+    "firstReportedAt": "2026-08-28",
+    "sourcePath": "content/product-daily/2026-08-28.md"
+  },
+  {
+    "kind": "event",
+    "name": "Women, Wellbeing & AI: Navigating Change with Confidence",
+    "url": "https://luma.com/z2b3nes9",
+    "firstReportedAt": "2026-08-28",
+    "sourcePath": "content/product-daily/2026-08-28.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI Agent Secure by Design Programme",
+    "url": "https://academy.cyberport.hk/trainings/ai-agent-secure-by-design-programme-sept-2026-live-webinar",
+    "firstReportedAt": "2026-08-28",
+    "sourcePath": "content/product-daily/2026-08-28.md"
+  },
+  {
+    "kind": "event",
+    "name": "SME AI Digital Transformation Workshop",
+    "url": "https://ddiy.hkpc.org/index.php/en/events/%E4%B8%AD%E5%B0%8F%E4%BC%81-ai-%E6%95%B8%E7%A2%BC%E8%BD%89%E5%9E%8B%E5%B7%A5%E4%BD%9C%E5%9D%8A",
+    "firstReportedAt": "2026-08-28",
+    "sourcePath": "content/product-daily/2026-08-28.md"
+  },
+  {
+    "kind": "event",
+    "name": "萬字夾資本主義",
+    "url": "https://luma.com/i0ckj4sm",
+    "firstReportedAt": "2026-08-28",
+    "sourcePath": "content/product-daily/2026-08-28.md"
   }
 ]
