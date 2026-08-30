@@ -4548,5 +4548,117 @@
     "url": "https://luma.com/i0ckj4sm",
     "firstReportedAt": "2026-08-28",
     "sourcePath": "content/product-daily/2026-08-28.md"
+  },
+  {
+    "kind": "github",
+    "name": "THU-MAIC/OpenMAIC",
+    "url": "https://github.com/THU-MAIC/OpenMAIC",
+    "firstReportedAt": "2026-08-30",
+    "sourcePath": "content/product-daily/2026-08-30.md"
+  },
+  {
+    "kind": "github",
+    "name": "Osmantic/ODS",
+    "url": "https://github.com/Osmantic/ODS",
+    "firstReportedAt": "2026-08-30",
+    "sourcePath": "content/product-daily/2026-08-30.md"
+  },
+  {
+    "kind": "github",
+    "name": "workweave/router",
+    "url": "https://github.com/workweave/router",
+    "firstReportedAt": "2026-08-30",
+    "sourcePath": "content/product-daily/2026-08-30.md"
+  },
+  {
+    "kind": "github",
+    "name": "abi/screenshot-to-code",
+    "url": "https://github.com/abi/screenshot-to-code",
+    "firstReportedAt": "2026-08-30",
+    "sourcePath": "content/product-daily/2026-08-30.md"
+  },
+  {
+    "kind": "github",
+    "name": "bilawalsidhu/gods-eye-view",
+    "url": "https://github.com/bilawalsidhu/gods-eye-view",
+    "firstReportedAt": "2026-08-30",
+    "sourcePath": "content/product-daily/2026-08-30.md"
+  },
+  {
+    "kind": "product",
+    "name": "Tencent Hy4 preview",
+    "url": "https://huggingface.co/tencent/Hy4-preview",
+    "firstReportedAt": "2026-08-30",
+    "sourcePath": "content/product-daily/2026-08-30.md"
+  },
+  {
+    "kind": "product",
+    "name": "Anthropic Model Hardware Standard",
+    "url": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
+    "firstReportedAt": "2026-08-30",
+    "sourcePath": "content/product-daily/2026-08-30.md"
+  },
+  {
+    "kind": "product",
+    "name": "Cohere Parse 5",
+    "url": "https://cohere.com/blog/parse",
+    "firstReportedAt": "2026-08-30",
+    "sourcePath": "content/product-daily/2026-08-30.md"
+  },
+  {
+    "kind": "product",
+    "name": "Qoder Agentic Platform",
+    "url": "https://qoder.com/en",
+    "firstReportedAt": "2026-08-30",
+    "sourcePath": "content/product-daily/2026-08-30.md"
+  },
+  {
+    "kind": "product",
+    "name": "Midjourney V8.2 Edit Model",
+    "url": "https://updates.midjourney.com/edit-model-for-v8/",
+    "firstReportedAt": "2026-08-30",
+    "sourcePath": "content/product-daily/2026-08-30.md"
+  },
+  {
+    "kind": "product",
+    "name": "Google Search AI Mode travel booking",
+    "url": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
+    "firstReportedAt": "2026-08-30",
+    "sourcePath": "content/product-daily/2026-08-30.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI, Crypto & Other Dangerous Ideas",
+    "url": "https://luma.com/qpg75zxj",
+    "firstReportedAt": "2026-08-30",
+    "sourcePath": "content/product-daily/2026-08-30.md"
+  },
+  {
+    "kind": "event",
+    "name": "Why Your AI App Looks Bad (and How to Fix It)",
+    "url": "https://luma.com/f3xg5xlu",
+    "firstReportedAt": "2026-08-30",
+    "sourcePath": "content/product-daily/2026-08-30.md"
+  },
+  {
+    "kind": "event",
+    "name": "Hackathon Live: AI Solutions for Market Intelligence & Analytics",
+    "url": "https://luma.com/k2fvllfv",
+    "firstReportedAt": "2026-08-30",
+    "sourcePath": "content/product-daily/2026-08-30.md"
+  },
+  {
+    "kind": "event",
+    "name": "Crazy Thursday Meetup - AI & App Builder [Sep 17]",
+    "url": "https://luma.com/u59ra0xs",
+    "firstReportedAt": "2026-08-30",
+    "sourcePath": "content/product-daily/2026-08-30.md"
+  },
+  {
+    "kind": "event",
+    "name": "2026 实在 Agent 数字员工｜企业 AI 落地实战沙龙・深圳站",
+    "url": "https://cd.huodongxing.com/events?city=%E6%B7%B1%E5%9C%B3",
+    "firstReportedAt": "2026-08-30",
+    "sourcePath": "content/product-daily/2026-08-30.md"
   }
 ]
