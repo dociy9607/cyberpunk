@@ -4660,5 +4660,110 @@
     "url": "https://cd.huodongxing.com/events?city=%E6%B7%B1%E5%9C%B3",
     "firstReportedAt": "2026-08-30",
     "sourcePath": "content/product-daily/2026-08-30.md"
+  },
+  {
+    "kind": "github",
+    "name": "Gitlawb/openclaude",
+    "url": "https://github.com/Gitlawb/openclaude",
+    "firstReportedAt": "2026-09-02",
+    "sourcePath": "content/product-daily/2026-09-02.md"
+  },
+  {
+    "kind": "github",
+    "name": "Imbad0202/academic-research-skills",
+    "url": "https://github.com/Imbad0202/academic-research-skills",
+    "firstReportedAt": "2026-09-02",
+    "sourcePath": "content/product-daily/2026-09-02.md"
+  },
+  {
+    "kind": "github",
+    "name": "jingyaogong/minimind",
+    "url": "https://github.com/jingyaogong/minimind",
+    "firstReportedAt": "2026-09-02",
+    "sourcePath": "content/product-daily/2026-09-02.md"
+  },
+  {
+    "kind": "github",
+    "name": "debpalash/VoiceStudio",
+    "url": "https://github.com/debpalash/VoiceStudio",
+    "firstReportedAt": "2026-09-02",
+    "sourcePath": "content/product-daily/2026-09-02.md"
+  },
+  {
+    "kind": "github",
+    "name": "handsomestWei/patent-disclosure-skill",
+    "url": "https://github.com/handsomestWei/patent-disclosure-skill",
+    "firstReportedAt": "2026-09-02",
+    "sourcePath": "content/product-daily/2026-09-02.md"
+  },
+  {
+    "kind": "product",
+    "name": "Claude Fable 5.1 / Claude Mythos 5.1",
+    "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+    "firstReportedAt": "2026-09-02",
+    "sourcePath": "content/product-daily/2026-09-02.md"
+  },
+  {
+    "kind": "product",
+    "name": "OpenAI Astra cyber-critical safeguards",
+    "url": "https://openai.com/index/path-to-astra/",
+    "firstReportedAt": "2026-09-02",
+    "sourcePath": "content/product-daily/2026-09-02.md"
+  },
+  {
+    "kind": "product",
+    "name": "Runway Solaris",
+    "url": "https://runway.com/news/research/introducing-solaris",
+    "firstReportedAt": "2026-09-02",
+    "sourcePath": "content/product-daily/2026-09-02.md"
+  },
+  {
+    "kind": "product",
+    "name": "Meta Muse Voice Transcribe",
+    "url": "https://research.meta.ai/blog/introducing-muse-voice-transcribe",
+    "firstReportedAt": "2026-09-02",
+    "sourcePath": "content/product-daily/2026-09-02.md"
+  },
+  {
+    "kind": "product",
+    "name": "Google TimesFM-3",
+    "url": "https://research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/",
+    "firstReportedAt": "2026-09-02",
+    "sourcePath": "content/product-daily/2026-09-02.md"
+  },
+  {
+    "kind": "product",
+    "name": "DeepSeek-V4-Flash-Vision-Exp",
+    "url": "https://api-docs.deepseek.com/news/news260821/",
+    "firstReportedAt": "2026-09-02",
+    "sourcePath": "content/product-daily/2026-09-02.md"
+  },
+  {
+    "kind": "event",
+    "name": "DAI 2026",
+    "url": "https://www.adai.ai/dai/2026/",
+    "firstReportedAt": "2026-09-02",
+    "sourcePath": "content/product-daily/2026-09-02.md"
+  },
+  {
+    "kind": "event",
+    "name": "AIGC 2026",
+    "url": "https://www.icaigc.org/",
+    "firstReportedAt": "2026-09-02",
+    "sourcePath": "content/product-daily/2026-09-02.md"
+  },
+  {
+    "kind": "event",
+    "name": "BIOHK2026",
+    "url": "https://bio-hk.com/",
+    "firstReportedAt": "2026-09-02",
+    "sourcePath": "content/product-daily/2026-09-02.md"
+  },
+  {
+    "kind": "event",
+    "name": "GAAC 2026",
+    "url": "https://www.paperfox.ai/conference/gaac2026",
+    "firstReportedAt": "2026-09-02",
+    "sourcePath": "content/product-daily/2026-09-02.md"
   }
 ]
