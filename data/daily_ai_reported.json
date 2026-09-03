@@ -4765,5 +4765,124 @@
     "url": "https://www.paperfox.ai/conference/gaac2026",
     "firstReportedAt": "2026-09-02",
     "sourcePath": "content/product-daily/2026-09-02.md"
+  },
+  {
+    "kind": "github",
+    "name": "Nanako0129/sepia",
+    "url": "https://github.com/Nanako0129/sepia",
+    "firstReportedAt": "2026-09-03",
+    "sourcePath": "content/product-daily/2026-09-03.md"
+  },
+  {
+    "kind": "github",
+    "name": "cbrock84/headcount",
+    "url": "https://github.com/cbrock84/headcount",
+    "firstReportedAt": "2026-09-03",
+    "sourcePath": "content/product-daily/2026-09-03.md"
+  },
+  {
+    "kind": "github",
+    "name": "useagenthq/useagent",
+    "url": "https://github.com/useagenthq/useagent",
+    "firstReportedAt": "2026-09-03",
+    "sourcePath": "content/product-daily/2026-09-03.md"
+  },
+  {
+    "kind": "github",
+    "name": "Human-Agent-Society/reef",
+    "url": "https://github.com/Human-Agent-Society/reef",
+    "firstReportedAt": "2026-09-03",
+    "sourcePath": "content/product-daily/2026-09-03.md"
+  },
+  {
+    "kind": "github",
+    "name": "ara-mkr/Wonder-Pill",
+    "url": "https://github.com/ara-mkr/Wonder-Pill",
+    "firstReportedAt": "2026-09-03",
+    "sourcePath": "content/product-daily/2026-09-03.md"
+  },
+  {
+    "kind": "product",
+    "name": "Meta Muse Spark 1.3",
+    "url": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+    "firstReportedAt": "2026-09-03",
+    "sourcePath": "content/product-daily/2026-09-03.md"
+  },
+  {
+    "kind": "product",
+    "name": "Gemini 3.8 Flash / Gemini 3.8 Flash Cyber",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+    "firstReportedAt": "2026-09-03",
+    "sourcePath": "content/product-daily/2026-09-03.md"
+  },
+  {
+    "kind": "product",
+    "name": "Google Pics GA in Workspace",
+    "url": "https://blog.google/products-and-platforms/products/workspace/google-pics/",
+    "firstReportedAt": "2026-09-03",
+    "sourcePath": "content/product-daily/2026-09-03.md"
+  },
+  {
+    "kind": "product",
+    "name": "World Labs Atlas",
+    "url": "https://www.worldlabs.ai/blog/atlas",
+    "firstReportedAt": "2026-09-03",
+    "sourcePath": "content/product-daily/2026-09-03.md"
+  },
+  {
+    "kind": "product",
+    "name": "ChatGPT for Healthcare: Epic integration + Healthcare Public Data",
+    "url": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources/",
+    "firstReportedAt": "2026-09-03",
+    "sourcePath": "content/product-daily/2026-09-03.md"
+  },
+  {
+    "kind": "product",
+    "name": "Google Gemini agentic video understanding",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/",
+    "firstReportedAt": "2026-09-03",
+    "sourcePath": "content/product-daily/2026-09-03.md"
+  },
+  {
+    "kind": "product",
+    "name": "Tencent WorkBuddy open platform",
+    "url": "https://workbuddy.tencent.com/",
+    "firstReportedAt": "2026-09-03",
+    "sourcePath": "content/product-daily/2026-09-03.md"
+  },
+  {
+    "kind": "event",
+    "name": "HKWD Private & Local AI",
+    "url": "https://luma.com/jtzwnh9w",
+    "firstReportedAt": "2026-09-03",
+    "sourcePath": "content/product-daily/2026-09-03.md"
+  },
+  {
+    "kind": "event",
+    "name": "2026具身智能产业大会",
+    "url": "https://www.iicieexpo.com/ConferenceList.html",
+    "firstReportedAt": "2026-09-03",
+    "sourcePath": "content/product-daily/2026-09-03.md"
+  },
+  {
+    "kind": "event",
+    "name": "SHTM x Pseudo Lab Joint Forum & Workshop: AI for Smart Hospitality, Tourism & Culture",
+    "url": "https://www.polyu.edu.hk/shtm/news-and-events/events/2026/09/shtm-x-pseudo-lab/",
+    "firstReportedAt": "2026-09-03",
+    "sourcePath": "content/product-daily/2026-09-03.md"
+  },
+  {
+    "kind": "event",
+    "name": "Agentic AI Solution Day",
+    "url": "https://campaigns.hkpc.org/en-hk/rsvp-agentic-ai-solution-day",
+    "firstReportedAt": "2026-09-03",
+    "sourcePath": "content/product-daily/2026-09-03.md"
+  },
+  {
+    "kind": "event",
+    "name": "WAIE 2026 AI 智能体产业应用大会",
+    "url": "https://cd.huodongxing.com/event/1871545635700?qd=8828363103856&utm_campaign=eventspage&utm_medium=&utm_source=%E5%8F%91%E7%8E%B0%E6%B4%BB%E5%8A%A8%E9%A1%B5",
+    "firstReportedAt": "2026-09-03",
+    "sourcePath": "content/product-daily/2026-09-03.md"
   }
 ]
