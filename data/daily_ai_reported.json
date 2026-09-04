@@ -4884,5 +4884,117 @@
     "url": "https://cd.huodongxing.com/event/1871545635700?qd=8828363103856&utm_campaign=eventspage&utm_medium=&utm_source=%E5%8F%91%E7%8E%B0%E6%B4%BB%E5%8A%A8%E9%A1%B5",
     "firstReportedAt": "2026-09-03",
     "sourcePath": "content/product-daily/2026-09-03.md"
+  },
+  {
+    "kind": "github",
+    "name": "JuliusBrussee/caveman",
+    "url": "https://github.com/JuliusBrussee/caveman",
+    "firstReportedAt": "2026-09-04",
+    "sourcePath": "content/product-daily/2026-09-04.md"
+  },
+  {
+    "kind": "github",
+    "name": "blader/humanizer",
+    "url": "https://github.com/blader/humanizer",
+    "firstReportedAt": "2026-09-04",
+    "sourcePath": "content/product-daily/2026-09-04.md"
+  },
+  {
+    "kind": "github",
+    "name": "f/prompts.chat",
+    "url": "https://github.com/f/prompts.chat",
+    "firstReportedAt": "2026-09-04",
+    "sourcePath": "content/product-daily/2026-09-04.md"
+  },
+  {
+    "kind": "github",
+    "name": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "firstReportedAt": "2026-09-04",
+    "sourcePath": "content/product-daily/2026-09-04.md"
+  },
+  {
+    "kind": "product",
+    "name": "GPT-6 Astra",
+    "url": "https://openai.com/index/gpt-6-astra/",
+    "firstReportedAt": "2026-09-04",
+    "sourcePath": "content/product-daily/2026-09-04.md"
+  },
+  {
+    "kind": "product",
+    "name": "Daybreak for Frontline Defenders",
+    "url": "https://openai.com/index/daybreak-for-frontline-defenders/",
+    "firstReportedAt": "2026-09-04",
+    "sourcePath": "content/product-daily/2026-09-04.md"
+  },
+  {
+    "kind": "product",
+    "name": "NVIDIA to Acquire Hugging Face",
+    "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
+    "firstReportedAt": "2026-09-04",
+    "sourcePath": "content/product-daily/2026-09-04.md"
+  },
+  {
+    "kind": "product",
+    "name": "Kilo Code for JetBrains",
+    "url": "https://blog.kilo.ai/p/kilo-code-goes-native-on-jetbrains",
+    "firstReportedAt": "2026-09-04",
+    "sourcePath": "content/product-daily/2026-09-04.md"
+  },
+  {
+    "kind": "product",
+    "name": "豆包工作多 Agents 并行与 Mac 操作电脑",
+    "url": "https://www.doubao.com/work",
+    "firstReportedAt": "2026-09-04",
+    "sourcePath": "content/product-daily/2026-09-04.md"
+  },
+  {
+    "kind": "product",
+    "name": "天猫 AI 空间站 Token 充值中心",
+    "url": "https://www.bjnews.com.cn/detail/1788422724129530.html",
+    "firstReportedAt": "2026-09-04",
+    "sourcePath": "content/product-daily/2026-09-04.md"
+  },
+  {
+    "kind": "product",
+    "name": "OpenAI Astra Customer Stories for API Workflows",
+    "url": "https://openai.com/index/playco-game-prototyping-with-astra/",
+    "firstReportedAt": "2026-09-04",
+    "sourcePath": "content/product-daily/2026-09-04.md"
+  },
+  {
+    "kind": "event",
+    "name": "第十五届中国智能产业高峰论坛（CIIS2026）",
+    "url": "https://www.caai.cn/site/content/8671.html",
+    "firstReportedAt": "2026-09-04",
+    "sourcePath": "content/product-daily/2026-09-04.md"
+  },
+  {
+    "kind": "event",
+    "name": "Smart Services: AI Reshaping Customer Experience for Hong Kong Enterprises",
+    "url": "https://campaigns.hkpc.org/en-hk/rsvp-ai-agent-smartservices",
+    "firstReportedAt": "2026-09-04",
+    "sourcePath": "content/product-daily/2026-09-04.md"
+  },
+  {
+    "kind": "event",
+    "name": "HKPUG #101 - Behind the Python Call",
+    "url": "https://www.meetup.com/pythonhk/events/316364763/",
+    "firstReportedAt": "2026-09-04",
+    "sourcePath": "content/product-daily/2026-09-04.md"
+  },
+  {
+    "kind": "event",
+    "name": "Global Vision Summit, Hong Kong",
+    "url": "https://www.eventbrite.com/e/global-vision-summit-hong-kong-tickets-1995630080291",
+    "firstReportedAt": "2026-09-04",
+    "sourcePath": "content/product-daily/2026-09-04.md"
+  },
+  {
+    "kind": "event",
+    "name": "Hong Kong AI Agent Challenge",
+    "url": "https://www.cyberport.hk/wp-content/uploads/Press-Release-Cyberport-and-HKISI-CAS-Co-host-Hong-Kong-AI-Agent-and-Ecosystem-Forum.pdf",
+    "firstReportedAt": "2026-09-04",
+    "sourcePath": "content/product-daily/2026-09-04.md"
   }
 ]
