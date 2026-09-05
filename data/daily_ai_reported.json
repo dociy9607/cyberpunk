@@ -4996,5 +4996,103 @@
     "url": "https://www.cyberport.hk/wp-content/uploads/Press-Release-Cyberport-and-HKISI-CAS-Co-host-Hong-Kong-AI-Agent-and-Ecosystem-Forum.pdf",
     "firstReportedAt": "2026-09-04",
     "sourcePath": "content/product-daily/2026-09-04.md"
+  },
+  {
+    "kind": "github",
+    "name": "radixark/miles",
+    "url": "https://github.com/radixark/miles",
+    "firstReportedAt": "2026-09-05",
+    "sourcePath": "content/product-daily/2026-09-05.md"
+  },
+  {
+    "kind": "product",
+    "name": "Compliance by TwelveLabs",
+    "url": "https://www.twelvelabs.io/blog/compliance",
+    "firstReportedAt": "2026-09-05",
+    "sourcePath": "content/product-daily/2026-09-05.md"
+  },
+  {
+    "kind": "product",
+    "name": "WeatherNext 3",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/",
+    "firstReportedAt": "2026-09-05",
+    "sourcePath": "content/product-daily/2026-09-05.md"
+  },
+  {
+    "kind": "product",
+    "name": "Microsoft Project Zenith",
+    "url": "https://blogs.windows.com/windowsdeveloper/2026/09/04/announcing-project-zenith-the-ready-to-code-windows-experience/",
+    "firstReportedAt": "2026-09-05",
+    "sourcePath": "content/product-daily/2026-09-05.md"
+  },
+  {
+    "kind": "product",
+    "name": "Kimi Code CLI 0.41.0",
+    "url": "https://www.kimi.com/code/docs/en/kimi-code-cli/release-notes/changelog.html",
+    "firstReportedAt": "2026-09-05",
+    "sourcePath": "content/product-daily/2026-09-05.md"
+  },
+  {
+    "kind": "event",
+    "name": "〖Preface Lecture Series〗AI Agents in Organisational Workflows",
+    "url": "https://luma.com/rxottx0t",
+    "firstReportedAt": "2026-09-05",
+    "sourcePath": "content/product-daily/2026-09-05.md"
+  },
+  {
+    "kind": "event",
+    "name": "Robotics Frontiers 2026: Models, Data, Hardware & Deployment｜HKU & Stanford",
+    "url": "https://luma.com/f1j2lxwc",
+    "firstReportedAt": "2026-09-05",
+    "sourcePath": "content/product-daily/2026-09-05.md"
+  },
+  {
+    "kind": "github",
+    "name": "google-research/timesfm",
+    "url": "https://github.com/google-research/timesfm",
+    "firstReportedAt": "2026-09-05",
+    "sourcePath": "content/product-daily/2026-09-05.md"
+  },
+  {
+    "kind": "github",
+    "name": "anomalyco/opencode",
+    "url": "https://github.com/anomalyco/opencode",
+    "firstReportedAt": "2026-09-05",
+    "sourcePath": "content/product-daily/2026-09-05.md"
+  },
+  {
+    "kind": "github",
+    "name": "ChromeDevTools/chrome-devtools-mcp",
+    "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+    "firstReportedAt": "2026-09-05",
+    "sourcePath": "content/product-daily/2026-09-05.md"
+  },
+  {
+    "kind": "github",
+    "name": "OpenWhispr/openwhispr",
+    "url": "https://github.com/OpenWhispr/openwhispr",
+    "firstReportedAt": "2026-09-05",
+    "sourcePath": "content/product-daily/2026-09-05.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI Agent企業n8n工作坊-第1場",
+    "url": "https://luma.com/dotai-WS001",
+    "firstReportedAt": "2026-09-05",
+    "sourcePath": "content/product-daily/2026-09-05.md"
+  },
+  {
+    "kind": "event",
+    "name": "Robots & Beers",
+    "url": "https://luma.com/bi7y2u01",
+    "firstReportedAt": "2026-09-05",
+    "sourcePath": "content/product-daily/2026-09-05.md"
+  },
+  {
+    "kind": "event",
+    "name": "SHTM × Pseudo Lab Joint Forum & Workshop: AI for Smart Hospitality, Tourism, and Culture",
+    "url": "https://luma.com/r017o3g4",
+    "firstReportedAt": "2026-09-05",
+    "sourcePath": "content/product-daily/2026-09-05.md"
   }
 ]
