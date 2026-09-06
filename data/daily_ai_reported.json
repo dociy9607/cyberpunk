@@ -5094,5 +5094,110 @@
     "url": "https://luma.com/r017o3g4",
     "firstReportedAt": "2026-09-05",
     "sourcePath": "content/product-daily/2026-09-05.md"
+  },
+  {
+    "kind": "github",
+    "name": "ruvnet/ruflo",
+    "url": "https://github.com/ruvnet/ruflo",
+    "firstReportedAt": "2026-09-06",
+    "sourcePath": "content/product-daily/2026-09-06.md"
+  },
+  {
+    "kind": "github",
+    "name": "humanlayer/skills",
+    "url": "https://github.com/humanlayer/skills",
+    "firstReportedAt": "2026-09-06",
+    "sourcePath": "content/product-daily/2026-09-06.md"
+  },
+  {
+    "kind": "github",
+    "name": "WorldFlowAI/everything-claude-code",
+    "url": "https://github.com/WorldFlowAI/everything-claude-code",
+    "firstReportedAt": "2026-09-06",
+    "sourcePath": "content/product-daily/2026-09-06.md"
+  },
+  {
+    "kind": "github",
+    "name": "punkpeye/awesome-mcp-servers",
+    "url": "https://github.com/punkpeye/awesome-mcp-servers",
+    "firstReportedAt": "2026-09-06",
+    "sourcePath": "content/product-daily/2026-09-06.md"
+  },
+  {
+    "kind": "product",
+    "name": "Google Workspace Gemini Live 语音入口",
+    "url": "https://blog.google/products-and-platforms/products/workspace/voice-features-gmail-docs-keep/",
+    "firstReportedAt": "2026-09-06",
+    "sourcePath": "content/product-daily/2026-09-06.md"
+  },
+  {
+    "kind": "product",
+    "name": "ChatGPT Ads 自助投放与全球扩张",
+    "url": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads/",
+    "firstReportedAt": "2026-09-06",
+    "sourcePath": "content/product-daily/2026-09-06.md"
+  },
+  {
+    "kind": "product",
+    "name": "Tenable CyberAgents Exchange AI Inspector",
+    "url": "https://www.tenable.com/press-releases/tenable-uses-openai-gpt-cyber-models-to-help-defenders-inspect-community-built-ai-components",
+    "firstReportedAt": "2026-09-06",
+    "sourcePath": "content/product-daily/2026-09-06.md"
+  },
+  {
+    "kind": "product",
+    "name": "Amazon SageMaker HyperPod InstantStart",
+    "url": "https://aws.amazon.com/blogs/machine-learning/run-agent-driven-amazon-sagemaker-hyperpod-operations-with-instantstart/",
+    "firstReportedAt": "2026-09-06",
+    "sourcePath": "content/product-daily/2026-09-06.md"
+  },
+  {
+    "kind": "product",
+    "name": "Microsoft Foundry GPT-6 Astra 可用性",
+    "url": "https://azure.microsoft.com/en-us/blog/gpt-6-astra-frontier-intelligence-for-work-now-available-in-microsoft-foundry/",
+    "firstReportedAt": "2026-09-06",
+    "sourcePath": "content/product-daily/2026-09-06.md"
+  },
+  {
+    "kind": "product",
+    "name": "Android September Drop: Gemini Find Hub 记忆物品位置",
+    "url": "https://blog.google/products-and-platforms/platforms/android/android-drop-september-2026/",
+    "firstReportedAt": "2026-09-06",
+    "sourcePath": "content/product-daily/2026-09-06.md"
+  },
+  {
+    "kind": "event",
+    "name": "AIHK Retail & Consumer Committee Event",
+    "url": "https://luma.com/3ckftghg",
+    "firstReportedAt": "2026-09-06",
+    "sourcePath": "content/product-daily/2026-09-06.md"
+  },
+  {
+    "kind": "event",
+    "name": "OpenSchool x 腾讯云 AI Claw Demo Day · 深圳站 9.12",
+    "url": "https://luma.com/b5ril5s9",
+    "firstReportedAt": "2026-09-06",
+    "sourcePath": "content/product-daily/2026-09-06.md"
+  },
+  {
+    "kind": "event",
+    "name": "Monad Metropolis Hacker House: 深圳",
+    "url": "https://luma.com/metropolis-shenzhen-sep-2026",
+    "firstReportedAt": "2026-09-06",
+    "sourcePath": "content/product-daily/2026-09-06.md"
+  },
+  {
+    "kind": "event",
+    "name": "SME AI Transformation Workshop: Smart Breakthrough",
+    "url": "https://campaigninfo.hkpc.org/en-rsvp-sme-ai-transformation-workshop-202609",
+    "firstReportedAt": "2026-09-06",
+    "sourcePath": "content/product-daily/2026-09-06.md"
+  },
+  {
+    "kind": "event",
+    "name": "Smart QS Hackathon 2026",
+    "url": "https://www.cyberport.hk/en/smart_qs_hackathon_2026/",
+    "firstReportedAt": "2026-09-06",
+    "sourcePath": "content/product-daily/2026-09-06.md"
   }
 ]
