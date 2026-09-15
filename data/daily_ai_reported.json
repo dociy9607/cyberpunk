@@ -5199,5 +5199,110 @@
     "url": "https://www.cyberport.hk/en/smart_qs_hackathon_2026/",
     "firstReportedAt": "2026-09-06",
     "sourcePath": "content/product-daily/2026-09-06.md"
+  },
+  {
+    "kind": "github",
+    "name": "alibaba/open-code-review",
+    "url": "https://github.com/alibaba/open-code-review",
+    "firstReportedAt": "2026-09-15",
+    "sourcePath": "content/product-daily/2026-09-15.md"
+  },
+  {
+    "kind": "github",
+    "name": "JustVugg/colibri",
+    "url": "https://github.com/JustVugg/colibri",
+    "firstReportedAt": "2026-09-15",
+    "sourcePath": "content/product-daily/2026-09-15.md"
+  },
+  {
+    "kind": "github",
+    "name": "tech-leads-club/agent-skills",
+    "url": "https://github.com/tech-leads-club/agent-skills",
+    "firstReportedAt": "2026-09-15",
+    "sourcePath": "content/product-daily/2026-09-15.md"
+  },
+  {
+    "kind": "github",
+    "name": "multimodal-art-projection/YuE",
+    "url": "https://github.com/multimodal-art-projection/YuE",
+    "firstReportedAt": "2026-09-15",
+    "sourcePath": "content/product-daily/2026-09-15.md"
+  },
+  {
+    "kind": "github",
+    "name": "OpenBMB/VoxCPM",
+    "url": "https://github.com/OpenBMB/VoxCPM",
+    "firstReportedAt": "2026-09-15",
+    "sourcePath": "content/product-daily/2026-09-15.md"
+  },
+  {
+    "kind": "product",
+    "name": "Suno v6",
+    "url": "https://suno.com/blog/introducing-v6",
+    "firstReportedAt": "2026-09-15",
+    "sourcePath": "content/product-daily/2026-09-15.md"
+  },
+  {
+    "kind": "product",
+    "name": "DeepSeek-V4.1-Flash",
+    "url": "https://api-docs.deepseek.com/news/news260910/",
+    "firstReportedAt": "2026-09-15",
+    "sourcePath": "content/product-daily/2026-09-15.md"
+  },
+  {
+    "kind": "product",
+    "name": "Universal Music Group × ElevenLabs licensed AI music platform",
+    "url": "https://www.universalmusic.com/universal-music-group-and-elevenlabs-announce-multi-year-strategic-agreement-beginning-with-a-new-licensed-ai-music-creation-platform/",
+    "firstReportedAt": "2026-09-15",
+    "sourcePath": "content/product-daily/2026-09-15.md"
+  },
+  {
+    "kind": "product",
+    "name": "Cognition SWE-2",
+    "url": "https://cognition.com/blog/swe-2",
+    "firstReportedAt": "2026-09-15",
+    "sourcePath": "content/product-daily/2026-09-15.md"
+  },
+  {
+    "kind": "product",
+    "name": "Apple Siri AI in iOS 27",
+    "url": "https://www.apple.com/newsroom/2026/09/siri-ai-a-profoundly-more-capable-and-personal-assistant-is-here/",
+    "firstReportedAt": "2026-09-15",
+    "sourcePath": "content/product-daily/2026-09-15.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI Founders' Guide to Commerce",
+    "url": "https://ma.to/event/ai-founders-guide-global-commerce-cyberport-16-sep-2026",
+    "firstReportedAt": "2026-09-15",
+    "sourcePath": "content/product-daily/2026-09-15.md"
+  },
+  {
+    "kind": "event",
+    "name": "Kids4Kids Youth Summit 2026: AI for Social Good",
+    "url": "https://www.eventbrite.hk/e/kids4kids-youth-summit-2026-ai-for-social-good-tickets-1987471349307",
+    "firstReportedAt": "2026-09-15",
+    "sourcePath": "content/product-daily/2026-09-15.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI Tinkerers Hong Kong: September Meetup with Cyberport and EY",
+    "url": "https://hong-kong.aitinkerers.org/",
+    "firstReportedAt": "2026-09-15",
+    "sourcePath": "content/product-daily/2026-09-15.md"
+  },
+  {
+    "kind": "event",
+    "name": "PoC Programme Innovation Showcase",
+    "url": "https://ma.to/event/poc-programme-innovation-showcase-09-oct-2026",
+    "firstReportedAt": "2026-09-15",
+    "sourcePath": "content/product-daily/2026-09-15.md"
+  },
+  {
+    "kind": "event",
+    "name": "Programmable Trust & Explainable AI: Minimising Cognitive Debt in Autonomous Systems",
+    "url": "https://hong-kong.aitinkerers.org/",
+    "firstReportedAt": "2026-09-15",
+    "sourcePath": "content/product-daily/2026-09-15.md"
   }
 ]
