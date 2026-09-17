@@ -5304,5 +5304,117 @@
     "url": "https://hong-kong.aitinkerers.org/",
     "firstReportedAt": "2026-09-15",
     "sourcePath": "content/product-daily/2026-09-15.md"
+  },
+  {
+    "kind": "github",
+    "name": "kruzovic7/ai-data-extractor",
+    "url": "https://github.com/kruzovic7/ai-data-extractor",
+    "firstReportedAt": "2026-09-17",
+    "sourcePath": "content/product-daily/2026-09-17.md"
+  },
+  {
+    "kind": "github",
+    "name": "Qiuner/birdview",
+    "url": "https://github.com/Qiuner/birdview",
+    "firstReportedAt": "2026-09-17",
+    "sourcePath": "content/product-daily/2026-09-17.md"
+  },
+  {
+    "kind": "github",
+    "name": "AetherLabsAI/RSIAgent",
+    "url": "https://github.com/AetherLabsAI/RSIAgent",
+    "firstReportedAt": "2026-09-17",
+    "sourcePath": "content/product-daily/2026-09-17.md"
+  },
+  {
+    "kind": "github",
+    "name": "tbphp/gpt-load",
+    "url": "https://github.com/tbphp/gpt-load",
+    "firstReportedAt": "2026-09-17",
+    "sourcePath": "content/product-daily/2026-09-17.md"
+  },
+  {
+    "kind": "github",
+    "name": "jgravelle/jcodemunch-mcp",
+    "url": "https://github.com/jgravelle/jcodemunch-mcp",
+    "firstReportedAt": "2026-09-17",
+    "sourcePath": "content/product-daily/2026-09-17.md"
+  },
+  {
+    "kind": "product",
+    "name": "Vidu S2 实时交互视频模型",
+    "url": "https://www.vidu.com/",
+    "firstReportedAt": "2026-09-17",
+    "sourcePath": "content/product-daily/2026-09-17.md"
+  },
+  {
+    "kind": "product",
+    "name": "Gemini 3.8 Live 与 3.8 Live Extended Thinking",
+    "url": "https://blog.google/",
+    "firstReportedAt": "2026-09-17",
+    "sourcePath": "content/product-daily/2026-09-17.md"
+  },
+  {
+    "kind": "product",
+    "name": "OpenAI Agents API public beta",
+    "url": "https://openai.com/",
+    "firstReportedAt": "2026-09-17",
+    "sourcePath": "content/product-daily/2026-09-17.md"
+  },
+  {
+    "kind": "product",
+    "name": "Salesforce Koa",
+    "url": "https://www.salesforce.com/agentforce/koa/?bc=OTH",
+    "firstReportedAt": "2026-09-17",
+    "sourcePath": "content/product-daily/2026-09-17.md"
+  },
+  {
+    "kind": "product",
+    "name": "Mozilla × Mistral Firefox Smart Window",
+    "url": "https://blog.mozilla.org/en/firefox/mozilla-mistral-partnership/",
+    "firstReportedAt": "2026-09-17",
+    "sourcePath": "content/product-daily/2026-09-17.md"
+  },
+  {
+    "kind": "product",
+    "name": "Appwrite 2.0",
+    "url": "https://appwrite.io/",
+    "firstReportedAt": "2026-09-17",
+    "sourcePath": "content/product-daily/2026-09-17.md"
+  },
+  {
+    "kind": "event",
+    "name": "BAYTECH 2026 AI/硬件黑客松24h",
+    "url": "https://luma.com/hong-kong-ai",
+    "firstReportedAt": "2026-09-17",
+    "sourcePath": "content/product-daily/2026-09-17.md"
+  },
+  {
+    "kind": "event",
+    "name": "Hong Kong AI Summit: BUILD ACROSS Hackathon",
+    "url": "https://www.startmeup.hk/events-detail/hong-kong-ai-summit-build-across-hackathon/",
+    "firstReportedAt": "2026-09-17",
+    "sourcePath": "content/product-daily/2026-09-17.md"
+  },
+  {
+    "kind": "event",
+    "name": "AI EdTech Roadshow",
+    "url": "https://ma.to/event/ai-edtech-roadshow-6-oct-2026",
+    "firstReportedAt": "2026-09-17",
+    "sourcePath": "content/product-daily/2026-09-17.md"
+  },
+  {
+    "kind": "event",
+    "name": "IP203 Generative AI - IP Concept and Legal Considerations",
+    "url": "https://www.ip.gov.hk/en/key-programmes/ip-training-programme/index_id_32.html",
+    "firstReportedAt": "2026-09-17",
+    "sourcePath": "content/product-daily/2026-09-17.md"
+  },
+  {
+    "kind": "event",
+    "name": "HKU Innovation Week 2026",
+    "url": "https://tec.hku.hk/innovation-week-2026/",
+    "firstReportedAt": "2026-09-17",
+    "sourcePath": "content/product-daily/2026-09-17.md"
   }
 ]
