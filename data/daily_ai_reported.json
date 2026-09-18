@@ -5416,5 +5416,103 @@
     "url": "https://tec.hku.hk/innovation-week-2026/",
     "firstReportedAt": "2026-09-17",
     "sourcePath": "content/product-daily/2026-09-17.md"
+  },
+  {
+    "kind": "github",
+    "name": "cloudflare/security-audit-skill",
+    "url": "https://github.com/cloudflare/security-audit-skill",
+    "firstReportedAt": "2026-09-18",
+    "sourcePath": "content/product-daily/2026-09-18.md"
+  },
+  {
+    "kind": "github",
+    "name": "Tencent/BrowserSkill",
+    "url": "https://github.com/Tencent/BrowserSkill",
+    "firstReportedAt": "2026-09-18",
+    "sourcePath": "content/product-daily/2026-09-18.md"
+  },
+  {
+    "kind": "product",
+    "name": "ChatGPT for Word",
+    "url": "https://help.openai.com/en/articles/20001526-chatgpt-for-word",
+    "firstReportedAt": "2026-09-18",
+    "sourcePath": "content/product-daily/2026-09-18.md"
+  },
+  {
+    "kind": "product",
+    "name": "Claude Cowork and chat are now one Claude",
+    "url": "https://claude.com/blog/cowork-is-now-claude",
+    "firstReportedAt": "2026-09-18",
+    "sourcePath": "content/product-daily/2026-09-18.md"
+  },
+  {
+    "kind": "product",
+    "name": "OpenAI model misalignment reporting framework",
+    "url": "https://openai.com/index/model-misalignment-reporting-framework/",
+    "firstReportedAt": "2026-09-18",
+    "sourcePath": "content/product-daily/2026-09-18.md"
+  },
+  {
+    "kind": "product",
+    "name": "Snap SPECS Intelligence",
+    "url": "https://investor.snap.com/news/news-details/2026/Snap-Inc--Introduces-SPECS-Intelligence-an-Anticipatory-AI-Service/default.aspx",
+    "firstReportedAt": "2026-09-18",
+    "sourcePath": "content/product-daily/2026-09-18.md"
+  },
+  {
+    "kind": "product",
+    "name": "Higgsfield API",
+    "url": "https://www.producthunt.com/products/higgsfield",
+    "firstReportedAt": "2026-09-18",
+    "sourcePath": "content/product-daily/2026-09-18.md"
+  },
+  {
+    "kind": "event",
+    "name": "〖百度智能云〗超级智能体大会-深圳站",
+    "url": "https://www.huodongxing.com/event/4877775514100?qd=8828363103856&utm_campaign=eventspage&utm_medium=&utm_source=%E5%8F%91%E7%8E%B0%E6%B4%BB%E5%8A%A8%E9%A1%B5",
+    "firstReportedAt": "2026-09-18",
+    "sourcePath": "content/product-daily/2026-09-18.md"
+  },
+  {
+    "kind": "event",
+    "name": "TikTok Shop×AI智能体实战课：WorkBuddy+Codex一天跑通跨境经营全链路",
+    "url": "https://www.huodongxing.com/event/5875874752200?qd=8828363103856&utm_campaign=eventspage&utm_medium=&utm_source=%E5%8F%91%E7%8E%B0%E6%B4%BB%E5%8A%A8%E9%A1%B5",
+    "firstReportedAt": "2026-09-18",
+    "sourcePath": "content/product-daily/2026-09-18.md"
+  },
+  {
+    "kind": "event",
+    "name": "〖云上硬核・智胜全球〗2026AI硬件出海合规与智能化实践闭门交流会",
+    "url": "https://www.huodongxing.com/event/8876083835100?qd=8828363103856&utm_campaign=eventspage&utm_medium=&utm_source=%E5%8F%91%E7%8E%B0%E6%B4%BB%E5%8A%A8%E9%A1%B5",
+    "firstReportedAt": "2026-09-18",
+    "sourcePath": "content/product-daily/2026-09-18.md"
+  },
+  {
+    "kind": "event",
+    "name": "Mind Made — Think + Build with AI",
+    "url": "https://luma.com/qkr8516r",
+    "firstReportedAt": "2026-09-18",
+    "sourcePath": "content/product-daily/2026-09-18.md"
+  },
+  {
+    "kind": "event",
+    "name": "IAB HK C26",
+    "url": "https://www.startmeup.hk/events-detail/iab-hk-c26/",
+    "firstReportedAt": "2026-09-18",
+    "sourcePath": "content/product-daily/2026-09-18.md"
+  },
+  {
+    "kind": "github",
+    "name": "hypit-ai/hypit",
+    "url": "https://github.com/hypit-ai/hypit",
+    "firstReportedAt": "2026-09-18",
+    "sourcePath": "content/product-daily/2026-09-18.md"
+  },
+  {
+    "kind": "github",
+    "name": "coder/coder",
+    "url": "https://github.com/coder/coder",
+    "firstReportedAt": "2026-09-18",
+    "sourcePath": "content/product-daily/2026-09-18.md"
   }
 ]
